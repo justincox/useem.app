@@ -425,6 +425,20 @@ section { padding: 4.5rem 0; }
 .footer-links a { text-decoration: none; color: var(--fg-muted); }
 .footer-links a:hover { color: var(--accent); }
 
+@media (max-width: 640px) {
+  /* Stack centered instead of wrapping left-aligned — nav on top
+     (column-reverse flips the DOM order of signature-then-nav), logo
+     underneath. */
+  .footer-row {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .footer-links {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 /* Personal signature mark — same idea as the app's own about-screen credit
    (DeveloperLogoMark.swift): one quiet, unobtrusive color by default so it
    signs the page without competing with the product branding. Unlike the
