@@ -184,6 +184,54 @@ section { padding: 4.5rem 0; }
 .feature-card h3 { font-size: 1.1rem; margin: 0; }
 .feature-card p { color: var(--fg-muted); font-size: 0.95rem; margin: 0; }
 
+/* ---------- feature showcase ----------
+   A single image stage sits above the feature grid. Desktop: hovering a
+   card swaps the active image. Mobile: the stage auto-rotates and can be
+   swiped, and only the matching card is shown as a caption below it. */
+.feature-showcase__stage {
+  position: relative;
+  width: 100%;
+  max-width: 38rem;
+  aspect-ratio: 2605 / 1854;
+  margin: 0 auto 2.5rem;
+}
+.feature-showcase__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.feature-showcase__img.is-active { opacity: 1; }
+.feature-showcase__dots {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1.25rem 0 2.5rem;
+}
+.feature-showcase__dot {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+}
+.feature-showcase__dot.is-active { background: var(--accent); }
+.feature-grid .feature-card.is-active { border-color: var(--accent); }
+
+@media (max-width: 640px) {
+  .feature-showcase__dots { display: flex; }
+  .feature-grid .feature-card { display: none; }
+  .feature-grid .feature-card.is-active { display: block; }
+}
+
 /* ---------- AI band ----------
    Deliberately plainer than the feature grid above: a tinted strip, no
    cards/shadows, small inline icons instead of icon tiles, body-weight

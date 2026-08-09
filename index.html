@@ -26,7 +26,7 @@
 <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/css/tokens.css?v=5">
-<link rel="stylesheet" href="assets/css/site.css?v=5">
+<link rel="stylesheet" href="assets/css/site.css?v=7">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -97,32 +97,45 @@
       <h2>Built by a writer with tons of files who wanted better control</h2>
       <p>em's features all start from the same idea: your writing is <em>yours</em>, and it should stay that way.</p>
     </div>
-    <div class="feature-grid">
+    <div class="feature-showcase" data-feature-showcase>
+      <div class="feature-showcase__stage">
+        <img class="feature-showcase__img is-active" data-index="0" src="assets/screenshots/smartsearch.webp?v=1" alt="Smart Search finding a note by meaning in em" width="2605" height="1854" loading="lazy">
+        <img class="feature-showcase__img" data-index="1" src="assets/screenshots/version.webp?v=1" alt="Restoring an earlier version of a draft in em" width="2605" height="1854" loading="lazy">
+        <img class="feature-showcase__img" data-index="2" src="assets/screenshots/ghost.webp?v=1" alt="Publishing a post to Ghost from em" width="2605" height="1854" loading="lazy">
+      </div>
+      <div class="feature-showcase__dots">
+        <button class="feature-showcase__dot is-active" type="button" data-index="0" aria-label="Show: Find anything you've ever written"></button>
+        <button class="feature-showcase__dot" type="button" data-index="1" aria-label="Show: Never lose a draft"></button>
+        <button class="feature-showcase__dot" type="button" data-index="2" aria-label="Show: Publish straight to Ghost"></button>
+      </div>
 
-      <a class="feature-card" href="help/search-and-smart-folders.html">
-        <div class="feature-card__head">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
-          <h3>Find anything you've ever written</h3>
-        </div>
-        <p>Keyword and on-device semantic search — ask for "the piece about creating an app" and em finds it, even if you titled it something else.</p>
-      </a>
+      <div class="feature-grid">
 
-      <a class="feature-card" href="help/version-history.html">
-        <div class="feature-card__head">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 7v5l4 2"/></svg></div>
-          <h3>Never lose a draft</h3>
-        </div>
-        <p>Every edit is versioned automatically and synced across devices with iCloud. Compare any two versions, restore one, and never have accidental deletes ever again.</p>
-      </a>
+        <a class="feature-card is-active" href="help/search-and-smart-folders.html" data-index="0">
+          <div class="feature-card__head">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+            <h3>Find anything you've ever written</h3>
+          </div>
+          <p>Keyword and on-device semantic search — ask for "the piece about creating an app" and em finds it, even if you titled it something else.</p>
+        </a>
 
-      <a class="feature-card" href="help/ghost-publishing.html">
-        <div class="feature-card__head">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6M5 12l7-7 7 7"/></svg></div>
-          <h3>Publish straight to Ghost</h3>
-        </div>
-        <p>Connect your Ghost site to fully edit, back up, and publish natively — including 16 custom card types, drafts, scheduling, and newsletters.</p>
-      </a>
+        <a class="feature-card" href="help/version-history.html" data-index="1">
+          <div class="feature-card__head">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 7v5l4 2"/></svg></div>
+            <h3>Never lose a draft</h3>
+          </div>
+          <p>Every edit is versioned automatically and synced across devices with iCloud. Compare any two versions, restore one, and never have accidental deletes ever again.</p>
+        </a>
 
+        <a class="feature-card" href="help/ghost-publishing.html" data-index="2">
+          <div class="feature-card__head">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6M5 12l7-7 7 7"/></svg></div>
+            <h3>Publish straight to Ghost</h3>
+          </div>
+          <p>Connect your Ghost site to fully edit, back up, and publish natively — including 16 custom card types, drafts, scheduling, and newsletters.</p>
+        </a>
+
+      </div>
     </div>
   </div>
 </section>
@@ -195,5 +208,6 @@
   </div>
 </footer>
 
+<script src="assets/js/site.js?v=1" defer></script>
 </body>
 </html>
