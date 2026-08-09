@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://useem.app/sitemap.xml

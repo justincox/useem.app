@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Version History — em Help</title>
+<meta name="description" content="Automatic versions, restoring drafts, and sync conflicts.">
+<link rel="canonical" href="https://useem.app/help/version-history.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="em">
+<meta property="og:url" content="https://useem.app/help/version-history.html">
+<meta property="og:title" content="Version History — em Help">
+<meta property="og:description" content="Automatic versions, restoring drafts, and sync conflicts.">
+<meta property="og:image" content="https://useem.app/assets/screenshots/em.webp">
+<meta property="og:image:width" content="2569">
+<meta property="og:image:height" content="1398">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Version History — em Help">
+<meta name="twitter:description" content="Automatic versions, restoring drafts, and sync conflicts.">
+<meta name="twitter:image" content="https://useem.app/assets/screenshots/em.webp">
+<meta name="theme-color" content="#F6F1E4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#201F1B" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../assets/img/favicon-512.png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html" aria-label="em — Home">
+      <span class="app-icon app-icon--sm"><img src="../assets/img/about-hero-icon.png" alt="" width="1024" height="1024"></span>
+    </a>
+    <ul class="site-nav__links">
+      <li><a href="../index.html#features">Features</a></li>
+      <li><a href="markdown-cheatsheet.html">Markdown</a></li>
+      <li><a href="index.html" aria-current="page">Help</a></li>
+      <li><a href="../privacy.html">Privacy</a></li>
+    </ul>
+    <div class="site-nav__cta">
+      <button class="btn btn--coming-soon btn--sm" type="button" aria-disabled="true">Coming Soon</button>
+    </div>
+  </div>
+</nav>
+
+<article class="article">
+  <a class="back-link" href="index.html">&larr; Help center</a>
+  <span class="eyebrow">em Help</span>
+  <h1>Version History</h1>
+  <div class="doc-preview">
+    <img src="../assets/screenshots/version.webp" alt="Version History in em" width="2605" height="1854" loading="lazy">
+  </div>
+  <div class="article__body">
+<p>Every edit in em is versioned automatically. Not "the last save" — a running history of your document, kept beside your files, synced with your library, and never trapped inside the app.</p>
+<h2 id="how-versions-work">How Versions Work</h2>
+<p>You don't do anything. em automatically Versions a document the first time you edit it, and again at natural intervals. Come back from lunch, rewrite the ending, change your mind — the version from before lunch is still available to restore.</p>
+<h2 id="browsing-and-restoring">Browsing and Restoring</h2>
+<p>Choose Version History… from a document's context menu or the Options menu (<code>⋯</code>):</p>
+<ul>
+<li>Every Version is listed with its date and the device it was edited on. Select one to explore the differences.</li>
+<li>Use This Version replaces the current document with the selected Version. It also silently creates a Version of what it's replacing, so even Restoring a Version is completely reversible.</li>
+</ul>
+<h2 id="where-versions-live">Where Versions Live</h2>
+<p>Version History is stored in a hidden <code>.em</code> folder inside em's iCloud directory. That means it syncs with the other files and preferences through your iCloud and reaches all of your devices.</p>
+<h2 id="when-icloud-syncs-collide">When iCloud Syncs Collide</h2>
+<p>Edit the same file on two devices before iCloud can sync and most apps silently pick a winner. em doesn't:</p>
+<ul>
+<li>Both copies are kept on every device.</li>
+<li>The file view tells you the file was Also Edited on Another Device and offers a Review… option — both versions side by side in Version History.</li>
+<li>Choosing one discards nothing: the copy you don't keep is saved into the Version History.</li>
+</ul>
+<p>The same promise holds when another app changes a file that's open in em: you choose which version continues, and the other goes into Version History.</p>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-row">
+      <a class="footer-signature" href="https://justincox.com/" target="_blank" rel="noopener noreferrer" aria-label="Justin Cox">
+        <svg class="footer-signature__mark" viewBox="0 0 1080 326" role="img" aria-hidden="true"><path class="fs-pilcrow" d="M268.0,300.5 165.0,300.5 164.0,222.5 120.0,222.5 91.0,218.5 62.0,205.5 43.5,189.0 32.5,173.0 24.5,154.0 20.5,134.0 20.5,109.0 23.5,93.0 34.5,67.0 41.5,57.0 56.0,42.5 83.0,27.5 111.0,21.5 268.5,22.0 268.0,300.5Z M303.0,300.5 286.5,300.0 287.0,21.5 303.5,22.0 303.0,300.5Z"/><path class="fs-wordmark" fill-rule="evenodd" d="M807.0,154.5 757.5,154.0 757.5,65.0 754.0,64.5 686.0,64.5 684.5,66.0 685.0,69.5 712.0,85.5 721.5,96.0 725.5,106.0 726.5,117.0 723.5,131.0 718.5,140.0 711.0,147.5 704.0,151.5 692.0,154.5 616.0,154.5 616.0,110.5 663.5,110.0 662.0,105.5 633.0,87.5 624.5,75.0 621.5,60.0 624.5,44.0 628.5,37.0 638.0,27.5 653.0,21.5 842.0,20.5 842.5,64.0 807.5,65.0 807.0,154.5Z M904.0,153.5 854.5,153.0 855.0,20.5 904.5,21.0 904.0,153.5Z M1059.0,153.5 1010.0,153.5 1004.5,133.0 997.5,119.0 989.0,107.5 971.0,92.5 967.5,93.0 967.5,153.0 918.0,153.5 917.5,21.0 932.0,20.5 944.0,22.5 966.0,29.5 984.0,39.5 1007.0,62.5 1009.0,62.5 1010.0,20.5 1059.0,20.5 1059.0,153.5Z M410.0,154.5 371.0,154.5 357.5,111.0 400.0,110.5 408.5,105.0 410.5,101.0 411.0,21.5 460.0,21.5 460.5,106.0 457.5,118.0 451.5,130.0 441.0,141.5 426.0,150.5 410.0,154.5Z M550.0,158.5 531.0,158.5 510.0,153.5 496.0,145.5 480.5,128.0 473.5,104.0 474.0,21.5 523.5,22.0 523.5,101.0 526.5,108.0 535.0,114.5 548.0,113.5 556.5,104.0 556.5,22.0 606.5,22.0 607.5,98.0 602.5,123.0 595.5,135.0 582.0,147.5 568.0,154.5 550.0,158.5Z M563.0,304.5 544.0,304.5 529.0,301.5 516.0,296.5 505.0,289.5 489.5,273.0 479.5,248.0 479.5,220.0 483.5,206.0 490.5,193.0 510.0,174.5 535.0,164.5 553.0,162.5 567.0,163.5 592.0,171.5 604.0,179.5 616.5,193.0 624.5,208.0 627.5,219.0 627.5,249.0 623.5,262.0 615.5,276.0 607.0,285.5 593.0,295.5 578.0,301.5 563.0,304.5Z M472.0,300.5 415.0,300.5 400.0,297.5 382.0,288.5 367.5,274.0 358.5,256.0 355.5,241.0 355.5,227.0 357.5,215.0 363.5,200.0 380.0,180.5 396.0,171.5 412.0,167.5 472.5,168.0 472.0,210.5 421.0,211.5 414.0,214.5 408.5,220.0 404.5,230.0 404.5,238.0 407.5,246.0 412.0,251.5 419.0,255.5 472.5,257.0 472.0,300.5Z M767.0,300.5 714.0,300.5 694.0,267.5 689.5,270.0 672.0,300.5 619.0,300.5 623.5,290.0 653.5,241.0 656.5,232.0 618.5,168.0 672.0,167.5 690.5,199.0 694.0,199.5 713.0,167.5 767.0,167.5 728.5,233.0 767.0,300.5Z M560.5,260.0 569.0,256.5 576.5,248.0 579.5,240.0 578.5,224.0 575.5,218.0 568.0,210.5 556.0,206.5 546.0,207.5 539.0,210.5 530.5,220.0 527.5,229.0 528.5,242.0 533.5,252.0 540.0,257.5 547.0,260.5 560.5,260.0Z"/></svg>
+      </a>
+      <nav class="footer-links">
+        <a href="index.html">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../acknowledgements.html">Acknowledgements</a>
+        <a href="https://justincox.com/contact/">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+/*
+ * em brand tokens — colors + typefaces, shared by the placeholder page and the
+ * (unlinked, noindex) full site under /site/.
+ *
+ * Fonts are the same four files em itself bundles (see em/Fonts/ and
+ * AppFontNames in EditorPlatformCompat.swift), converted to woff2 and
+ * self-hosted here instead of pulled from Google Fonts — no third-party
+ * request on load, and it's the actual typeface em ships, not a lookalike.
+ *   - Fraunces  → headings (variable font; em pins opsz 9 / wght 900 / WONK 1,
+ *                 the "Fraunces-9ptBlack" instance used for Read-view headings)
+ *   - Ubuntu    → body copy and UI text
+ *   - Pacifico  → the "em" wordmark only
+ *   - Courier Prime → monospace accents (tags, code, tiny labels)
+ * Licenses (SIL OFL / Ubuntu Font License) sit alongside the woff2 files.
+ */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/Fraunces.woff2") format("woff2-variations"),
+       url("../fonts/Fraunces.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("../fonts/Pacifico-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Courier Prime";
+  src: url("../fonts/CourierPrime-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light dark;
+
+  /* light (default) */
+  --bg: #F6F1E4;
+  --bg-raised: #FFFFFF;
+  --fg: #252525;
+  --fg-muted: #5B5B54;
+  --accent: #347959;
+  --accent-fg: #F6F1E4;
+  --border: rgba(37, 37, 37, 0.12);
+  --shadow-color: 0deg 0% 0%;
+
+  /* Fixed (non-theme-flipping) device chrome for the iPad/iPhone mockups —
+     a phone bezel should stay dark in both light and dark mode, not track
+     --fg (which flips to cream in dark mode and reads as a broken layout). */
+  --device-bezel: #1B1A17;
+  --device-chrome: #E9E4D6;
+
+  --font-heading: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-wordmark: "Pacifico", cursive;
+  --font-mono: "Courier Prime", "SFMono-Regular", ui-monospace, Menlo, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #201F1B;
+    --bg-raised: #2B2A25;
+    --fg: #F6F1E4;
+    --fg-muted: #C7C2B2;
+    --accent: #4E9A76;
+    --accent-fg: #14201A;
+    --border: rgba(246, 241, 228, 0.14);
+    --shadow-color: 0deg 0% 0%;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+}
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-variation-settings: "opsz" 9, "WONK" 1;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  margin: 0 0 0.5em;
+}
+p { line-height: 1.6; margin: 0 0 1em; }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+
+/*
+ * App-icon treatment: the source art (about-hero-icon.png) is flat marketing
+ * art with square corners, so the squircle mask, bevel highlight, and
+ * elevation shadow that make it read as a real app icon are all applied
+ * here in CSS. Usage: <div class="app-icon"><img src="…" alt="em app icon"
+ * width="1024" height="1024"></div>
+ */
+.app-icon {
+  --size: clamp(132px, 32vw, 208px);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 22%;
+  overflow: hidden;
+  position: relative;
+  box-shadow:
+    0 1px 1px hsl(var(--shadow-color) / 0.08),
+    0 6px 14px hsl(var(--shadow-color) / 0.16),
+    0 24px 48px -8px hsl(var(--shadow-color) / 0.28);
+}
+.app-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.app-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+}
+@media (prefers-color-scheme: dark) {
+  .app-icon {
+    box-shadow:
+      0 0 0 1px rgba(246, 241, 228, 0.08),
+      0 6px 14px hsl(var(--shadow-color) / 0.4),
+      0 24px 48px -8px hsl(var(--shadow-color) / 0.55);
+  }
+}
+.app-icon--sm { --size: clamp(36px, 8vw, 44px); border-radius: 24%; }
