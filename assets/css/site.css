@@ -243,6 +243,16 @@ section { padding: 4.5rem 0; }
   height: auto;
   display: block;
 }
+@media (prefers-color-scheme: dark) {
+  /* The shot's own background is opaque cream now (needed so the device
+     shadows in the image have something to sit on) — in light mode that
+     matches the page and reads as full-bleed, but on the dark page it'd
+     be a stark rectangle. Round it into a deliberate card instead. */
+  .platform-shot {
+    border-radius: 1.5rem;
+    box-shadow: 0 30px 70px -20px hsl(var(--shadow-color) / 0.5);
+  }
+}
 .mockup { display: none; }
 .mockup__placeholder {
   display: flex;
