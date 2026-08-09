@@ -50,9 +50,10 @@
   <span class="eyebrow">em Help</span>
   <h1>Markdown Cheatsheet</h1>
   <div class="article__body">
-<p>Everything em understands, from standard Markdown to em's own touches to the Ghost cards that publish as rich blocks on your site.</p>
-<p><strong>The fastest way to insert any of this</strong>: type <code>/</code> at the start of a line in Edit mode and pick from the slash-command menu. It knows every block on this page.</p>
-<h2>Basic Formatting</h2>
+<p>Markdown is the greatest writing system ever devised, and em's customized version enhances it to support Ghost.</p>
+<p>The fastest way to insert any Markdown code is by typing <code>/</code> at the start of a line in Edit mode and pick from the menu. em contains every option and only shows you the ones available wherever you are.</p>
+<h2>Text Formatting</h2>
+<h3>Headings</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code># Heading
@@ -61,12 +62,14 @@
   <p class="pane-label">Renders as</p>
   <div class="em-render"><h1>Heading</h1><h2>Subheading</h2><h3>Smaller heading</h3></div>
 </div>
+<h3>Text Styles</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
-  <pre><code>**bold**   *italic*   `inline code`   ~~strikethrough~~</code></pre>
+  <pre><code>**bold**   *italic*   `inline code`   ~~strikethrough~~   ==highlights==</code></pre>
   <p class="pane-label">Renders as</p>
-  <div class="em-render"><p><strong>bold</strong>&nbsp;&nbsp;&nbsp;<em>italic</em>&nbsp;&nbsp;&nbsp;<code>inline code</code>&nbsp;&nbsp;&nbsp;<s>strikethrough</s></p></div>
+  <div class="em-render"><p><strong>bold</strong>&nbsp;&nbsp;&nbsp;<em>italic</em>&nbsp;&nbsp;&nbsp;<code>inline code</code>&nbsp;&nbsp;&nbsp;<s>strikethrough</s>&nbsp;&nbsp;&nbsp;<span class="em-highlight">highlights</span></p></div>
 </div>
+<h3>Links and Images</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code>[link text](https://example.com)
@@ -75,6 +78,7 @@
   <p class="pane-label">Renders as</p>
   <div class="em-render"><p><a href="#">link text</a></p><figure style="margin-top:0.75rem;"><div class="em-img-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div><figcaption>alt text</figcaption></figure></div>
 </div>
+<h3>Quotes</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code>&gt; A blockquote.</code></pre>
@@ -87,19 +91,14 @@
   <p class="pane-label">Renders as</p>
   <div class="em-render"><div class="em-pullquote"><hr><p>A pull quote.</p><hr></div></div>
 </div>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>Text with a ==highlighted== phrase.</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><p>Text with a <span class="em-highlight">highlighted</span> phrase.</p></div>
-</div>
+<h3>Hashtags</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code>Tappable in Read mode: #hashtag</code></pre>
   <p class="pane-label">Renders as</p>
   <div class="em-render"><p>Tappable in Read mode: <a href="#" class="em-hashtag">#hashtag</a></p></div>
 </div>
-<h2>Lists</h2>
+<h3>Lists</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code>- Bulleted list
@@ -110,6 +109,7 @@
   <p class="pane-label">Renders as</p>
   <div class="em-render"><ul><li>Bulleted list<ul><li>Nested item</li></ul></li></ul><ol><li>Numbered list</li><li>Second item</li></ol></div>
 </div>
+<h3>Tasks</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code>- [ ] A task
@@ -117,7 +117,7 @@
   <p class="pane-label">Renders as</p>
   <div class="em-render"><ul class="em-tasklist"><li><span class="em-task-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/></svg></span><span>A task</span></li><li class="em-task-done"><span class="em-task-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12l3 3 5-6"/></svg></span><span>A finished task</span></li></ul></div>
 </div>
-<h2>Tables</h2>
+<h3>Tables</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code>| Column | Column |
@@ -126,14 +126,14 @@
   <p class="pane-label">Renders as</p>
   <div class="em-render"><table><thead><tr><th>Column</th><th>Column</th></tr></thead><tbody><tr><td>Cell</td><td>Cell</td></tr></tbody></table></div>
 </div>
-<h2>Dividers</h2>
+<h3>Dividers</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code>---</code> or <code>***</code></pre>
   <p class="pane-label">Renders as</p>
   <div class="em-render"><hr style="border:none;border-top:1px solid var(--em-border);margin:0;"></div>
 </div>
-<h2>Code Blocks</h2>
+<h3>Code Blocks</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code>```swift
@@ -142,7 +142,7 @@ let greeting = &quot;Hello&quot;
   <p class="pane-label">Renders as</p>
   <div class="em-render"><pre><code><span class="tok-kw">let</span> greeting = <span class="tok-str">"Hello"</span></code><span class="em-code-lang">Swift</span></pre></div>
 </div>
-<h2>Footnotes</h2>
+<h3>Footnotes</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code>Some claim.[^1]
@@ -151,7 +151,7 @@ let greeting = &quot;Hello&quot;
   <p class="pane-label">Renders as</p>
   <div class="em-render"><p>Some claim.<sup class="em-footnote-ref">1</sup></p><p class="em-footnote-def"><span class="em-footnote-num">1.</span>The footnote text.</p></div>
 </div>
-<h2>Metadata</h2>
+<h3>Metadata</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code>---
@@ -163,7 +163,7 @@ tags: [technology, culture]
 </div>
 <h2>Ghost Cards</h2>
 <p>Some Ghost cards, like Pull Quote and Tables, are supported using existing Markdown formatting. Unique Ghost cards use a fenced block in the editor, meaning it starts with <code>:::ghost-card</code> plus the card type, some <code>field: value</code> lines, and a closing <code>:::</code>.</p>
-<p>You don't need to memorize any of this — the <code>/</code> menu inserts a ready-to-edit template for every card.</p>
+<p>You don't need to memorize any of this — the <code>/</code> menu inserts a ready-to-edit template for every card (and you can also just start typing <code>:::</code> to open a Ghost menu).</p>
 <h3>Callout</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
@@ -171,11 +171,17 @@ tags: [technology, culture]
 emoji: 💡
 color: #007AFF
 Callout text.
+:::</code><br><br>
+<code>:::ghost-card callout
+emoji: ⚠️
+color: #FF0010
+Callout text.
 :::</code></pre>
   <p class="pane-label">Renders as</p>
-  <div class="em-render"><div class="gc-callout" style="--gc-color:#007AFF;"><span class="gc-callout__emoji">💡</span><span class="gc-callout__text">Callout text.</span></div></div>
+  <div class="em-render"><div class="gc-callout" style="--gc-color:#007AFF;"><span class="gc-callout__emoji">💡</span><span class="gc-callout__text">Callout text.</span></div></div><br><br>
+  <div class="em-render"><div class="gc-callout" style="--gc-color:#FF0010;"><span class="gc-callout__emoji">⚠️</span><span class="gc-callout__text">Callout text.</span></div></div>
 </div>
-<h3>Image card</h3>
+<h3>Images</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code>:::ghost-card image
@@ -186,9 +192,8 @@ width: normal
   <p class="pane-label">Renders as</p>
   <div class="em-render"><figure><div class="em-img-ph" style="height:130px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div><figcaption>Optional caption</figcaption></figure></div>
 </div>
-<p><code>width</code> can be <code>normal</code>, <code>wide</code>, or <code>full</code>.</p>
-<h3>Image gallery</h3>
-<p>Use the slash command — it opens a picker, then builds the card from the images you choose. Image URLs and alt text are comma-separated on their own line:</p>
+<p><code>width</code> can be <code>normal</code>, <code>wide</code>, or <code>full</code>. <em>Note: regardless of the width choice, em shows all images the same way.</em></p>
+<h3>Image Gallery</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code>:::ghost-card gallery
@@ -200,7 +205,7 @@ width: wide
   <p class="pane-label">Renders as</p>
   <div class="em-render"><figure><div class="gc-gallery"><div class="gc-gallery__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div><div class="gc-gallery__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div><div class="gc-gallery__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div><div class="gc-gallery__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div></div><figcaption>Trip highlights</figcaption></figure></div>
 </div>
-<h3>Bookmark</h3>
+<h3>Bookmarks</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code>:::ghost-card bookmark
@@ -212,7 +217,7 @@ thumbnail: https://example.com/image.jpg
   <p class="pane-label">Renders as</p>
   <div class="em-render"><div class="gc-bookmark"><div class="gc-bookmark__text"><div class="gc-bookmark__title">Link title</div><div class="gc-bookmark__desc">Link description</div><div class="gc-bookmark__meta">example.com</div></div><div class="gc-bookmark__thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div></div></div>
 </div>
-<h3>Toggle</h3>
+<h3>Toggles</h3>
 <p>A collapsible section — readers tap the title to reveal the content.</p>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
@@ -223,7 +228,7 @@ Hidden toggle content.
   <p class="pane-label">Renders as</p>
   <div class="em-render"><details class="gc-toggle" open><summary>Toggle title</summary><div class="gc-toggle__body">Hidden toggle content.</div></details></div>
 </div>
-<h3>Header</h3>
+<h3>Header Blocks</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code>:::ghost-card header
@@ -237,7 +242,7 @@ buttonText: Learn more
   <div class="em-render"><div class="gc-header"><div class="gc-header__title">Header title</div><p class="gc-header__subtitle">Header subtitle</p><a class="gc-pill" href="#">Learn more</a></div></div>
 </div>
 <p><code>style</code> can be <code>light</code>, <code>dark</code>, or <code>accent</code>.</p>
-<h3>Button</h3>
+<h3>Buttons</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code>:::ghost-card button
@@ -247,7 +252,7 @@ url: https://example.com
   <p class="pane-label">Renders as</p>
   <div class="em-render"><a class="gc-button" href="#">Button text</a></div>
 </div>
-<h3>Product</h3>
+<h3>Product Cards</h3>
 <div class="render-pair">
   <p class="pane-label">Markdown</p>
   <pre><code>:::ghost-card product

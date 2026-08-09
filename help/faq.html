@@ -54,6 +54,8 @@
 <h2 id="privacy">Privacy</h2>
 <h3 id="can-em-access-my-data">Can em access my data?</h3>
 <p><strong>No</strong>. There is no em server at all — that's not a "em doesn't sell your data" promise, it's an architectural decision. Your writing syncs through your own iCloud account and never touches infrastructure em operates. Read more in em's <a href="../privacy.html">Privacy Policy</a>.</p>
+<h3 id="can-em-see-my-ai-questions">Does em see my AI questions?</h3>
+<p><strong>No</strong>. If you use an external model with an API key, those questions are sent through that provider's process. The response is captured as a Markdown file in your AI library. Nothing is ever sent to em or it's developer. Read more in em's <a href="../privacy.html">Privacy Policy</a>.</p>
 <h2 id="files-and-icloud">Files and iCloud</h2>
 <h3 id="why-do-libraries-have-to-be-in-icloud-drive">Why do libraries have to be in iCloud Drive?</h3>
 <p>iCloud is em's only sync feature. Your folders, your version history, your library settings — all of it reaches your other devices by living in an iCloud-synced folder.</p>
@@ -65,29 +67,33 @@
 <li>Versions between one day and one week old are condensed to the most recent version per day — the rest are removed.</li>
 <li>Versions older than a week are reduced to one per week — the rest go.</li>
 </ul>
-<h3 id="what-is-the-em-folder-inside-my-icloud-drive">What is the <code>.em</code> folder inside my iCloud Drive?</h3>
-<p>This is em's home for preferences, Version Histories, and library customizations. It lives inside iCloud so it syncs across your devices. This folder can be deleted by performing a Factory Reset in Settings.</p>
+<h3 id="what-is-the-em-folder-inside-my-icloud-drive">What is the hidden folders inside my iCloud Drive?</h3>
+<p>These are em's home for preferences, Version Histories, and library customizations. They live inside iCloud so it syncs across your devices. This folder can be deleted by performing a Factory Reset in Settings.</p>
 <h3 id="what-happens-to-my-writing-if-i-stop-using-em">What happens to my writing if I stop using em?</h3>
 <p><strong>Nothing</strong>. Your writing stays in its original iCloud location, exactly where it's always been.</p>
 <h3 id="i-added-a-folder-on-one-device-why-does-my-other-device-not-add-it-automatically">I added a folder on one device. Why does my other device not add it automatically?</h3>
 <p>Each device needs to explicitly request permission to your iCloud libraries. This is a way to protect your files in accordance with Apple's policies.</p>
 <h2 id="ghost">Ghost</h2>
 <h3 id="why-cant-i-edit-my-ghost-posts">Why can't I edit my Ghost posts?</h3>
-<p>Ghost sites are read-only by default. To enable editing, turn this off in Settings.</p>
+<p>Ghost sites are read-only by default. To enable editing, turn this off in Settings → Ghost.</p>
 <h3 id="does-em-auto-publish-my-edits">Does em auto-publish my edits?</h3>
 <p><strong>Never</strong>. Nothing reaches your site until you explicitly Save or choose to publish. If you leave a Ghost draft with unsaved changes, em asks what to do.</p>
 <h3 id="does-em-support-ghost-formats-that-are-not-part-of-markdown">Does em support Ghost formats that are not part of Markdown?</h3>
-<p><strong>Yes</strong>! em has a customized version of Markdown that supports 16 different Ghost card types, like callouts, image galleries, and toggles. This custom Markdown is denoted by <code>:::</code> in the editor and can be used in local drafts too! Learn more about <a href="markdown-cheatsheet.html">em's custom version of Markdown</a>.</p>
+<p><strong>Yes</strong>! em uses a customized version of Markdown that supports 16 different Ghost card types, like callouts, image galleries, and toggles. This custom Markdown is denoted by <code>:::</code> in the editor and can be used in local drafts too! Learn more about <a href="markdown-cheatsheet.html">em's custom version of Markdown</a>.</p>
 <h3 id="can-i-use-em-to-export-posts-from-ghost">Can I use em to export posts from Ghost?</h3>
-<p>Yes. em gives you the ability to export a single post or your entire library as markdown files. This includes em's customized markdown format for Ghost-specific styles.</p>
+<p>Yes. em gives you the ability to export a single post or your entire library as Markdown files. This includes em's customized Markdown format for Ghost-specific styles.</p>
 <h2 id="search-and-the-index">Search and the Index</h2>
+<h3 id="why-does-smart-search-say-its-indexing">Why does Smart Search say it's indexing?</h3>
+<p>Smart Search relies on semantic vectors ("chunks") that are built during search indexing. Creating chunks for each file in the library can take a few minutes, especially on large libraries. Each chunk is stored on-device in accordance with em's Privacy Policy. Once the index is finalized, Smart Search will be available. This can take a little while after adding a new library.</p>
 <h3 id="why-do-search-results-look-wrong-or-stale">Why do search results look wrong or stale?</h3>
 <p>It's possible something went wrong with your index. Don't worry, this is only an issue with em's index and your files are fine. Visit Settings → Index → Check Index Health to see what's going on. If needed, use Rebuild Search Index to recreate the index. The index is only a cache — rebuilding never touches your files.</p>
-<h3 id="why-does-smart-search-say-its-indexing">Why does Smart Search say it's indexing?</h3>
-<p>Smart Search relies on semantic vectors ("chunks") that are built during search indexing. Creating chunks for each file in the library can take a few minutes, especially on large libraries. Each chunk is stored on-device in accordance with em's Privacy Policy. Once the index is finalized, Smart Search will be available. </p>
 <h2 id="ai">AI</h2>
+<h3 id="why-would-a-writer-use-ai">Why would a writer use AI?</h3>
+<p>AI use among writers can be controversial, but em believes it's a choice you get to make for yourself. If you want to use AI to provide feedback, em provides the opportunity. But only after you explicitly enable AI and provide access to your libraries. em puts you in control of how or if you use AI.</p>
 <h3 id="do-i-have-to-use-ai-features">Do I have to use AI features?</h3>
 <p><strong>Absolutely not</strong>! Your writing is <em>yours</em> and you should be the only one who decides what to do with it. This means you can use em without ever enabling its AI features. Markdown editing, Version History, Smart Search, and Ghost publishing all work without the need to enable AI.</p>
+<h3 id="ai-is-off-why-does-write-with-siri-still-show-up">AI is off, why does Write With Siri still show up?</h3>
+<p>Write With Siri is a system-wide proofreading tool provided by Apple Intelligence. In em, it's not controlled by the AI settings and instead lives in the Editor settings. You can enable or disable Write With Siri as you wish.</p>
 <h3 id="is-my-ai-usage-private">Is my AI usage private?</h3>
 <p>This answer depends on which AI model you choose. When AI is enabled, em defaults to Apple Intelligence's on-device models. This means your questions and your data never leave your device. AI conversations, even with on-device models, are synced through iCloud so they appear in each version of em you use. </p>
 <p>Using Editorial Review will send contents of the selected draft through remote servers for analysis. When the on-device model is selected, this happens using a Shortcut and Apple's Private Cloud Compute. </p>
@@ -102,9 +108,11 @@
 <h3 id="whats-with-the-em-dash-highlighting">What's with the em dash highlighting?</h3>
 <p>The em dash is the single greatest punctuation mark there is and it's worth showing off — if you want, that is.</p>
 <h3 id="can-em-read-my-writing-aloud">Can em read my writing aloud?</h3>
-<p>Yes. Read Aloud is in the Options menu (⋯), with your choice of voice and speed. It reads the whole article (or, on the Mac, just your selection) and skips code, tables, and images. Read Aloud is a good way to edit your writing based on what you hear.</p>
+<p>Yes. Read Aloud is in the Options menu (⋯), with your choice of voice and speed. It reads the whole article (or, on the Mac, just your selected text) and skips code, tables, and images. Read Aloud is a good way to edit your writing based on what you hear.</p>
 <h3 id="does-em-work-offline">Does em work offline?</h3>
-<p><strong>Yes</strong>. So long as you download files from iCloud, they are available offline. Changes will sync the next time you connect to the internet. Smart Search, editing, Version History, and on-device AI all work offline. Ghost publishing and external models need the internet.</p>
+<p><strong>Yes</strong>. So long as iCloud has downloaded copies of the files in it's directory, they are available offline. Changes will sync the next time you connect to the internet. Smart Search, editing, Version History, and on-device AI all work offline. Ghost publishing and remote models need the internet.</p>
+<h3 id="why-is-em-always-lowercase">Why is em always lowercase?</h3>
+<p>It looks better that way.</p>
   </div>
 </article>
 

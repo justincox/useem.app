@@ -58,11 +58,11 @@
 <p>Ask a question — "what have I written about my grandfather?", "when did I first mention burnout?" — and em answers from your own writing, grounded in the actual documents, with sources you can open. Answers arrive as conversations in the AI library, which is itself just a folder of Markdown files in your iCloud Drive — your conversations sync everywhere, and you can read them in any app.</p>
 <p>Ask em only reads libraries you've approved in Settings → AI.</p>
 <h2 id="editorial-review">Editorial Review</h2>
-<p>Ask for an Editorial Review and em reads your open draft and returns structured feedback. What makes it different: the instructions are yours. Every review follows the "Editorial Review Prompt" document that you can edit in Settings → AI (or in the Shortcut if using the on-device model). Want reviews to focus on structure, or check your citations, or be harsher? Edit the document. Delete your edits and em falls back to its built-in prompt.</p>
-<p>Reviews run through one of two engines:</p>
+<p>Ask for an Editorial Review and em reads the open draft and returns structured feedback. What makes it different: the instructions are yours. Every review follows the "Editorial Review Prompt" document that you can edit in Settings → AI (or in the Shortcut if using Apple Intelligence). Want reviews to focus on structure, or check your citations, or be harsher? Edit the document. Delete your edits and em falls back to its built-in prompt.</p>
+<p>Editorial Reviews run through one of two engines:</p>
 <ul>
 <li><strong>A connected model</strong> (see below), if you've added one.</li>
-<li><strong>A Shortcut</strong> you build in Apple's Shortcuts app — a "Use Model" action runs on Apple's Private Cloud Compute. em hands the Shortcut your draft, and the Shortcut's own permissions govern everything else.</li>
+<li><strong>A Shortcut</strong> you build in Apple's Shortcuts app — a "Use Model" action runs on Apple's Private Cloud Compute. em hands the Shortcut your draft, and the Shortcut's own permissions govern everything else. <a href="shortcuts.html">Learn more about using Shortcuts with em</a>.</li>
 </ul>
 <p>Either way, a review sends the draft's text to the service that reviews it — em tells you so before the first one runs.</p>
 <h2 id="three-privacy-tiers">Three Privacy Tiers</h2>
@@ -71,19 +71,19 @@
 <li><strong>Private Cloud Compute, via Shortcuts.</strong> If you add an Editorial Review Shortcut using Apple's "Use Model" action, your draft is processed on Apple's Private Cloud Compute infrastructure under Apple's own <a href="https://security.apple.com/documentation/private-cloud-compute" target="_blank" rel="noopener noreferrer">PCC privacy guarantees</a>. em hands the Shortcut your draft — the Shortcut's own permissions govern the rest.</li>
 <li><strong>Remote Models (Claude, ChatGPT, or Gemini).</strong> You supply your own API key. When this tier answers a question or reviews a draft, it receives only your question plus the specific excerpts em's on-device search selected, or the text of the draft under review — never your library as a whole, and never your files in bulk. That request goes directly from your device to the provider you chose, using your key. em does not proxy it, log it, or see it.</li>
 </ol>
-<p>Whatever the tier, search, indexing, and your files never leave your device. When an external model answers, it receives your question, the excerpts em's on-device retrieval selected, or the draft under review — nothing more.</p>
+<p>Search, indexing, and reading your files happen entirely on-device in every configuration, regardless of which AI tier you use.</p>
 <h2 id="connecting-your-own-model">Connecting Your Own Model</h2>
-<p>In Settings → AI, pick a provider, paste your API key (the Get a Key… button opens in your browser), and em verifies it before connecting the first time.</p>
+<p>In Settings → AI, pick a provider, paste your API key (the Get a Key… button opens in your browser), and em verifies it before connecting.</p>
 <p>Worth knowing:</p>
 <ul>
 <li><strong>Your key, your billing.</strong> em is not a middleman — usage is billed by the provider to your account, and you can revoke the key in their console at any time.</li>
 <li><strong>One connection at a time.</strong> Connecting a provider replaces the previous one, but switched-away keys stay safely in your Keychain — switch back without re-pasting. Only the Forget API Key… button (or a Factory Reset) deletes one.</li>
-<li><strong>It works everywhere.</strong> The connection and key sync through iCloud Keychain, end-to-end encrypted.</li>
-<li><strong>em always tells you who's answering</strong> — the input field itself says "Ask em, powered by Claude" (or ChatGPT, or Gemini, or Siri), and external models are shown with their real logos, never disguised.</li>
-<li><strong>Disconnect anytime</strong> to return fully on-device.</li>
+<li><strong>Keys work everywhere.</strong> The connection and key sync through iCloud Keychain, and are end-to-end encrypted.</li>
+<li><strong>em always tells you who's answering</strong> — the input field itself says "Ask em, powered by Claude" (or ChatGPT, or Gemini, or Apple Intelligence), and external models are shown with their real logos, never disguised.</li>
+<li><strong>Disconnect keys anytime</strong> to return fully on-device.</li>
 </ul>
 <h3 id="web-searches">Web Searches</h3>
-<p>External models can access the web to add additional references or information to your results. This feature is off by default. When off, requests carry no tools — the model cannot browse the internet, and em strips any external link the model invents, because a link a model can't have visited isn't a valid citation. Turn Enable Web Searches on and the provider's own search runs using your API key — the Editorial Review will cite real retrieved sources in an Extended Citations section.</p>
+<p>External models can access the web to add additional references or information to your results. This feature is off by default. When off, requests carry no tools — the model cannot browse the internet, and em strips any external link the model invents. Turn Enable Web Searches on and the provider's own search runs using your API key — the Editorial Review will cite real retrieved sources in an Extended Citations section.</p>
 <h2 id="turning-ai-off">Turning AI Off</h2>
 <p>Settings → AI → Enable AI turns the whole thing off. Turning it off deletes the AI library and its conversations — on every device.</p>
   </div>
