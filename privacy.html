@@ -62,7 +62,7 @@
 </ul>
 <h2 id="your-files">Your Files</h2>
 <p>Your libraries are folders that live in your iCloud Drive. em reads and writes them directly. Sync between your Mac, iPad, and iPhone happens through Apple's iCloud, under your Apple Account. No copy of your writing is ever transmitted to em's developer or to any server em controls, because that server doesn't exist.</p>
-<p>Deleting em from a device does not delete your files — they're just folders in your normal storage directory. See the FAQ for what happens to em's Version History and the <code>.em</code> metadata folder if you stop using the app.</p>
+<p>Deleting em from a device does not delete your files — they're just folders in your normal storage directory. em writes nothing into your folders — Version History, library settings, and preferences live in em's own iCloud folder, not alongside your writing. See the FAQ for what happens to them if you stop using the app.</p>
 <h2 id="ghost-publishing">Ghost Publishing</h2>
 <p>If you connect a Ghost site, em talks directly to that site's Admin API using a key you generate in your own Ghost admin. That key is stored in your Keychain and synced via iCloud, which is end-to-end encrypted. Data only ever flows between your device and the Ghost site you connected — never through em. Ghost connections are read-only by default and nothing writes to your site until you explicitly choose to enable the feature and then save or publish a draft. There is no background or automatic upload of your drafts.</p>
 <h2 id="ai-features">AI Features</h2>
