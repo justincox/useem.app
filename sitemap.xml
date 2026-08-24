@@ -2,62 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://useem.app/</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://useem.app/help/</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://useem.app/help/getting-started.html</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://useem.app/help/markdown-cheatsheet.html</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://useem.app/help/ghost-publishing.html</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://useem.app/help/search-and-smart-folders.html</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://useem.app/help/ai-features.html</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://useem.app/help/version-history.html</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://useem.app/help/shortcuts.html</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://useem.app/help/faq.html</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://useem.app/privacy.html</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://useem.app/acknowledgements.html</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.3</priority>
   </url>
 </urlset>

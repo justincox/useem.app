@@ -15,7 +15,8 @@
 (function () {
   var doc = document.querySelector('[data-read]');
   var source = document.querySelector('[data-source]');
-  if (!doc) return;
+  /* Only the home page carries an Edit view; every page highlights its dashes. */
+  var page = document.querySelector('.page') || document.body;
 
   var WORDS_PER_MINUTE = 238;
 
@@ -27,7 +28,7 @@
   }
 
   var meta = document.querySelector('[data-doc-meta]');
-  if (meta) {
+  if (meta && doc) {
     var words = countWords(doc.textContent || '');
     var minutes = words > 0 ? Math.max(1, Math.round(words / WORDS_PER_MINUTE)) : 0;
     meta.textContent =
@@ -172,6 +173,7 @@
 
   function toMarkdown() {
     var lines = [];
+    if (!doc) return '';
     Array.prototype.forEach.call(doc.children, function (child) { blockToMarkdown(child, lines); });
     while (lines.length && lines[lines.length - 1] === '') lines.pop();
     return lines.join('\n');
@@ -182,6 +184,7 @@
   var viewButtons = Array.prototype.slice.call(document.querySelectorAll('[data-view]'));
 
   function setView(view) {
+    if (!doc) return;
     var editing = view === 'edit';
     if (editing && source && !source.dataset.rendered) {
       /* The editor is where em highlights em dashes, so the source view does
@@ -206,5 +209,22 @@
   });
 
   /* Marked after the count, so a highlight never becomes a word of its own. */
-  markDashes(doc);
+  markDashes(page);
+
+  /* A link into a collapsed answer should open it and land on it. */
+  function openTarget(hash) {
+    if (!hash || hash.length < 2) return;
+    var target;
+    try { target = document.querySelector(hash); } catch (error) { return; }
+    if (!target) return;
+    var panel = target.closest('details');
+    while (panel) {
+      panel.open = true;
+      panel = panel.parentElement ? panel.parentElement.closest('details') : null;
+    }
+    target.scrollIntoView();
+  }
+
+  window.addEventListener('hashchange', function () { openTarget(window.location.hash); });
+  if (window.location.hash) openTarget(window.location.hash);
 })();

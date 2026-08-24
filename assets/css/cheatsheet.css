@@ -1,0 +1,429 @@
+/*
+ * Markdown cheatsheet only: the rendered examples that reproduce em's Read
+ * view block by block. Lifted unchanged from the retired site.css, and still
+ * measured from the app (UnifiedReadDocument.swift, MarkdownPreview.swift,
+ * UnifiedMarkdownReadView.swift). Depends on tokens.css and read.css.
+ */
+
+
+/* ==========================================================================
+   Markdown Cheatsheet — rendered examples
+   Every syntax block is paired with a live render styled to match em's own
+   Read view exactly (measured from the app: UnifiedReadDocument.swift,
+   MarkdownPreview.swift, UnifiedMarkdownReadView.swift — Paper-and-Ink
+   colors, Fraunces/Ubuntu/Courier Prime, the 12pt shared corner radius,
+   the accent-tinted card treatments). The library's user-customizable
+   accent color is represented here by the site's own green accent.
+   ========================================================================== */
+
+.render-pair { margin: 1.5rem 0 2.5rem; }
+.render-pair .pane-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--fg-muted);
+  margin: 0 0 0.5rem;
+}
+.render-pair .pane-label:not(:first-child) { margin-top: 1.1rem; }
+.render-pair pre {
+  margin: 0;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+.render-pair pre code { font-family: var(--font-mono); }
+
+/* ---------- .em-render: em's Read view, reproduced ---------- */
+.em-render {
+  --em-bg: #F6F1E4;
+  --em-text: #121212;
+  --em-text-secondary: rgba(18, 18, 18, 0.6);
+  --em-text-tertiary: rgba(18, 18, 18, 0.4);
+  --em-link: #0069DB;
+  --em-accent: var(--accent);
+  --em-boxed-fill: rgba(18, 18, 18, 0.07);
+  --em-border: rgba(18, 18, 18, 0.16);
+  --em-syntax-kw: #B52170;
+  --em-syntax-str: #C41A17;
+  background: var(--em-bg);
+  color: var(--em-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.55;
+  padding: 1.35rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+}
+@media (prefers-color-scheme: dark) {
+  .em-render {
+    --em-bg: #252525;
+    --em-text: #FFFFFF;
+    --em-text-secondary: rgba(255, 255, 255, 0.6);
+    --em-text-tertiary: rgba(255, 255, 255, 0.4);
+    --em-link: #248DFF;
+    --em-boxed-fill: rgba(255, 255, 255, 0.07);
+    --em-border: rgba(255, 255, 255, 0.16);
+    --em-syntax-kw: #FD6B8C;
+    --em-syntax-str: #FA7057;
+  }
+}
+.em-render > *:first-child { margin-top: 0; }
+.em-render > *:last-child { margin-bottom: 0; }
+.em-render h1, .em-render h2, .em-render h3 {
+  /* Reset: nested inside .article__body, whose h2/h3 rules (divider,
+     top padding, scroll-margin) would otherwise leak into these
+     "renders as" heading examples. */
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-variation-settings: "opsz" 9, "WONK" 1;
+  color: var(--em-text);
+  margin: 0 0 0.5rem;
+  padding-top: 0;
+  border-top: none;
+  scroll-margin-top: 0;
+  line-height: 1.1;
+}
+.em-render h1 { font-size: 2rem; }
+.em-render h2 { font-size: 1.75rem; }
+.em-render h3 { font-size: 1.625rem; }
+.em-render p { margin: 0 0 1rem; color: var(--em-text); }
+.em-render strong { font-weight: 700; }
+.em-render em { font-style: italic; }
+.em-render s, .em-render del { color: var(--em-text-secondary); text-decoration: line-through; }
+.em-render code {
+  /* em's Read view: inline code is a bare font swap, no pill styling —
+     reset what .article__body code (the site's own prose style) adds. */
+  font-family: var(--font-mono);
+  font-size: 1em;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+.em-render a { color: var(--em-link); text-decoration: none; }
+.em-render a:hover { text-decoration: underline; }
+.em-render .em-hashtag { color: var(--em-link); text-decoration: none; }
+.em-render img { border-radius: 12px; }
+
+.em-render blockquote {
+  margin: 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--em-accent);
+  color: var(--em-text-secondary);
+}
+
+.em-render .em-pullquote { text-align: center; padding: 0.75rem 1rem; margin: 0; }
+.em-render .em-pullquote hr {
+  border: none;
+  border-top: 1px solid color-mix(in srgb, var(--em-accent) 45%, transparent);
+  width: 4rem;
+  margin: 0 auto 0.9rem;
+}
+.em-render .em-pullquote hr:last-child { margin: 0.9rem auto 0; }
+.em-render .em-pullquote p {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 900;
+  color: var(--em-accent);
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.em-render .em-highlight {
+  background: color-mix(in srgb, var(--em-accent) 85%, transparent);
+  border: 1px solid color-mix(in srgb, var(--em-accent) 35%, transparent);
+  border-radius: 4px;
+  padding: 0.05em 0.3em;
+  font-weight: 700;
+  color: #fff;
+}
+
+.em-render ul, .em-render ol { margin: 0 0 1rem; padding-left: 1.3rem; }
+.em-render li { margin-bottom: 0.35rem; }
+.em-render .em-tasklist { list-style: none; padding-left: 0; }
+.em-render .em-tasklist li { display: flex; align-items: flex-start; gap: 0.55rem; }
+.em-render .em-task-icon { flex: none; width: 1.15rem; height: 1.15rem; margin-top: 0.15rem; color: var(--em-text); }
+.em-render .em-task-done .em-task-icon { color: var(--em-text-secondary); }
+.em-render .em-task-done { color: var(--em-text-secondary); text-decoration: line-through; }
+
+.em-render pre {
+  background: var(--em-boxed-fill);
+  border-radius: 12px;
+  padding: 0.8rem 0.9rem;
+  overflow-x: auto;
+  margin: 0;
+  position: relative;
+}
+.em-render pre code { font-family: var(--font-mono); font-size: 0.88rem; line-height: 1.6; }
+.em-render .em-code-lang {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--em-text) 10%, transparent);
+  color: var(--em-text-secondary);
+}
+.em-render .tok-kw { color: var(--em-syntax-kw); }
+.em-render .tok-str { color: var(--em-syntax-str); }
+
+.em-render table { width: 100%; border-collapse: collapse; border-radius: 12px; overflow: hidden; border: 1.5px solid var(--em-border); }
+.em-render th, .em-render td { padding: 0.6rem 0.85rem; text-align: left; border-bottom: 1px solid var(--em-border); }
+.em-render thead th { background: color-mix(in srgb, var(--em-text) 12%, transparent); font-weight: 700; }
+.em-render tbody tr:nth-child(odd) { background: color-mix(in srgb, var(--em-text) 6%, transparent); }
+.em-render tbody tr:last-child td { border-bottom: none; }
+
+/* Ghost cards */
+.em-render .gc-callout {
+  /* Real em callouts take their color from the card's own `color:` field
+     (or fall back to the library accent) — set --gc-color inline per
+     example to match, same as the app does per-card. */
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  padding: 0.9rem;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--gc-color, var(--em-accent)) 50%, transparent);
+  border: 1px solid color-mix(in srgb, var(--gc-color, var(--em-accent)) 32%, transparent);
+}
+.em-render .gc-callout__emoji { flex: none; font-size: 1.2rem; line-height: 1; }
+.em-render .gc-callout__text { color: var(--em-text); }
+
+.em-render .gc-bookmark {
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--em-text) 6%, transparent);
+  min-height: 7rem;
+}
+.em-render .gc-bookmark__text { flex: 1; padding: 0.9rem; display: flex; flex-direction: column; justify-content: center; gap: 0.3rem; min-width: 0; }
+.em-render .gc-bookmark__title { font-weight: 700; }
+.em-render .gc-bookmark__desc { font-size: 0.88rem; color: var(--em-text-secondary); }
+.em-render .gc-bookmark__meta { font-size: 0.78rem; color: var(--em-text-tertiary); }
+.em-render .gc-bookmark__thumb {
+  width: 32%;
+  flex: none;
+  background: color-mix(in srgb, var(--em-text) 14%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--em-text-tertiary);
+}
+.em-render .gc-bookmark__thumb svg { width: 1.6rem; height: 1.6rem; }
+
+.em-render .gc-toggle {
+  border-radius: 12px;
+  padding: 0.8rem 0.9rem;
+  background: color-mix(in srgb, var(--em-accent) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--em-accent) 25%, transparent);
+}
+.em-render .gc-toggle summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--em-text);
+}
+.em-render .gc-toggle summary::-webkit-details-marker { display: none; }
+.em-render .gc-toggle summary::before {
+  content: "\203A";
+  display: inline-block;
+  transition: transform 0.15s ease;
+  color: var(--em-text-secondary);
+}
+.em-render .gc-toggle[open] summary::before { transform: rotate(90deg); }
+.em-render .gc-toggle__body { padding-top: 0.65rem; color: var(--em-text); }
+
+.em-render .gc-header {
+  border-radius: 8px;
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+}
+.em-render .gc-header__title { font-family: var(--font-body); font-size: 1.4rem; font-weight: 700; margin: 0 0 0.4rem; }
+.em-render .gc-header__subtitle { margin: 0 0 1rem; opacity: 0.86; }
+.em-render .gc-header .gc-pill {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.16);
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.em-render .gc-button {
+  display: block;
+  text-align: center;
+  background: var(--em-accent);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+}
+.em-render .gc-button:hover { text-decoration: none; opacity: 0.92; }
+
+.em-render .gc-product {
+  border-radius: 12px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--em-accent) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--em-accent) 25%, transparent);
+}
+.em-render .gc-product__image {
+  height: 7.5rem;
+  background: color-mix(in srgb, var(--em-text) 14%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--em-text-tertiary);
+}
+.em-render .gc-product__image svg { width: 1.8rem; height: 1.8rem; }
+.em-render .gc-product__body { padding: 0.9rem; }
+.em-render .gc-product__title-row { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
+.em-render .gc-product__title { font-weight: 700; color: var(--em-text); }
+.em-render .gc-product__stars { color: #F5A623; font-size: 0.85rem; letter-spacing: 0.04em; flex: none; }
+.em-render .gc-product__desc { font-size: 0.9rem; color: var(--em-text-secondary); margin: 0.45rem 0 0.85rem; }
+.em-render .gc-product .gc-pill {
+  display: block;
+  text-align: center;
+  background: var(--em-accent);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.em-render .gc-signup {
+  display: flex;
+  gap: 0.8rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--em-text) 5%, transparent);
+}
+.em-render .gc-signup__icon { flex: none; color: var(--em-text-secondary); width: 1.35rem; height: 1.35rem; }
+.em-render .gc-signup__title { font-weight: 700; color: var(--em-text); }
+.em-render .gc-signup__desc { font-size: 0.9rem; color: var(--em-text-secondary); margin: 0.25rem 0 0.55rem; }
+.em-render .gc-signup__action { font-weight: 700; color: var(--em-accent); font-size: 0.9rem; }
+
+.em-render .gc-hidden {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px dashed color-mix(in srgb, var(--em-text) 24%, transparent);
+}
+.em-render .gc-hidden__icon { flex: none; opacity: 0.6; width: 1.3rem; height: 1.3rem; color: var(--em-text); }
+.em-render .gc-hidden__title { font-weight: 700; font-size: 0.9rem; color: var(--em-text); }
+.em-render .gc-hidden__sub { font-size: 0.78rem; color: var(--em-text-secondary); }
+
+.em-render .gc-frontmatter {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.45rem 1.25rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 12px;
+  background: var(--em-boxed-fill);
+  border: 1px solid var(--em-border);
+  font-size: 0.9rem;
+  margin: 0;
+}
+.em-render .gc-frontmatter dt { color: var(--em-text-secondary); font-weight: 600; font-size: 0.85em; }
+.em-render .gc-frontmatter dd { margin: 0; color: var(--em-text); }
+
+/* Images: a real placeholder graphic (not just a colored box), with the
+   alt/caption text always shown as a proper caption underneath — matches
+   how em's Read view captions every image, not only Ghost image cards. */
+.em-render figure { margin: 0; }
+.em-render .em-img-ph {
+  height: 110px;
+  border-radius: 12px;
+  background: var(--em-boxed-fill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--em-text-tertiary);
+}
+.em-render .em-img-ph svg { width: 2rem; height: 2rem; }
+.em-render figcaption {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--em-text-secondary);
+  margin-top: 0.5rem;
+}
+
+/* Footnotes: the reference is a plain superscript (not a live link in this
+   static example), and the actual definition text renders below, matching
+   em's own Read view footnote list — marker + body, secondary color,
+   hanging indent. */
+.em-render .em-footnote-ref {
+  font-size: 0.7em;
+  vertical-align: super;
+  color: var(--em-link);
+}
+.em-render .em-footnote-def {
+  font-size: 0.85em;
+  color: var(--em-text-secondary);
+  margin-top: 0.75rem;
+  padding-left: 1.1rem;
+  text-indent: -1.1rem;
+}
+.em-render .em-footnote-num { margin-right: 0.2rem; }
+
+/* Gallery: 2-column tile grid, matching the app's LazyVGrid layout. */
+.em-render .gc-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+.em-render .gc-gallery__tile {
+  aspect-ratio: 1;
+  border-radius: 6px;
+  background: var(--em-boxed-fill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--em-text-tertiary);
+}
+.em-render .gc-gallery__tile svg { width: 1.4rem; height: 1.4rem; }
+
+/* ==========================================================================
+   Living inside a .doc
+   read.css styles every list, rule, and table in the page as em's Read view
+   draws them. Inside .em-render those same elements are the *example*, so the
+   document's own markers step aside and the reproduction's own rules stand.
+   ========================================================================== */
+
+.em-render ul { list-style: disc; padding-left: 1.3rem; }
+.em-render ol { list-style: decimal; padding-left: 1.3rem; counter-reset: none; }
+.em-render ul li,
+.em-render ol li {
+  position: static;
+  padding-left: 0;
+  margin-bottom: 0.35rem;
+  counter-increment: none;
+}
+.em-render ul li::before,
+.em-render ol li::before { content: none; }
+.em-render .em-tasklist { list-style: none; padding-left: 0; }
+.em-render figure img { border: 0; border-radius: 12px; }
+.em-render hr { width: auto; height: auto; background: none; border-radius: 0; }
+.em-render blockquote p {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.55;
+}

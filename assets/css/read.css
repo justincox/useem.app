@@ -1,12 +1,16 @@
 /*
- * useem.app home page.
+ * useem.app — every page.
  *
- * The page is one document, drawn the way em's Read view draws a document:
+ * Each page is one document, drawn the way em's Read view draws a document:
  * Read's own paper and ink, the 700pt column cap, ReadTypeScale.page for the
  * headings, and the single 3pt rule at half the column that em uses for
  * thematic breaks, quote bars, and pull quotes alike. The toolbar is em's
- * toolbar — a Read/Edit pair and the em dash highlight switch. Depends on
- * tokens.css; the help and privacy pages still use site.css.
+ * toolbar — the Read/Edit pair (home only) and the em dash highlight switch.
+ *
+ * Green is the library colour. In em every library carries an accent that
+ * tints its rules, quote bars, links, and card fills; em's own is the green in
+ * the app icon, so that is what marks up the site. Depends on tokens.css; the
+ * cheatsheet loads cheatsheet.css on top for its rendered examples.
  */
 
 body {
@@ -228,30 +232,37 @@ body {
   text-align: center;
 }
 
-/* One line, drawn at one weight: the thematic break is half the column. */
+/* One line, drawn at one weight, in the library's colour: the thematic break
+   is half the column. */
 .doc hr {
   border: 0;
   height: var(--rule-thickness);
   width: 50%;
   margin: 3rem auto;
   border-radius: 999px;
-  background: var(--rule);
+  background: color-mix(in srgb, var(--accent) 55%, transparent);
 }
 
 .doc section { margin: 0 0 3rem; }
 .doc section > h2 { margin-bottom: 0.6em; }
-/* A `###` under a `##` is that section's aside, set tight against it. */
-.doc section > h2 + h3 {
+.doc section > h3 { margin: 2.25rem 0 0.9rem; }
+/* Pages whose body is one long run of prose rather than titled sections. */
+.article__body h2 { margin: 2.75rem 0 0.6em; }
+.article__body h3 { margin: 2rem 0 0.5em; }
+.article__body > *:first-child { margin-top: 0; }
+/* A `###` written as a section's aside rather than a heading of its own, set
+   tight against the `##` above it. */
+.doc h3.aside {
   margin: -0.5em 0 0.8em;
   color: var(--ink-muted);
   font-size: 1.1em;
 }
 
-/* The quote's bar is the same mark as the rule. */
+/* The quote's bar is the same mark as the rule, in the same library colour. */
 .doc blockquote {
   margin: 1.6rem 0;
   padding-left: var(--nesting-indent);
-  border-left: var(--rule-thickness) solid var(--rule);
+  border-left: var(--rule-thickness) solid var(--accent);
 }
 .doc blockquote p {
   font-family: var(--font-heading);
@@ -277,7 +288,27 @@ body {
   position: absolute;
   left: 0;
   width: var(--marker-column);
-  color: var(--ink-muted);
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+.doc ol {
+  list-style: none;
+  counter-reset: step;
+  margin: 0 0 1.15em;
+  padding: 0;
+}
+.doc ol > li {
+  position: relative;
+  counter-increment: step;
+  padding-left: calc(var(--nesting-indent) + 0.5rem);
+  margin-bottom: 0.6em;
+}
+.doc ol > li::before {
+  content: counter(step) ".";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
   font-family: var(--font-mono);
 }
 
@@ -305,6 +336,181 @@ body {
   border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
 }
 .doc__more:hover { border-bottom-color: var(--accent); }
+
+/* Prose links wear the library colour, the way a link does inside a document. */
+.doc p a,
+.doc li a,
+.doc td a,
+.doc dd a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.doc p a:hover,
+.doc li a:hover,
+.doc td a:hover,
+.doc dd a:hover { border-bottom-color: var(--accent); }
+
+/* ---------- article pages ---------- */
+
+.doc__eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+.doc__title {
+  font-size: 2em;
+  margin: 0 0 0.5rem;
+}
+.doc__updated {
+  font-family: var(--font-mono);
+  font-size: 0.78em;
+  color: var(--ink-muted);
+  margin: 0 0 2.5rem;
+}
+.back-link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  color: var(--ink-muted);
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+.back-link:hover { color: var(--ink); }
+
+/* Contents: anchor links, set like a document's own list of sections. */
+.toc {
+  margin: 0 0 3rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--block-radius);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+}
+.toc h2 {
+  font-family: var(--font-mono) !important;
+  font-size: 0.75em !important;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin: 0 0 0.75rem;
+}
+.toc ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+.toc ul li { margin: 0; padding: 0; position: static; }
+.toc ul li::before { content: none; }
+.toc a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.toc a:hover { border-bottom-color: var(--accent); }
+
+/* Every heading is an anchor target, so give it room under the sticky bar. */
+.doc h2[id],
+.doc h3[id],
+.doc summary[id] { scroll-margin-top: 4.5rem; }
+
+/* ---------- toggles ---------- */
+
+/*
+ * em renders a Ghost toggle card as a tinted block with a chevron that turns.
+ * The help page's questions are the same block, doing the same job.
+ */
+.toggle {
+  border-radius: var(--block-radius);
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  padding: 0.85rem 1.1rem;
+  margin: 0 0 0.6rem;
+}
+.toggle > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  font-weight: 700;
+  scroll-margin-top: 4.5rem;
+}
+.toggle > summary::-webkit-details-marker { display: none; }
+.toggle > summary::before {
+  content: "›";
+  flex: none;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  transition: transform 140ms ease;
+}
+.toggle[open] > summary::before { transform: rotate(90deg); }
+.toggle__body { padding-top: 0.85rem; }
+.toggle__body > *:last-child { margin-bottom: 0; }
+
+/* ---------- callouts ---------- */
+
+/*
+ * A Ghost callout card: an emoji, a tinted fill, the library colour on the
+ * edge. Set --gc-color on the element to use one of em's own pigments.
+ */
+.callout {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.9rem 1.1rem;
+  margin: 1.5rem 0;
+  border-radius: var(--block-radius);
+  background: color-mix(in srgb, var(--gc-color, var(--accent)) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--gc-color, var(--accent)) 28%, transparent);
+}
+.callout__emoji { flex: none; font-size: 1.1rem; line-height: 1.5; }
+.callout__body > *:last-child { margin-bottom: 0; }
+
+/* ---------- code, tables ---------- */
+
+.doc code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+.doc pre {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  line-height: 1.6;
+  overflow-x: auto;
+  padding: 0.9rem 1.1rem;
+  margin: 0 0 1.15em;
+  border-radius: var(--block-radius);
+  background: color-mix(in srgb, var(--ink) 6%, transparent);
+}
+.doc pre code { font-size: inherit; }
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 0 0 1.5em;
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  border-radius: var(--block-radius);
+}
+.doc table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92em;
+}
+.doc th,
+.doc td {
+  text-align: left;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+}
+.doc thead th { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.doc tbody tr:last-child td { border-bottom: 0; }
 
 .doc__end { text-align: center; margin-bottom: 0; }
 .doc__actions { margin: 1.5rem 0 0; }
@@ -368,7 +574,9 @@ body {
 }
 .footer-signature { display: block; line-height: 0; }
 .footer-signature__mark { width: 108px; height: auto; }
-.fs-pilcrow { fill: var(--accent); }
+/* The pilcrow is orange in Justin Cox's mark, in every context — it does not
+   take the page's accent. */
+.fs-pilcrow { fill: #FF7700; }
 .fs-wordmark { fill: var(--ink); }
 .footer-links {
   display: flex;
