@@ -5,7 +5,7 @@
  * Read's own paper and ink, the 700pt column cap, ReadTypeScale.page for the
  * headings, and the single 3pt rule at half the column that em uses for
  * thematic breaks, quote bars, and pull quotes alike. The toolbar is em's
- * toolbar — the Read/Edit pair (home only) and the em dash highlight switch.
+ * toolbar — the Read/Edit pair, on the home page.
  *
  * Green is the library colour. In em every library carries an accent that
  * tints its rules, quote bars, links, and card fills; em's own is the green in
@@ -108,29 +108,6 @@ body {
   background: var(--paper);
   color: var(--ink);
   box-shadow: 0 1px 2px hsl(var(--shadow-color) / 0.18);
-}
-
-.dash-toggle {
-  appearance: none;
-  cursor: pointer;
-  font: inherit;
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  line-height: 1;
-  width: 2rem;
-  height: 1.85rem;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--rule);
-  border-radius: 8px;
-  background: transparent;
-  color: var(--ink-muted);
-  transition: background 120ms ease, color 120ms ease;
-}
-.dash-toggle.is-active {
-  background: var(--highlight);
-  color: var(--ink);
-  border-color: transparent;
 }
 
 .toolbar__links {
@@ -549,15 +526,12 @@ body {
   cursor: default;
 }
 
-/* The em dash wears the highlight — the same feature, switched on. */
+/* The em dash is picked out in the library colour, the way em's editor marks
+   it — the greatest punctuation mark there is, wearing the accent. */
 .emdash {
-  background: transparent;
-  color: inherit;
-  border-radius: 3px;
-  padding: 0 0.08em;
-  transition: background 140ms ease;
+  background: none;
+  color: var(--accent);
 }
-.dashes-on .emdash { background: var(--highlight); }
 
 /* ---------- edit view ---------- */
 

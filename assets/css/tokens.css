@@ -103,9 +103,6 @@
   --olive: #7d8b46;
   --teal: #3f8b86;
   --plum: #8a4f79;
-
-  /* The one highlight colour — em ships yellow, and the em dash wears it. */
-  --highlight: rgba(233, 196, 70, 0.42);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -128,8 +125,6 @@
     --olive: #9aa85f;
     --teal: #5aa8a2;
     --plum: #b06f97;
-
-    --highlight: rgba(233, 196, 70, 0.30);
   }
 }
 

@@ -3,7 +3,7 @@
  *
  * Three small jobs, all of them things em itself does:
  *   1. Count the words and the reading time (238 wpm, the app's own rate).
- *   2. Highlight every em dash, switchable, the way the editor does.
+ *   2. Mark every em dash in the library colour, the way the editor does.
  *   3. Toggle Read and Edit — the Edit view is the Markdown that would have
  *      produced the Read view, written out of the rendered document itself so
  *      the two can never drift apart.
@@ -15,7 +15,7 @@
 (function () {
   var doc = document.querySelector('[data-read]');
   var source = document.querySelector('[data-source]');
-  /* Only the home page carries an Edit view; every page highlights its dashes. */
+  /* Only the home page carries an Edit view; every page marks its dashes. */
   var page = document.querySelector('.page') || document.body;
 
   var WORDS_PER_MINUTE = 238;
@@ -37,7 +37,7 @@
       minutes + ' min read';
   }
 
-  /* ---------- em dash highlighting ---------- */
+  /* ---------- em dashes ---------- */
 
   function markDashes(root) {
     var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
@@ -56,7 +56,7 @@
       var fragment = document.createDocumentFragment();
       parts.forEach(function (part, i) {
         if (i > 0) {
-          var mark = document.createElement('mark');
+          var mark = document.createElement('span');
           mark.className = 'emdash';
           mark.textContent = '—';
           fragment.appendChild(mark);
@@ -64,16 +64,6 @@
         if (part) fragment.appendChild(document.createTextNode(part));
       });
       text.parentNode.replaceChild(fragment, text);
-    });
-  }
-
-  var dashButton = document.querySelector('[data-dash-toggle]');
-  if (dashButton) {
-    document.body.classList.add('dashes-on');
-    dashButton.addEventListener('click', function () {
-      var on = document.body.classList.toggle('dashes-on');
-      dashButton.classList.toggle('is-active', on);
-      dashButton.setAttribute('aria-pressed', String(on));
     });
   }
 
@@ -187,9 +177,9 @@
     if (!doc) return;
     var editing = view === 'edit';
     if (editing && source && !source.dataset.rendered) {
-      /* The editor is where em highlights em dashes, so the source view does
-         too. Nothing but text can carry a dash here, so a replace is safe. */
-      source.innerHTML = toMarkdown().replace(/—/g, '<mark class="emdash">—</mark>');
+      /* The editor is where em marks em dashes, so the source view does too.
+         Nothing but text can carry a dash here, so a replace is safe. */
+      source.innerHTML = toMarkdown().replace(/—/g, '<span class="emdash">—</span>');
       source.dataset.rendered = 'true';
     }
     doc.hidden = editing;
@@ -208,7 +198,7 @@
     button.addEventListener('click', function () { setView(button.dataset.view); });
   });
 
-  /* Marked after the count, so a highlight never becomes a word of its own. */
+  /* Marked after the count, so a mark never becomes a word of its own. */
   markDashes(page);
 
   /* A link into a collapsed answer should open it and land on it. */
