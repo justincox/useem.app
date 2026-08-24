@@ -292,15 +292,16 @@ body {
 .doc figure {
   margin: 1.75rem 0 0;
 }
+/* em draws an image as the art alone: the 12pt corner radius and nothing
+   round it, with the caption centred underneath. No frame. */
 .doc figure img {
   width: 100%;
   height: auto;
   border-radius: var(--block-radius);
-  border: 1px solid var(--rule);
 }
 .doc figcaption {
-  margin-top: 0.6rem;
-  padding-left: var(--block-radius);
+  margin-top: 0.5rem;
+  text-align: center;
   font-size: 0.74em;
   color: var(--ink-muted);
 }
