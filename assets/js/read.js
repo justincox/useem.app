@@ -112,6 +112,23 @@
   function blockToMarkdown(el, lines) {
     var name = el.tagName.toLowerCase();
 
+    /* A callout is a Ghost card, and em writes Ghost cards as fenced blocks. */
+    if (el.classList.contains('callout')) {
+      var emoji = el.querySelector('.callout__emoji');
+      var styles = window.getComputedStyle(el);
+      var color = styles.getPropertyValue('--gc-color').trim();
+      var indirect = color.match(/^var\((--[\w-]+)\)$/);
+      if (indirect) color = styles.getPropertyValue(indirect[1]).trim();
+
+      lines.push(token('marker', ':::ghost-card callout'));
+      if (emoji) lines.push(token('marker', 'emoji: ') + escapeHTML(emoji.textContent.trim()));
+      if (color) lines.push(token('marker', 'color: ') + token('link', color));
+      Array.prototype.forEach.call(el.querySelectorAll('.callout__body p'), function (p) {
+        lines.push(inline(p).trim());
+      });
+      lines.push(token('marker', ':::'), '');
+      return;
+    }
     if (name === 'section' || name === 'header' || name === 'div') {
       Array.prototype.forEach.call(el.children, function (child) { blockToMarkdown(child, lines); });
       return;

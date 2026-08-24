@@ -182,7 +182,6 @@ body {
 .doc__subtitle {
   font-size: 1.2em !important;
   font-weight: 900;
-  color: var(--ink-muted);
   margin: 0 0 1.1rem;
 }
 
@@ -197,16 +196,28 @@ body {
   .doc__meta { font-size: 0.7em; }
 }
 
-.lede {
+/*
+ * The page's one claim, carried by a callout card in em's clay pigment. em
+ * fills a callout at half its colour, so the page's headline card is mixed
+ * close to that rather than at the quiet tint the asides use.
+ */
+.callout.callout--lede {
+  margin: 0;
+  padding: 1.15rem 1.4rem;
+  align-items: center;
+  background: color-mix(in srgb, var(--gc-color) 38%, transparent);
+  border-color: color-mix(in srgb, var(--gc-color) 55%, transparent);
+}
+.callout--lede .callout__emoji { font-size: 1.5rem; }
+.callout--lede p {
   font-size: 1.35em;
-  line-height: 1.35;
+  line-height: 1.3;
   font-family: var(--font-heading);
   font-weight: 900;
   font-variation-settings: "opsz" 9, "WONK" 1;
   letter-spacing: -0.01em;
   text-wrap: balance;
-  margin: 0 0 0.5em !important;
-  text-align: center;
+  margin: 0;
 }
 
 /* One line, drawn at one weight, in the library's colour: the thematic break
