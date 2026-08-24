@@ -1,0 +1,389 @@
+/*
+ * useem.app home page.
+ *
+ * The page is one document, drawn the way em's Read view draws a document:
+ * Read's own paper and ink, the 700pt column cap, ReadTypeScale.page for the
+ * headings, and the single 3pt rule at half the column that em uses for
+ * thematic breaks, quote bars, and pull quotes alike. The toolbar is em's
+ * toolbar — a Read/Edit pair and the em dash highlight switch. Depends on
+ * tokens.css; the help and privacy pages still use site.css.
+ */
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: clamp(1.0625rem, 0.98rem + 0.4vw, 1.1875rem);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 50;
+  padding: 0.75rem 1rem;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 0 0 var(--block-radius) 0;
+}
+.skip:focus { left: 0; }
+
+/* ---------- toolbar ---------- */
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rule);
+}
+.toolbar__wrap {
+  max-width: calc(var(--column) + 8rem);
+  margin: 0 auto;
+  padding: 0.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.toolbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  color: inherit;
+  min-width: 0;
+}
+.toolbar__file {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.toolbar__ext { color: var(--ink-muted); }
+.toolbar__tools {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.segmented {
+  display: inline-flex;
+  padding: 2px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ink) 8%, transparent);
+}
+.segmented__btn {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.8125rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-muted);
+  transition: background 120ms ease, color 120ms ease;
+}
+.segmented__btn.is-active {
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 1px 2px hsl(var(--shadow-color) / 0.18);
+}
+
+.dash-toggle {
+  appearance: none;
+  cursor: pointer;
+  font: inherit;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  line-height: 1;
+  width: 2rem;
+  height: 1.85rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink-muted);
+  transition: background 120ms ease, color 120ms ease;
+}
+.dash-toggle.is-active {
+  background: var(--highlight);
+  color: var(--ink);
+  border-color: transparent;
+}
+
+.toolbar__links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+.toolbar__links a {
+  text-decoration: none;
+  color: var(--ink-muted);
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+.toolbar__links a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--rule);
+}
+
+@media (max-width: 640px) {
+  .toolbar__links { display: none; }
+  .toolbar__wrap { padding: 0.5rem 1rem; }
+}
+
+/* ---------- the document ---------- */
+
+.page {
+  max-width: var(--column);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 8vw, 5rem) 1.25rem 4rem;
+}
+
+.doc h1,
+.doc h2,
+.doc h3 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-variation-settings: "opsz" 9, "WONK" 1;
+  letter-spacing: -0.015em;
+  line-height: 1.08;
+  margin: 0;
+}
+/* ReadTypeScale.page: 2.0 / 1.6 / 1.35 against the reading size. */
+.doc h1 { font-size: 2em; }
+.doc h2 { font-size: 1.6em; }
+.doc h3 { font-size: 1.35em; }
+
+.doc p { margin: 0 0 1.15em; }
+.doc a { color: inherit; }
+
+.doc__head { text-align: center; margin-bottom: 2.5rem; }
+.doc__head .app-icon { margin: 0 auto 1.75rem; }
+/* The title is the wordmark: Pacifico draws "em" and nothing else, in the app
+   and here. */
+.doc__head h1 {
+  font-family: var(--font-wordmark);
+  font-weight: 400;
+  font-variation-settings: normal;
+  font-size: 3em;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--accent);
+  margin: 0 0 0.15em;
+}
+
+/*
+ * An `##` straight after an `#` is that title's subtitle rather than a section
+ * of its own — em sets the pair tight, so the page does too.
+ */
+.doc__subtitle {
+  font-size: 1.2em !important;
+  font-weight: 900;
+  color: var(--ink-muted);
+  margin: 0 0 1.1rem;
+}
+
+.doc__meta {
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  color: var(--ink-muted);
+  margin: 0;
+  text-wrap: balance;
+}
+@media (max-width: 480px) {
+  .doc__meta { font-size: 0.7em; }
+}
+
+.lede {
+  font-size: 1.35em;
+  line-height: 1.35;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-variation-settings: "opsz" 9, "WONK" 1;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  margin: 0 0 0.5em !important;
+  text-align: center;
+}
+
+/* One line, drawn at one weight: the thematic break is half the column. */
+.doc hr {
+  border: 0;
+  height: var(--rule-thickness);
+  width: 50%;
+  margin: 3rem auto;
+  border-radius: 999px;
+  background: var(--rule);
+}
+
+.doc section { margin: 0 0 3rem; }
+.doc section > h2 { margin-bottom: 0.6em; }
+/* A `###` under a `##` is that section's aside, set tight against it. */
+.doc section > h2 + h3 {
+  margin: -0.5em 0 0.8em;
+  color: var(--ink-muted);
+  font-size: 1.1em;
+}
+
+/* The quote's bar is the same mark as the rule. */
+.doc blockquote {
+  margin: 1.6rem 0;
+  padding-left: var(--nesting-indent);
+  border-left: var(--rule-thickness) solid var(--rule);
+}
+.doc blockquote p {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-variation-settings: "opsz" 9, "WONK" 1;
+  font-size: 1.2em;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.doc ul {
+  list-style: none;
+  margin: 0 0 1.15em;
+  padding: 0;
+}
+.doc ul li {
+  position: relative;
+  padding-left: var(--nesting-indent);
+  margin-bottom: 0.6em;
+}
+.doc ul li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  width: var(--marker-column);
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+}
+
+.doc figure {
+  margin: 1.75rem 0 0;
+}
+.doc figure img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--block-radius);
+  border: 1px solid var(--rule);
+}
+.doc figcaption {
+  margin-top: 0.6rem;
+  padding-left: var(--block-radius);
+  font-size: 0.74em;
+  color: var(--ink-muted);
+}
+
+.doc__more {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+}
+.doc__more:hover { border-bottom-color: var(--accent); }
+
+.doc__end { text-align: center; margin-bottom: 0; }
+.doc__actions { margin: 1.5rem 0 0; }
+
+.btn {
+  appearance: none;
+  font: inherit;
+  font-family: var(--font-body);
+  font-weight: 700;
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--ink) 6%, transparent);
+  color: var(--ink-muted);
+  cursor: default;
+}
+
+/* The em dash wears the highlight — the same feature, switched on. */
+.emdash {
+  background: transparent;
+  color: inherit;
+  border-radius: 3px;
+  padding: 0 0.08em;
+  transition: background 140ms ease;
+}
+.dashes-on .emdash { background: var(--highlight); }
+
+/* ---------- edit view ---------- */
+
+.source {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  margin: 0;
+  tab-size: 2;
+}
+.source .tok-marker { color: var(--ink-muted); }
+.source .tok-heading { color: var(--clay); font-weight: 700; }
+.source .tok-quote { color: var(--olive); }
+.source .tok-strong { color: var(--ink); font-weight: 700; }
+.source .tok-link { color: var(--teal); }
+.source .tok-rule { color: var(--ink-muted); }
+.source .tok-image { color: var(--plum); }
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding: 2rem 1.25rem 3rem;
+}
+.site-footer__wrap {
+  max-width: var(--column);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+.footer-signature { display: block; line-height: 0; }
+.footer-signature__mark { width: 108px; height: auto; }
+.fs-pilcrow { fill: var(--accent); }
+.fs-wordmark { fill: var(--ink); }
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+.footer-links a {
+  color: var(--ink-muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+.footer-links a:hover { color: var(--ink); border-bottom-color: var(--rule); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

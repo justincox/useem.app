@@ -78,6 +78,34 @@
   --font-body: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-wordmark: "Pacifico", cursive;
   --font-mono: "Courier Prime", "SFMono-Regular", ui-monospace, Menlo, monospace;
+
+  /*
+   * Read view's own measurements, lifted from the app rather than guessed at:
+   * ReadTypography (paper/ink, the 700pt column cap, the 3pt rule drawn at half
+   * the column, the 12pt block radius, the 22pt nesting indent) and
+   * ReadTypeScale.page (2.0 / 1.6 / 1.35 / 1.2 for headings, base ÷ 1.1 and
+   * ÷ 1.35 below it). Read's paper and ink are deliberately not the site's
+   * --bg/--fg: in the app they are Read mode's own pair, and they stay that way
+   * here so the page reads as a document em rendered.
+   */
+  --paper: #f6f1e4;
+  --ink: #2b2b2b;
+  --ink-muted: #6a675e;
+  --rule: rgba(43, 43, 43, 0.22);
+  --column: 700px;
+  --block-radius: 12px;
+  --nesting-indent: 22px;
+  --marker-column: 18px;
+  --rule-thickness: 3px;
+
+  /* em's own four pigments (HighlightColor.paperAndInk). */
+  --clay: #c1683f;
+  --olive: #7d8b46;
+  --teal: #3f8b86;
+  --plum: #8a4f79;
+
+  /* The one highlight colour — em ships yellow, and the em dash wears it. */
+  --highlight: rgba(233, 196, 70, 0.42);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -90,6 +118,18 @@
     --accent-fg: #14201A;
     --border: rgba(246, 241, 228, 0.14);
     --shadow-color: 0deg 0% 0%;
+
+    --paper: #252525;
+    --ink: #ece7d9;
+    --ink-muted: #9d988a;
+    --rule: rgba(236, 231, 217, 0.26);
+
+    --clay: #d4825c;
+    --olive: #9aa85f;
+    --teal: #5aa8a2;
+    --plum: #b06f97;
+
+    --highlight: rgba(233, 196, 70, 0.30);
   }
 }
 

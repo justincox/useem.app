@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>em — a markdown writing app for Mac, iPad, and iPhone</title>
-<meta name="description" content="em — a markdown writing app for Mac, iPad, and iPhone — search by meaning, version history, and publish to Ghost. No server, no account, just your writing.">
+<meta name="description" content="Your files are yours, and you're the only one who should decide what to do with ’em. em is a markdown writing app for Mac, iPad, and iPhone with smart search, version history, and Ghost publishing. No server, no account.">
 <link rel="canonical" href="https://useem.app/">
 <link rel="me" href="https://social.lol/@justincox">
 <meta property="fediverse:creator" content="@justincox@social.lol">
@@ -12,21 +12,21 @@
 <meta property="og:site_name" content="em">
 <meta property="og:url" content="https://useem.app/">
 <meta property="og:title" content="em — a markdown writing app for Mac, iPad, and iPhone">
-<meta property="og:description" content="em is a markdown writing app for Mac, iPad, and iPhone — search by meaning, version history, and publish to Ghost. No server, no account, just your own iCloud.">
+<meta property="og:description" content="Your files are yours, and you're the only one who should decide what to do with ’em.">
 <meta property="og:image" content="https://useem.app/assets/screenshots/em.webp?v=2">
 <meta property="og:image:width" content="2880">
 <meta property="og:image:height" content="1618">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="em — a markdown writing app for Mac, iPad, and iPhone">
-<meta name="twitter:description" content="em is a markdown writing app for Mac, iPad, and iPhone — search by meaning, version history, and publish to Ghost. No server, no account, just your own iCloud.">
+<meta name="twitter:description" content="Your files are yours, and you're the only one who should decide what to do with ’em.">
 <meta name="twitter:image" content="https://useem.app/assets/screenshots/em.webp?v=2">
 <meta name="theme-color" content="#F6F1E4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#201F1B" media="(prefers-color-scheme: dark)">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
-<link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/css/tokens.css?v=5">
-<link rel="stylesheet" href="assets/css/site.css?v=7">
+<meta name="theme-color" content="#252525" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png?v=3">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png?v=3">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=3">
+<link rel="stylesheet" href="assets/css/tokens.css?v=6">
+<link rel="stylesheet" href="assets/css/read.css?v=1">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,7 +34,7 @@
   "name": "em",
   "url": "https://useem.app/",
   "image": "https://useem.app/assets/screenshots/em.webp?v=2",
-  "description": "em is a markdown writing app for Mac, iPad, and iPhone. Search your archive by meaning, keep automatic version history, publish straight to Ghost, and ask questions of your own writing — all with no server and no account.",
+  "description": "em is a markdown writing app for Mac, iPad, and iPhone, built on one idea: your writing files are yours, and you're the only one who should decide what to do with them. Smart search, automatic version history, Ghost publishing, and optional on-device AI — with no server and no account.",
   "operatingSystem": "macOS, iPadOS, iOS",
   "applicationCategory": "ProductivityApplication",
   "author": {
@@ -47,167 +47,148 @@
 </head>
 <body>
 
-<nav class="site-nav">
-  <div class="wrap">
-    <a class="brand" href="index.html" aria-label="em — Home">
-      <span class="app-icon app-icon--sm"><img src="assets/img/about-hero-icon.png" alt="em app icon" width="1024" height="1024"></span>
+<a class="skip" href="#doc">Skip to the writing</a>
+
+<!--
+  The toolbar is em's own: a Read/Edit pair and the em dash highlight switch,
+  in the same order and with the same jobs they have in the app.
+-->
+<nav class="toolbar">
+  <div class="toolbar__wrap">
+    <a class="toolbar__brand" href="index.html" aria-label="em — home">
+      <span class="app-icon app-icon--sm"><img src="assets/img/about-hero-icon.png?v=3" alt="" width="1024" height="1024"></span>
+      <span class="toolbar__file">em<span class="toolbar__ext">.md</span></span>
     </a>
-    <ul class="site-nav__links">
-      <li><a href="#features" aria-current="page">Features</a></li>
-      <li><a href="help/markdown-cheatsheet.html">Markdown</a></li>
-      <li><a href="help/index.html">Help</a></li>
-      <li><a href="privacy.html">Privacy</a></li>
-    </ul>
-    <div class="site-nav__cta">
-      <button class="btn btn--coming-soon btn--sm" type="button" aria-disabled="true">Coming Soon</button>
+
+    <div class="toolbar__tools">
+      <div class="segmented" role="group" aria-label="View">
+        <button class="segmented__btn is-active" type="button" data-view="read" aria-pressed="true">Read</button>
+        <button class="segmented__btn" type="button" data-view="edit" aria-pressed="false">Edit</button>
+      </div>
+      <button class="dash-toggle is-active" type="button" data-dash-toggle aria-pressed="true" title="Highlight em dashes">
+        <span aria-hidden="true">—</span>
+        <span class="visually-hidden">Highlight em dashes</span>
+      </button>
+      <ul class="toolbar__links">
+        <li><a href="help/index.html">Help</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
     </div>
   </div>
 </nav>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="app-icon">
-      <img src="assets/img/about-hero-icon.png" alt="em app icon" width="1024" height="1024">
-    </div>
-    <h1>Your writing is <em>yours</em> — em keeps it that way.</h1>
-    <p class="lede">Named after the best punctuation mark there is, em protects every version, answers questions, and publishes straight to your Ghost site from a beautiful Markdown editor.</p>
-    <div class="hero__actions">
-      <button class="btn btn--coming-soon" type="button" aria-disabled="true">Coming Soon</button>
-      <a class="btn btn--ghost" href="#features">em's Features</a>
-    </div>
-    <p class="hero__platforms">Mac · iPad · iPhone</p>
-  </div>
-</header>
+<main class="page" id="doc">
 
-<section id="platforms">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>One app, every device</h2>
-      <p>em works and syncs across the Mac, iPad, and iPhone so your writing is always available when inspiration strikes.</p>
-    </div>
-    <div class="platform-stage">
-      <img class="platform-shot" src="assets/screenshots/em.webp?v=2" alt="em running on Mac, iPad, and iPhone" width="2880" height="1618" loading="lazy">
-    </div>
-  </div>
-</section>
+  <!-- Read view: the page as em renders a document. -->
+  <article class="doc" data-read>
 
-<section class="section--alt" id="features">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Built by a writer with tons of files who wanted better control</h2>
-      <p>em's features all start from the same idea: your writing is <em>yours</em>, and it should stay that way.</p>
-    </div>
-    <div class="feature-showcase" data-feature-showcase>
-      <div class="feature-showcase__stage">
-        <img class="feature-showcase__img is-active" data-index="0" src="assets/screenshots/smartsearch.webp?v=1" alt="Smart Search finding a note by meaning in em" width="2605" height="1854" loading="lazy">
-        <img class="feature-showcase__img" data-index="1" src="assets/screenshots/version.webp?v=1" alt="Restoring an earlier version of a draft in em" width="2605" height="1854" loading="lazy">
-        <img class="feature-showcase__img" data-index="2" src="assets/screenshots/ghost.webp?v=1" alt="Publishing a post to Ghost from em" width="2605" height="1854" loading="lazy">
+    <header class="doc__head">
+      <div class="app-icon">
+        <img src="assets/img/about-hero-icon.png?v=3" alt="em app icon" width="1024" height="1024">
       </div>
-      <div class="feature-showcase__dots">
-        <button class="feature-showcase__dot is-active" type="button" data-index="0" aria-label="Show: Find anything you've ever written"></button>
-        <button class="feature-showcase__dot" type="button" data-index="1" aria-label="Show: Never lose a draft"></button>
-        <button class="feature-showcase__dot" type="button" data-index="2" aria-label="Show: Publish straight to Ghost"></button>
-      </div>
+      <h1>em</h1>
+      <h2 class="doc__subtitle">a markdown writing app for Mac, iPad, and iPhone</h2>
+      <p class="doc__meta" data-doc-meta>Mac · iPad · iPhone</p>
+    </header>
 
-      <div class="feature-grid">
+    <p class="lede">Your files are yours, and you're the only one who should decide what to do with ’em.</p>
 
-        <a class="feature-card is-active" href="help/search-and-smart-folders.html" data-index="0">
-          <div class="feature-card__head">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
-            <h3>Find anything you've ever written</h3>
-          </div>
-          <p>Keyword and on-device semantic search — ask for "the piece about creating an app" and em finds it, even if you titled it something else.</p>
-        </a>
+    <hr>
 
-        <a class="feature-card" href="help/version-history.html" data-index="1">
-          <div class="feature-card__head">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 7v5l4 2"/></svg></div>
-            <h3>Never lose a draft</h3>
-          </div>
-          <p>Every edit is versioned automatically and synced across devices with iCloud. Compare any two versions, restore one, and never have accidental deletes ever again.</p>
-        </a>
+    <section>
+      <h2>Find ’em</h2>
+      <p>Your writing is spread across folders you forgot about, under titles that made sense at the time. Smart Search finds it by meaning — not just by matching letters.</p>
+      <blockquote>
+        <p>Ask for “the piece about building an app” and em finds the essay you titled something else entirely.</p>
+      </blockquote>
+      <p>Full-text search and on-device semantic search, together. em understands what your drafts are about, not just the words in ’em.</p>
+      <figure>
+        <img src="assets/screenshots/smartsearch.webp?v=1" alt="Smart Search finding a note by meaning in em" width="2605" height="1854" loading="lazy">
+        <figcaption>Smart Search, running entirely on your device.</figcaption>
+      </figure>
+    </section>
 
-        <a class="feature-card" href="help/ghost-publishing.html" data-index="2">
-          <div class="feature-card__head">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6M5 12l7-7 7 7"/></svg></div>
-            <h3>Publish straight to Ghost</h3>
-          </div>
-          <p>Connect your Ghost site to fully edit, back up, and publish natively — including 16 custom card types, drafts, scheduling, and newsletters.</p>
-        </a>
+    <section>
+      <h2>Protect ’em</h2>
+      <p>Every edit is versioned automatically and backed up to iCloud. Compare a draft against the version your iPhone saved at 2:45 PM, restore whichever one you actually meant, and stop mourning the paragraph you deleted on purpose and regretted immediately.</p>
+      <figure>
+        <img src="assets/screenshots/version.webp?v=1" alt="Restoring an earlier version of a draft in em" width="2605" height="1854" loading="lazy">
+        <figcaption>Version History, across every device you write on.</figcaption>
+      </figure>
+    </section>
 
-      </div>
-    </div>
-  </div>
-</section>
+    <section>
+      <h2>Publish ’em</h2>
+      <p>Connect your Ghost site and write, edit, back up, and publish natively — 16 Ghost card types, plus drafts, scheduling, and newsletters, all from Markdown. Your files can live in iCloud or in Ghost. Either way, you still decide what happens to ’em.</p>
+      <figure>
+        <img src="assets/screenshots/ghost.webp?v=1" alt="Publishing a post to Ghost from em" width="2605" height="1854" loading="lazy">
+        <figcaption>Markdown in, Ghost cards out.</figcaption>
+      </figure>
+    </section>
 
-<section class="ai-band">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>AI on your terms,<br /><em>or not at all</em></h2>
-      <p>You control <em>if</em> AI enters your workflow and what it accesses.</p>
-    </div>
-    <div class="ai-callouts">
+    <section>
+      <h2>Explore ’em</h2>
+      <h3>(but only if you want to)</h3>
+      <p>Every AI feature ships off. Turn one on and it runs on-device with Apple Intelligence — or connect Claude, ChatGPT, or Gemini with your own API key, your own billing, revocable whenever you like. em names the model that's answering, every time.</p>
+      <p>Ask questions and get answers grounded in what's in your files, not what's on the internet. Editorial Review runs from a prompt that's an ordinary document in your own library — read it, rewrite it, delete it. em doesn't write your drafts for you. It helps you decide what to do with ’em.</p>
+      <p><a class="doc__more" href="help/ai-features.html">How AI works in em →</a></p>
+    </section>
 
-      <div class="ai-callout">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M18.4 6.6a8 8 0 1 1-12.8 0"/></svg></span>
-        <div>
-          <h3>Off by default</h3>
-          <p>Every AI feature comes disabled. Nothing runs, nothing is sent anywhere, until <em>you</em> turn it on.</p>
-        </div>
-      </div>
+    <hr>
 
-      <div class="ai-callout">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M9 3v2M15 3v2M9 19v2M15 19v2M3 9h2M3 15h2M19 9h2M19 15h2"/></svg></span>
-        <div>
-          <h3>On-device first</h3>
-          <p>Ask em runs entirely on your Mac, iPad, or iPhone with Apple Intelligence — nothing leaves the device.</p>
-        </div>
-      </div>
+    <section>
+      <h2>Privacy, plainly</h2>
+      <blockquote>
+        <p>Your files are yours and no one can tell you what to do with ’em.</p>
+      </blockquote>
+      <p>em has no server. That isn't a promise about what em's developer chooses to do with your writing — there's no backend to store it, no account to create, and no company database it could end up in. Your writing syncs through your iCloud and never touches infrastructure you didn't authorize.</p>
+      <p><a class="doc__more" href="privacy.html">Read the full Privacy Policy →</a></p>
+    </section>
 
-      <div class="ai-callout">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg></span>
-        <div>
-          <h3>Always named</h3>
-          <p>em says exactly which model is answering, every time, on every screen. No guessing what has access to your writing.</p>
-        </div>
-      </div>
+    <section>
+      <h2>Everything else</h2>
+      <ul>
+        <li><strong>Smart Folders</strong> — any search, saved, and always current across every library</li>
+        <li><strong>Apple Shortcuts</strong> — automate publishing to Ghost from outside em</li>
+        <li><strong>Offline editing</strong> — writing, search, and version history with no connection at all</li>
+        <li><strong>Customization</strong> — Reader and Editor fonts and colors, tuned to your taste</li>
+        <li><strong>Quick access</strong> — favorites and per-library icons with your own accent colors</li>
+        <li><strong>Even more</strong> — reading time, word counts, and yes — em dash highlighting</li>
+      </ul>
+    </section>
 
-    </div>
-    <div class="more-link-wrap">
-      <a class="more-link" href="help/ai-features.html">Read more about how AI works in em →</a>
-    </div>
-  </div>
-</section>
+    <hr>
 
-<section>
-  <div class="wrap">
-    <div class="callout">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg></div>
-      <div>
-        <h2>It's your writing, <em>always</em></h2>
-        <p>em has no backend to store data, no account to create, and no company database your writing could end up in. em and its developer cannot access anything you create, edit, or work with in the app. <em>Ever</em>.</p>
-        <a class="inline-link" href="privacy.html">Read the full Privacy Policy →</a>
-      </div>
-    </div>
-  </div>
-</section>
+    <section class="doc__end">
+      <h2>Get ’em</h2>
+      <p>em is coming to the Mac App Store and the App Store.</p>
+      <p class="doc__actions">
+        <button class="btn" type="button" aria-disabled="true">Coming Soon</button>
+      </p>
+    </section>
+
+  </article>
+
+  <!-- Edit view: the same document, in the editor. Written by read.js from the Read view above. -->
+  <pre class="source" data-source hidden aria-hidden="true"></pre>
+
+</main>
 
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-row">
-      <a class="footer-signature" href="https://justincox.com/" target="_blank" rel="noopener noreferrer" aria-label="Justin Cox">
-        <svg class="footer-signature__mark" viewBox="0 0 1080 326" role="img" aria-hidden="true"><path class="fs-pilcrow" d="M268.0,300.5 165.0,300.5 164.0,222.5 120.0,222.5 91.0,218.5 62.0,205.5 43.5,189.0 32.5,173.0 24.5,154.0 20.5,134.0 20.5,109.0 23.5,93.0 34.5,67.0 41.5,57.0 56.0,42.5 83.0,27.5 111.0,21.5 268.5,22.0 268.0,300.5Z M303.0,300.5 286.5,300.0 287.0,21.5 303.5,22.0 303.0,300.5Z"/><path class="fs-wordmark" fill-rule="evenodd" d="M807.0,154.5 757.5,154.0 757.5,65.0 754.0,64.5 686.0,64.5 684.5,66.0 685.0,69.5 712.0,85.5 721.5,96.0 725.5,106.0 726.5,117.0 723.5,131.0 718.5,140.0 711.0,147.5 704.0,151.5 692.0,154.5 616.0,154.5 616.0,110.5 663.5,110.0 662.0,105.5 633.0,87.5 624.5,75.0 621.5,60.0 624.5,44.0 628.5,37.0 638.0,27.5 653.0,21.5 842.0,20.5 842.5,64.0 807.5,65.0 807.0,154.5Z M904.0,153.5 854.5,153.0 855.0,20.5 904.5,21.0 904.0,153.5Z M1059.0,153.5 1010.0,153.5 1004.5,133.0 997.5,119.0 989.0,107.5 971.0,92.5 967.5,93.0 967.5,153.0 918.0,153.5 917.5,21.0 932.0,20.5 944.0,22.5 966.0,29.5 984.0,39.5 1007.0,62.5 1009.0,62.5 1010.0,20.5 1059.0,20.5 1059.0,153.5Z M410.0,154.5 371.0,154.5 357.5,111.0 400.0,110.5 408.5,105.0 410.5,101.0 411.0,21.5 460.0,21.5 460.5,106.0 457.5,118.0 451.5,130.0 441.0,141.5 426.0,150.5 410.0,154.5Z M550.0,158.5 531.0,158.5 510.0,153.5 496.0,145.5 480.5,128.0 473.5,104.0 474.0,21.5 523.5,22.0 523.5,101.0 526.5,108.0 535.0,114.5 548.0,113.5 556.5,104.0 556.5,22.0 606.5,22.0 607.5,98.0 602.5,123.0 595.5,135.0 582.0,147.5 568.0,154.5 550.0,158.5Z M563.0,304.5 544.0,304.5 529.0,301.5 516.0,296.5 505.0,289.5 489.5,273.0 479.5,248.0 479.5,220.0 483.5,206.0 490.5,193.0 510.0,174.5 535.0,164.5 553.0,162.5 567.0,163.5 592.0,171.5 604.0,179.5 616.5,193.0 624.5,208.0 627.5,219.0 627.5,249.0 623.5,262.0 615.5,276.0 607.0,285.5 593.0,295.5 578.0,301.5 563.0,304.5Z M472.0,300.5 415.0,300.5 400.0,297.5 382.0,288.5 367.5,274.0 358.5,256.0 355.5,241.0 355.5,227.0 357.5,215.0 363.5,200.0 380.0,180.5 396.0,171.5 412.0,167.5 472.5,168.0 472.0,210.5 421.0,211.5 414.0,214.5 408.5,220.0 404.5,230.0 404.5,238.0 407.5,246.0 412.0,251.5 419.0,255.5 472.5,257.0 472.0,300.5Z M767.0,300.5 714.0,300.5 694.0,267.5 689.5,270.0 672.0,300.5 619.0,300.5 623.5,290.0 653.5,241.0 656.5,232.0 618.5,168.0 672.0,167.5 690.5,199.0 694.0,199.5 713.0,167.5 767.0,167.5 728.5,233.0 767.0,300.5Z M560.5,260.0 569.0,256.5 576.5,248.0 579.5,240.0 578.5,224.0 575.5,218.0 568.0,210.5 556.0,206.5 546.0,207.5 539.0,210.5 530.5,220.0 527.5,229.0 528.5,242.0 533.5,252.0 540.0,257.5 547.0,260.5 560.5,260.0Z"/></svg>
-      </a>
-      <nav class="footer-links">
-        <a href="help/index.html">Help</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="acknowledgements.html">Acknowledgements</a>
-        <a href="https://justincox.com/contact/">Contact</a>
-      </nav>
-    </div>
+  <div class="site-footer__wrap">
+    <a class="footer-signature" href="https://justincox.com/" target="_blank" rel="noopener noreferrer" aria-label="Justin Cox">
+      <svg class="footer-signature__mark" viewBox="0 0 1080 326" role="img" aria-hidden="true"><path class="fs-pilcrow" d="M268.0,300.5 165.0,300.5 164.0,222.5 120.0,222.5 91.0,218.5 62.0,205.5 43.5,189.0 32.5,173.0 24.5,154.0 20.5,134.0 20.5,109.0 23.5,93.0 34.5,67.0 41.5,57.0 56.0,42.5 83.0,27.5 111.0,21.5 268.5,22.0 268.0,300.5Z M303.0,300.5 286.5,300.0 287.0,21.5 303.5,22.0 303.0,300.5Z"/><path class="fs-wordmark" fill-rule="evenodd" d="M807.0,154.5 757.5,154.0 757.5,65.0 754.0,64.5 686.0,64.5 684.5,66.0 685.0,69.5 712.0,85.5 721.5,96.0 725.5,106.0 726.5,117.0 723.5,131.0 718.5,140.0 711.0,147.5 704.0,151.5 692.0,154.5 616.0,154.5 616.0,110.5 663.5,110.0 662.0,105.5 633.0,87.5 624.5,75.0 621.5,60.0 624.5,44.0 628.5,37.0 638.0,27.5 653.0,21.5 842.0,20.5 842.5,64.0 807.5,65.0 807.0,154.5Z M904.0,153.5 854.5,153.0 855.0,20.5 904.5,21.0 904.0,153.5Z M1059.0,153.5 1010.0,153.5 1004.5,133.0 997.5,119.0 989.0,107.5 971.0,92.5 967.5,93.0 967.5,153.0 918.0,153.5 917.5,21.0 932.0,20.5 944.0,22.5 966.0,29.5 984.0,39.5 1007.0,62.5 1009.0,62.5 1010.0,20.5 1059.0,20.5 1059.0,153.5Z M410.0,154.5 371.0,154.5 357.5,111.0 400.0,110.5 408.5,105.0 410.5,101.0 411.0,21.5 460.0,21.5 460.5,106.0 457.5,118.0 451.5,130.0 441.0,141.5 426.0,150.5 410.0,154.5Z M550.0,158.5 531.0,158.5 510.0,153.5 496.0,145.5 480.5,128.0 473.5,104.0 474.0,21.5 523.5,22.0 523.5,101.0 526.5,108.0 535.0,114.5 548.0,113.5 556.5,104.0 556.5,22.0 606.5,22.0 607.5,98.0 602.5,123.0 595.5,135.0 582.0,147.5 568.0,154.5 550.0,158.5Z M563.0,304.5 544.0,304.5 529.0,301.5 516.0,296.5 505.0,289.5 489.5,273.0 479.5,248.0 479.5,220.0 483.5,206.0 490.5,193.0 510.0,174.5 535.0,164.5 553.0,162.5 567.0,163.5 592.0,171.5 604.0,179.5 616.5,193.0 624.5,208.0 627.5,219.0 627.5,249.0 623.5,262.0 615.5,276.0 607.0,285.5 593.0,295.5 578.0,301.5 563.0,304.5Z M472.0,300.5 415.0,300.5 400.0,297.5 382.0,288.5 367.5,274.0 358.5,256.0 355.5,241.0 355.5,227.0 357.5,215.0 363.5,200.0 380.0,180.5 396.0,171.5 412.0,167.5 472.5,168.0 472.0,210.5 421.0,211.5 414.0,214.5 408.5,220.0 404.5,230.0 404.5,238.0 407.5,246.0 412.0,251.5 419.0,255.5 472.5,257.0 472.0,300.5Z M767.0,300.5 714.0,300.5 694.0,267.5 689.5,270.0 672.0,300.5 619.0,300.5 623.5,290.0 653.5,241.0 656.5,232.0 618.5,168.0 672.0,167.5 690.5,199.0 694.0,199.5 713.0,167.5 767.0,167.5 728.5,233.0 767.0,300.5Z M560.5,260.0 569.0,256.5 576.5,248.0 579.5,240.0 578.5,224.0 575.5,218.0 568.0,210.5 556.0,206.5 546.0,207.5 539.0,210.5 530.5,220.0 527.5,229.0 528.5,242.0 533.5,252.0 540.0,257.5 547.0,260.5 560.5,260.0Z"/></svg>
+    </a>
+    <nav class="footer-links">
+      <a href="help/index.html">Help</a>
+      <a href="help/markdown-cheatsheet.html">Markdown</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="acknowledgements.html">Acknowledgements</a>
+      <a href="https://justincox.com/contact/">Contact</a>
+    </nav>
   </div>
 </footer>
 
-<script src="assets/js/site.js?v=1" defer></script>
+<script src="assets/js/read.js?v=1" defer></script>
 </body>
 </html>
