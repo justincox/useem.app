@@ -382,13 +382,16 @@ body {
 }
 .back-link:hover { color: var(--ink); }
 
-/* Contents: anchor links, set like a document's own list of sections. */
+/*
+ * Contents: an outline, not a pile of links. One numbered row per section,
+ * the number in the library colour, the row set as a line of the document.
+ */
 .toc {
   margin: 0 0 3rem;
-  padding: 1.1rem 1.25rem;
+  padding: 1.25rem 1.4rem;
   border-radius: var(--block-radius);
-  background: color-mix(in srgb, var(--accent) 8%, transparent);
-  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
 }
 .toc h2 {
   font-family: var(--font-mono) !important;
@@ -397,24 +400,42 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-muted);
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.9rem;
 }
-.toc ul {
+.toc ol {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 1.25rem;
+  counter-reset: section;
   margin: 0;
   padding: 0;
 }
-.toc ul li { margin: 0; padding: 0; position: static; }
-.toc ul li::before { content: none; }
-.toc a {
-  color: var(--accent);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
+@media (min-width: 34rem) {
+  .toc ol { columns: 2; column-gap: 2rem; }
 }
-.toc a:hover { border-bottom-color: var(--accent); }
+.toc ol li {
+  counter-increment: section;
+  position: relative;
+  margin: 0 0 0.15rem;
+  padding: 0;
+  break-inside: avoid;
+}
+.toc ol li::before { content: none; }
+.toc ol li a {
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+  padding: 0.3rem 0;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 0;
+}
+.toc a::before {
+  content: counter(section, decimal-leading-zero);
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  color: color-mix(in srgb, var(--accent) 75%, var(--ink));
+}
+.toc a:hover { color: var(--accent); }
 
 /* Every heading is an anchor target, so give it room under the sticky bar. */
 .doc h2[id],
