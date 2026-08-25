@@ -32,9 +32,9 @@
 
 <nav class="toolbar">
   <div class="toolbar__wrap">
-    <a class="toolbar__brand" href="../index.html" aria-label="em — home">
+    <a class="toolbar__brand" href="../index.html" aria-label="em — Markdown Writer &amp; Editor">
       <span class="app-icon app-icon--sm"><img src="../assets/img/about-hero-icon.png?v=3" alt="" width="1024" height="1024"></span>
-      <span class="toolbar__file">help<span class="toolbar__ext">.md</span></span>
+      <span class="toolbar__title"><span class="toolbar__wordmark">em</span> — Markdown Writer &amp; Editor</span>
     </a>
 
     <div class="toolbar__tools">
@@ -50,33 +50,31 @@
 <main class="page" id="doc">
   <article class="doc">
 
-    <a class="back-link" href="../index.html">← Home</a>
-    <span class="doc__eyebrow">em Help</span>
-    <h1 class="doc__title">Everything about using em</h1>
+    <h1 class="doc__title">Everything About Using em</h1>
     <p class="doc__updated">Mac · iPad · iPhone</p>
 
     <nav class="toc" aria-label="Contents">
       <h2>Contents</h2>
       <ol>
-        <li><a href="#getting-started">Getting started</a></li>
+        <li><a href="#getting-started">Getting Started</a></li>
         <li><a href="#search">Search &amp; Smart Folders</a></li>
         <li><a href="#versions">Version History</a></li>
         <li><a href="#ghost">Publishing to Ghost</a></li>
         <li><a href="#ai">AI in em</a></li>
         <li><a href="#shortcuts">Shortcuts</a></li>
         <li><a href="#faq">Questions</a></li>
-        <li><a href="markdown-cheatsheet.html">Markdown cheatsheet</a></li>
+        <li><a href="markdown-cheatsheet.html">Markdown Cheatsheet</a></li>
       </ol>
     </nav>
 
     <hr>
 
     <section>
-      <h2 id="getting-started">Getting started</h2>
+      <h2 id="getting-started">Getting Started</h2>
       <p>em is built on one idea: <strong>your writing is yours, and it should stay that way.</strong> There is no import, no proprietary format, and no server. em reads plain Markdown files from folders you choose, indexes them so you can find anything, and leaves the files exactly where they are.</p>
 
       <details class="toggle">
-        <summary id="add-your-first-library">Add your first library</summary>
+        <summary id="add-your-first-library">Add your First Library</summary>
         <div class="toggle__body">
           <p>A <em>library</em> is just a folder of Markdown files that em can access.</p>
           <ol>
@@ -87,7 +85,7 @@
           <div class="callout">
             <span class="callout__emoji" aria-hidden="true">☁️</span>
             <div class="callout__body">
-              <p><strong>Why iCloud Drive?</strong> em syncs your writing through <em>your</em> iCloud, not through any server em controls. Using iCloud lets a library — and its Version History — sync across devices. A folder outside iCloud Drive can't make that promise.</p>
+              <p><strong>Why iCloud Drive?</strong> em syncs your writing through <em>your</em> iCloud, not through any server em controls. Using iCloud lets libraries, Version History, and settings sync across devices. A folder outside iCloud Drive can't make that promise.</p>
             </div>
           </div>
         </div>
@@ -98,8 +96,8 @@
         <div class="toggle__body">
           <p>Every document has two faces:</p>
           <ul>
-            <li><strong>Reader</strong> renders your Markdown as a clean, typeset page — your fonts, your spacing, your colors, all customizable in Settings → Reader.</li>
-            <li><strong>Editor</strong> is a Markdown editor that styles as you type, with its own customizations in Settings → Editor. Not sure what Markdown code to use? Type <code>/</code> at the start of a line to insert anything from a heading to a Ghost product card.</li>
+            <li><strong>Reader</strong> renders your Markdown as a clean, typeset page — your fonts, your spacing, your colors, all customizable in Settings → Reader. (By default, it looks <em>a lot</em> like this site.)</li>
+            <li><strong>Editor</strong> is a Markdown editor that styles as you type, with its own customizations in Settings → Editor. Not sure what Markdown code to use? Type <code>/</code> to insert anything from a heading to a Ghost product card.</li>
           </ul>
         </div>
       </details>
@@ -107,18 +105,18 @@
       <details class="toggle">
         <summary id="images">Images</summary>
         <div class="toggle__body">
-          <p>Drop or paste an image into a document and em copies it into an images folder beside the file and inserts a relative Markdown link — so the document and its images travel together, in any app, forever. The image folder's name is up to you in Settings → Files.</p>
+          <p>Drop or paste an image into a document and em copies it into an images folder in your library and inserts the Markdown link — so the document and its images stay together both in and out of em.</p>
         </div>
       </details>
 
       <details class="toggle">
-        <summary id="where-everything-lives">Where everything lives</summary>
+        <summary id="where-everything-lives">Where Everything Lives</summary>
         <div class="toggle__body">
-          <p>Everything em knows about your writing lives with your writing:</p>
+          <p>Everything em knows about your writing lives in one of three places:</p>
           <ul>
-            <li>Your documents stay in your folders, untouched.</li>
-            <li>Version History, library settings, and preferences live in a hidden folder in em's iCloud folder and sync along with it.</li>
-            <li>The search index is just a cache on each device — em can rebuild it from your files at any time, and deleting it doesn't touch your writing.</li>
+            <li>Your documents stay in your folders.</li>
+            <li>Version History, library settings, and preferences live in em's iCloud folder.</li>
+            <li>The search index is a cache of data that is unique to each device and does not sync anywhere. em can rebuild it from your files at any time, and deleting it doesn't touch your writing.</li>
           </ul>
           <p>If you ever stop using em, your writing is exactly where it always was: a folder of Markdown files, with nothing missing and nothing to export.</p>
         </div>
@@ -135,13 +133,13 @@
       </figure>
 
       <details class="toggle">
-        <summary id="two-kinds-of-search">Two kinds of search</summary>
+        <summary id="two-kinds-of-search">Two Kinds of Search</summary>
         <div class="toggle__body">
           <ul>
             <li><strong>Search</strong> matches the words themselves — titles and full text, instantly, as you type.</li>
-            <li><strong>Smart Search</strong> matches meaning. Switch to Smart Search from the search selector in the search field and describe what you're looking for — a topic, a half-remembered idea, even a question. em searches by meaning and keywords together, and orders results by what they're <em>about</em>. All of this happens completely on your device.</li>
+            <li><strong>Smart Search</strong> matches meaning and is enabled by hitting return or the search button. Describe what you're looking for — a topic, a half-remembered idea, even a question — em searches by meaning and keywords together, and orders results by what they're <em>about</em>. All of this happens completely on your device.</li>
           </ul>
-          <p>Smart Search doesn't require AI features. On a new install or right after a big import, the semantic index takes a little while to build, and Smart Search tells you so right in the search field. Keyword search works fully immediately.</p>
+          <p>Smart Search doesn't require enabling em's AI features. On a new install or right after a big import, the index may take a little while to build, but keyword search works immediately.</p>
           <p>Ghost posts are also searchable. Published posts are included by default; drafts and scheduled posts are included if you turn that on in Settings.</p>
         </div>
       </details>
@@ -159,12 +157,11 @@
       </details>
 
       <details class="toggle">
-        <summary id="favorites">Favorites, filtering, and sorting</summary>
+        <summary id="favorites">Favorites, Filtering, and Sorting</summary>
         <div class="toggle__body">
-          <p><strong>Favorite</strong> a document and it joins the Favorites list in the sidebar; the status syncs to your other devices through em's own iCloud folder — Ghost posts can be favorites too.</p>
+          <p><strong>Favorite</strong> a document and it joins the Favorites list in the sidebar — the status syncs to your other devices through em's own iCloud folder.</p>
           <p>Every file list can be narrowed and ordered:</p>
           <ul>
-            <li>The filter bar narrows the current list by title or favorite status as you type.</li>
             <li>Sort by title, date created, date modified, or — for Ghost libraries — date published.</li>
             <li>File rows can show text excerpts, dates, and file extensions — all of it is up to you in Settings.</li>
           </ul>
@@ -172,15 +169,15 @@
       </details>
 
       <details class="toggle">
-        <summary id="when-search-seems-off">When search seems off</summary>
+        <summary id="when-search-seems-off">When Search Seems Off</summary>
         <div class="toggle__body">
-          <p>If results ever look stale or incomplete, Index Settings has the tools:</p>
+          <p>If results ever look stale or incomplete, em's Data settings has the tools to investigate (or repair):</p>
           <ul>
             <li><strong>Check Index Health</strong> tells you what's wrong.</li>
-            <li><strong>Repair Index Metadata</strong> fixes the common cases.</li>
+            <li><strong>Repair Search Index</strong> fixes the common cases.</li>
             <li><strong>Rebuild Search Index</strong> starts everything over.</li>
           </ul>
-          <p>The index is only a cache of your files — rebuilding it never touches your writing, and you never lose anything.</p>
+          <p>The index is only a cache of your files — rebuilding it never touches your writing, and you never lose anything. Indices are unique to each device and do not sync.</p>
         </div>
       </details>
     </section>
@@ -195,47 +192,47 @@
       </figure>
 
       <details class="toggle">
-        <summary id="how-versions-work">How versions work</summary>
+        <summary id="how-versions-work">How Versions Work</summary>
         <div class="toggle__body">
-          <p>You don't do anything. em versions a document the first time you edit it, and again at natural intervals. Come back from lunch, rewrite the ending, change your mind — the version from before lunch is still there to restore.</p>
+          <p>You don't do anything. em versions a document the first time you edit it, and again at natural intervals. Rewrite the ending before lunch and change your mind after dinner — the Version from before lunch is ready to restore.</p>
         </div>
       </details>
 
       <details class="toggle">
-        <summary id="browsing-and-restoring">Browsing and restoring</summary>
+        <summary id="browsing-and-restoring">Browsing and Restoring</summary>
         <div class="toggle__body">
           <p>Choose Version History… from a document's context menu or the Options menu (<code>⋯</code>):</p>
           <ul>
-            <li>Every version is listed with its date and the device it was edited on. Select one to explore the differences.</li>
-            <li>Use This Version replaces the current document with the selected version. It also silently creates a version of what it's replacing, so even restoring is completely reversible.</li>
+            <li>Every Version is listed with its date and the device it was edited on. Select one to explore the differences.</li>
+            <li>Use This Version replaces the current document with the selected Version. It also silently creates a new Version of what it's replacing, so even restoring is completely reversible.</li>
           </ul>
         </div>
       </details>
 
       <details class="toggle">
-        <summary id="where-versions-live">Where versions live</summary>
+        <summary id="where-versions-live">Where Versions Live</summary>
         <div class="toggle__body">
-          <p>Version History is stored in a hidden folder inside em's iCloud directory. That means it syncs with the other files and preferences through iCloud and reaches all of your devices.</p>
+          <p>Version History is stored in a folder inside em's iCloud directory. That means it syncs with the other files and preferences through iCloud and reaches all of your devices.</p>
         </div>
       </details>
 
       <details class="toggle">
-        <summary id="when-icloud-syncs-collide">When iCloud syncs collide</summary>
+        <summary id="when-icloud-syncs-collide">When iCloud Syncs Collide</summary>
         <div class="toggle__body">
           <p>Edit the same file on two devices before iCloud can sync and most apps silently pick a winner. em doesn't:</p>
           <ul>
             <li>Both copies are kept on every device.</li>
-            <li>The file view tells you the file was Also Edited on Another Device and offers a Review… option — both versions side by side in Version History.</li>
-            <li>Choosing one discards nothing: the copy you don't keep is saved into the Version History.</li>
+            <li>The file view tells you the file was Also Edited on Another Device and offers a choice.</li>
+            <li>Choosing one discards nothing — the copy you don't keep is saved into the Version History.</li>
           </ul>
-          <p>The same promise holds when another app changes a file that's open in em: you choose which version continues, and the other goes into Version History.</p>
+          <p>The same promise holds when another app changes a file that's open in em: you choose which Version continues, and the other goes into Version History.</p>
         </div>
       </details>
     </section>
 
     <section>
       <h2 id="ghost">Publishing to Ghost</h2>
-      <p>em connects directly to your <a href="https://ghost.org" target="_blank" rel="noopener noreferrer">Ghost</a> site: your posts appear as a library, your drafts publish from the same editor you write everything else in, and 16 Ghost card types are supported.</p>
+      <p>em connects directly to your <a href="https://ghost.org" target="_blank" rel="noopener noreferrer">Ghost</a> site: your posts appear as a library, your drafts publish from the same editor you write everything else in, and 16 Ghost Koenig card types are supported.</p>
 
       <figure>
         <img src="../assets/screenshots/ghost.webp?v=1" alt="Publishing a post to Ghost from em" width="2605" height="1854" loading="lazy">
@@ -243,55 +240,54 @@
       </figure>
 
       <details class="toggle">
-        <summary id="connect-your-site">Connect your site</summary>
+        <summary id="connect-your-site">Connect Your Site</summary>
         <div class="toggle__body">
           <ol>
             <li>In your Ghost admin, open Settings → Integrations → Add custom integration, name it (em happens to be a great name), and copy the <strong>Admin API key</strong> — not the Content API key.</li>
             <li>In em, choose Connect Ghost Site…, enter your site's URL, and paste the API key.</li>
-            <li>em verifies the connection and downloads your posts.</li>
+            <li>em verifies the connection and indexes your posts.</li>
           </ol>
           <p>Your site appears in the sidebar like any other library. The Admin API key is stored in your Keychain and syncs to your other devices through iCloud Keychain — connect once, and your site works everywhere.</p>
         </div>
       </details>
 
       <details class="toggle">
-        <summary id="read-only-until-you-say-otherwise">Read-only, until you say otherwise</summary>
+        <summary id="read-only-until-you-say-otherwise">Read-Only, Until You Say Otherwise</summary>
         <div class="toggle__body">
-          <p>A newly connected Ghost site is read-only: you can read, search, and export every post, and nothing you do in em can change your site. When you're ready to edit and publish from em, turn off Keep Ghost read-only in Settings → Ghost.</p>
+          <p>A newly connected Ghost site is read-only — you can read, search, and export every post, and nothing you do in em can change your site. When you're ready to edit and publish from em, turn off Keep Ghost read-only in Settings → Ghost.</p>
         </div>
       </details>
 
       <details class="toggle">
-        <summary id="publish-a-local-draft-to-ghost">Publish a local draft to Ghost</summary>
+        <summary id="publish-a-local-draft-to-ghost">Publish a Local Draft to Ghost</summary>
         <div class="toggle__body">
           <p>Any Markdown file in any library can become a Ghost post:</p>
           <ol>
             <li>Choose Publish to Ghost… from the file's context menu or the Options menu (<code>⋯</code>).</li>
             <li>Set the title, excerpt, post slug, featured image, and tags. If the draft has an image, em offers the first one as the featured image automatically.</li>
-            <li>Choose the newsletter settings — send to all subscribers, free or paid only, or don't send at all.</li>
+            <li>Choose the newsletter settings — send to all subscribers, free or paid only — or don't send at all.</li>
             <li>Create Draft to keep working on it in Ghost, Publish Post to go live, or Schedule Post for later.</li>
           </ol>
         </div>
       </details>
 
       <details class="toggle">
-        <summary id="edit-an-existing-ghost-post">Edit an existing Ghost post</summary>
+        <summary id="edit-an-existing-ghost-post">Edit an Existing Ghost Post</summary>
         <div class="toggle__body">
-          <p>Once Ghost's read-only mode is off, open any post from your Ghost library and switch to Edit. em converts Ghost's cards into readable Markdown (see the <a href="markdown-cheatsheet.html">Markdown cheatsheet</a>) so the whole post stays plain text while you work.</p>
+          <p>Once Ghost's read-only mode is off, open any post from your Ghost library and switch to the Editor. em converts Ghost's cards into readable Markdown (see the <a href="markdown-cheatsheet.html">Markdown cheatsheet</a>) so the whole post stays plain text while you work.</p>
           <ul>
             <li>Save to Ghost (⌘S) sends your changes back to the site. Nothing is ever sent until you save — there is no auto-publish.</li>
             <li>If the post changed on Ghost while you were editing, em shows you both versions and lets you choose. Your edit is never silently overwritten, and neither is the site's.</li>
             <li>Leave a post with unsaved changes and em asks to save them to Ghost, or revert to the site's version.</li>
             <li>Edit Post Settings… changes a post's status — title, excerpt, tags, newsletter, schedule — without touching its content.</li>
           </ul>
-          <p>Some Ghost cards — like email call to actions or subscription cards — do not have a visible option inside em's Reader and are represented by a shared “Hidden Content” card.</p>
         </div>
       </details>
 
       <details class="toggle">
-        <summary id="staying-in-sync">Staying in sync</summary>
+        <summary id="staying-in-sync">Staying in Sync</summary>
         <div class="toggle__body">
-          <p>em checks your site for changed posts when it launches and whenever you choose Refresh Posts. Launch refreshes are quick and incremental; Settings → Ghost controls how often a full sync runs.</p>
+          <p>em checks your site for changed posts every time it launches so your site is always in sync.</p>
         </div>
       </details>
     </section>
@@ -303,7 +299,7 @@
       <div class="callout">
         <span class="callout__emoji" aria-hidden="true">🔒</span>
         <div class="callout__body">
-          <p>Search, indexing, and reading your files happen entirely on-device in every configuration, whichever AI tier you use — or none at all.</p>
+          <p>Search, indexing, and reading your files happen entirely on-device in every configuration without needing to enable AI features.</p>
         </div>
       </div>
 
@@ -318,7 +314,7 @@
       <details class="toggle">
         <summary id="editorial-review">Editorial Review</summary>
         <div class="toggle__body">
-          <p>Ask for an Editorial Review and em reads the open draft and returns structured feedback. What makes it different: the instructions are yours. Every review follows the “Editorial Review Prompt” document that you can edit in Settings → AI (or in the Shortcut, if you're using Apple Intelligence). Want reviews to focus on structure, or check your citations, or be harsher? Edit the document. Delete your edits and em falls back to its built-in prompt.</p>
+          <p>Ask for an Editorial Review and em reads the open draft and returns structured feedback. What makes it different: the instructions are yours. Every review follows the “Editorial Review Prompt” document that you can edit in Settings → AI (or in the Shortcut, if you're using Apple Intelligence). Want reviews to focus on structure, or check your citations, or be harsher? Edit the prompt document. Delete your edits and em falls back to its built-in prompt.</p>
           <p>Editorial Reviews run through one of two engines:</p>
           <ul>
             <li><strong>A connected model</strong>, if you've added one.</li>
@@ -329,35 +325,24 @@
       </details>
 
       <details class="toggle">
-        <summary id="three-privacy-tiers">Three privacy tiers</summary>
+        <summary id="connecting-your-own-model">Connecting Your Own Model</summary>
         <div class="toggle__body">
-          <ol>
-            <li><strong>On-Device.</strong> Apple Intelligence's on-device model. Nothing about your writing leaves your device — not to Apple, not to em's developer. <a href="https://developer.apple.com/documentation/foundationmodels" target="_blank" rel="noopener noreferrer">Learn more about Apple's on-device Foundation Models</a>.</li>
-            <li><strong>Private Cloud Compute, via Shortcuts.</strong> If you add an Editorial Review Shortcut using Apple's “Use Model” action, your draft is processed on Apple's Private Cloud Compute infrastructure under Apple's own <a href="https://security.apple.com/documentation/private-cloud-compute" target="_blank" rel="noopener noreferrer">PCC privacy guarantees</a>. em hands the Shortcut your draft — the Shortcut's own permissions govern the rest.</li>
-            <li><strong>Remote models (Claude, ChatGPT, or Gemini).</strong> You supply your own API key. When this tier answers a question or reviews a draft, it receives only your question plus the specific excerpts em's on-device search selected, or the text of the draft under review — never your library as a whole, and never your files in bulk. That request goes directly from your device to the provider you chose, using your key. em does not proxy it, log it, or see it.</li>
-          </ol>
-        </div>
-      </details>
-
-      <details class="toggle">
-        <summary id="connecting-your-own-model">Connecting your own model</summary>
-        <div class="toggle__body">
-          <p>In Settings → AI, pick a provider, paste your API key (the Get a Key… button opens in your browser), and em verifies it before connecting.</p>
+          <p>In Settings → AI, pick a provider and paste your API key (the Get a Key… button opens in your browser).</p>
           <ul>
-            <li><strong>Your key, your billing.</strong> em is not a middleman — usage is billed by the provider to your account, and you can revoke the key in their console at any time.</li>
-            <li><strong>One connection at a time.</strong> Connecting a provider replaces the previous one, but switched-away keys stay safely in your Keychain — switch back without re-pasting. Only the Forget API Key… button (or a Factory Reset) deletes one.</li>
-            <li><strong>Keys work everywhere.</strong> The connection and key sync through iCloud Keychain, end-to-end encrypted.</li>
-            <li><strong>em always tells you who's answering</strong> — the input field itself says “Ask em, powered by Claude” (or ChatGPT, or Gemini, or Apple Intelligence), and external models are shown with their real logos, never disguised.</li>
-            <li><strong>Disconnect keys anytime</strong> to return fully on-device.</li>
+            <li><strong>Your key, Your Billing.</strong> em is not a middleman — usage is billed by the provider to your account, and you can revoke the key in their console at any time.</li>
+            <li><strong>One Connection at a Time.</strong> Connecting a provider replaces the previous one, but switched-away keys stay safely in your Keychain — switch back without re-pasting. Only the Forget API Key… button (or an em Factory Reset) deletes one.</li>
+            <li><strong>Keys Work Everywhere.</strong> The connection and key sync through iCloud Keychain.</li>
+            <li><strong>em Always Tells You Who's Answering</strong> — the input field itself says “Ask em, powered by Claude” (or ChatGPT, or Gemini, or Apple Intelligence).</li>
+            <li>Disconnect keys anytime to return fully on-device.</li>
           </ul>
-          <p><strong>Web searches.</strong> External models can access the web to add references to your results. This is off by default. When off, requests carry no tools — the model cannot browse the internet, and em strips any external link the model invents. Turn Enable Web Searches on and the provider's own search runs using your API key, and Editorial Review cites real retrieved sources in an Extended Citations section.</p>
+          <p><strong>Web Searches.</strong> External models can access the web to add references to your results. This is off by default. When off, requests carry no tools — the model cannot browse the internet, and em strips any external link the model invents. Turn Enable Web Searches on and the provider's own search runs using your API key, and Editorial Review cites real retrieved sources in an Extended Citations section.</p>
         </div>
       </details>
 
       <details class="toggle">
-        <summary id="turning-ai-off">Turning AI off</summary>
+        <summary id="turning-ai-off">Turning AI Off</summary>
         <div class="toggle__body">
-          <p>Settings → AI → Enable AI turns the whole thing off. Turning it off deletes the AI library and its conversations — on every device.</p>
+          <p>Settings → AI → Enable AI turns the whole thing off. Turning AI off deletes the entire AI library and its conversations on every device. This is a destructive action and conversations cannot be restored after disabling AI in em.</p>
         </div>
       </details>
     </section>
@@ -367,12 +352,12 @@
       <p>em's actions are available in Apple's Shortcuts app on Mac, iPad, and iPhone. Use your writing as the destination — or the source — for any automation you can dream up.</p>
 
       <details class="toggle">
-        <summary id="the-actions">The actions</summary>
+        <summary id="the-actions">The Actions</summary>
         <div class="toggle__body">
           <div class="table-wrap">
             <table>
               <thead>
-                <tr><th>Action</th><th>What it does</th></tr>
+                <tr><th>Action</th><th>What it Does</th></tr>
               </thead>
               <tbody>
                 <tr><td><strong>Create Document</strong></td><td>Creates a new Markdown document in a specified library, with a title and optional starting text.</td></tr>
@@ -384,21 +369,22 @@
                 <tr><td><strong>Get Document Title</strong></td><td>Returns a document's title.</td></tr>
                 <tr><td><strong>Get Document Markdown</strong></td><td>Returns a document's full Markdown source.</td></tr>
                 <tr><td><strong>Import AI Result</strong></td><td>Saves text produced by a Shortcut as a new AI conversation in em.</td></tr>
+                <tr><td><strong>Send to Ghost</strong></td><td>Writes specified content to the Ghost site in draft, scheduled, or published status.</td></tr>
               </tbody>
             </table>
           </div>
-          <p>Actions that write are careful by design: if a file changes while a shortcut is running, em declines to overwrite it rather than clobber your edit.</p>
+          <p>Actions that write are careful by design: if a file changes while a Shortcut is running, em declines to overwrite the file rather than clobber your edit.</p>
         </div>
       </details>
 
       <details class="toggle">
-        <summary id="shortcut-ideas">Shortcut ideas</summary>
+        <summary id="shortcut-ideas">Shortcut Ideas</summary>
         <div class="toggle__body">
           <ul>
-            <li><strong>A capture inbox.</strong> A Shortcut on your phone that asks for text and appends it to a file in your library — a thought captured in two taps, from anywhere.</li>
-            <li><strong>A daily note.</strong> Create a document named for today's date in your journal library, from a time-of-day automation.</li>
-            <li><strong>Read it later.</strong> Share a link to a Shortcut that appends it, with the page title, to a reading list document.</li>
-            <li><strong>Your own AI pipeline.</strong> Chain Get Document Markdown into any model action Shortcuts can reach, then Import AI Result to file the response in em — your archive in, your archive out. This is how Editorial Review using Apple's model works.</li>
+            <li><strong>Capture Inbox.</strong> A Shortcut on your phone that asks for text and appends it to a file in your library — a thought captured in two taps, from anywhere.</li>
+            <li><strong>Daily Note.</strong> Create a document named for today's date in your journal library, from a time-of-day automation.</li>
+            <li><strong>Read it Later.</strong> Share a link to a Shortcut that appends it, with the page title, to a reading list document.</li>
+            <li><strong>Your Own AI Pipeline.</strong> Chain Get Document Markdown into any model action Shortcuts can reach, then Import AI Result to file the response in em — your archive in, your archive out. This is how Editorial Review using Apple's model works.</li>
           </ul>
         </div>
       </details>
@@ -407,7 +393,7 @@
     <hr>
 
     <section>
-      <h2 id="faq">Questions</h2>
+      <h2 id="faq">Frequently Asked Questions</h2>
 
       <h3 id="privacy">Privacy</h3>
 
@@ -430,7 +416,7 @@
       <details class="toggle">
         <summary id="why-do-libraries-have-to-be-in-icloud-drive">Why do libraries have to be in iCloud Drive?</summary>
         <div class="toggle__body">
-          <p>iCloud is em's only sync feature. Your folders, your version history, your library settings — all of it reaches your other devices by living in an iCloud-synced folder.</p>
+          <p>iCloud is em's only sync feature. Your folders, your Version History, your library settings — all of it reaches your other devices by living in an iCloud-synced folder.</p>
         </div>
       </details>
 
@@ -448,7 +434,7 @@
       </details>
 
       <details class="toggle">
-        <summary id="what-is-the-em-folder-inside-my-icloud-drive">What are the hidden folders inside my iCloud Drive?</summary>
+        <summary id="what-is-the-em-folder-inside-my-icloud-drive">What are the folders inside my iCloud Drive?</summary>
         <div class="toggle__body">
           <p>These are em's home for preferences, Version Histories, and library customizations. They live inside iCloud so they sync across your devices. They can be deleted by performing a Factory Reset in Settings.</p>
         </div>
@@ -487,7 +473,7 @@
       <details class="toggle">
         <summary id="does-em-support-ghost-formats-that-are-not-part-of-markdown">Does em support Ghost formats that aren't part of Markdown?</summary>
         <div class="toggle__body">
-          <p><strong>Yes!</strong> em uses a customized version of Markdown that supports 16 different Ghost card types, like callouts, image galleries, and toggles. This custom Markdown is denoted by <code>:::</code> in the editor and can be used in local drafts too. Learn more in the <a href="markdown-cheatsheet.html">Markdown cheatsheet</a>.</p>
+          <p><strong>Yes!</strong> em uses a customized version of Markdown that supports 16 different Ghost Koenig card types, like callouts, image galleries, and toggles. This custom Markdown is denoted by <code>:::</code> in the editor and can be used in local drafts too. Learn more in the <a href="markdown-cheatsheet.html">Markdown cheatsheet</a>.</p>
         </div>
       </details>
 
@@ -498,7 +484,7 @@
         </div>
       </details>
 
-      <h3 id="search-and-the-index">Search and the index</h3>
+      <h3 id="search-and-the-index">Search and the Index</h3>
 
       <details class="toggle">
         <summary id="why-does-smart-search-say-its-indexing">Why does Smart Search say it's indexing?</summary>
@@ -510,7 +496,7 @@
       <details class="toggle">
         <summary id="why-do-search-results-look-wrong-or-stale">Why do search results look wrong or stale?</summary>
         <div class="toggle__body">
-          <p>Something may have gone wrong with your index — an index problem only, never your files. Visit Settings → Index → Check Index Health to see what's going on. If needed, use Rebuild Search Index. The index is only a cache; rebuilding never touches your files.</p>
+          <p>Something may have gone wrong with your index, not your files. Visit Settings → Index → Check Index Health to see what's going on. If needed, use Rebuild Search Index. The index is only a cache; rebuilding never touches your files.</p>
         </div>
       </details>
 
@@ -519,7 +505,7 @@
       <details class="toggle">
         <summary id="why-would-a-writer-use-ai">Why would a writer use AI?</summary>
         <div class="toggle__body">
-          <p>AI use among writers can be controversial, but em believes it's a choice you get to make for yourself. If you want AI to provide feedback, em provides the opportunity — but only after you explicitly enable it and grant access to your libraries. em puts you in control of how, or if, you use AI.</p>
+          <p>AI use among writers can be controversial, but em believes it's a choice you get to make for yourself. If you want AI to provide feedback, em provides the opportunity — but only after you explicitly enable it and grant access to your libraries. em puts you in control of how, or <em>if</em>, you use AI.</p>
         </div>
       </details>
 
@@ -533,14 +519,14 @@
       <details class="toggle">
         <summary id="ai-is-off-why-does-write-with-siri-still-show-up">AI is off — why does Write With Siri still show up?</summary>
         <div class="toggle__body">
-          <p>Write With Siri is a system-wide proofreading tool provided by Apple Intelligence. In em it isn't controlled by the AI settings and instead lives in the Editor settings, where you can enable or disable it as you wish.</p>
+          <p>Write With Siri is a system-wide proofreading tool provided by Apple Intelligence.</p>
         </div>
       </details>
 
       <details class="toggle">
         <summary id="is-my-ai-usage-private">Is my AI usage private?</summary>
         <div class="toggle__body">
-          <p>It depends which model you choose. When AI is enabled, em defaults to Apple Intelligence's on-device models, so your questions and your data never leave your device. AI conversations, even with on-device models, sync through iCloud so they appear in each copy of em you use.</p>
+          <p>Theoretically yes, but it depends on the AI provider's privacy policies. When AI is enabled, em defaults to Apple Intelligence's on-device models, so your questions and your data never leave your device. AI conversations, even with on-device models, sync through iCloud so they appear in each copy of em you use.</p>
           <p>Editorial Review sends the contents of the selected draft through remote servers for analysis. With the on-device model selected, this happens through a Shortcut and Apple's Private Cloud Compute.</p>
           <p>If a remote model (Claude, ChatGPT, or Gemini) is enabled, your questions and Editorial Review content are processed in accordance with that provider's usage policies. Read more in the <a href="../privacy.html">Privacy Policy</a>.</p>
         </div>
@@ -553,7 +539,7 @@
         </div>
       </details>
 
-      <h3 id="the-danger-zone">The danger zone</h3>
+      <h3 id="the-danger-zone">The Danger Zone</h3>
 
       <details class="toggle">
         <summary id="what-does-factory-reset-do">What does Factory Reset do?</summary>
@@ -564,11 +550,11 @@
               <p>A Factory Reset reverts em to a just-downloaded state <strong>on every device signed into your iCloud</strong>, and it cannot be undone.</p>
             </div>
           </div>
-          <p>Settings → Index has a few erasure options. They only touch the data em creates — Version Histories, saved preferences, and the like. Deleting them never touches your own Markdown files.</p>
+          <p>Settings → Data has a few erasure options. They only touch the data em creates — Version Histories, saved preferences, and the like. Deleting them never touches your own Markdown files.</p>
         </div>
       </details>
 
-      <h3 id="odds-and-ends">Odds and ends</h3>
+      <h3 id="odds-and-ends">Odds and Ends</h3>
 
       <details class="toggle">
         <summary id="whats-with-the-em-dash-highlighting">What's with the em dashes?</summary>
@@ -597,13 +583,27 @@
           <p>It looks better that way.</p>
         </div>
       </details>
+      
+      <details class="toggle">
+        <summary id="will-em-come-to-windows">Will em come to Windows or Android or Linux or insert_platform_here?</summary>
+        <div class="toggle__body">
+          <p>em will only be available for Apple devices — it's the ecosystem I use and understanding one development process was hard enough.</p>
+        </div>
+      </details>
+      
+      <details class="toggle">
+        <summary id="will-em-support-more-than-just-ghost-in-the-future">Will em support more than just Ghost in the future?</summary>
+        <div class="toggle__body">
+          <p>Maybe? It depends on API availability and my patience (and maybe user requests). If Medium opened their API again that would be a no-brainer...</p>
+        </div>
+      </details>
     </section>
 
     <hr>
 
     <section class="doc__end">
-      <h2>Still stuck?</h2>
-      <p>The <a href="markdown-cheatsheet.html">Markdown cheatsheet</a> covers every syntax em understands, including the Ghost cards.</p>
+      <h2>Still Stuck?</h2>
+      <p>The <a href="markdown-cheatsheet.html">Markdown Cheatsheet</a> covers every syntax em understands, including the Ghost Koenig cards.</p>
     </section>
 
   </article>

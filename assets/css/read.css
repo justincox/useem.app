@@ -4,8 +4,7 @@
  * Each page is one document, drawn the way em's Read view draws a document:
  * Read's own paper and ink, the 700pt column cap, ReadTypeScale.page for the
  * headings, and the single 3pt rule at half the column that em uses for
- * thematic breaks, quote bars, and pull quotes alike. The toolbar is em's
- * toolbar — the Read/Edit pair, on the home page.
+ * thematic breaks, quote bars, and pull quotes alike.
  *
  * Green is the library colour. In em every library carries an accent that
  * tints its rules, quote bars, links, and card fills; em's own is the green in
@@ -73,41 +72,22 @@ body {
   color: inherit;
   min-width: 0;
 }
-.toolbar__file {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  letter-spacing: -0.01em;
+.toolbar__title {
+  font-size: 0.9rem;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.toolbar__ext { color: var(--ink-muted); }
+/* Pacifico draws "em" and nothing else, in the app and here. */
+.toolbar__wordmark {
+  font-family: var(--font-wordmark);
+  font-size: 1.15em;
+  color: var(--accent);
+}
 .toolbar__tools {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-}
-
-.segmented {
-  display: inline-flex;
-  padding: 2px;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--ink) 8%, transparent);
-}
-.segmented__btn {
-  appearance: none;
-  border: 0;
-  cursor: pointer;
-  font: inherit;
-  font-size: 0.8125rem;
-  padding: 0.3rem 0.85rem;
-  border-radius: 999px;
-  background: transparent;
-  color: var(--ink-muted);
-  transition: background 120ms ease, color 120ms ease;
-}
-.segmented__btn.is-active {
-  background: var(--paper);
-  color: var(--ink);
-  box-shadow: 0 1px 2px hsl(var(--shadow-color) / 0.18);
 }
 
 .toolbar__links {
@@ -342,15 +322,6 @@ body {
 
 /* ---------- article pages ---------- */
 
-.doc__eyebrow {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.75em;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.75rem;
-}
 .doc__title {
   font-size: 2em;
   margin: 0 0 0.5rem;
@@ -361,16 +332,6 @@ body {
   color: var(--ink-muted);
   margin: 0 0 2.5rem;
 }
-.back-link {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.8em;
-  color: var(--ink-muted);
-  text-decoration: none;
-  margin-bottom: 2rem;
-}
-.back-link:hover { color: var(--ink); }
-
 /*
  * Contents: an outline, not a pile of links. One numbered row per section,
  * the number in the library colour, the row set as a line of the document.
@@ -545,25 +506,6 @@ body {
   color: var(--accent);
 }
 
-/* ---------- edit view ---------- */
-
-.source {
-  font-family: var(--font-mono);
-  font-size: 0.9em;
-  line-height: 1.7;
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
-  margin: 0;
-  tab-size: 2;
-}
-.source .tok-marker { color: var(--ink-muted); }
-.source .tok-heading { color: var(--clay); font-weight: 700; }
-.source .tok-quote { color: var(--olive); }
-.source .tok-strong { color: var(--ink); font-weight: 700; }
-.source .tok-link { color: var(--teal); }
-.source .tok-rule { color: var(--ink-muted); }
-.source .tok-image { color: var(--plum); }
-
 /* ---------- footer ---------- */
 
 .site-footer {
@@ -581,10 +523,20 @@ body {
 }
 .footer-signature { display: block; line-height: 0; }
 .footer-signature__mark { width: 108px; height: auto; }
-/* The pilcrow is orange in Justin Cox's mark, in every context — it does not
-   take the page's accent. */
-.fs-pilcrow { fill: #FF7700; }
-.fs-wordmark { fill: var(--ink); }
+/*
+ * The signature is somebody else's mark on somebody else's site, so it sits in
+ * grey until you reach for it and then takes its own colours — the pilcrow's
+ * orange is fixed, never the page's accent.
+ */
+.fs-pilcrow,
+.fs-wordmark {
+  fill: var(--ink-muted);
+  transition: fill 160ms ease;
+}
+.footer-signature:hover .fs-pilcrow,
+.footer-signature:focus-visible .fs-pilcrow { fill: #FF7700; }
+.footer-signature:hover .fs-wordmark,
+.footer-signature:focus-visible .fs-wordmark { fill: var(--ink); }
 .footer-links {
   display: flex;
   flex-wrap: wrap;

@@ -32,9 +32,9 @@
 
 <nav class="toolbar">
   <div class="toolbar__wrap">
-    <a class="toolbar__brand" href="index.html" aria-label="em — home">
+    <a class="toolbar__brand" href="index.html" aria-label="em — Markdown Writer &amp; Editor">
       <span class="app-icon app-icon--sm"><img src="assets/img/about-hero-icon.png?v=3" alt="" width="1024" height="1024"></span>
-      <span class="toolbar__file">privacy<span class="toolbar__ext">.md</span></span>
+      <span class="toolbar__title"><span class="toolbar__wordmark">em</span> — Markdown Writer &amp; Editor</span>
     </a>
 
     <div class="toolbar__tools">
@@ -50,20 +50,18 @@
 <main class="page" id="doc">
   <article class="doc">
 
-    <a class="back-link" href="index.html">← Home</a>
-    <span class="doc__eyebrow">Legal</span>
     <h1 class="doc__title">Privacy Policy</h1>
     <p class="doc__updated">Last updated: August 9, 2026</p>
 
     <nav class="toc" aria-label="Contents">
       <h2>Contents</h2>
       <ol>
-        <li><a href="#the-short-version">The short version</a></li>
-        <li><a href="#your-files">Your files</a></li>
-        <li><a href="#ghost-publishing">Ghost publishing</a></li>
-        <li><a href="#ai-features">AI features</a></li>
-        <li><a href="#what-em-doesnt-collect">What em doesn't collect</a></li>
-        <li><a href="#childrens-privacy">Children's privacy</a></li>
+        <li><a href="#the-short-version">The Short Version</a></li>
+        <li><a href="#your-files">Your Files</a></li>
+        <li><a href="#ghost-publishing">Ghost Publishing</a></li>
+        <li><a href="#ai-features">AI Features</a></li>
+        <li><a href="#what-em-doesnt-collect">What em Doesn't Collect</a></li>
+        <li><a href="#childrens-privacy">Children's Privacy</a></li>
         <li><a href="#changes-to-this-policy">Changes</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -74,57 +72,57 @@
       <p>Your files are yours and no one can tell you what to do with ’em.</p>
     </blockquote>
 
-    <p><strong>em has no server.</strong> This isn't a promise about what em's developer chooses to do with your data — em has no backend to store data, no account to create, and no company database your writing could end up in. em and its developer cannot access anything you create, edit, or work with in the app. This policy describes exactly where your data lives and the (few) cases where it leaves your device.</p>
+    <p><strong>em has no server.</strong> This isn't a promise about what em chooses to do with your data — em has nowhere to store data, no account to create, and no company database where your writing could end up. em and its developer cannot access anything you create, edit, or work with in the app. This policy describes exactly where your data lives and the (few) cases where it leaves your device.</p>
 
     <hr>
 
     <section>
-      <h2 id="the-short-version">The short version</h2>
+      <h2 id="the-short-version">The Short Version</h2>
       <ul>
         <li>em stores your writing as plain Markdown files in folders you choose.</li>
         <li>Those folders sync between your own devices through your own iCloud account — never through servers em operates, because em doesn't operate any.</li>
         <li>Ghost publishing sends data only to the Ghost site you connect, using your own Admin API key, which is stored in Apple's Keychain.</li>
-        <li>AI features are off by default and begin with Apple's on-device models if enabled. If you connect your own Claude, ChatGPT, or Gemini API key, only your question (or the draft under review) is sent to that provider. Your API key is stored in Apple's Keychain, and the provider bills you according to their usage policy.</li>
-        <li>em and its developer never see your writing, your credentials, or your usage. Even better, there is nothing to see — no analytics, no crash reporting to a third party, no telemetry at all.</li>
+        <li>AI features are off by default and begin with Apple's on-device models if enabled. If you connect your own Claude, ChatGPT, or Gemini API key, only files from libraries you specify are sent to the model. Your API key is stored in Apple's Keychain, and the provider bills you according to their usage policy.</li>
+        <li>em and its developer never see your writing, your credentials, or your usage. Even better, there is nothing to see — no analytics, no crash reporting unless you choose to share it.</li>
       </ul>
     </section>
 
     <section>
-      <h2 id="your-files">Your files</h2>
-      <p>Your libraries are folders that live in your iCloud Drive. em reads and writes them directly. Sync between your Mac, iPad, and iPhone happens through Apple's iCloud, under your Apple Account. No copy of your writing is ever transmitted to em's developer or to any server em controls, because that server doesn't exist.</p>
-      <p>Deleting em from a device does not delete your files — they're just folders in your normal storage directory. em writes nothing into your folders: Version History, library settings, and preferences live in em's own iCloud folder, not alongside your writing. See the <a href="help/index.html#faq">questions in Help</a> for what happens to them if you stop using the app.</p>
+      <h2 id="your-files">Your Files</h2>
+      <p>Your libraries are folders that live in your iCloud Drive. em reads and writes to them directly. Sync between your Mac, iPad, and iPhone happens through Apple's iCloud with your Apple Account. No copy of your writing is ever transmitted to em's developer or to any server em controls, because that server doesn't exist.</p>
+      <p>Deleting em from a device does not delete your files — they remain in the original storage directory. em's settings, Version History, and preferences live in em's own iCloud folder, not alongside your writing. See the <a href="help/index.html#faq">FAQ</a> to learn what happens to these synced files if you stop using em.</p>
     </section>
 
     <section>
-      <h2 id="ghost-publishing">Ghost publishing</h2>
-      <p>If you connect a Ghost site, em talks directly to that site's Admin API using a key you generate in your own Ghost admin. That key is stored in your Keychain and synced via iCloud, which is end-to-end encrypted. Data only ever flows between your device and the Ghost site you connected — never through em. Ghost connections are read-only by default, and nothing writes to your site until you explicitly enable the feature and then save or publish a draft. There is no background or automatic upload of your drafts.</p>
+      <h2 id="ghost-publishing">Ghost Publishing</h2>
+      <p>If you connect a Ghost site, em talks directly to that site's Admin API using a key you generate in your own Ghost site's settings. That key is stored in your Keychain and synced via iCloud. Data only ever flows between your device and the Ghost site you connected — never through em. Ghost connections are read-only by default, and nothing writes to your site until you explicitly enable the feature and then save or publish a draft. There is no background or automatic upload of your drafts.</p>
     </section>
 
     <section>
-      <h2 id="ai-features">AI features</h2>
-      <p>AI features are off by default in em. You can choose to leave it that way or use AI on your terms. In privacy terms, there are three tiers of AI models built into em:</p>
+      <h2 id="ai-features">AI Features</h2>
+      <p>AI features are off by default in em. You can choose to leave it that way or use AI on your terms. There are three tiers of AI models built into em:</p>
       <ol>
         <li><strong>On-Device.</strong> Apple Intelligence's on-device model. Nothing about your writing leaves your device — not to Apple, not to em's developer. <a href="https://developer.apple.com/documentation/foundationmodels" target="_blank" rel="noopener noreferrer">Learn more about Apple's on-device Foundation Models</a>.</li>
-        <li><strong>Private Cloud Compute, via Shortcuts.</strong> If you add an Editorial Review Shortcut using Apple's “Use Model” action, your draft is processed on Apple's Private Cloud Compute infrastructure under Apple's own <a href="https://security.apple.com/documentation/private-cloud-compute" target="_blank" rel="noopener noreferrer">PCC privacy guarantees</a>. em hands the Shortcut your draft — the Shortcut's own permissions govern the rest.</li>
-        <li><strong>Remote Models (Claude, ChatGPT, or Gemini).</strong> You supply your own API key. When this tier answers a question or reviews a draft, it receives only your question plus the specific excerpts em's on-device search selected, or the text of the draft under review — never your library as a whole, and never your files in bulk. That request goes directly from your device to the provider you chose, using your key. em does not proxy it, log it, or see it.</li>
+        <li><strong>Private Cloud Compute, via Shortcuts.</strong> If you add an Editorial Review Shortcut using Apple's on-device model, your draft is processed on Apple's Private Cloud Compute infrastructure under Apple's own <a href="https://security.apple.com/documentation/private-cloud-compute" target="_blank" rel="noopener noreferrer">PCC privacy guarantees</a>. em hands the Shortcut your draft — the Shortcut's own permissions govern the rest.</li>
+        <li><strong>Remote Models (Claude, ChatGPT, or Gemini).</strong> You supply your own API key. When this tier answers a question or reviews a draft, it receives only content from the library or libraries you enable for AI. Requests go directly from your device to the provider you chose, using your key. em never sees your key or the information sent with it.</li>
       </ol>
-      <p>Search, indexing, and reading your files happen entirely on-device in every configuration, regardless of which AI tier you use.</p>
-      <p><strong>Billing and control belong to you.</strong> External model usage is billed by the provider to your account — em takes no cut and does not act as a middleman. Your API key is stored in your Keychain and syncs via iCloud, end-to-end encrypted; only you can see it, and you can revoke it from the provider's console or em's settings at any time.</p>
+      <p>Search, indexing, and reading your files happen entirely on-device in every configuration, regardless of which AI model you enable.</p>
+      <p><strong>Billing and control belong to you.</strong> External model usage is billed by the provider to your account — em takes no cut and does not act as a middleman. Your API key is stored in your Keychain and syncs via iCloud; only you can see it, and you can revoke it from the provider's console or em's settings at any time. Apple's Private Cloud Compute may have usage limit based on Apple's iCloud service, but the on-device model is always free.</p>
       <p><strong>Web search is up to you.</strong> You can choose to give a remote model access to the internet via em's model settings. If you do, web search runs under the model's API key through that provider's own search. Web search is off by default.</p>
     </section>
 
     <section>
-      <h2 id="what-em-doesnt-collect">What em doesn't collect</h2>
-      <p>There is no em account, no sign-up, and no telemetry. em doesn't operate analytics, crash reporting, or usage tracking of any kind — there's no server for that data to reach even if em wanted to collect it. Any crash reports you choose to send go through Apple's standard OS-level mechanism and are governed by <a href="https://www.apple.com/privacy/" target="_blank" rel="noopener noreferrer">Apple's own privacy policy</a>, not em's.</p>
+      <h2 id="what-em-doesnt-collect">What em Doesn't Collect</h2>
+      <p>There is no em account, no sign-up, and no telemetry. em doesn't operate analytics, crash reporting outside of Apple's opt-in model, or usage tracking of any kind — there's no server for that data to reach even if em wanted to collect it. Any crash reports you choose to send go through Apple's standard OS-level mechanism and are governed by <a href="https://www.apple.com/privacy/" target="_blank" rel="noopener noreferrer">Apple's own privacy policy</a>, not em's.</p>
     </section>
 
     <section>
-      <h2 id="childrens-privacy">Children's privacy</h2>
+      <h2 id="childrens-privacy">Children's Privacy</h2>
       <p>em collects no personal information from anyone, of any age, because it collects no personal information at all — everything described above stays on your device or moves directly between your device and services you explicitly connect.</p>
     </section>
 
     <section>
-      <h2 id="changes-to-this-policy">Changes to this policy</h2>
+      <h2 id="changes-to-this-policy">Changes to This Policy</h2>
       <p>If em's architecture changes in a way that affects this policy, this document would be updated first, and the change would be visible in the app before it took effect.</p>
     </section>
 
@@ -139,7 +137,7 @@
       <h2 id="acknowledgements">Acknowledgements</h2>
 
       <h3 id="fonts">Fonts</h3>
-      <p>em uses the following fonts, bundled with the app and with this site:</p>
+      <p>em uses the following fonts in the app and on this site:</p>
       <div class="table-wrap">
         <table>
           <thead>
@@ -153,7 +151,6 @@
           </tbody>
         </table>
       </div>
-      <p>Full font licence notices are included with the bundled font files inside the em app.</p>
 
       <h3 id="markdown">Markdown</h3>
       <p>Markdown was created by <a href="https://daringfireball.net/projects/markdown/" target="_blank" rel="noopener noreferrer">John Gruber</a>.</p>
@@ -161,7 +158,7 @@
       <h3 id="trademarks">Trademarks</h3>
       <ul>
         <li>Ghost is a trademark of Ghost Foundation Ltd.</li>
-        <li>Apple, Apple Intelligence, and Siri are trademarks of Apple Inc.</li>
+        <li>Apple, Apple Intelligence, iCloud, Private Cloud Compute, and Siri are trademarks of Apple Inc.</li>
         <li>Anthropic and Claude are trademarks of Anthropic, PBC.</li>
         <li>OpenAI and ChatGPT are trademarks of OpenAI, L.L.C.</li>
         <li>Google and Gemini are trademarks of Google LLC.</li>

@@ -49,19 +49,14 @@
 
 <a class="skip" href="#doc">Skip to the writing</a>
 
-<!-- The toolbar is em's own: the Read/Edit pair, doing the job it does in the app. -->
 <nav class="toolbar">
   <div class="toolbar__wrap">
-    <a class="toolbar__brand" href="index.html" aria-label="em — home">
+    <a class="toolbar__brand" href="index.html" aria-label="em — Markdown Writer &amp; Editor">
       <span class="app-icon app-icon--sm"><img src="assets/img/about-hero-icon.png?v=3" alt="" width="1024" height="1024"></span>
-      <span class="toolbar__file">em<span class="toolbar__ext">.md</span></span>
+      <span class="toolbar__title"><span class="toolbar__wordmark">em</span> — Markdown Writer &amp; Editor</span>
     </a>
 
     <div class="toolbar__tools">
-      <div class="segmented" role="group" aria-label="View">
-        <button class="segmented__btn is-active" type="button" data-view="read" aria-pressed="true">Read</button>
-        <button class="segmented__btn" type="button" data-view="edit" aria-pressed="false">Edit</button>
-      </div>
       <ul class="toolbar__links">
         <li><a href="help/markdown-cheatsheet.html">Markdown</a></li>
         <li><a href="help/index.html">Help</a></li>
@@ -73,8 +68,7 @@
 
 <main class="page" id="doc">
 
-  <!-- Read view: the page as em renders a document. -->
-  <article class="doc" data-read>
+  <article class="doc">
 
     <header class="doc__head">
       <div class="app-icon">
@@ -96,11 +90,11 @@
 
     <section>
       <h2>Find ’em</h2>
-      <p>Your writing is spread across folders you forgot about, under titles that made sense at the time. Smart Search finds it by meaning — not just by matching letters.</p>
+      <p>Your writing is spread across folders you forgot about, under titles that made sense at the time. Smart Search finds ’em by meaning — not just by matching words.</p>
       <blockquote>
         <p>Ask for “the piece about building an app” and em finds the essay you titled something else entirely.</p>
       </blockquote>
-      <p>Full-text search and on-device semantic search, together. em understands what your drafts are about, not just the words in ’em.</p>
+      <p>Full-text search and on-device semantic search, <em>together</em>. em understands what your drafts are about, not just the words in ’em.</p>
       <figure>
         <img src="assets/screenshots/smartsearch.webp?v=1" alt="Smart Search finding a note by meaning in em" width="2605" height="1854" loading="lazy">
         <figcaption>Smart Search, running entirely on your device.</figcaption>
@@ -109,7 +103,7 @@
 
     <section>
       <h2>Protect ’em</h2>
-      <p>Every edit is versioned automatically and backed up to iCloud. Compare a draft against the version your iPhone saved at 2:45 PM, restore whichever one you actually meant, and stop mourning the paragraph you deleted on purpose and regretted immediately.</p>
+      <p>Every edit is versioned automatically and backed up to iCloud. Compare a draft against the version your iPhone saved, restore whichever one you actually want, and stop mourning the paragraph you deleted and regretted immediately.</p>
       <figure>
         <img src="assets/screenshots/version.webp?v=1" alt="Restoring an earlier version of a draft in em" width="2605" height="1854" loading="lazy">
         <figcaption>Version History, across every device you write on.</figcaption>
@@ -118,18 +112,18 @@
 
     <section>
       <h2>Publish ’em</h2>
-      <p>Connect your Ghost site and write, edit, back up, and publish natively — 16 Ghost card types, plus drafts, scheduling, and newsletters, all from Markdown. Your files can live in iCloud or in Ghost. Either way, you still decide what happens to ’em.</p>
+      <p>Connect your Ghost site and write, edit, back up, and publish natively — 16 Ghost Koenig card types, plus drafts, scheduling, and <em>newsletters</em>, all from em's customized Markdown. Your files can live in iCloud or in Ghost. Either way, you still decide what happens to ’em.</p>
       <figure>
         <img src="assets/screenshots/ghost.webp?v=1" alt="Publishing a post to Ghost from em" width="2605" height="1854" loading="lazy">
-        <figcaption>Markdown in, Ghost cards out.</figcaption>
+        <figcaption>Markdown in, Koenig cards out.</figcaption>
       </figure>
     </section>
 
     <section>
       <h2>Explore ’em</h2>
       <h3 class="aside">(but only if you want to)</h3>
-      <p>Every AI feature ships off. Turn one on and it runs on-device with Apple Intelligence — or connect Claude, ChatGPT, or Gemini with your own API key, your own billing, revocable whenever you like. em names the model that's answering, every time.</p>
-      <p>Ask questions and get answers grounded in what's in your files, not what's on the internet. Editorial Review runs from a prompt that's an ordinary document in your own library — read it, rewrite it, delete it. em doesn't write your drafts for you. It helps you decide what to do with ’em.</p>
+      <p><strong>The only one who should decide about how AI interacts with your writing is you!</strong> Enabling AI lets you ask questions and get answers grounded in what's in your files, not what's on the internet. An Editorial Review runs from a prompt that's an ordinary document in your own library — read it, rewrite it, delete it. em doesn't write your drafts for you. It helps you decide what to do with ’em.</p>
+      <p>em provides intelligence features only if you opt into ’em. Every AI feature ships <strong>off</strong>. Once on, AI conversations stay on-device with Apple Intelligence by default. Engage with more powerful models like Claude, ChatGPT, or Gemini with your own API key and your own billing if you want to tap into a more powerful model. Or don't! It's your choice.</p>
       <p><a class="doc__more" href="help/index.html#ai">How AI works in em →</a></p>
     </section>
 
@@ -140,19 +134,18 @@
       <blockquote>
         <p>Your files are yours and no one can tell you what to do with ’em.</p>
       </blockquote>
-      <p>em has no server. That isn't a promise about what em's developer chooses to do with your writing — there's no backend to store it, no account to create, and no company database it could end up in. Your writing syncs through your iCloud and never touches infrastructure you didn't authorize.</p>
+      <p>em has no server. That isn't a promise about what em chooses to do with your writing — there's no backend to store data, no account to create, and no company database where it could end up. <em>Your</em> writing syncs through <em>your</em> iCloud and never touches infrastructure <em>you</em> didn't authorize.</p>
       <p><a class="doc__more" href="privacy.html">Read the full Privacy Policy →</a></p>
     </section>
 
     <section>
-      <h2>Everything else</h2>
+      <h2>Everything Else</h2>
       <ul>
-        <li><strong>Smart Folders</strong> — any search, saved, and always current across every library</li>
-        <li><strong>Apple Shortcuts</strong> — automate publishing to Ghost from outside em</li>
-        <li><strong>Offline editing</strong> — writing, search, and version history with no connection at all</li>
-        <li><strong>Customization</strong> — Reader and Editor fonts and colors, tuned to your taste</li>
-        <li><strong>Quick access</strong> — favorites and per-library icons with your own accent colors</li>
-        <li><strong>Even more</strong> — reading time, word counts, and yes — em dash marking</li>
+        <li><strong>Universal App</strong> — writing, Versions, and settings sync across devices with iCloud
+        <li><strong>Apple Shortcuts</strong> — automate publishing to Ghost or creating files from outside em</li>
+        <li><strong>Customize Everything</strong> — Change fonts, colors, icons, and more to create the perfect writing environment</li>
+        <li><strong>Smart Folders</strong> — create folders based on criteria you define</li>
+        <li><strong>Even More</strong> — reading time, word counts, and yes — em dash coloring</li>
       </ul>
     </section>
 
@@ -168,8 +161,6 @@
 
   </article>
 
-  <!-- Edit view: the same document, in the editor. Written by read.js from the Read view above. -->
-  <pre class="source" data-source hidden aria-hidden="true"></pre>
 
 </main>
 
