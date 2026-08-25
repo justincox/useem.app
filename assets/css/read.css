@@ -78,11 +78,15 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* Pacifico draws "em" and nothing else, in the app and here. */
+/* Pacifico draws "em" and nothing else, in the app and here — set large
+   enough to hold its own beside the icon, with the rest of the name trailing
+   after it. */
 .toolbar__wordmark {
   font-family: var(--font-wordmark);
-  font-size: 1.15em;
+  font-size: 1.7em;
+  line-height: 1;
   color: var(--accent);
+  margin-right: 0.1em;
 }
 .toolbar__tools {
   display: flex;
@@ -183,12 +187,12 @@ body {
  */
 .callout.callout--lede {
   margin: 0;
-  padding: 1.15rem 1.4rem;
-  align-items: center;
+  padding: 1.35rem 1.4rem;
+  display: block;
+  text-align: center;
   background: color-mix(in srgb, var(--gc-color) 38%, transparent);
   border-color: color-mix(in srgb, var(--gc-color) 55%, transparent);
 }
-.callout--lede .callout__emoji { font-size: 1.5rem; }
 .callout--lede p {
   font-size: 1.35em;
   line-height: 1.3;
