@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Markdown Cheatsheet — em Help</title>
-<meta name="description" content="Every bit of syntax em understands, including Ghost cards — with live rendered examples styled exactly like em's own Read view.">
+<meta name="description" content="Every bit of syntax em understands, including the Ghost Koenig cards — with live rendered examples styled exactly like em's own Reader.">
 <link rel="canonical" href="https://useem.app/help/markdown-cheatsheet.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="em">
 <meta property="og:url" content="https://useem.app/help/markdown-cheatsheet.html">
 <meta property="og:title" content="Markdown Cheatsheet — em Help">
-<meta property="og:description" content="Every bit of syntax em understands, including Ghost cards — with live rendered examples styled exactly like em's own Read view.">
+<meta property="og:description" content="Every bit of syntax em understands, including the Ghost Koenig cards — with live rendered examples styled exactly like em's own Reader.">
 <meta property="og:image" content="https://useem.app/assets/screenshots/em.webp?v=2">
 <meta property="og:image:width" content="2880">
 <meta property="og:image:height" content="1618">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Markdown Cheatsheet — em Help">
-<meta name="twitter:description" content="Every bit of syntax em understands, including Ghost cards — with live rendered examples styled exactly like em's own Read view.">
+<meta name="twitter:description" content="Every bit of syntax em understands, including the Ghost Koenig cards — with live rendered examples styled exactly like em's own Reader.">
 <meta name="twitter:image" content="https://useem.app/assets/screenshots/em.webp?v=2">
 <meta name="theme-color" content="#F6F1E4" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#252525" media="(prefers-color-scheme: dark)">
@@ -24,8 +24,8 @@
 <link rel="icon" type="image/png" sizes="512x512" href="../assets/img/favicon-512.png?v=3">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png?v=3">
 <link rel="stylesheet" href="../assets/css/tokens.css?v=6">
-<link rel="stylesheet" href="../assets/css/read.css?v=2">
-<link rel="stylesheet" href="../assets/css/cheatsheet.css?v=1">
+<link rel="stylesheet" href="../assets/css/read.css?v=3">
+<link rel="stylesheet" href="../assets/css/cheatsheet.css?v=2">
 </head>
 <body>
 
@@ -50,261 +50,615 @@
 
 <main class="page" id="doc">
   <article class="doc">
+
   <h1 class="doc__title">Markdown Cheatsheet</h1>
   <p class="doc__updated">Every Markdown syntax em understands, including the Ghost Koenig cards.</p>
+
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#headings">Headings</a></li>
+      <li><a href="#text-formatting">Text Formatting</a></li>
+      <li><a href="#quotes">Quotes</a></li>
+      <li><a href="#lists">Lists</a></li>
+      <li><a href="#tables">Tables</a></li>
+      <li><a href="#dividers">Dividers</a></li>
+      <li><a href="#code-blocks">Code Blocks</a></li>
+      <li><a href="#images">Images</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#callouts">Callouts</a></li>
+      <li><a href="#interactive-blocks">Interactive Blocks</a></li>
+      <li><a href="#membership">Membership &amp; Newsletters</a></li>
+    </ol>
+  </nav>
+
   <div class="article__body">
-<p>Markdown is the greatest writing system ever devised, and em's customized version enhances it to support Ghost.</p>
-<p>The fastest way to insert any Markdown code is by typing <code>/</code> in the editor and selecting a style from the menu. em contains every option and only shows you the ones available wherever you are.</p>
-<h2>Text Formatting</h2>
-<h3>Headings</h3>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code># Heading
-## Subheading
-### Smaller heading</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><h1>Heading</h1><h2>Subheading</h2><h3>Smaller heading</h3></div>
-</div>
-<h3>Text Styles</h3>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>**bold**   *italic*   `inline code`   ~~strikethrough~~   ==highlights==</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><p><strong>bold</strong>&nbsp;&nbsp;&nbsp;<em>italic</em>&nbsp;&nbsp;&nbsp;<code>inline code</code>&nbsp;&nbsp;&nbsp;<s>strikethrough</s>&nbsp;&nbsp;&nbsp;<span class="em-highlight">highlights</span></p></div>
-</div>
-<h3>Links and Images</h3>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>[link text](https://example.com)
 
-![alt text](image.png)</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><p><a href="#">link text</a></p><figure style="margin-top:0.75rem;"><div class="em-img-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div><figcaption>alt text</figcaption></figure></div>
-</div>
-<h3>Quotes</h3>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>&gt; A blockquote.</code><br><br><code>&gt;&gt; A pull quote.</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><blockquote><p>A blockquote.</p></blockquote><br><br><div class="em-pullquote"><hr><p>A pull quote.</p><hr></div></div>
-</div>
-<h3>Hashtags</h3>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>Tappable in Read mode: #hashtag</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><p>Tappable in Read mode: <a href="#" class="em-hashtag">#hashtag</a></p></div>
-</div>
-<h3>Lists</h3>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>- Bulleted list
-  - Nested item
+<p>Markdown is a writing syntax designed to get out of the way so you can focus on writing. em's implementation takes Markdown to the next level by adding customized support for Ghost's editor cards.</p>
 
-1. Numbered list
-2. Second item</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><ul><li>Bulleted list<ul><li>Nested item</li></ul></li></ul><ol><li>Numbered list</li><li>Second item</li></ol></div>
-</div>
-<h3>Tasks</h3>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>- [ ] A task
-- [x] A finished task</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><ul class="em-tasklist"><li><span class="em-task-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/></svg></span><span>A task</span></li><li class="em-task-done"><span class="em-task-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12l3 3 5-6"/></svg></span><span>A finished task</span></li></ul></div>
-</div>
-<h3>Tables</h3>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>| Column | Column |
-| --- | --- |
-| Cell | Cell |</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><table><thead><tr><th>Column</th><th>Column</th></tr></thead><tbody><tr><td>Cell</td><td>Cell</td></tr></tbody></table></div>
-</div>
-<h3>Dividers</h3>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>---</code> or <code>***</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><hr style="border:none;border-top:1px solid var(--em-border);margin:0;"></div>
-</div>
-<h3>Code Blocks</h3>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>```swift
-let greeting = &quot;Hello&quot;
-```</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><pre><code><span class="tok-kw">let</span> greeting = <span class="tok-str">"Hello"</span></code><span class="em-code-lang">Swift</span></pre></div>
-</div>
-<h3>Footnotes</h3>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>Some claim.[^1]
+<p>This document contains all of the Markdown formatting options available in em so you can learn the syntax and see what it looks like in the Reader.</p>
 
-[^1]: The footnote text.</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><p>Some claim.<sup class="em-footnote-ref">1</sup></p><p class="em-footnote-def"><span class="em-footnote-num">1.</span>The footnote text.</p></div>
-</div>
-<h3>Metadata</h3>
+<p>You can access the Markdown selector by typing <code>/</code> in an em document so you don't have to remember any of this if you don't want to.</p>
+
+<hr>
+
+<h2 id="headings">Headings</h2>
+
+<p>em supports up to six levels of headings:</p>
+
 <div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>---
-title: My Essay
-tags: [technology, culture]
----</code></pre>
   <p class="pane-label">Renders as</p>
-  <div class="em-render"><dl class="gc-frontmatter"><dt>Title</dt><dd>My Essay</dd><dt>Tags</dt><dd>technology, culture</dd></dl></div>
-</div>
-<h2>Ghost Koenig Cards</h2>
-<p>Some styles, like Pull Quote and Tables, are supported using existing Markdown formatting. Unique Ghost Koenig cards use a unique <code>:::ghost-card</code> plus the card type, some <code>field: value</code> lines, and a closing <code>:::</code>.</p>
-<p>You don't need to memorize any of this — the <code>/</code> menu inserts a ready-to-edit template for every card (and you can also just start typing <code>:::</code> to open a Ghost-specific menu).</p>
-<h3>Callout</h3>
-<div class="render-pair">
+  <div class="em-render">
+    <h1>Heading 1</h1>
+    <h2>Heading 2 (After a Heading 1)</h2>
+    <h2>Heading 2 (Not after a Heading 1)</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+  </div>
   <p class="pane-label">Markdown</p>
-  <pre><code>:::ghost-card callout
-emoji: 💡
-color: #007AFF
-Callout text.
-:::</code><br><br>
-<code>:::ghost-card callout
-emoji: ⚠️
-color: #FF0010
-Callout text.
-:::</code></pre>
+  <div class="em-render"><pre><code># Heading 1
+## Heading 2 (After a Heading 1)
+
+## Heading 2 (Not after a Heading 1)
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<p>Notice that em has a special style when an H2 (<code>##</code>) immediately follows an H1 (<code>#</code>). It's very blog-coded for a reason.</p>
+
+<hr>
+
+<h2 id="text-formatting">Text Formatting</h2>
+
+<div class="render-pair">
   <p class="pane-label">Renders as</p>
-  <div class="em-render"><div class="gc-callout" style="--gc-color:#007AFF;"><span class="gc-callout__emoji">💡</span><span class="gc-callout__text">Callout text.</span></div><br><br>
-<div class="gc-callout" style="--gc-color:#FF0010;"><span class="gc-callout__emoji">⚠️</span><span class="gc-callout__text">Callout text.</span></div></div>
-</div>
-<h3>Images</h3>
-<div class="render-pair">
+  <div class="em-render">
+    <p>em’s customized Markdown supports <a href="https://justincox.com/" target="_blank" rel="noopener noreferrer">links</a><span class="em-link-ref">[1]</span>, <em>italics</em>, <strong>bold</strong>, <strong><em>bold italics</em></strong>, <s>strikethrough</s>, <span class="em-highlight">highlights</span>, <code>inline code</code>, <a class="em-hashtag" href="#text-formatting">#hashtags</a>, and footnotes<span class="em-footnote-ref">1</span>.</p>
+    <div class="em-footnotes"><p>1: Footnote Text.</p></div>
+  </div>
   <p class="pane-label">Markdown</p>
-  <pre><code>:::ghost-card image
-source: https://example.com/image.jpg
-caption: Optional caption
-width: normal
-:::</code></pre>
+  <div class="em-render"><pre><code>em’s customized Markdown supports [links](https://justincox.com/), *italics*, **bold**, ***bold italics***, ~~strikethrough~~, ==highlights==, `inline code`, #hashtags, and footnotes[^1].
+
+[^1]: Footnote Text.</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<hr>
+
+<h2 id="quotes">Quotes</h2>
+
+<p>em supports block quotes and pull quotes:</p>
+
+<div class="render-pair">
   <p class="pane-label">Renders as</p>
-  <div class="em-render"><figure><div class="em-img-ph" style="height:130px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div><figcaption>Optional caption</figcaption></figure></div>
-</div>
-<p><code>width</code> can be <code>normal</code>, <code>wide</code>, or <code>full</code>. <em>Note: regardless of the width choice, em shows all images the same way.</em></p>
-<h3>Image Gallery</h3>
-<div class="render-pair">
+  <div class="em-render">
+    <blockquote><p>This is a block quote. It's typically used to highlight text someone else wrote that you're quoting or citing. Block quotes support <a href="https://justincox.com/" target="_blank" rel="noopener noreferrer">links</a><span class="em-link-ref">[1]</span>, italics, <strong>bold</strong>, <strong>bold italics</strong>, <s>strikethrough</s>, <span class="em-highlight">highlights</span>, <code>inline code</code>, <a class="em-hashtag" href="#quotes">#hashtags</a>, and footnotes<span class="em-footnote-ref">1</span>.</p></blockquote>
+    <div class="em-pullquote">
+      <hr>
+      <p>This is a pull quote. It's typically used to highlight text from somewhere else in the current document. Pull quotes support <a href="https://justincox.com/" target="_blank" rel="noopener noreferrer">links</a><span class="em-link-ref">[1]</span>, italics, <strong>bold</strong>, bold italics, <s>strikethrough</s>, <span class="em-highlight">highlights</span>, <code>inline code</code>, <a class="em-hashtag" href="#quotes">#hashtags</a>, and footnotes<span class="em-footnote-ref">1</span>.</p>
+      <hr>
+    </div>
+  </div>
   <p class="pane-label">Markdown</p>
-  <pre><code>:::ghost-card gallery
-sources: https://example.com/photo-1.jpg, https://example.com/photo-2.jpg, https://example.com/photo-3.jpg, https://example.com/photo-4.jpg
-alts: First photo, Second photo, Third photo, Fourth photo
-caption: Trip highlights
+  <div class="em-render"><pre><code>&gt; This is a block quote. It's typically used to highlight text someone else wrote that you're quoting or citing.
+
+&gt;&gt; This is a pull quote. It's typically used to highlight text from somewhere else in the current document.</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<hr>
+
+<h2 id="lists">Lists</h2>
+
+<p>em supports both unordered and ordered list types:</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <ul>
+      <li>This is an unordered list item.
+        <ul>
+          <li>It's represented by a simple bullet.
+            <ul><li>You can change the bullet styles in em's Settings.</li></ul>
+          </li>
+          <li>Unordered list items support <a href="https://justincox.com/" target="_blank" rel="noopener noreferrer">links</a><span class="em-link-ref">[1]</span>, <em>italics</em>, <strong>bold</strong>, <strong><em>bold italics</em></strong>, <s>strikethrough</s>, <span class="em-highlight">highlights</span>, <code>inline code</code>, <a class="em-hashtag" href="#lists">#hashtags</a>, and footnotes<span class="em-footnote-ref">1</span>.</li>
+        </ul>
+      </li>
+    </ul>
+    <ol>
+      <li>This is an ordered list item.
+        <ol>
+          <li>It's represented by a number or letter.
+            <ol><li>You can change the style in em's Settings.</li></ol>
+          </li>
+          <li>Ordered list items support <a href="https://justincox.com/" target="_blank" rel="noopener noreferrer">links</a><span class="em-link-ref">[1]</span>, <em>italics</em>, <strong>bold</strong>, <strong><em>bold italics</em></strong>, <s>strikethrough</s>, <span class="em-highlight">highlights</span>, <code>inline code</code>, <a class="em-hashtag" href="#lists">#hashtags</a>, and footnotes<span class="em-footnote-ref">1</span>.</li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>- This is an unordered list item.
+  - It's represented by a simple bullet.
+    - You can change the bullet styles in em's Settings.
+  - Unordered list items support [links](https://justincox.com/).
+
+1. This is an ordered list item.
+  2. It's represented by a number or letter.
+    3. You can change the style in em's Settings.
+  3. Ordered list items support [links](https://justincox.com/).</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<p>em also supports tasks (though, they Ghost does not). Pro tip: you can check and uncheck tasks in the Reader and they update the Markdown in the Editor!</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <ul class="em-tasklist">
+      <li><span class="em-task-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/></svg></span><span>A task waiting to be completed</span></li>
+      <li class="em-task-done"><span class="em-task-icon"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 12.2l3 3 6-6.4" fill="none" stroke="var(--em-bg)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>A completed task</span></li>
+    </ul>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>- [ ] A task waiting to be completed
+- [x] A completed task</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<hr>
+
+<h2 id="tables">Tables</h2>
+
+<p>em supports tables with alignment formatting:</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="text-align:left;">Header</th><th style="text-align:center;">Header</th><th style="text-align:right;">Header</th></tr></thead>
+        <tbody>
+          <tr><td style="text-align:left;">Left Aligned Content</td><td style="text-align:center;">Center Aligned Content</td><td style="text-align:right;">Right Aligned Content</td></tr>
+          <tr><td style="text-align:left;">Content</td><td style="text-align:center;">Content</td><td style="text-align:right;">Content</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>| Header | Header | Header |
+| :--- | :----: | ---: |
+| Left Aligned Content | Center Aligned Content | Right Aligned Content |
+| Content | Content | Content |</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<hr>
+
+<h2 id="dividers">Dividers</h2>
+
+<p>em supports two versions of dividers that both render the same way:</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render"><hr class="em-divider"></div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>***
+---</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<hr>
+
+<h2 id="code-blocks">Code Blocks</h2>
+
+<p>em supports dedicated code bocks and highlights syntax for certain code formats. Spoiler alert, you’ve been looking at a lot of Markdown code blocks in this document so far!</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render"><pre><code><span class="tok-kw">enum</span> PreviewTypographyDefaults {
+    <span class="tok-kw">static</span> <span class="tok-kw">let</span> contentMaxColumns = <span class="tok-num">70</span>
+    <span class="tok-kw">static</span> <span class="tok-kw">let</span> firstLineIndent: CGFloat = <span class="tok-num">0</span>
+    <span class="tok-kw">static</span> <span class="tok-kw">let</span> lineHeightMultiple = <span class="tok-num">1.0</span>
+    <span class="tok-kw">static</span> <span class="tok-kw">let</span> paragraphSpacing: CGFloat = <span class="tok-num">14</span>
+}</code><span class="em-code-lang">swift</span></pre></div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>```swift
+enum PreviewTypographyDefaults {
+    static let contentMaxColumns = 70
+    static let firstLineIndent: CGFloat = 0
+    static let lineHeightMultiple = 1.0
+    static let paragraphSpacing: CGFloat = 14
+}
+```</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<p>em also supports HTML blocks which embed HTML into the page when synced to Ghost. In em, these look like typical code blocks.</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render"><pre><code><span class="tok-kw">&lt;div&gt;</span>Raw HTML content<span class="tok-kw">&lt;/div&gt;</span></code><span class="em-code-lang">HTML</span></pre></div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>:::html
+&lt;div&gt;Raw HTML content&lt;/div&gt;
+:::</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<hr>
+
+<h2 id="images">Images</h2>
+
+<p>em supports image and galleries. Note that the <code>Load External Content</code> setting must be turned on in em's Reader Settings or remote images will not display. em is always thinking about your privacy.</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <figure>
+      <img src="https://plus.unsplash.com/premium_photo-1785104547207-797a73e17e54" alt="A small house on a green hillside above still water" loading="lazy" referrerpolicy="no-referrer">
+      <figcaption>Image Caption (TSD Studio / Unsplash)</figcaption>
+    </figure>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>![Image Caption (TSD Studio / Unsplash)](https://plus.unsplash.com/premium_photo-1785104547207-797a73e17e54)</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<p>Wide image width:</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <figure class="em-wide">
+      <img src="https://images.unsplash.com/photo-1776695799247-b15851a1aa2d" alt="A wide landscape" loading="lazy" referrerpolicy="no-referrer">
+      <figcaption>Wide Width Image Caption (martin bennie / Unsplash)</figcaption>
+    </figure>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>:::image
+source: https://images.unsplash.com/photo-1776695799247-b15851a1aa2d
+caption: Wide Width Image Caption (martin bennie / Unsplash)
 width: wide
-:::</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><figure><div class="gc-gallery"><div class="gc-gallery__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div><div class="gc-gallery__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div><div class="gc-gallery__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div><div class="gc-gallery__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div></div><figcaption>Trip highlights</figcaption></figure></div>
+:::</code><span class="em-code-lang">markdown</span></pre></div>
 </div>
-<h3>Bookmarks</h3>
+
+<p>Full image width:</p>
+
 <div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>:::ghost-card bookmark
-title: Link title
-description: Link description
-url: https://example.com
-thumbnail: https://example.com/image.jpg
-:::</code></pre>
   <p class="pane-label">Renders as</p>
-  <div class="em-render"><div class="gc-bookmark"><div class="gc-bookmark__text"><div class="gc-bookmark__title">Link title</div><div class="gc-bookmark__desc">Link description</div><div class="gc-bookmark__meta">example.com</div></div><div class="gc-bookmark__thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div></div></div>
-</div>
-<h3>Toggles</h3>
-<p>A collapsible section — readers tap the title to reveal the content.</p>
-<div class="render-pair">
+  <div class="em-render">
+    <figure class="em-full">
+      <img src="https://images.unsplash.com/photo-1766548729668-30bd92a37856" alt="An observatory on a hill at dusk" loading="lazy" referrerpolicy="no-referrer">
+      <figcaption>Full Width Image Caption (Venti Views / Unsplash)</figcaption>
+    </figure>
+  </div>
   <p class="pane-label">Markdown</p>
-  <pre><code>:::ghost-card toggle
-title: Toggle title
-Hidden toggle content.
-:::</code></pre>
+  <div class="em-render"><pre><code>:::image
+source: https://images.unsplash.com/photo-1766548729668-30bd92a37856
+caption: Full Width Image Caption (Venti Views / Unsplash)
+width: full
+:::</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<p>Image gallery:</p>
+
+<div class="render-pair">
   <p class="pane-label">Renders as</p>
-  <div class="em-render"><details class="gc-toggle" open><summary>Toggle title</summary><div class="gc-toggle__body">Hidden toggle content.</div></details></div>
-</div>
-<h3>Header Blocks</h3>
-<div class="render-pair">
+  <div class="em-render">
+    <figure class="em-wide">
+      <div class="gc-gallery">
+        <img src="https://plus.unsplash.com/premium_photo-1784809463929-68bb69503357" alt="Fellipe Ditadi" loading="lazy" referrerpolicy="no-referrer">
+        <img src="https://plus.unsplash.com/premium_photo-1786551854346-c47b56c64156" alt="Benjamin Taman" loading="lazy" referrerpolicy="no-referrer">
+        <img src="https://plus.unsplash.com/premium_photo-1787292946551-52a9f6eb6590" alt="T" loading="lazy" referrerpolicy="no-referrer">
+        <img src="https://images.unsplash.com/photo-1785270101111-4de7e302db8d" alt="Rafael Peier" loading="lazy" referrerpolicy="no-referrer">
+        <img src="https://plus.unsplash.com/premium_photo-1756151955092-9f76c8ddd464" alt="Sara Canonici" loading="lazy" referrerpolicy="no-referrer">
+        <img src="https://images.unsplash.com/photo-1784693969058-dab479bd4ff3" alt="Kestner Brae (KB) De Vera" loading="lazy" referrerpolicy="no-referrer">
+      </div>
+      <figcaption>Image Gallery (Fellipe Ditadi, Benjamin Taman, T, Rafael Peier, Sara Canonici, and Kestner Brae (KB) De Vera / Unsplash)</figcaption>
+    </figure>
+  </div>
   <p class="pane-label">Markdown</p>
-  <pre><code>:::ghost-card header
-title: Header title
-subtitle: Header subtitle
+  <div class="em-render"><pre><code>:::gallery
+sources: https://plus.unsplash.com/premium_photo-1784809463929-68bb69503357, https://plus.unsplash.com/premium_photo-1786551854346-c47b56c64156, …
+alts: Fellipe Ditadi, Benjamin Taman, T, Rafael Peier, Sara Canonici, and Kestner Brae (KB) De Vera
+caption: Image Gallery (… / Unsplash)
+width: wide
+:::</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<hr>
+
+<h2 id="media">Media</h2>
+
+<p>em also supports multiple file types, including video:</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <figure>
+      <div class="gc-embed">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z" fill="currentColor" stroke="none"/></svg>
+        <span>Open in Browser</span>
+      </div>
+      <figcaption>Video Caption</figcaption>
+    </figure>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>:::ghost-card embed
+title: Maarva's Message
+url: https://www.youtube.com/watch?v=TaKrm5txGCQ
+caption: Video Caption
+:::</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<p>Audio:</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <figure>
+      <div class="gc-media-row">
+        <span class="gc-media-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></svg></span>
+        <span class="gc-media-row__title">Nemik's Manifesto</span>
+        <span class="gc-media-row__action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z" fill="currentColor" stroke="none"/></svg></span>
+      </div>
+      <figcaption>Audio Caption</figcaption>
+    </figure>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>:::audio
+url: https://soundcloud.com/noshuniverse/nemiks-manifesto-freestyle-1
+title: Nemik's Manifesto
+caption: Audio Caption
+:::</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<p>and literal files:</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <figure>
+      <div class="gc-media-row">
+        <span class="gc-media-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7z"/><path d="M14 3v4h4"/></svg></span>
+        <span class="gc-media-row__title">Write Now Worksheets</span>
+        <span class="gc-media-row__action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v7M9 12.5l3 3 3-3"/></svg></span>
+      </div>
+      <figcaption>Files Caption</figcaption>
+    </figure>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>:::file
+url: https://justincox.com/content/files/2023/05/worksheets.pdf
+title: Write Now Worksheets
+caption: Files Caption
+:::</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<hr>
+
+<h2 id="callouts">Callouts</h2>
+
+<p>em supports callouts to really get your point across! Each one can support an emoji or not, it's up to you.</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <div class="gc-callout" style="--gc-color:#007AFF;"><span class="gc-callout__emoji">😂</span><span class="gc-callout__text">Blue is a sad color, but it doesn't have to be!</span></div>
+    <div class="gc-callout" style="--gc-color:#4E7C61;"><span class="gc-callout__text">It should go without saying, but green is the best color.</span></div>
+    <div class="gc-callout" style="--gc-color:#FFCC00; --gc-ink:#121212;"><span class="gc-callout__emoji">👤</span><span class="gc-callout__text">Callouts support any HEX color code, <a href="https://justincox.com/" target="_blank" rel="noopener noreferrer">links</a>, <em>italics</em>, <strong>bold</strong>, <strong><em>bold italics</em></strong>, <s>strikethrough</s>, <span class="em-highlight">highlights</span>, <code>inline code</code>, #hashtags, and footnotes<span class="em-footnote-ref">1</span>.</span></div>
+    <div class="gc-callout" style="--gc-color:#FF3B30;"><span class="gc-callout__emoji">⚠️</span><span class="gc-callout__text">Callouts also make great warnings in your documents.</span></div>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>:::ghost-card callout
+emoji: 😂
+color: #007AFF
+Blue is a sad color, but it doesn't have to be!
+:::
+
+:::ghost-card callout
+color: #4E7C61
+It should go without saying, but green is the best color.
+:::</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<hr>
+
+<h2 id="interactive-blocks">Interactive Blocks</h2>
+
+<p>em supports multiple interactive elements that render well on a connected Ghost site.</p>
+
+<p>Buttons:</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <div class="gc-button-wrap"><a class="gc-button" href="https://justincox.com/" target="_blank" rel="noopener noreferrer">I'm a Button!</a></div>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>:::button
+title: I'm a Button!
+url: https://justincox.com/
+alignment: center
+:::</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<p>Toggles:</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <details class="gc-toggle">
+      <summary>Toggle Card</summary>
+      <div class="gc-toggle__body">Make text unfold when clicked!</div>
+    </details>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>:::toggle
+title: Toggle Card
+Make text unfold when clicked!
+:::</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<p>Bookmarks:</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <div class="gc-bookmark">
+      <div class="gc-bookmark__text">
+        <div class="gc-bookmark__title">Justin Cox</div>
+        <div class="gc-bookmark__desc">Justin Cox is a Star Wars-loving, word-writing, nonprofit educator in Orlando, FL. He also runs The Writing Cooperative on Medium. Come say hello! 👋🏼</div>
+      </div>
+      <img class="gc-bookmark__thumb" src="https://justincox.com/content/images/size/w256h256/format/jpeg/2023/12/IMG_1460-1.JPG" alt="Justin Cox" loading="lazy" referrerpolicy="no-referrer">
+    </div>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>:::bookmark
+url: https://justincox.com/
+title: Justin Cox
+description: Justin Cox is a Star Wars-loving, word-writing, nonprofit educator in Orlando, FL.
+thumbnail: https://justincox.com/content/images/size/w256h256/format/jpeg/2023/12/IMG_1460-1.JPG
+caption: Bookmark Caption
+:::</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<p>Header:</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <div class="gc-header">
+      <div class="gc-header__title">Heading Text</div>
+      <div class="gc-header__subtitle">Subheading Text</div>
+      <a class="gc-button" href="https://justincox.com/" target="_blank" rel="noopener noreferrer">Click Me</a>
+    </div>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>:::header
 style: dark
-url: https://example.com
-buttonText: Learn more
-:::</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><div class="gc-header"><div class="gc-header__title">Header title</div><p class="gc-header__subtitle">Header subtitle</p><a class="gc-pill" href="#">Learn more</a></div></div>
-</div>
-<p><code>style</code> can be <code>light</code>, <code>dark</code>, or <code>accent</code>.</p>
-<h3>Buttons</h3>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>:::ghost-card button
-title: Button text
-url: https://example.com
-:::</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><a class="gc-button" href="#">Button text</a></div>
-</div>
-<h3>Product Cards</h3>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>:::ghost-card product
-title: Product name
-description: Product description
-image: https://example.com/product.jpg
-rating: 4
-url: https://example.com
-buttonText: Buy now
-:::</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><div class="gc-product"><div class="gc-product__image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div><div class="gc-product__body"><div class="gc-product__title-row"><span class="gc-product__title">Product name</span><span class="gc-product__stars">★★★★☆</span></div><p class="gc-product__desc">Product description</p><a class="gc-pill" href="#">Buy now</a></div></div></div>
-</div>
-<h3>Email Signups</h3>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>:::ghost-card signup
-title: Sign up for updates
-description: Optional signup description.
-:::</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><div class="gc-signup"><span class="gc-signup__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><div class="gc-signup__title">Sign up for updates</div><p class="gc-signup__desc">Optional signup description.</p><span class="gc-signup__action">Subscribe</span></div></div></div>
-</div>
-<h3>Public Preview Divider</h3>
-<p>Everything above the divider is public; everything below is for members.</p>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>:::ghost-card paywall
-:::</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><div class="gc-hidden"><span class="gc-hidden__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M10.6 5.1A10.9 10.9 0 0 1 12 5c5 0 9 4 10 7-.4 1.1-1.2 2.4-2.3 3.6M6.6 6.6C4.4 8 2.9 10 2 12c1 3 5 7 10 7 1.6 0 3.1-.4 4.4-1.1"/><path d="M9.5 9.8a3 3 0 0 0 4.2 4.2"/></svg></span><div><div class="gc-hidden__title">Ghost Public Preview Divider</div><div class="gc-hidden__sub">Hidden content is viewable in the editor.</div></div></div></div>
-</div>
-<h3>Email-Only Content</h3>
-<p>Content that goes out in the newsletter but never appears on the site.</p>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>:::ghost-card email
-Email-only content.
-:::</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><div class="gc-hidden"><span class="gc-hidden__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M10.6 5.1A10.9 10.9 0 0 1 12 5c5 0 9 4 10 7-.4 1.1-1.2 2.4-2.3 3.6M6.6 6.6C4.4 8 2.9 10 2 12c1 3 5 7 10 7 1.6 0 3.1-.4 4.4-1.1"/><path d="M9.5 9.8a3 3 0 0 0 4.2 4.2"/></svg></span><div><div class="gc-hidden__title">Ghost Email-Only Content</div><div class="gc-hidden__sub">Private email content is viewable in the editor.</div></div></div></div>
-</div>
-<h3>Email Call to Action</h3>
-<div class="render-pair">
-  <p class="pane-label">Markdown</p>
-  <pre><code>:::ghost-card email-cta
-segment: status:free
 alignment: left
-showButton: false
-showDividers: true
-Email-only call to action.
-:::</code></pre>
-  <p class="pane-label">Renders as</p>
-  <div class="em-render"><div class="gc-hidden"><span class="gc-hidden__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M10.6 5.1A10.9 10.9 0 0 1 12 5c5 0 9 4 10 7-.4 1.1-1.2 2.4-2.3 3.6M6.6 6.6C4.4 8 2.9 10 2 12c1 3 5 7 10 7 1.6 0 3.1-.4 4.4-1.1"/><path d="M9.5 9.8a3 3 0 0 0 4.2 4.2"/></svg></span><div><div class="gc-hidden__title">Ghost Email Call-to-Action</div><div class="gc-hidden__sub">Private email-cta content is viewable in the editor.</div></div></div></div>
+title: Heading Text
+subtitle: Subheading Text
+url: https://justincox.com/
+button: Click Me
+:::</code><span class="em-code-lang">markdown</span></pre></div>
 </div>
+
+<p>Products:</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <div class="gc-product">
+      <img class="gc-product__image" src="https://justincox.com/content/images/2025/07/Cover---Front.png" alt="Write Now, by Justin Cox" loading="lazy" referrerpolicy="no-referrer">
+      <div class="gc-product__body">
+        <div class="gc-product__title-row">
+          <span class="gc-product__title">Buy My Book!</span>
+          <span class="gc-product__stars" aria-label="4 out of 5">★★★★☆</span>
+        </div>
+        <div class="gc-product__desc">I wrote a book on writing. It's pretty meta.</div>
+        <div class="gc-button-wrap"><a class="gc-button" href="https://justincox.com/book/" target="_blank" rel="noopener noreferrer">Buy My Book</a></div>
+      </div>
+    </div>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>:::product
+title: Buy My Book!
+description: I wrote a book on writing. It's pretty meta.
+image: https://justincox.com/content/images/2025/07/Cover---Front.png
+rating: 4
+url: https://justincox.com/book/
+button: Buy My Book
+:::</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<hr>
+
+<h2 id="membership">Ghost Membership and Newsletter Formats</h2>
+
+<p>em supports multiple features that are specific to Ghost emails or membership content, including email-only content:</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <div class="gc-gated gc-gated--inline">
+      <span><strong>Hey</strong> <code>{first_name, "there"}</code>,</span>
+      <span class="gc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email Only</span>
+    </div>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>:::email
+Hey `{first_name, "there"}`,
+:::</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<p>Paywall dividers:</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <div class="gc-paywall"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Public Preview Ends</span></div>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>:::paywall
+:::</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<p>Email-Only CTA:</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <div class="gc-gated">
+      <p>Thanks for reading, {first_name, "friend"}!</p>
+      <p>Enjoyed this post? Leave a one-time tip to help fund more writing like this. And let me know what you think by hitting reply.</p>
+      <a class="gc-button" href="https://justincox.com/#/portal/support" target="_blank" rel="noopener noreferrer">Leave a Tip</a>
+      <div><span class="gc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email Only</span></div>
+    </div>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>:::email-cta
+segment: free
+alignment: left
+showButton: true
+showDividers: true
+button: Leave a Tip
+buttonUrl: https://justincox.com/#/portal/support
+Thanks for reading, {first_name, "friend"}!
+
+Enjoyed this post? Leave a one-time tip to help fund more writing like this.
+:::</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
+<p>Universal CTA:</p>
+
+<div class="render-pair">
+  <p class="pane-label">Renders as</p>
+  <div class="em-render">
+    <div class="gc-gated gc-gated--centre">
+      <p>Call to action text.</p>
+      <a class="gc-button" href="https://example.com" target="_blank" rel="noopener noreferrer">Learn more</a>
+      <div><span class="gc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10" cy="8" r="3.2"/><path d="M4 19c0-3 2.7-5 6-5s6 2 6 5"/><path d="M18 8h4M20 6v4"/></svg>Members Only</span></div>
+    </div>
+  </div>
+  <p class="pane-label">Markdown</p>
+  <div class="em-render"><pre><code>:::cta
+layout: immersive
+color: accent
+alignment: center
+showButton: true
+showDividers: true
+sponsor: true
+buttonText: Learn more
+buttonUrl: https://example.com
+buttonColor: #000000
+buttonTextColor: #ffffff
+linkColor: text
+webAnonymous: true
+webFree: true
+webPaid: true
+emailFree: true
+emailPaid: true
+Call to action text.
+:::</code><span class="em-code-lang">markdown</span></pre></div>
+</div>
+
   </div>
   </article>
 </main>
@@ -323,6 +677,6 @@ Email-only call to action.
   </div>
 </footer>
 
-<script src="../assets/js/read.js?v=2" defer></script>
+<script src="../assets/js/read.js?v=3" defer></script>
 </body>
 </html>
