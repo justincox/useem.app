@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <title>Privacy Policy — em</title>
 <!--
-  /privacy exists only to send visitors to /privacy.html. GitHub Pages
-  serves privacy.html for a request to /privacy when no exact file is
-  here — this file overrides that fallback so the address bar actually
-  lands on the canonical URL instead of quietly serving duplicate
-  content under two paths.
+  /privacy exists only to send visitors to /privacy.html. A bare
+  extensionless file here got served by GitHub Pages as
+  application/octet-stream (a download, not a page) — a directory with
+  its own index.html is what actually gets text/html and a real 301 from
+  /privacy to /privacy/ first, the same pattern /help already uses.
 -->
 <meta http-equiv="refresh" content="0; url=https://useem.app/privacy.html">
 <link rel="canonical" href="https://useem.app/privacy.html">
