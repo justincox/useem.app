@@ -24,7 +24,9 @@
 <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png?v=3">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=3">
 <link rel="stylesheet" href="assets/css/tokens.css?v=6">
-<link rel="stylesheet" href="assets/css/read.css?v=5">
+<link rel="stylesheet" href="assets/css/read.css?v=6">
+<!-- The hamburger needs JS to open; with it off, keep the nav inline instead of unreachable. -->
+<noscript><style>.toolbar__links{display:flex!important;position:static!important;flex-direction:row!important;flex-wrap:wrap;gap:0.6rem!important;box-shadow:none;padding:0;border-bottom:0}.toolbar__links a{padding:0;border-bottom:1px solid transparent}.menu-toggle{display:none!important}</style></noscript>
 </head>
 <body>
 
@@ -38,13 +40,16 @@
     </a>
 
     <div class="toolbar__tools">
-      <ul class="toolbar__links">
+      <ul class="toolbar__links" id="toolbar-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="help/markdown-cheatsheet.html">Markdown</a></li>
         <li><a href="help/index.html">Help</a></li>
       </ul>
       <!-- Same prep as the bottom CTA in Get 'em on the home page — swap to the <a> there on approval, and this one too. -->
       <button class="btn btn--sm" type="button" aria-disabled="true" data-live-href="https://apps.apple.com/app/id6797005003">Coming Soon</button>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="toolbar-menu" aria-label="Menu">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
     </div>
   </div>
 </nav>
@@ -185,6 +190,6 @@
   </div>
 </footer>
 
-<script src="assets/js/read.js?v=3" defer></script>
+<script src="assets/js/read.js?v=4" defer></script>
 </body>
 </html>

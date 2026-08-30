@@ -114,10 +114,45 @@ body {
 }
 
 /*
- * Below 640px there's no room for both the tagline and the nav — the
- * tagline goes (the icon plus "em" still names the page) so the actual
- * menu and the CTA stay put rather than disappearing with nothing to
- * replace them.
+ * The hamburger: three bars that scissor into an X when the menu opens.
+ * Hidden above 640px — the nav links have their own room there and the
+ * button has nothing to do.
+ */
+.menu-toggle {
+  display: none;
+  appearance: none;
+  flex: none;
+  width: 2.15rem;
+  height: 2.15rem;
+  padding: 0;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.menu-toggle span {
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--ink);
+  transition: transform 160ms ease, opacity 120ms ease, top 160ms ease;
+}
+.menu-toggle span:nth-child(1) { top: 0.62rem; }
+.menu-toggle span:nth-child(2) { top: calc(50% - 1px); }
+.menu-toggle span:nth-child(3) { top: calc(100% - 0.72rem); }
+.menu-toggle[aria-expanded="true"] span:nth-child(1) { top: calc(50% - 1px); transform: rotate(45deg); }
+.menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-toggle[aria-expanded="true"] span:nth-child(3) { top: calc(50% - 1px); transform: rotate(-45deg); }
+
+/*
+ * Below 640px there's no room for the tagline, the nav, and the CTA
+ * together — the tagline goes first (the icon plus "em" still names the
+ * page), and the nav links move off the bar entirely into a dropdown the
+ * hamburger opens, so the bar itself only ever holds the icon, the
+ * wordmark, the App Store button, and the toggle.
  */
 @media (max-width: 640px) {
   .toolbar__tagline { display: none; }
@@ -125,14 +160,35 @@ body {
      must never be the thing that shrinks to fit. */
   .toolbar__title { overflow: visible; text-overflow: clip; flex-shrink: 0; }
   .toolbar__brand { flex-shrink: 0; }
-  .toolbar__wrap { padding: 0.5rem 0.75rem; gap: 0.4rem; }
-  .toolbar__tools { gap: 0.4rem; }
-  .toolbar__links { gap: 0.6rem; font-size: 0.78rem; }
+  .toolbar__wrap { padding: 0.5rem 0.75rem; gap: 0.4rem; position: relative; }
+  .toolbar__tools { gap: 0.5rem; }
+  .menu-toggle { display: block; }
   .btn--sm { padding: 0.3rem 0.7rem; font-size: 0.7rem; }
+
+  .toolbar__links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    padding: 0.25rem 0.75rem 0.5rem;
+    box-shadow: 0 10px 20px hsl(var(--shadow-color) / 0.1);
+  }
+  .toolbar__links.is-open { display: flex; }
+  .toolbar__links a {
+    display: block;
+    padding: 0.75rem 0.25rem;
+    border-bottom: 1px solid var(--rule);
+    font-size: 1rem;
+  }
+  .toolbar__links li:last-child a { border-bottom: 0; }
 }
 
 @media (max-width: 360px) {
-  .toolbar__links { gap: 0.4rem; font-size: 0.72rem; }
   .toolbar__wrap { gap: 0.3rem; }
 }
 
