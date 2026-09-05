@@ -133,6 +133,8 @@
 [^1]: Footnote Text.</code><span class="em-code-lang">markdown</span></pre></div>
 </div>
 
+<p><em>Note: Ghost does not support <s>strikethrough</s>, <span class="em-highlight">highlights</span>, or inline <a class="em-hashtag" href="#text-formatting">#hashtags</a>.</em></p>
+
 <hr>
 
 <h2 id="quotes">Quotes</h2>
@@ -281,10 +283,10 @@ enum PreviewTypographyDefaults {
 
 <div class="render-pair">
   <p class="pane-label">Renders as</p>
-  <div class="em-render"><pre><code><span class="tok-kw">&lt;div&gt;</span>Raw HTML content<span class="tok-kw">&lt;/div&gt;</span></code><span class="em-code-lang">HTML</span></pre></div>
+  <div class="em-render"><pre><code><span class="tok-kw">&lt;div&gt;</span>This is raw HTML content<span class="tok-kw">&lt;/div&gt;</span></code><span class="em-code-lang">HTML</span></pre></div>
   <p class="pane-label">Markdown</p>
   <div class="em-render"><pre><code>:::html
-&lt;div&gt;Raw HTML content&lt;/div&gt;
+&lt;div&gt;This is raw HTML content&lt;/div&gt;
 :::</code><span class="em-code-lang">markdown</span></pre></div>
 </div>
 
@@ -404,14 +406,12 @@ caption: Video Caption
         <span class="gc-media-row__title">Nemik's Manifesto</span>
         <span class="gc-media-row__action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z" fill="currentColor" stroke="none"/></svg></span>
       </div>
-      <figcaption>Audio Caption</figcaption>
     </figure>
   </div>
   <p class="pane-label">Markdown</p>
   <div class="em-render"><pre><code>:::audio
 url: https://soundcloud.com/noshuniverse/nemiks-manifesto-freestyle-1
 title: Nemik's Manifesto
-caption: Audio Caption
 :::</code><span class="em-code-lang">markdown</span></pre></div>
 </div>
 
@@ -426,14 +426,12 @@ caption: Audio Caption
         <span class="gc-media-row__title">Write Now Worksheets</span>
         <span class="gc-media-row__action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v7M9 12.5l3 3 3-3"/></svg></span>
       </div>
-      <figcaption>Files Caption</figcaption>
     </figure>
   </div>
   <p class="pane-label">Markdown</p>
   <div class="em-render"><pre><code>:::file
 url: https://justincox.com/content/files/2023/05/worksheets.pdf
 title: Write Now Worksheets
-caption: Files Caption
 :::</code><span class="em-code-lang">markdown</span></pre></div>
 </div>
 
@@ -448,7 +446,7 @@ caption: Files Caption
   <div class="em-render">
     <div class="gc-callout" style="--gc-color:#007AFF;"><span class="gc-callout__emoji">😂</span><span class="gc-callout__text">Blue is a sad color, but it doesn't have to be!</span></div>
     <div class="gc-callout" style="--gc-color:#4E7C61;"><span class="gc-callout__text">It should go without saying, but green is the best color.</span></div>
-    <div class="gc-callout" style="--gc-color:#FFCC00; --gc-ink:#121212;"><span class="gc-callout__emoji">👤</span><span class="gc-callout__text">Callouts support any HEX color code, <a href="https://justincox.com/" target="_blank" rel="noopener noreferrer">links</a>, <em>italics</em>, <strong>bold</strong>, <strong><em>bold italics</em></strong>, <s>strikethrough</s>, <span class="em-highlight">highlights</span>, <code>inline code</code>, #hashtags, and footnotes<span class="em-footnote-ref">1</span>.</span></div>
+    <div class="gc-callout" style="--gc-color:#FFCC00; --gc-ink:#121212;"><span class="gc-callout__emoji">👤</span><span class="gc-callout__text">Callouts support any HEX color code, <a href="https://justincox.com/" target="_blank" rel="noopener noreferrer">links</a>, <em>italics</em>, <strong>bold</strong>, and <strong><em>bold italics</em></strong> in Ghost. In addition, em also supports <s>strikethrough</s>, <span class="em-highlight">highlights</span>, <code>inline code</code>, #hashtags, and footnotes<span class="em-footnote-ref">1</span> in callouts.</span></div>
     <div class="gc-callout" style="--gc-color:#FF3B30;"><span class="gc-callout__emoji">⚠️</span><span class="gc-callout__text">Callouts also make great warnings in your documents.</span></div>
   </div>
   <p class="pane-label">Markdown</p>
@@ -461,6 +459,18 @@ Blue is a sad color, but it doesn't have to be!
 :::ghost-card callout
 color: #4E7C61
 It should go without saying, but green is the best color.
+:::
+
+:::ghost-card callout
+emoji: 👤
+color: #FFCC00
+Callouts support any HEX color code, [links](https://justincox.com/), *italics*, **bold**, and ***bold italics*** in Ghost. In addition, em also supports ~~strikethrough~~, ==highlights==, `inline code`, #hashtags, and footnotes[^1] in callouts.
+:::
+
+:::ghost-card callout
+emoji: ⚠️
+color: #FF3B30
+Callouts also make great warnings in your documents.
 :::</code><span class="em-code-lang">markdown</span></pre></div>
 </div>
 
@@ -531,19 +541,19 @@ caption: Bookmark Caption
   <p class="pane-label">Renders as</p>
   <div class="em-render">
     <div class="gc-header">
-      <div class="gc-header__title">Heading Text</div>
-      <div class="gc-header__subtitle">Subheading Text</div>
-      <a class="gc-button" href="https://justincox.com/" target="_blank" rel="noopener noreferrer">Click Me</a>
+      <div class="gc-header__title">Check out This Just In</div>
+      <div class="gc-header__subtitle">That's Justin's Somewhat Regular Newsletter</div>
+      <a class="gc-button" href="https://justincox.com/" target="_blank" rel="noopener noreferrer">Read</a>
     </div>
   </div>
   <p class="pane-label">Markdown</p>
   <div class="em-render"><pre><code>:::header
 style: dark
 alignment: left
-title: Heading Text
-subtitle: Subheading Text
+title: Check out This Just In
+subtitle: That's Justin's Somewhat Regular Newsletter
 url: https://justincox.com/
-button: Click Me
+button: Read
 :::</code><span class="em-code-lang">markdown</span></pre></div>
 </div>
 
@@ -615,7 +625,7 @@ Hey `{first_name, "there"}`,
     <div class="gc-gated">
       <p>Thanks for reading, {first_name, "friend"}!</p>
       <p>Enjoyed this post? Leave a one-time tip to help fund more writing like this. And let me know what you think by hitting reply.</p>
-      <a class="gc-button" href="https://justincox.com/#/portal/support" target="_blank" rel="noopener noreferrer">Leave a Tip</a>
+      <a class="gc-button" href="https://tip.justincox.com/" target="_blank" rel="noopener noreferrer">Leave a Tip</a>
       <div><span class="gc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email Only</span></div>
     </div>
   </div>
@@ -626,7 +636,7 @@ alignment: left
 showButton: true
 showDividers: true
 button: Leave a Tip
-buttonUrl: https://justincox.com/#/portal/support
+buttonUrl: https://tip.justincox.com/
 Thanks for reading, {first_name, "friend"}!
 
 Enjoyed this post? Leave a one-time tip to help fund more writing like this.
@@ -639,9 +649,8 @@ Enjoyed this post? Leave a one-time tip to help fund more writing like this.
   <p class="pane-label">Renders as</p>
   <div class="em-render">
     <div class="gc-gated gc-gated--centre">
-      <p>Call to action text.</p>
-      <a class="gc-button" href="https://example.com" target="_blank" rel="noopener noreferrer">Learn more</a>
-      <div><span class="gc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10" cy="8" r="3.2"/><path d="M4 19c0-3 2.7-5 6-5s6 2 6 5"/><path d="M18 8h4M20 6v4"/></svg>Members Only</span></div>
+      <p>Thanks for reading this post. Consider supporting the writer.</p>
+      <a class="gc-button" href="https://tip.justincox.com/" target="_blank" rel="noopener noreferrer">Leave a Tip</a>
     </div>
   </div>
   <p class="pane-label">Markdown</p>
@@ -652,8 +661,8 @@ alignment: center
 showButton: true
 showDividers: true
 sponsor: true
-buttonText: Learn more
-buttonUrl: https://example.com
+buttonText: Leave a Tip
+buttonUrl: https://tip.justincox.com/
 buttonColor: #000000
 buttonTextColor: #ffffff
 linkColor: text
@@ -662,7 +671,7 @@ webFree: true
 webPaid: true
 emailFree: true
 emailPaid: true
-Call to action text.
+Thanks for reading this post. Consider supporting the writer.
 :::</code><span class="em-code-lang">markdown</span></pre></div>
 </div>
 
