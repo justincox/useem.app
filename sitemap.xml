@@ -26,6 +26,21 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://useem.app/theme/theme-features.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://useem.app/theme/docs.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://useem.app/theme/paywall.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://useem.app/privacy.html</loc>
     <lastmod>2026-08-24</lastmod>
     <priority>0.5</priority>

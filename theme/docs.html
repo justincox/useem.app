@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Paper & Ink — a Ghost theme for em</title>
-<meta name="description" content="Paper & Ink is a warm, editorial Ghost theme built to pair with em, the Markdown writing app that publishes straight to Ghost. This is a static demo — no Ghost install behind it.">
-<link rel="canonical" href="https://useem.app/theme/">
-<meta property="og:type" content="website">
+<title>Documentation — Paper & Ink</title>
+<meta name="description" content="Installation, requirements, and the full theme-settings reference for the Paper & Ink Ghost theme.">
+<link rel="canonical" href="https://useem.app/theme/docs.html">
+<meta property="og:type" content="article">
 <meta property="og:site_name" content="em">
-<meta property="og:url" content="https://useem.app/theme/">
-<meta property="og:title" content="Paper & Ink — a Ghost theme for em">
-<meta property="og:description" content="A warm, editorial Ghost theme built to pair with em, the Markdown writing app that publishes straight to Ghost.">
+<meta property="og:url" content="https://useem.app/theme/docs.html">
+<meta property="og:title" content="Paper & Ink Documentation">
+<meta property="og:description" content="Installation, requirements, and the full theme-settings reference for the Paper & Ink Ghost theme.">
 <meta name="theme-color" content="#F6F1E4" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#252525" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="assets/css/screen.css?v=1">
@@ -45,6 +45,67 @@
 }
 .demo-banner a { color: #7fd1ae; }
 .demo-banner strong { color: #fff; }
+
+/* Ghost's own cards.min.css normally supplies the structural layout below
+   for callouts, toggles, and card spacing — Paper & Ink's screen.css only
+   overrides colors on top of it. This demo has no Ghost install behind it,
+   so it has nothing to override; these rules replicate just the base
+   structure Ghost would otherwise provide. */
+.kg-callout-card {
+	display: flex;
+	align-items: flex-start;
+}
+.kg-callout-emoji {
+	font-size: 1.25em;
+	line-height: 1.4;
+	margin-right: 0.75rem;
+	flex-shrink: 0;
+}
+.kg-callout-text {
+	flex: 1;
+	line-height: 1.4;
+}
+.kg-card {
+	margin: 1.5em 0;
+}
+.kg-toggle-heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	gap: 1rem;
+}
+.kg-toggle-heading-text {
+	margin: 0;
+}
+.kg-toggle-card-icon {
+	background: none;
+	border: 0;
+	padding: 0;
+	width: 1.25rem;
+	height: 1.25rem;
+	flex-shrink: 0;
+	cursor: pointer;
+}
+.kg-toggle-card-icon svg {
+	width: 100%;
+	height: 100%;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	transition: transform 0.2s ease;
+}
+.kg-toggle-card[data-kg-toggle-state="close"] .kg-toggle-content {
+	display: none;
+}
+.kg-toggle-card[data-kg-toggle-state="open"] .kg-toggle-card-icon svg {
+	transform: rotate(180deg);
+}
+.kg-toggle-content {
+	margin-top: 1rem;
+}
 </style>
 <script>
 	try {
@@ -56,7 +117,7 @@
 <body>
 
 <div class="demo-banner">
-	<strong>Paper & Ink</strong> — a Ghost theme based on the em app. Part of the <a href="https://useem.app/">em</a> ecosystem, by <a href="https://justincox.com/">Justin Cox</a>. This is the homepage feed — <a href="post.html">see a full post →</a>
+	<strong>Paper & Ink</strong> — a Ghost theme based on the em app. Part of the <a href="https://useem.app/">em</a> ecosystem, by <a href="https://justincox.com/">Justin Cox</a>. <a href="index.html">← Back to the homepage feed</a>
 </div>
 
 <header class="site-header">
@@ -68,7 +129,7 @@
 			<ul class="main-nav-list" data-priority-nav>
 				<li class="main-nav-item"><a href="post.html"><span>Card Showcase</span></a></li>
 				<li class="main-nav-item"><a href="theme-features.html"><span>Features</span></a></li>
-				<li class="main-nav-item"><a href="docs.html"><span>Documentation</span></a></li>
+				<li class="main-nav-item is-current"><a href="docs.html"><span>Documentation</span></a></li>
 				<li class="main-nav-item"><a href="#"><span>Contact</span></a></li>
 			</ul>
 			<a title="Search" aria-label="Search" class="nav-icon-button" href="#">
@@ -100,87 +161,83 @@
 			</div>
 		</nav>
 	</div>
+	<div class="reading-progress" aria-hidden="true"><div class="reading-progress-fill"></div></div>
 </header>
 
 <main class="site-content">
 	<section class="page-content" role="main">
 
-		<div class="post-box" style="margin-top:2rem">
-			<div class="post-image-container">
-				<a href="post.html" class="permalink">
-					<img src="https://picsum.photos/id/1040/220/220" alt="Every Ghost Card, Rendered Properly" class="post-featured-image" loading="eager" fetchpriority="high" decoding="async" width="100" height="100">
-				</a>
-			</div>
-			<div class="post-loop-content">
-				<h2 class="post-title"><span class="post-title-text"><a href="post.html" class="permalink">Every Ghost Card, Rendered Properly</a></span></h2>
-				<span class="post-meta">
-					<time>September 5, 2026</time>
-					&bull; <a href="#" class="post-meta-tag">Showcase</a>
-					&bull; <span class="post-label free">Free</span>
-				</span>
-				<p class="post-excerpt">Galleries, code blocks with real syntax highlighting, callouts, tables, buttons, and toggles — everything em can publish, styled the way it was meant to look. See the full showcase post →</p>
+<article class="post h-entry">
+
+	<div class="post-header">
+		<span class="post-kicker">
+			<a href="#" class="kicker-link">Guides</a>
+		</span>
+		<h1 class="post-title"><a href="#" class="permalink">Theme Documentation</a></h1>
+		<p class="post-header-excerpt">Installation, requirements, and the full theme-settings reference — everything you need to get Paper &amp; Ink running on your own Ghost site.</p>
+		<div class="post-meta">
+			<div class="post-meta-text">
+				<span class="post-meta-author">Justin Cox</span>
+				<div class="date-reading-time">
+					<time class="post-meta-publish-date">August 14, 2026</time>
+					<span class="reading-time">&bull; 3 min read</span>
+				</div>
 			</div>
 		</div>
+	</div>
 
-		<div class="post-box">
-			<div class="post-image-container">
-				<a href="theme-features.html" class="permalink">
-					<img src="https://picsum.photos/id/60/220/220" alt="The Features of Paper &amp; Ink" class="post-featured-image" loading="lazy" decoding="async" width="100" height="100">
-				</a>
-			</div>
-			<div class="post-loop-content">
-				<h2 class="post-title"><span class="post-title-text"><a href="theme-features.html" class="permalink">The Features of Paper &amp; Ink</a></span></h2>
-				<span class="post-meta">
-					<time>August 28, 2026</time>
-					&bull; <a href="#" class="post-meta-tag">Theme</a>
-					&bull; <span class="post-label free">Free</span>
-				</span>
-				<p class="post-excerpt">A sticky header, per-tag accent colors, a reading progress bar, related posts, post navigation — a tour of every setting Design → Brand gives you, and what it actually changes.</p>
-			</div>
-		</div>
+	<section class="post-content">
 
-		<div class="post-box">
-			<div class="post-image-container">
-				<a href="docs.html" class="permalink">
-					<img src="https://picsum.photos/id/180/220/220" alt="Paper &amp; Ink Documentation" class="post-featured-image" loading="lazy" decoding="async" width="100" height="100">
-				</a>
-			</div>
-			<div class="post-loop-content">
-				<h2 class="post-title"><span class="post-title-text"><a href="docs.html" class="permalink">Theme Documentation</a></span></h2>
-				<span class="post-meta">
-					<time>August 14, 2026</time>
-					&bull; <a href="#" class="post-meta-tag">Guides</a>
-					&bull; <span class="post-label free">Free</span>
-				</span>
-				<p class="post-excerpt">Installation, requirements, and the full theme-settings reference — everything you need to get Paper &amp; Ink running on your own Ghost site.</p>
-			</div>
-		</div>
+		<p>Paper &amp; Ink is a warm, editorial Ghost theme built to pair with <a href="https://useem.app/">em</a>, the Markdown writing app that publishes straight to Ghost. This page covers requirements, installation, and every configurable setting.</p>
 
-		<div class="post-box">
-			<div class="post-image-container">
-				<a href="paywall.html" class="permalink">
-					<img src="https://picsum.photos/id/1039/220/220" alt="Dark Mode Shouldn't Be an Afterthought" class="post-featured-image" loading="lazy" decoding="async" width="100" height="100">
-				</a>
-			</div>
-			<div class="post-loop-content">
-				<h2 class="post-title"><span class="post-title-text"><a href="paywall.html" class="permalink">Dark Mode Shouldn't Be an Afterthought</a></span></h2>
-				<span class="post-meta">
-					<time>July 30, 2026</time>
-					&bull; <a href="#" class="post-meta-tag">Design</a>
-					&bull; <span class="post-label paid">Paid</span>
-				</span>
-				<p class="post-excerpt">Every color in Paper &amp; Ink is derived from the current ground at a fixed opacity — not hand-picked per mode. Here's why that one decision made the whole theme easier to maintain.</p>
-			</div>
-		</div>
+		<h2>Requirements</h2>
+		<p>Ghost 5.0 or later.</p>
 
-		<section class="support-tile">
-			<h2>Purchase Paper &amp; Ink</h2>
-			<p>Works with Ghost 6+</p>
-			<div class="support-tile-actions">
-				<a class="kg-btn" href="#">Buy for $19</a>
-			</div>
-		</section>
+		<h2>Installation</h2>
+		<ol>
+			<li>Download the theme as a <code>.zip</code>.</li>
+			<li>In Ghost Admin, go to <strong>Settings &rarr; Design &rarr; Change theme &rarr; Upload theme</strong>.</li>
+			<li>Activate it, then visit <strong>Settings &rarr; Design &rarr; Brand and design settings</strong> to configure the theme settings below.</li>
+		</ol>
 
+		<h2>Theme settings</h2>
+		<p>All configurable from Ghost Admin's Design panel — no code required. See <a href="theme-features.html">The Features of Paper &amp; Ink</a> for a walkthrough of what each group is for.</p>
+
+		<table>
+			<thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What it does</th></tr></thead>
+			<tbody>
+				<tr><td>Background (Dark)</td><td>Color</td><td><code>#252525</code></td><td>The dark-mode ground color.</td></tr>
+				<tr><td>Background (Light)</td><td>Color</td><td><code>#F6F1E4</code></td><td>The light-mode ground color.</td></tr>
+				<tr><td>Accent (Secondary)</td><td>Color</td><td><code>#4168D2</code></td><td>Second accent, used across links, labels, and callouts.</td></tr>
+				<tr><td>Accent (Success)</td><td>Color</td><td><code>#5D742F</code></td><td>Third accent, used for the "paid" post-status label and elsewhere.</td></tr>
+				<tr><td>Copyright</td><td>Text</td><td>&mdash;</td><td>Extra text appended to the footer's copyright line.</td></tr>
+				<tr><td>Tip Url</td><td>Text</td><td>&mdash;</td><td>Shows a "Leave a Tip" link (footer + support tile) when set.</td></tr>
+				<tr><td>Sticky Header</td><td>Boolean</td><td>Off</td><td>Keeps the header pinned while scrolling.</td></tr>
+				<tr><td>Tag Color</td><td>Boolean</td><td>Off</td><td>Post kickers/loop cards pick up each tag's own accent color.</td></tr>
+				<tr><td>Show Feature Images in List</td><td>Boolean</td><td>Off</td><td>Shows each post's feature image in list views.</td></tr>
+				<tr><td>Show Post Status</td><td>Boolean</td><td>On</td><td>Shows a Free/Member/Paid label next to each post.</td></tr>
+				<tr><td>Post Navigation</td><td>Boolean</td><td>Off</td><td>Adds prev/next post links at the bottom of a post.</td></tr>
+				<tr><td>External Link Icons</td><td>Boolean</td><td>On</td><td>Marks links that leave your site with an icon.</td></tr>
+				<tr><td>Reading Progress Bar</td><td>Boolean</td><td>On</td><td>A scroll-progress bar under the header on post pages.</td></tr>
+				<tr><td>Related Posts</td><td>Boolean</td><td>Off</td><td>Shows related posts at the bottom of a post.</td></tr>
+			</tbody>
+		</table>
+
+		<h2>Support</h2>
+		<p>Questions or issues: <strong>support@justincox.com</strong></p>
+
+		<h2>Credits</h2>
+		<ul>
+			<li>Fonts: Fraunces, Ubuntu, Red Hat Mono — Google Fonts, self-hosted.</li>
+			<li>Icons: Font Awesome Free (CC BY 4.0).</li>
+			<li>Syntax highlighting: highlight.js (BSD-3-Clause), self-hosted.</li>
+		</ul>
+
+		<p>See the full <a href="post.html">card showcase</a> for how every Koenig card renders in this theme.</p>
+
+	</section>
+
+</article>
 	</section>
 </main>
 
@@ -201,7 +258,22 @@
 	</nav>
 </footer>
 
+<script src="assets/js/highlight.min.js"></script>
 <script>
+	(function () {
+		document.querySelectorAll('.post-content pre > code').forEach(function (code) {
+			const pre = code.parentElement;
+			code.textContent = code.textContent.replace(/^[ \t]*\r?\n/, '').replace(/^ (?=\S)/, '');
+			const match = code.className.match(/language-([\w+-]+)/);
+			if (match) {
+				const lang = match[1].toLowerCase();
+				const labels = { js: 'JavaScript', javascript: 'JavaScript', py: 'Python', python: 'Python' };
+				pre.setAttribute('data-language', labels[lang] || (lang.charAt(0).toUpperCase() + lang.slice(1)));
+				if (window.hljs && window.hljs.getLanguage(lang)) window.hljs.highlightElement(code);
+			}
+		});
+	})();
+
 	const themeToggle = document.getElementById('theme-toggle');
 	if (themeToggle) {
 		themeToggle.addEventListener('click', function (event) {
@@ -214,6 +286,20 @@
 			try { localStorage.setItem('theme', next); } catch (e) {}
 		});
 	}
+
+	document.querySelectorAll('.kg-toggle-card').forEach(function (card) {
+		const button = card.querySelector('.kg-toggle-card-icon');
+		const heading = card.querySelector('.kg-toggle-heading');
+		const toggle = () => {
+			const isOpen = card.getAttribute('data-kg-toggle-state') === 'open';
+			card.setAttribute('data-kg-toggle-state', isOpen ? 'close' : 'open');
+			if (button) button.setAttribute('aria-expanded', String(!isOpen));
+		};
+		if (button) button.addEventListener('click', toggle);
+		if (heading) heading.addEventListener('click', function (event) {
+			if (event.target !== button && !button.contains(event.target)) toggle();
+		});
+	});
 
 	const menuToggle = document.querySelector('.navigation-menu-toggle');
 	const navMenuButton = document.querySelector('.nav-menu-button');
@@ -257,6 +343,21 @@
 		window.addEventListener('resize', requestFit);
 		window.addEventListener('load', fitPriorityNav, { once: true });
 		fitPriorityNav();
+	}
+
+	if (!CSS.supports('animation-timeline: scroll()')) {
+		const progressFill = document.querySelector('.reading-progress-fill');
+		function updateProgress() {
+			const totalHeight = document.body.clientHeight;
+			const windowHeight = document.documentElement.clientHeight;
+			const scrollRange = Math.max(totalHeight - windowHeight, 1);
+			const progress = Math.max(0, Math.min(100, window.scrollY / scrollRange * 100));
+			if (progressFill) progressFill.style.transform = `scaleX(${progress / 100})`;
+		}
+		window.addEventListener('scroll', updateProgress, { passive: true });
+		window.addEventListener('resize', updateProgress);
+		window.addEventListener('load', updateProgress, { once: true });
+		updateProgress();
 	}
 </script>
 </body>

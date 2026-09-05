@@ -976,6 +976,10 @@ textarea {
 }
 
 .alt-nav li a {
+	/* Ghost's navigation helper renders these <a> tags with no class, so
+	   without this override they pick up the global a:not([class]) rule's
+	   box-shadow underline treatment above. */
+	box-shadow: none;
 	text-decoration: none;
 	color: var(--color-text-muted);
 	display: flex;
