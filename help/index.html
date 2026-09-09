@@ -303,7 +303,7 @@
 
     <section>
       <h2 id="ai">AI in em</h2>
-      <p>AI features are off by default. You can leave it that way, or use AI on your terms. Ask em and search run on-device by default; Editorial Review runs through a Shortcut on Apple's Private Cloud Compute, or a model you connect yourself. Every surface names the model that's answering, and you decide which files AI can see.</p>
+      <p>AI features are off by default. You can leave it that way, or use AI on your terms. Ask em and search run on-device by default; Siri can open, read, and edit your documents once AI is on; Editorial Review runs through a Shortcut on Apple's Private Cloud Compute, or a model you connect yourself. Every surface names the model that's answering, and you decide which files AI can see.</p>
 
       <div class="callout">
         <span class="callout__emoji" aria-hidden="true">🔒</span>
@@ -317,6 +317,14 @@
         <div class="toggle__body">
           <p>Ask a question — “what have I written about my grandfather?”, “when did I first mention burnout?” — and em answers from your own writing, grounded in the actual documents, with sources you can open. Answers arrive as conversations in the AI library, which is itself just a folder of Markdown files in your iCloud Drive — your conversations sync everywhere, and you can read them in any app.</p>
           <p>Ask em only reads libraries you've approved in Settings → AI.</p>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="siri">Siri</summary>
+        <div class="toggle__body">
+          <p>With AI turned on, Siri can open, read, and edit your documents directly — on Mac, iPad, and iPhone. Ask it to find a document, read one back to you, or make a change, and it works the same way Ask em does: grounded in your own files, nothing on the open internet.</p>
+          <p>Simple requests run on-device. Anything Siri can't handle on-device falls back to Apple's Private Cloud Compute, under the same PCC guarantees Editorial Review's Shortcut uses — see <a href="../privacy.html#ai-features">Private Cloud Compute</a> in the Privacy Policy. Siri follows the same library approvals as Ask em, in Settings → AI, and edits it makes are versioned automatically, exactly like an edit you typed yourself.</p>
         </div>
       </details>
 
@@ -351,7 +359,7 @@
       <details class="toggle">
         <summary id="turning-ai-off">Turning AI Off</summary>
         <div class="toggle__body">
-          <p>Settings → AI → Enable AI turns the whole thing off. Turning AI off deletes the entire AI library and its conversations on every device. This is a destructive action and conversations cannot be restored after disabling AI in em.</p>
+          <p>Settings → AI → Enable AI turns the whole thing off — Ask em, Editorial Review, connected models, and Siri's access to your documents. Turning AI off deletes the entire AI library and its conversations on every device. This is a destructive action and conversations cannot be restored after disabling AI in em.</p>
         </div>
       </details>
     </section>
@@ -536,7 +544,7 @@
         <summary id="is-my-ai-usage-private">Is my AI usage private?</summary>
         <div class="toggle__body">
           <p>Theoretically yes, but it depends on the AI provider's privacy policies. When AI is enabled, em defaults to Apple Intelligence's on-device models, so your questions and your data never leave your device. AI conversations, even with on-device models, sync through iCloud so they appear in each copy of em you use.</p>
-          <p>Editorial Review sends the contents of the selected draft through remote servers for analysis. With the on-device model selected, this happens through a Shortcut and Apple's Private Cloud Compute.</p>
+          <p>Editorial Review sends the contents of the selected draft through remote servers for analysis. With the on-device model selected, this happens through a Shortcut and Apple's Private Cloud Compute. Siri works the same way: simple requests stay on-device, and anything more complex falls back to Private Cloud Compute.</p>
           <p>If a remote model (Claude, ChatGPT, or Gemini) is enabled, your questions and Editorial Review content are processed in accordance with that provider's usage policies. Read more in the <a href="../privacy.html">Privacy Policy</a>.</p>
         </div>
       </details>
