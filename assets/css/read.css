@@ -290,8 +290,68 @@ body {
 }
 
 .doc section { margin: 0 0 3rem; }
-.doc section > h2 { margin-bottom: 0.6em; }
+.doc section > h2 { margin-bottom: 0.6em; display: flex; align-items: center; gap: 0.65rem; }
 .doc section > h3 { margin: 2.25rem 0 0.9rem; }
+
+/*
+ * A section's icon badge: one of em's own colours (the library accent, or
+ * one of the four Paper-and-Ink pigments) at a soft tint behind a Font
+ * Awesome Free glyph, self-hosted as inline paths rather than a webfont —
+ * consistent with how every other icon on this site (callouts, media cards
+ * in the cheatsheet) is already drawn. Set --icon-color per instance; it
+ * defaults to the library accent for icons that don't specify one, like the
+ * ones in the Everything Else grid.
+ */
+.section-icon {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  border-radius: 30%;
+  background: color-mix(in srgb, var(--icon-color, var(--accent)) 16%, transparent);
+  color: var(--icon-color, var(--accent));
+}
+.section-icon svg { width: 1.05rem; height: 1.05rem; fill: currentColor; }
+h2 .section-icon { width: 1.85rem; height: 1.85rem; }
+h2 .section-icon svg { width: 0.9rem; height: 0.9rem; }
+
+/*
+ * Everything Else, as a grid of cards rather than a bullet list — each one
+ * a title, a line of description, and its own icon badge.
+ */
+.doc .feature-grid {
+  list-style: none;
+  margin: 0 0 1.15em;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+.doc .feature-grid > li {
+  position: static;
+  padding: 1.15rem 1.25rem;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  border-radius: var(--block-radius);
+  background: color-mix(in srgb, var(--ink) 4%, transparent);
+  border: 1px solid var(--rule);
+}
+.doc .feature-grid > li::before { content: none; }
+.feature-grid__item strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+.feature-grid__item p {
+  margin: 0;
+  font-size: 0.92em;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
 /* Pages whose body is one long run of prose rather than titled sections. */
 .article__body h2 { margin: 2.75rem 0 0.6em; }
 .article__body h3 { margin: 2rem 0 0.5em; }
