@@ -255,9 +255,10 @@ body {
 }
 
 /*
- * The page's one claim, carried by a callout card in em's clay pigment. em
- * fills a callout at half its colour, so the page's headline card is mixed
- * close to that rather than at the quiet tint the asides use.
+ * A claim worth stopping on, carried by a callout card rather than a quiet
+ * blockquote — the top-of-page lede in clay, and Privacy's echo of it in
+ * teal. em fills a callout at half its colour, so these read closer to that
+ * than to the quiet tint the asides use.
  */
 .callout.callout--lede {
   margin: 0;
