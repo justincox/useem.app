@@ -625,25 +625,15 @@ h2 .section-icon svg { width: 0.9rem; height: 0.9rem; }
 .doc__end { text-align: center; margin-bottom: 0; }
 .doc__actions { margin: 1.5rem 0 0; }
 
-.btn {
-  appearance: none;
-  font: inherit;
-  font-family: var(--font-body);
-  font-weight: 700;
-  padding: 0.7rem 1.5rem;
-  border-radius: 999px;
-  border: 1px solid var(--rule);
-  background: color-mix(in srgb, var(--ink) 6%, transparent);
-  color: var(--ink-muted);
-  cursor: default;
-}
-/* The toolbar's own scale — same pill, sized to sit in a 4.25rem-ish bar
-   beside the nav links rather than the full-size bottom-of-page CTA. */
-.btn--sm {
-  padding: 0.4rem 1rem;
-  font-size: 0.82rem;
-  white-space: nowrap;
-}
+/* Official "Download on the App Store" badge — Apple's asset, unmodified.
+   It carries its own black pill background baked into the SVG, so it reads
+   fine on both the light and dark paper. Never recolor, restyle, shrink
+   below Apple's 40px minimum, or put text inside it; the promo line lives
+   beside it instead. */
+.app-store-badge { display: inline-flex; line-height: 0; }
+.app-store-badge img { display: block; height: 40px; width: auto; }
+/* The bottom-of-page CTA gets a little more presence than the toolbar's copy. */
+.app-store-badge--lg img { height: 52px; }
 
 /* The em dash is picked out in the library colour, the way em's editor marks
    it — the greatest punctuation mark there is, wearing the accent. */
