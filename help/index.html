@@ -145,17 +145,22 @@
 
     <section>
       <h2 id="search">Search &amp; Smart Folders</h2>
-      <p>em searches by keyword and by meaning. Ask for “the piece about software development” and Smart Search finds the essay you titled “that time I built an app” — because em understands what your drafts are about, not just which words they contain.</p>
+      <p>Files scattered across folders with all kinds of titles? Smart Search lists every file holding your words, the ones holding all of them first, with nothing cut off. Use quotes, +, -, OR, and * when you know exactly what you want, narrow by library, tag, status, or year, and save any search as a Smart Folder that stays current. When you only remember what a piece was about, <a href="#ask-em">ask em</a>.</p>
 
 
       <details class="toggle">
-        <summary id="two-kinds-of-search">Two Kinds of Search</summary>
+        <summary id="search-operators">Search Operators</summary>
         <div class="toggle__body">
+          <p>Smart Search matches titles and full text as you type. Files holding every word you typed come first, followed by files holding only some of them. Nothing is cut off. When you know exactly what you want, narrow it down:</p>
           <ul>
-            <li><strong>Search</strong> matches the words themselves — titles and full text, instantly, as you type.</li>
-            <li><strong>Smart Search</strong> matches meaning and is enabled by hitting return or the search button. Describe what you're looking for — a topic, a half-remembered idea, even a question — em searches by meaning and keywords together, and orders results by what they're <em>about</em>. All of this happens completely on your device.</li>
+            <li><strong>“quotes”</strong> match an exact phrase.</li>
+            <li><strong>+word</strong> requires a word.</li>
+            <li><strong>-word</strong> leaves out files containing a word.</li>
+            <li><strong>OR</strong> matches either word on each side of it.</li>
+            <li><strong>word*</strong> matches anything starting with those letters.</li>
           </ul>
-          <p>Smart Search doesn't require enabling em's AI features. On a new install or right after a big import, the index may take a little while to build, but keyword search works immediately.</p>
+          <p>Filter results by library, tag, status, or year, and save any search as a <a href="#smart-folders">Smart Folder</a>.</p>
+          <p>Smart Search runs entirely on your device and doesn't require enabling em's AI features. Looking for a piece by what it was about rather than the words in it? That's what <a href="#ask-em">Ask em</a> is for.</p>
           <p>Ghost posts are also searchable. Published posts are included by default; drafts and scheduled posts are included if you turn that on in Settings.</p>
         </div>
       </details>
@@ -541,9 +546,9 @@
       <h3 id="search-and-the-index">Search and the Index</h3>
 
       <details class="toggle">
-        <summary id="why-does-smart-search-say-its-indexing">Why does Smart Search say it's indexing?</summary>
+        <summary id="why-does-search-say-its-indexing">Why does search say it's indexing?</summary>
         <div class="toggle__body">
-          <p>Smart Search relies on semantic vectors (“chunks”) that are built during search indexing. Creating chunks for each file can take a few minutes, especially on large libraries. Each chunk is stored on-device in accordance with em's Privacy Policy. Once the index is finalized, Smart Search is available.</p>
+          <p>em builds a search index from your files on your device. On a new install or right after a big import, indexing can take a few minutes, especially on large libraries, and results fill in as it goes. The index is stored on-device in accordance with em's Privacy Policy and never syncs anywhere.</p>
         </div>
       </details>
 
