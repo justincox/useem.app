@@ -5,7 +5,7 @@
  * it follows the reader's own light and dark appearance.
  *
  * The library accent in the export is Apple's blue; here it is em's own green,
- * because that is this site's library colour. Depends on tokens.css and
+ * because that is this site's library color. Depends on tokens.css and
  * read.css — read.css styles the surrounding prose, and the compatibility
  * block at the foot of this file keeps the document's own list markers, rules,
  * and tables out of the examples.
@@ -146,7 +146,7 @@
   line-height: 1.55;
   margin: 0;
 }
-/* A pull quote is the document's own voice: centred, black, between rules. */
+/* A pull quote is the document's own voice: centered, black, between rules. */
 .em-render .em-pullquote { text-align: center; padding: 0.5rem 0; margin: 0; }
 .em-render .em-pullquote hr {
   border: none;

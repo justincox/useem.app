@@ -1,7 +1,7 @@
 /*
  * useem.app — four small jobs, all of them things em itself does:
  *   1. Count the words and the reading time (238 wpm, the app's own rate).
- *   2. Mark every em dash in the library colour, the way the editor does.
+ *   2. Mark every em dash in the library color, the way the editor does.
  *   3. Open a collapsed answer when a link points into it.
  *   4. Open and close the mobile toolbar's hamburger menu.
  *
