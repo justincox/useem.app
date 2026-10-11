@@ -24,7 +24,7 @@
 <link rel="icon" type="image/png" sizes="512x512" href="../assets/img/favicon-512.png?v=4">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png?v=4">
 <link rel="stylesheet" href="../assets/css/tokens.css?v=6">
-<link rel="stylesheet" href="../assets/css/read.css?v=8">
+<link rel="stylesheet" href="../assets/css/read.css?v=10">
 <!-- The hamburger needs JS to open; with it off, keep the nav inline instead of unreachable. -->
 <noscript><style>.toolbar__links{display:flex!important;position:static!important;flex-direction:row!important;flex-wrap:wrap;gap:0.6rem!important;box-shadow:none;padding:0;border-bottom:0}.toolbar__links a{padding:0;border-bottom:1px solid transparent}.menu-toggle{display:none!important}</style></noscript>
 </head>
@@ -63,6 +63,8 @@
       <h2>Contents</h2>
       <ol>
         <li><a href="#getting-started">Getting Started</a></li>
+        <li><a href="#goals">Goals &amp; Calendar</a></li>
+        <li><a href="#places">Places</a></li>
         <li><a href="#search">Search &amp; Smart Folders</a></li>
         <li><a href="#versions">Version History</a></li>
         <li><a href="#ghost">Publishing to Ghost</a></li>
@@ -139,6 +141,81 @@
             <li>The search index is a cache of data that is unique to each device and does not sync anywhere. em can rebuild it from your files at any time, and deleting it doesn't touch your writing.</li>
           </ul>
           <p>If you ever stop using em, your writing is exactly where it always was: a folder of Markdown files, with nothing missing and nothing to export.</p>
+        </div>
+      </details>
+    </section>
+
+    <section>
+      <h2 id="goals">Goals &amp; Calendar</h2>
+      <p>Set a goal for a single file, or a standing goal for everything you write. em shows your pace and your streak, and the Calendar keeps every day you wrote in one place.</p>
+
+      <details class="toggle">
+        <summary id="file-goals">A Goal for One File</summary>
+        <div class="toggle__body">
+          <p>Open a file's Info inspector with the (i) button. The Goal section at the top holds a word goal and a deadline for that file, along with the reading-level and links goals.</p>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="writing-goal">Your Daily, Weekly, or Monthly Goal</summary>
+        <div class="toggle__body">
+          <p>In Settings → General, choose a Writing Goal: Off, daily, weekly, or monthly. The Calendar's goal bar follows it, showing how far along you are and whether you're ahead of or behind pace.</p>
+          <p>Below it, <strong>Building Streaks Requires Meeting Goals</strong> decides what counts toward a streak. On, a day, week, or month adds to your streak only when you reach your goal. Off, any period you write counts.</p>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="calendar">The Calendar</summary>
+        <div class="toggle__body">
+          <p>Calendar is a row in the sidebar's Collections section. It shows whenever at least one library is connected, so there's nothing to set up. Open it to see the month, today's goal bar, four tiles — Today, Streak, Words, and Days — and the files you worked on each day.</p>
+          <ul>
+            <li>Each tile is a menu. Count the Streak in days, weeks, or months, and Words and Days over this week, the month shown, or its year.</li>
+            <li>Click or tap the count on the goal bar to open the goal editor.</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <section>
+      <h2 id="places">Places</h2>
+      <p>Places remembers where you began writing each file, and any other place you came back to work on it, then shows them all on a map. It's off until you turn it on for a library.</p>
+
+      <details class="toggle">
+        <summary id="turn-on-location">Turn On Location for a Library</summary>
+        <div class="toggle__body">
+          <p>Open a library's settings (Library Settings…) and switch on <strong>Location</strong>. Its footer explains the deal: em adds location metadata when files are created in this library, to build maps, and location data is removed when sharing files with AI models.</p>
+          <ul>
+            <li>Settings → Location holds system location access (Allow Location Access…) and your list of Named Places.</li>
+            <li>Only files created after the switch is on get a location. To add one to an older file, use that file's Location menu.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="places-map">The Places Map</summary>
+        <div class="toggle__body">
+          <p>Places is a row in the Collections section of the sidebar, beside Calendar. It appears only once at least one library has Location turned on. Until then it isn't there, and when it's empty it says: “Turn on Location in a library's settings, and the files you create there appear here.”</p>
+          <p>A file's Info inspector has its own Location section: a map with one pin for each place and a count of the visits at each.</p>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="visits">Visits</summary>
+        <div class="toggle__body">
+          <p>A file has the location where you began it, and it can also carry <em>visits</em>: other places you came back to it. A visit close to an earlier one adds to that visit instead of creating a new pin.</p>
+          <ul>
+            <li><strong>Add a visit:</strong> choose Location → Add Visit Here from the file's More menu, or use the button on the keyboard bar. em confirms with “Visit Added”, or tells you “This visit is already recorded.”</li>
+            <li><strong>Other actions:</strong> Use Current Location, Change Location… (pick on a map), and Remove Location, which takes out the location, visits, and place names after you confirm.</li>
+            <li><strong>Several files at once:</strong> select them and use the Location submenu, which also offers Name as a Named Place….</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="location-and-privacy">Location and Privacy</summary>
+        <div class="toggle__body">
+          <p>A file's location is recorded in the file's own metadata, so it moves with the file through your iCloud and never reaches em's developer. em reads your location only while the app is open. Copy, Ask em, Siri, and Shortcuts never include it, and Share and Print ask you first.</p>
+          <p>Map tiles and place names come from Apple Maps. See <a href="../privacy.html#maps">Maps</a> and <a href="../privacy.html#your-files">Your Files</a> in the Privacy Policy.</p>
         </div>
       </details>
     </section>
@@ -318,7 +395,7 @@
       <div class="callout">
         <span class="callout__emoji" aria-hidden="true">🔒</span>
         <div class="callout__body">
-          <p>Search, indexing, and reading your files happen entirely on-device in every configuration without needing to enable AI features.</p>
+          <p>Search, indexing, and reading your files happen entirely on-device in every configuration without needing to enable AI features. Location data is never sent with an AI request.</p>
         </div>
       </div>
 
@@ -387,20 +464,25 @@
                 <tr><th>Action</th><th>What it Does</th></tr>
               </thead>
               <tbody>
-                <tr><td><strong>Create Document</strong></td><td>Creates a new Markdown document in a specified library, with a title and optional starting text.</td></tr>
+                <tr><td><strong>Create Document</strong></td><td>Creates a new Markdown document in a specified library, with a title and optional starting text, location, and place name.</td></tr>
+                <tr><td><strong>Search Documents</strong></td><td>Searches your libraries by title and content; returns the matches for later steps.</td></tr>
                 <tr><td><strong>Append to Document</strong></td><td>Adds text to the end of a document.</td></tr>
                 <tr><td><strong>Prepend to Document</strong></td><td>Adds text to the beginning of a document.</td></tr>
                 <tr><td><strong>Replace Text in Document</strong></td><td>Finds matching text in a document and replaces it with specified text.</td></tr>
-                <tr><td><strong>Search Documents</strong></td><td>Searches your libraries by title and content; returns the matches for later steps.</td></tr>
                 <tr><td><strong>Open Document</strong></td><td>Opens a document in em.</td></tr>
                 <tr><td><strong>Get Document Title</strong></td><td>Returns a document's title.</td></tr>
                 <tr><td><strong>Get Document Markdown</strong></td><td>Returns a document's full Markdown source.</td></tr>
-                <tr><td><strong>Import AI Result</strong></td><td>Saves text produced by a Shortcut as a new AI conversation in em.</td></tr>
-                <tr><td><strong>Send to Ghost</strong></td><td>Writes specified content to the Ghost site in draft, scheduled, or published status.</td></tr>
+                <tr><td><strong>Get Editorial Review Prompt</strong></td><td>Returns your Editorial Review Prompt, for use in a Shortcut that runs its own review.</td></tr>
+                <tr><td><strong>Create AI Conversation</strong></td><td>Saves text produced by a Shortcut as a new AI conversation in em.</td></tr>
+                <tr><td><strong>Publish to Ghost</strong></td><td>Writes specified content to the Ghost site in draft, scheduled, or published status.</td></tr>
+                <tr><td><strong>Set Document Location</strong></td><td>Sets a document's location, with an optional place name, either as where it was written or as a visit.</td></tr>
+                <tr><td><strong>Rename Document</strong></td><td>Gives a document a new file name. em adds <code>.md</code> if you leave it off.</td></tr>
+                <tr><td><strong>Get File Name</strong></td><td>Returns a document's file name, with or without its folder.</td></tr>
               </tbody>
             </table>
           </div>
-          <p>Actions that write are careful by design: if a file changes while a Shortcut is running, em declines to overwrite the file rather than clobber your edit.</p>
+          <p>Actions that write are careful by design: if a file changes while a Shortcut is running, em declines to overwrite the file rather than clobber your edit. Set Document Location also respects each library's Location switch — a library with Location off refuses it.</p>
+          <p>Seven of the actions come with spoken phrases for Siri, such as “Create a document in em”, “Search em”, “Open a document in em”, and “Publish to Ghost with em”.</p>
         </div>
       </details>
 
@@ -411,7 +493,7 @@
             <li><strong>Capture Inbox.</strong> A Shortcut on your phone that asks for text and appends it to a file in your library — a thought captured in two taps, from anywhere.</li>
             <li><strong>Daily Note.</strong> Create a document named for today's date in your journal library, from a time-of-day automation.</li>
             <li><strong>Read it Later.</strong> Share a link to a Shortcut that appends it, with the page title, to a reading list document.</li>
-            <li><strong>Your Own AI Pipeline.</strong> Chain Get Document Markdown into any model action Shortcuts can reach, then Import AI Result to file the response in em — your archive in, your archive out. This is how Editorial Review using Apple's model works.</li>
+            <li><strong>Your Own AI Pipeline.</strong> Chain Get Document Markdown into any model action Shortcuts can reach, then Create AI Conversation to file the response in em — your archive in, your archive out. This is how Editorial Review using Apple's model works.</li>
           </ul>
         </div>
       </details>
@@ -427,19 +509,19 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><a href="https://www.icloud.com/shortcuts/1e212d1bc8014db9bb920f7c681b84bf" target="_blank" rel="noopener noreferrer">Dreamcatcher</a></td>
+                  <td><a href="https://www.icloud.com/shortcuts/1e212d1bc8014db9bb920f7c681b84bf" target="_blank" rel="noopener noreferrer">Dreamcatcher</a><span class="shortcut-updated">Last updated: September 9, 2026</span></td>
                   <td>Capture what you remember about a dream and save it as a new document in em. Optionally, it can use Apple's Private Cloud Compute to turn the dream into a short story, with a possible interpretation.</td>
                 </tr>
                 <tr>
-                  <td><a href="https://www.icloud.com/shortcuts/a5fe526aae4346e8bff1b275b5b5745c" target="_blank" rel="noopener noreferrer">Entertainment Reviewer</a></td>
+                  <td><a href="https://www.icloud.com/shortcuts/a5fe526aae4346e8bff1b275b5b5745c" target="_blank" rel="noopener noreferrer">Entertainment Reviewer</a><span class="shortcut-updated">Last updated: September 9, 2026</span></td>
                   <td>Create a Ghost post reviewing a movie or TV show, using data from The Movie Database.</td>
                 </tr>
                 <tr>
-                  <td><a href="https://www.icloud.com/shortcuts/fc355c741e9e4671a24919fc7ffcae19" target="_blank" rel="noopener noreferrer">Journaler</a></td>
+                  <td><a href="https://www.icloud.com/shortcuts/fc355c741e9e4671a24919fc7ffcae19" target="_blank" rel="noopener noreferrer">Journaler</a><span class="shortcut-updated">Last updated: September 9, 2026</span></td>
                   <td>Capture a thought and save it to em as a new document.</td>
                 </tr>
                 <tr>
-                  <td><a href="https://www.icloud.com/shortcuts/391c5554b05f4e0a94e10a07252ebb65" target="_blank" rel="noopener noreferrer">Editorial Review</a></td>
+                  <td><a href="https://www.icloud.com/shortcuts/391c5554b05f4e0a94e10a07252ebb65" target="_blank" rel="noopener noreferrer">Editorial Review</a><span class="shortcut-updated">Last updated: September 9, 2026</span></td>
                   <td>Runs an Editorial Review of your open draft using Apple's on-device model, via Private Cloud Compute — the Shortcut behind the <a href="#editorial-review">Editorial Review</a> feature.</td>
                 </tr>
               </tbody>
@@ -558,6 +640,44 @@
           <p>Something may have gone wrong with your index, not your files. Visit Settings → Index → Check Index Health to see what's going on. If needed, use Rebuild Search Index. The index is only a cache; rebuilding never touches your files.</p>
         </div>
       </details>
+
+      <h3 id="goals-and-places-questions">Goals, Places, and Location</h3>
+
+      <details class="toggle">
+        <summary id="why-dont-i-see-places">Why don't I see Places in my sidebar?</summary>
+        <div class="toggle__body">
+          <p>Places appears only once at least one library has Location turned on. Open a library's settings and switch on Location, and the row shows up in Collections. See <a href="#turn-on-location">Turn On Location for a Library</a>.</p>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="does-em-track-where-i-go">Does em track where I go?</summary>
+        <div class="toggle__body">
+          <p><strong>No.</strong> Location is off by default. In a library where you turn it on, em records where you began writing each new file, plus any visits you add, and only reads your location while the app is open. There's no background tracking, and nothing goes to an em server, because there isn't one.</p>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="is-my-location-sent-to-ai">Is my location sent to AI?</summary>
+        <div class="toggle__body">
+          <p><strong>No.</strong> Location data is removed before anything reaches a model — on-device, Private Cloud Compute, or a provider you connect. Copy, Ask em, Siri, and Shortcuts never include it either, and Share and Print ask you first.</p>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="do-my-old-files-get-a-location">Do my existing files get a location?</summary>
+        <div class="toggle__body">
+          <p>Only files created after you turn Location on. For older files, use the file's Location menu: Use Current Location, or Change Location… to pick a spot on the map.</p>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="what-counts-toward-my-streak">What counts toward my streak?</summary>
+        <div class="toggle__body">
+          <p>It depends on <strong>Building Streaks Requires Meeting Goals</strong> in Settings → General. On, a period counts only when you reach your goal. Off, any period you write counts. The Calendar's Streak tile can count in days, weeks, or months.</p>
+        </div>
+      </details>
+
 
       <h3 id="ai-questions">AI</h3>
 
