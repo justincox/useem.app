@@ -178,7 +178,7 @@
 
     <section>
       <h2 id="places">Places</h2>
-      <p>Places remembers where you began writing each file, and any other place you came back to work on it, then shows them all on a map. It's off until you turn it on for a library.</p>
+      <p>Places remembers where you began writing each file, and any other place you came back to work on it, then shows them all on a map. It's off until you turn it on for a library, and once it's on, em records the weather where you began writing each file too.</p>
 
       <details class="toggle">
         <summary id="turn-on-location">Turn On Location for a Library</summary>
@@ -187,6 +187,7 @@
           <ul>
             <li>Settings → Location holds system location access (Allow Location Access…) and your list of Named Places.</li>
             <li>Only files created after the switch is on get a location. To add one to an older file, use that file's Location menu.</li>
+            <li>Each library also has a Weather switch under Location, on by default. See <a href="#weather">Weather</a>.</li>
           </ul>
         </div>
       </details>
@@ -212,9 +213,23 @@
       </details>
 
       <details class="toggle">
+        <summary id="weather">Weather</summary>
+        <div class="toggle__body">
+          <p>Every new file with a location records the weather where you started writing: a condition such as Partly Cloudy, a symbol, and the temperature in your unit, for that hour. em writes it into the file's own frontmatter, on one line beside the location, and shows it in Info and at the end of a read page.</p>
+          <ul>
+            <li><strong>Turn it on or off:</strong> Weather is on by default when you turn Location on for a library. To change it, open the library's settings (or Settings → Location), find Weather under Location, and switch it. Location keeps working without it.</li>
+            <li><strong>Older files:</strong> open a file's Info and choose Generate Weather to look up the weather for the hour and place it was started, back to 1940.</li>
+            <li><strong>Imported journals:</strong> if a journal came with its own weather, em never reads, changes, or duplicates weather it didn't write.</li>
+            <li><strong>Sharing:</strong> like location, the weather line is removed from Copy, AI, Shortcuts, and Siri, and Share follows the same rule as location. Printed pages and PDFs never include it.</li>
+          </ul>
+          <p>The data comes from Open-Meteo's public files, read directly from your device. See <a href="../privacy.html#weather">Weather</a> in the Privacy Policy for exactly what that does and doesn't reveal.</p>
+        </div>
+      </details>
+
+      <details class="toggle">
         <summary id="location-and-privacy">Location and Privacy</summary>
         <div class="toggle__body">
-          <p>A file's location is recorded in the file's own metadata, so it moves with the file through your iCloud and never reaches em's developer. em reads your location only while the app is open. Copy, Ask em, Siri, and Shortcuts never include it, and Share and Print ask you first.</p>
+          <p>A file's location is recorded in the file's own metadata, so it moves with the file through your iCloud and never reaches em's developer. em reads your location only while the app is open. Copy, Ask em, Siri, and Shortcuts never include it, and Share and Print ask you first. The weather line follows the same rules.</p>
           <p>Map tiles and place names come from Apple Maps. See <a href="../privacy.html#maps">Maps</a> and <a href="../privacy.html#your-files">Your Files</a> in the Privacy Policy.</p>
         </div>
       </details>
@@ -660,7 +675,28 @@
       <details class="toggle">
         <summary id="is-my-location-sent-to-ai">Is my location sent to AI?</summary>
         <div class="toggle__body">
-          <p><strong>No.</strong> Location data is removed before anything reaches a model — on-device, Private Cloud Compute, or a provider you connect. Copy, Ask em, Siri, and Shortcuts never include it either, and Share and Print ask you first.</p>
+          <p><strong>No.</strong> Location data, and the weather recorded with it, is removed before anything reaches a model — on-device, Private Cloud Compute, or a provider you connect. Copy, Ask em, Siri, and Shortcuts never include it either, and Share and Print ask you first.</p>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="where-does-the-weather-come-from">Where does the weather come from?</summary>
+        <div class="toggle__body">
+          <p>From Open-Meteo's public open-data files, which are hosted on Amazon Web Services. The current hour comes from Deutscher Wetterdienst's ICON model, and older dates come from Copernicus ERA5. em reads them directly from your device, with no account, key, or login, and nothing goes through a server run by the developer. Credit is in the <a href="../privacy.html#weather-data">Privacy Policy's acknowledgments</a>.</p>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="does-looking-up-weather-reveal-my-location">Does looking up weather reveal my location?</summary>
+        <div class="toggle__body">
+          <p>Not your coordinates, place names, or file contents — em sends none of those. But the parts of the public files em asks for correspond to a region of the map, so Amazon's servers, and Open-Meteo if it keeps access logs, could infer your general area, the hour being looked up, and your device's IP address, as with any web request. If that's more than you want, turn Weather off for the library; Location keeps working without it.</p>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="how-do-i-turn-off-weather">How do I turn weather off?</summary>
+        <div class="toggle__body">
+          <p>Open the library's settings (or Settings → Location) and switch off Weather under Location.</p>
         </div>
       </details>
 
