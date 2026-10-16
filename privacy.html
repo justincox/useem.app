@@ -57,7 +57,7 @@
   <article class="doc">
 
     <h1 class="doc__title">Privacy Policy</h1>
-    <p class="doc__updated">Last updated: October 10, 2026</p>
+    <p class="doc__updated">Last updated: October 16, 2026</p>
 
     <nav class="toc" aria-label="Contents">
       <h2>Contents</h2>
@@ -67,6 +67,7 @@
         <li><a href="#ghost-publishing">Ghost Publishing</a></li>
         <li><a href="#ai-features">AI Features</a></li>
         <li><a href="#maps">Maps</a></li>
+        <li><a href="#weather">Weather</a></li>
         <li><a href="#what-em-doesnt-collect">What em Doesn't Collect</a></li>
         <li><a href="#childrens-privacy">Children's Privacy</a></li>
         <li><a href="#changes-to-this-policy">Changes</a></li>
@@ -92,6 +93,7 @@
         <li>Those folders sync between your own devices through your own iCloud account — never through servers em operates, because em doesn't operate any.</li>
         <li>Ghost publishing sends data only to the Ghost site you connect, using your own Admin API key, which is stored in Apple's Keychain.</li>
         <li>Location is optional and off until you turn it on for a library. If you do, where you began writing a file is recorded in that file, on your device and in your own iCloud. It never reaches em’s developer, and em never includes it when you copy, use Ask em or Siri, or run a Shortcut.</li>
+        <li>Weather is optional and tied to Location, with its own switch for each library. em reads it from Open-Meteo’s public data on Amazon Web Services, directly from your device, with no coordinates or personal data sent. Those servers can still infer the general area, the hour, and your IP address, as with any web request. The result is stored only in your own file and removed from anything you share, the same as location.</li>
         <li>AI features are off by default and begin with Apple's on-device models if enabled. If you connect your own Claude, ChatGPT, or Gemini API key, only files from libraries you specify are sent to the model. Your API key is stored in Apple's Keychain, and the provider bills you according to their usage policy.</li>
         <li>em and its developer never see your writing, your credentials, or your usage. Even better, there is nothing to see — no analytics, no crash reporting unless you choose to share it.</li>
         <li>em keeps a log of its own activity on the device for up to seven days, used only when you compile a bug report. If you choose to send diagnostics with a bug report, the log is redacted of any personal details.</li>
@@ -103,7 +105,7 @@
       <h2 id="your-files">Your Files</h2>
       <p>Your libraries are folders that live in your iCloud Drive. em reads and writes to them directly. Sync between your Mac, iPad, and iPhone happens through Apple's iCloud with your Apple Account. No copy of your writing is ever transmitted to em's developer or to any server em controls, because that server doesn't exist.</p>
       <p>Deleting em from a device does not delete your files — they remain in the original storage directory. em's settings, Version History, and preferences live in em's own iCloud folder, not alongside your writing. See the <a href="help/index.html#faq">FAQ</a> to learn what happens to these synced files if you stop using em.</p>
-      <p>Location is off by default. In a library where you turn it on, em asks your permission through the system, then records where you began writing each new file in that file’s own metadata, so it moves with the file between your devices through your iCloud. em reads your location only while the app is open — it doesn’t track you in the background or watch where you go. Copy, Ask em, Siri, and Shortcuts never include a file’s location, and Share and Print ask you first.</p>
+      <p>Location is off by default. In a library where you turn it on, em asks your permission through the system, then records where you began writing each new file in that file’s own metadata, so it moves with the file between your devices through your iCloud. em reads your location only while the app is open — it doesn’t track you in the background or watch where you go. Copy, Ask em, Siri, and Shortcuts never include a file’s location, and Share and Print ask you first. If Weather is on for the library, the weather for that hour and place is recorded in the same file, and nowhere else. See <a href="#weather">Weather</a>.</p>
     </section>
 
     <section>
@@ -130,8 +132,18 @@
     </section>
 
     <section>
+      <h2 id="weather">Weather</h2>
+      <p>Weather is optional and tied to Location. In a library where Location is on, em can record the weather for the hour and place where you began writing a file: a condition such as Partly Cloudy, a symbol, and the temperature in your unit. Each library has its own Weather switch under Location, on by default when you turn Location on, and you can turn it off without losing Location. Older files with a location can look up their weather too, back to 1940.</p>
+      <p><strong>Where it comes from.</strong> em reads weather from the public open-data files that <a href="https://open-meteo.com" target="_blank" rel="noopener noreferrer">Open-Meteo</a> hosts on Amazon Web Services (S3), downloading small byte ranges of them directly from your device. The current hour comes from Deutscher Wetterdienst’s ICON model, and older dates come from Copernicus ERA5. No account, API key, or login is involved, and nothing passes through a server em operates, because em has none.</p>
+      <p><strong>What those requests can reveal.</strong> em sends no coordinates, place names, file contents, or identifiers. But which parts of the public files em asks for correspond to a region of the map, so Amazon’s servers, and Open-Meteo if it keeps access logs, could infer your general area — roughly a strip tens of kilometers tall and about 150 km wide — along with the hour being looked up and your device’s IP address, as with any web request. Weather is a record of the conditions for that hour and place, not a precise reading for your exact spot.</p>
+      <p><strong>Where it’s stored.</strong> The weather is written only into your own file, on one line beside the location, and so into your iCloud if your files sync there. em keeps no copy anywhere else. If you imported a journal that came with its own weather, em never reads, changes, or duplicates weather it didn’t write.</p>
+      <p><strong>Sharing.</strong> Like location, the weather line is removed from anything em sends out — Copy, AI requests, Shortcuts, and Siri — and Share follows the same rule as location. Printed pages and PDFs never include it.</p>
+      <p>Open-Meteo’s data is licensed under CC BY 4.0. See <a href="#acknowledgements">Acknowledgments</a> for the credit.</p>
+    </section>
+
+    <section>
       <h2 id="what-em-doesnt-collect">What em Doesn't Collect</h2>
-      <p>There is no em account, no sign-up, and no telemetry. em doesn't operate analytics, crash reporting outside of Apple's opt-in model, or usage tracking of any kind — there's no server for that data to reach even if em wanted to collect it. Any crash reports you choose to send go through Apple's standard OS-level mechanism and are governed by <a href="https://www.apple.com/privacy/" target="_blank" rel="noopener noreferrer">Apple's own privacy policy</a>, not em's. em never collects your location. If you turn Location on, it stays in your own files.</p>
+      <p>There is no em account, no sign-up, and no telemetry. em doesn't operate analytics, crash reporting outside of Apple's opt-in model, or usage tracking of any kind — there's no server for that data to reach even if em wanted to collect it. Any crash reports you choose to send go through Apple's standard OS-level mechanism and are governed by <a href="https://www.apple.com/privacy/" target="_blank" rel="noopener noreferrer">Apple's own privacy policy</a>, not em's. em never collects your location. If you turn Location on, it stays in your own files; the only exception is the general-area hint that Weather lookups can give Amazon and Open-Meteo, described under <a href="#weather">Weather</a>.</p>
     </section>
 
     <section>
@@ -187,8 +199,11 @@
         <li>OpenAI and ChatGPT are trademarks of OpenAI, L.L.C.</li>
         <li>Google and Gemini are trademarks of Google LLC.</li>
       </ul>
-      <p>em is not affiliated with or endorsed by Anthropic, Apple, Ghost, Google, Magic Pages, or OpenAI.</p>
+      <p>em is not affiliated with or endorsed by Amazon, Anthropic, Apple, Ghost, Google, Magic Pages, Open-Meteo, or OpenAI.</p>
       <p>All other trademarks are property of their respective owners.</p>
+
+      <h3 id="weather-data">Weather Data</h3>
+      <p>Weather data by <a href="https://open-meteo.com" target="_blank" rel="noopener noreferrer">Open-Meteo</a>, under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Contains modified Copernicus Climate Change Service information (ERA5) and data from Deutscher Wetterdienst (ICON), modified by em.</p>
     </section>
 
   </article>
