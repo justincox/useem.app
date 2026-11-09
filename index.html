@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>em — Markdown Writer &amp; Editor</title>
-<meta name="description" content="Your files are yours, and you're the only one who should decide what to do with ’em. em is a privacy-first markdown writing app for Mac, iPad, and iPhone with writing goals, a map of where you write, smart search, version history, and Ghost publishing. No server, no account.">
+<meta name="description" content="Your files are yours, and you're the only one who should decide what to do with ’em. em is a privacy-first markdown writing app for Mac, iPad, and iPhone with writing goals, On This Day, a map of where you write, smart search, version history, locked files, and Ghost publishing. No server, no account.">
 <link rel="canonical" href="https://useem.app/">
 <link rel="me" href="https://social.lol/@justincox">
 <meta property="fediverse:creator" content="@justincox@social.lol">
@@ -36,7 +36,7 @@
   "name": "em",
   "url": "https://useem.app/",
   "image": "https://useem.app/assets/img/og.png?v=3",
-  "description": "em is a markdown writing app for Mac, iPad, and iPhone, built on one idea: your writing files are yours, and you're the only one who should decide what to do with them. Writing goals and streaks, a map of where you write, smart search, automatic version history, Ghost publishing, and optional on-device AI — with no server and no account.",
+  "description": "em is a markdown writing app for Mac, iPad, and iPhone, built on one idea: your writing files are yours, and you're the only one who should decide what to do with them. Writing goals and streaks, On This Day, a map of where you write, smart search, automatic version history, locked files, Ghost publishing, and optional on-device AI — with no server and no account.",
   "operatingSystem": "macOS, iPadOS, iOS",
   "applicationCategory": "ProductivityApplication",
   "author": {
@@ -127,15 +127,13 @@
 
     <section>
       <h2><span class="section-icon" style="--icon-color: var(--olive);" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M448 256A192 192 0 1 0 64 256a192 192 0 1 0 384 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 80a80 80 0 1 0 0-160 80 80 0 1 0 0 160zm0-224a144 144 0 1 1 0 288 144 144 0 1 1 0-288zM224 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg></span>Track ’em</h2>
-      <p>Set a word goal or a deadline for a file, or a daily, weekly, or monthly goal for everything you write. Want 500 words a day? 50,000 by the end of the month? em keeps track, shows your pace and your streak, and holds you to it. The Calendar keeps every day you wrote in one place.</p>
+      <p>Set a word goal or a deadline for a file, or a daily, weekly, or monthly goal for everything you write. Want 500 words a day? 50,000 by the end of the month? em keeps track, shows your pace and your streak, and tells you when a streak needs words today. The Calendar shows what you worked on each day, marked in each library's own color, and you choose which libraries count toward your goals and streaks. Days follow the time zone you wrote in, so travel never breaks a streak.</p>
       <figure class="shot">
         <picture>
           <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/goals-iphone-dark.webp">
           <source media="(max-width: 640px)" srcset="assets/screenshots/goals-iphone-light.webp">
-          <source media="(max-width: 1024px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/goals-ipad-dark.webp">
-          <source media="(max-width: 1024px)" srcset="assets/screenshots/goals-ipad-light.webp">
-          <source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/goals-mac-dark.webp">
-          <img src="assets/screenshots/goals-mac-light.webp" alt="em's Calendar showing today's word goal, pace, and writing streak" width="1400" height="875" loading="lazy">
+          <source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/goals-ipad-dark.webp">
+          <img src="assets/screenshots/goals-ipad-light.webp" alt="em's Calendar showing today's word goal, pace, and writing streak" width="1000" height="1333" loading="lazy" style="display: block; max-width: 460px; margin: 0 auto;">
         </picture>
         <figcaption>Your goal, your pace, your streak.</figcaption>
       </figure>
@@ -143,8 +141,16 @@
     </section>
 
     <section>
+      <h2><span class="section-icon" style="--icon-color: var(--plum);" aria-hidden="true"><svg viewBox="0 0 448 512"><path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg></span>Remember ’em</h2>
+      <p><strong>On This Day</strong> is a collection that lists what you published or started on today's month and day in every year, this year included. Each year gets its own section, headed by how long ago it was, like “3 Years Ago · 2023.” Choose which libraries it shows from its toolbar menu or from each library's settings.</p>
+      <p>It can tap you on the shoulder, too. Get one notification a day, only on days that hold files, at a set time or a random time inside a window you choose. It names a single file and its year, or counts several, in wording that changes from day to day, and tapping it opens On This Day. The On This Day widget comes in small, medium, and large for the Home Screen or desktop, with each file's picture, plus a Lock Screen version on iPhone. There's a Shortcuts action, too.</p>
+      <p>The Calendar and On This Day answer different questions. The Calendar is what you worked on each day. On This Day is what you published or started on this day, in every year.</p>
+      <p><a class="doc__more" href="help/index.html#on-this-day">How On This Day works →</a></p>
+    </section>
+
+    <section>
       <h2><span class="section-icon" style="--icon-color: var(--clay);" aria-hidden="true"><svg viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg></span>Map ’em</h2>
-      <p>em can remember where you started writing each file, including every place you came back to work on ’em. See all of them on a map and follow your writing journey in a whole new way. Every new file with a location also records the weather where you started writing, and older files can look it up back to 1940. Location is off until you turn it on for a library, weather has its own switch, and neither is ever sent to AI.</p>
+      <p>em can remember where you started writing each file, including every place you came back to work on ’em. See all of them on a map and follow your writing journey in a whole new way. Tap the place at the end of a file to see it on that library's map, and go back to the file when you're done. Every new file with a location also records the weather where you started writing, and older files can look it up back to 1940, or all at once with Generate Missing Weather. Location is off until you turn it on for a library, weather has its own switch, and neither is ever sent to AI.</p>
       <figure class="shot">
         <picture>
           <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/places-iphone-dark.webp">
@@ -161,7 +167,7 @@
 
     <section>
       <h2><span class="section-icon" style="--icon-color: var(--teal);" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></span>Find ’em</h2>
-      <p>Smart Search lists every file holding your words. Use quotes, +, -, OR, and * for precision, filter by library, tag, status, or year, and save any search as a Smart Folder that stays current. Only remember what a piece was about? Ask em.</p>
+      <p>Smart Search lists every file holding your words. Use quotes, +, -, OR, and * for precision, filter by library, tag, status, or year, and save any search as a Smart Folder that stays current, now with rules for files written today, files from any month and day in any year, and locked files. Show Images puts each file's picture beside it in every list. Only remember what a piece was about? Ask em.</p>
       <figure class="shot">
         <picture>
           <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/smartfolder-iphone-dark.webp">
@@ -179,6 +185,7 @@
     <section>
       <h2><span class="section-icon" style="--icon-color: var(--olive);" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z"/></svg></span>Protect ’em</h2>
       <p>Every edit is versioned automatically and backed up to iCloud. Compare a draft against the version your iPhone saved, restore whichever one you actually want, and stop mourning the paragraph you deleted and regretted immediately.</p>
+      <p>Lock a file, or a whole library, behind Face ID, Touch ID, or your passcode. It locks again when you step away, and a locked file's title never appears on the Lock Screen, in a notification, or in a widget. Images that may be sensitive stay blurred until you choose to show them, if you use Sensitive Content Warning or Communication Safety.</p>
       <figure class="shot">
         <picture>
           <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/version-iphone-dark.webp">
@@ -278,6 +285,18 @@
         <li class="feature-grid__item">
           <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-33.6 61.3-70.1 61.3L344 320c-26.5 0-48 21.5-48 48c0 3.4 .4 6.7 1 9.9c2.1 10.2 6.5 20 10.8 29.9c6.1 13.8 12.1 27.5 12.1 42c0 31.8-21.6 60.7-53.4 62c-3.5 .1-7 .2-10.6 .2C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg></span>
           <div><strong>Customize Everything</strong><p>Change fonts, colors, icons, and more to create the perfect writing environment.</p></div>
+        </li>
+        <li class="feature-grid__item">
+          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 448 512"><path d="M144 144l0 48 160 0 0-48c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192l0-48C80 64.5 144.5 0 224 0s144 64.5 144 144l0 48 16 0c35.3 0 64 28.7 64 64l0 192c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 256c0-35.3 28.7-64 64-64l16 0z"/></svg></span>
+          <div><strong>Locked Files</strong><p>Lock a file or a whole library behind Face ID, Touch ID, or your passcode.</p></div>
+        </li>
+        <li class="feature-grid__item">
+          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 640 640"><path d="M320 64C302.3 64 288 78.3 288 96L288 99.2C215 114 160 178.6 160 256L160 277.7C160 325.8 143.6 372.5 113.6 410.1L103.8 422.3C98.7 428.6 96 436.4 96 444.5C96 464.1 111.9 480 131.5 480L508.4 480C528 480 543.9 464.1 543.9 444.5C543.9 436.4 541.2 428.6 536.1 422.3L526.3 410.1C496.4 372.5 480 325.8 480 277.7L480 256C480 178.6 425 114 352 99.2L352 96C352 78.3 337.7 64 320 64zM258 528C265.1 555.6 290.2 576 320 576C349.8 576 374.9 555.6 382 528L258 528z"/></svg></span>
+          <div><strong>Notifications</strong><p>On This Day and writing reminders, all built and delivered on your device.</p></div>
+        </li>
+        <li class="feature-grid__item">
+          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 448 512"><path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg></span>
+          <div><strong>Widgets and Controls</strong><p>On This Day, New File, and Streak widgets, a New File control for Control Center, and Home Screen quick actions.</p></div>
         </li>
         <li class="feature-grid__item">
           <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"/></svg></span>

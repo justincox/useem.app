@@ -57,7 +57,7 @@
   <article class="doc">
 
     <h1 class="doc__title">Privacy Policy</h1>
-    <p class="doc__updated">Last updated: October 16, 2026</p>
+    <p class="doc__updated">Last updated: November 8, 2026</p>
 
     <nav class="toc" aria-label="Contents">
       <h2>Contents</h2>
@@ -68,6 +68,9 @@
         <li><a href="#ai-features">AI Features</a></li>
         <li><a href="#maps">Maps</a></li>
         <li><a href="#weather">Weather</a></li>
+        <li><a href="#on-this-day">On This Day, Notifications, and Widgets</a></li>
+        <li><a href="#locks-and-sensitive-images">Locks and Sensitive Images</a></li>
+        <li><a href="#disk-space">Disk Space</a></li>
         <li><a href="#what-em-doesnt-collect">What em Doesn't Collect</a></li>
         <li><a href="#childrens-privacy">Children's Privacy</a></li>
         <li><a href="#changes-to-this-policy">Changes</a></li>
@@ -94,6 +97,8 @@
         <li>Ghost publishing sends data only to the Ghost site you connect, using your own Admin API key, which is stored in Apple's Keychain.</li>
         <li>Location is optional and off until you turn it on for a library. If you do, where you began writing a file is recorded in that file, on your device and in your own iCloud. It never reaches em’s developer, and em never includes it when you copy, use Ask em or Siri, or run a Shortcut.</li>
         <li>Weather is optional and tied to Location, with its own switch for each library. em reads it from Open-Meteo’s public data on Amazon Web Services, directly from your device, with no coordinates or personal data sent. Those servers can still infer the general area, the hour, and your IP address, as with any web request. The result is stored only in your own file and removed from anything you share, the same as location.</li>
+        <li>On This Day, its notifications, writing reminders, and widgets are all built on your device, and every notification is local. Nothing about them is sent anywhere.</li>
+        <li>Locked files use your device’s own Face ID, Touch ID, or passcode. em never sees biometric data. Sensitive image detection is Apple’s, runs on your device, and sends nothing off it.</li>
         <li>AI features are off by default and begin with Apple's on-device models if enabled. If you connect your own Claude, ChatGPT, or Gemini API key, only files from libraries you specify are sent to the model. Your API key is stored in Apple's Keychain, and the provider bills you according to their usage policy.</li>
         <li>em and its developer never see your writing, your credentials, or your usage. Even better, there is nothing to see — no analytics, no crash reporting unless you choose to share it.</li>
         <li>em keeps a log of its own activity on the device for up to seven days, used only when you compile a bug report. If you choose to send diagnostics with a bug report, the log is redacted of any personal details.</li>
@@ -138,7 +143,26 @@
       <p><strong>What those requests can reveal.</strong> em sends no coordinates, place names, file contents, or identifiers. But which parts of the public files em asks for correspond to a region of the map, so Amazon’s servers, and Open-Meteo if it keeps access logs, could infer your general area — roughly a strip tens of kilometers tall and about 150 km wide — along with the hour being looked up and your device’s IP address, as with any web request. Weather is a record of the conditions for that hour and place, not a precise reading for your exact spot.</p>
       <p><strong>Where it’s stored.</strong> The weather is written only into your own file, on one line beside the location, and so into your iCloud if your files sync there. em keeps no copy anywhere else. If you imported a journal that came with its own weather, em never reads, changes, or duplicates weather it didn’t write.</p>
       <p><strong>Sharing.</strong> Like location, the weather line is removed from anything em sends out — Copy, AI requests, Shortcuts, and Siri — and Share follows the same rule as location. Printed pages and PDFs never include it.</p>
+      <p><strong>Generate Missing Weather.</strong> In Settings → Location, after you confirm, em reads the same public Open-Meteo data on Amazon’s servers that a file’s own weather uses, once for every file that has a location but no weather. As with any weather lookup, no coordinate is sent, but Amazon’s servers can infer the general area and the hour of each file, along with your IP address. The weather is written into the files themselves. It skips Read Only libraries and libraries with Weather turned off, and never changes weather you wrote yourself.</p>
       <p>Open-Meteo’s data is licensed under CC BY 4.0. See <a href="#acknowledgements">Acknowledgments</a> for the credit.</p>
+    </section>
+
+    <section>
+      <h2 id="on-this-day">On This Day, Notifications, and Widgets</h2>
+      <p>On This Day, its notifications, writing reminders, and widgets are built on your device, and every notification is local. Nothing about them is sent to em’s developer, because em has no server, or to anyone else.</p>
+      <p>The widgets read a snapshot that em writes into its App Group on your device. It holds the titles, dates, and small pictures of the coming days’ files. It never holds a locked file’s title or picture, or an image your Sensitive Content Warning would hide.</p>
+      <p>Your On This Day library choices, the notification library switches, and the Counts Toward Goals and Streaks switches sync between your devices through your own iCloud, like em’s other settings.</p>
+    </section>
+
+    <section>
+      <h2 id="locks-and-sensitive-images">Locks and Sensitive Images</h2>
+      <p><strong>Locks.</strong> Locked files and libraries use your device’s own Face ID, Touch ID, or passcode. em never sees biometric data.</p>
+      <p id="sensitive-images"><strong>Sensitive images.</strong> Detection uses Apple’s on-device analysis. It runs only when you have Sensitive Content Warning or Communication Safety on, keeps its answers in memory only, and sends nothing off your device.</p>
+    </section>
+
+    <section>
+      <h2 id="disk-space">Disk Space</h2>
+      <p>em reads how much disk space is available on your device, to check that there is room for its search index. Apple’s privacy manifest lists this as a required-reason API (reason code <code>E174.1</code>). em sends nothing about it anywhere.</p>
     </section>
 
     <section>
@@ -153,7 +177,7 @@
 
     <section>
       <h2 id="changes-to-this-policy">Changes to This Policy</h2>
-      <p>If em's architecture changes in a way that affects this policy, this document would be updated first, and the change would be visible in the app before it took effect.</p>
+      <p>If em's architecture changes in a way that affects this policy, this document would be updated first, and the change would be visible in the app before it took effect. Beyond what’s described above, em 1.5 sends nothing new off your device.</p>
     </section>
 
     <section>

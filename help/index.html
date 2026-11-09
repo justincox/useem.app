@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Help — em</title>
-<meta name="description" content="Everything about using em: libraries, search, version history, Ghost publishing, AI, Shortcuts, and answers to the common questions.">
+<meta name="description" content="Everything about using em: libraries, goals, On This Day, search, version history, locked files, Ghost publishing, AI, Shortcuts, and answers to the common questions.">
 <link rel="canonical" href="https://useem.app/help/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="em">
 <meta property="og:url" content="https://useem.app/help/">
 <meta property="og:title" content="Help — em">
-<meta property="og:description" content="Everything about using em: libraries, search, version history, Ghost publishing, AI, Shortcuts, and answers to the common questions.">
+<meta property="og:description" content="Everything about using em: libraries, goals, On This Day, search, version history, locked files, Ghost publishing, AI, Shortcuts, and answers to the common questions.">
 <meta property="og:image" content="https://useem.app/assets/img/og.png?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Help — em">
-<meta name="twitter:description" content="Everything about using em: libraries, search, version history, Ghost publishing, AI, Shortcuts, and answers to the common questions.">
+<meta name="twitter:description" content="Everything about using em: libraries, goals, On This Day, search, version history, locked files, Ghost publishing, AI, Shortcuts, and answers to the common questions.">
 <meta name="twitter:image" content="https://useem.app/assets/img/og.png?v=3">
 <meta name="theme-color" content="#F6F1E4" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#252525" media="(prefers-color-scheme: dark)">
@@ -64,9 +64,11 @@
       <ol>
         <li><a href="#getting-started">Getting Started</a></li>
         <li><a href="#goals">Goals &amp; Calendar</a></li>
+        <li><a href="#on-this-day">On This Day &amp; Notifications</a></li>
         <li><a href="#places">Places</a></li>
         <li><a href="#search">Search &amp; Smart Folders</a></li>
         <li><a href="#versions">Version History</a></li>
+        <li><a href="#locks">Locked Files &amp; Sensitive Images</a></li>
         <li><a href="#ghost">Publishing to Ghost</a></li>
         <li><a href="#ai">AI in em</a></li>
         <li><a href="#shortcuts">Shortcuts</a></li>
@@ -147,7 +149,7 @@
 
     <section>
       <h2 id="goals">Goals &amp; Calendar</h2>
-      <p>Set a goal for a single file, or a standing goal for everything you write. em shows your pace and your streak, and the Calendar keeps every day you wrote in one place.</p>
+      <p>Set a goal for a single file, or a standing goal for everything you write. em shows your pace and your streak, and the Calendar shows what you worked on each day.</p>
 
       <details class="toggle">
         <summary id="file-goals">A Goal for One File</summary>
@@ -159,19 +161,81 @@
       <details class="toggle">
         <summary id="writing-goal">Your Daily, Weekly, or Monthly Goal</summary>
         <div class="toggle__body">
-          <p>In Settings → General, choose a Writing Goal: Off, daily, weekly, or monthly. The Calendar's goal bar follows it, showing how far along you are and whether you're ahead of or behind pace.</p>
+          <p>In Settings → Goals, choose a Writing Goal: Off, daily, weekly, or monthly. The Calendar's goal bar follows it, showing how far along you are and whether you're ahead of or behind pace.</p>
           <p>Below it, <strong>Building Streaks Requires Meeting Goals</strong> decides what counts toward a streak. On, a day, week, or month adds to your streak only when you reach your goal. Off, any period you write counts.</p>
+          <p><strong>Counts Toward Goals and Streaks</strong> is a switch for each library, on the Goals page and in each library's own settings. A library that is off leaves the goal, the streak, and the tiles, and its marks on the Calendar become upside-down triangles, labeled “Excluded Library” in the key. The AI library has the same switch, on the AI page in Settings, and it starts off. With it on, what you ask counts as writing and em's answers never do.</p>
+          <p>Days are read in the time zone the file was written in, so travel no longer breaks a streak.</p>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="writing-reminders">Writing Reminders</summary>
+        <div class="toggle__body">
+          <p>Settings → Notifications can nudge you, but only on days you haven't written yet. The reminder names your streak or what's left of your goal, in wording that changes from day to day, at a set time or a random one. See <a href="#on-this-day-notifications">Notifications</a> for the rest of that page.</p>
         </div>
       </details>
 
       <details class="toggle">
         <summary id="calendar">The Calendar</summary>
         <div class="toggle__body">
-          <p>Calendar is a row in the sidebar's Collections section. It shows whenever at least one library is connected, so there's nothing to set up. Open it to see the month, today's goal bar, four tiles — Today, Streak, Words, and Days — and the files you worked on each day.</p>
+          <p>Calendar is a row in the sidebar's Collections section. It shows whenever at least one library is connected, so there's nothing to set up. Open it to see the month, today's goal bar, four tiles — Today, Streak, Words, and Days — and the files from the day you choose. The Calendar is <em>what you worked on each day</em>.</p>
           <ul>
+            <li><strong>Filled dots</strong> in a library's color mean you wrote or edited there that day. Only filled days count toward the streak and the Days tile.</li>
+            <li><strong>Outlined dots</strong> mean a file was created, published, or scheduled that day with no writing in that library. A key under the calendar says “Created, Published, or Scheduled” and “Wrote or Edited.” A post written Saturday and published Wednesday fills Saturday and outlines Wednesday.</li>
+            <li>Choosing a day lists that day's own files, never the same date in other years. On the Mac they appear in the file column. For other years, see <a href="#on-this-day-collection">On This Day</a>.</li>
+            <li><strong>Streak at Risk:</strong> when a streak needs words today, the Calendar says so.</li>
             <li>Each tile is a menu. Count the Streak in days, weeks, or months, and Words and Days over this week, the month shown, or its year.</li>
             <li>Click or tap the count on the goal bar to open the goal editor.</li>
           </ul>
+        </div>
+      </details>
+    </section>
+
+    <section>
+      <h2 id="on-this-day">On This Day &amp; Notifications</h2>
+      <p>On This Day looks back. Every file has one anniversary, and on that day each year em can bring it back to you, by a collection, a notification, or a widget.</p>
+
+      <details class="toggle">
+        <summary id="on-this-day-collection">The On This Day Collection</summary>
+        <div class="toggle__body">
+          <p>On This Day is a row under Collections. It lists what you published or started on today's month and day in every year, this year included, with one section for each year, headed by how long ago it was: “3 Years Ago · 2023.”</p>
+          <ul>
+            <li><strong>One anniversary per file:</strong> its publication date if it's published, otherwise the date it was created. Writing days don't place a file there.</li>
+            <li><strong>Choose its libraries:</strong> its toolbar menu and each library's settings pick which libraries it shows.</li>
+            <li>It also comes as a Shortcuts action.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="calendar-or-on-this-day">Calendar or On This Day?</summary>
+        <div class="toggle__body">
+          <p>They answer different questions. The <a href="#calendar">Calendar</a> is what you worked on each day: choose a day and it lists that day's own files. On This Day is what you published or started on this day, in every year.</p>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="on-this-day-notifications">Notifications</summary>
+        <div class="toggle__body">
+          <p>Settings → Notifications holds On This Day notifications and <a href="#writing-reminders">writing reminders</a> together on one page.</p>
+          <ul>
+            <li><strong>One a day, on days that hold files,</strong> at a set time or a random time inside a window you choose.</li>
+            <li>It names a single file and its year, or counts several, in a wording that changes from day to day. Tapping it opens On This Day.</li>
+            <li><strong>Silence a library:</strong> Settings → Notifications has a switch for each library that silences its notifications while leaving its files on the On This Day page and in the widget. Each library's own settings hold the same switch, beside Show in On This Day.</li>
+            <li>Opening em clears the notifications it has already delivered.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="widgets-and-controls">Widgets, Controls, and Quick Actions</summary>
+        <div class="toggle__body">
+          <ul>
+            <li><strong>On This Day widget:</strong> small, medium, and large on the Home Screen or desktop, with each file's picture, and a Lock Screen version on iPhone. When the day holds more files than fit, the bottom right corner says how many more.</li>
+            <li><strong>New File and Streak widgets,</strong> and a New File control for Control Center.</li>
+            <li><strong>Home Screen quick actions</strong> for a new file in the library you last used, or for On This Day.</li>
+          </ul>
+          <p>A locked file's title never appears in a widget or a notification. They say “Locked File” or count it instead. See <a href="#locks">Locked Files</a>.</p>
         </div>
       </details>
     </section>
@@ -197,6 +261,7 @@
         <div class="toggle__body">
           <p>Places is a row in the Collections section of the sidebar, beside Calendar. It appears only once at least one library has Location turned on. Until then it isn't there, and when it's empty it says: “Turn on Location in a library's settings, and the files you create there appear here.”</p>
           <p>A file's Info inspector has its own Location section: a map with one pin for each place and a count of the visits at each.</p>
+          <p>Tap the place at the end of a file to see it on that library's map, and go back to the file when you're done.</p>
         </div>
       </details>
 
@@ -219,6 +284,7 @@
           <ul>
             <li><strong>Turn it on or off:</strong> Weather is on by default when you turn Location on for a library. To change it, open the library's settings (or Settings → Location), find Weather under Location, and switch it. Location keeps working without it.</li>
             <li><strong>Older files:</strong> open a file's Info and choose Generate Weather to look up the weather for the hour and place it was started, back to 1940.</li>
+            <li><strong>Every older file at once:</strong> in Settings → Location, Generate Missing Weather adds the weather to every file that has a location but no weather, based on where and when each file was created. It skips Read Only libraries and libraries with Weather turned off, and never changes weather you wrote yourself.</li>
             <li><strong>Imported journals:</strong> if a journal came with its own weather, em never reads, changes, or duplicates weather it didn't write.</li>
             <li><strong>Sharing:</strong> like location, the weather line is removed from Copy, AI, Shortcuts, and Siri, and Share follows the same rule as location. Printed pages and PDFs never include it.</li>
           </ul>
@@ -264,7 +330,9 @@
           <ul>
             <li>Match any or all of your rules.</li>
             <li>Rules can include title, content, library, favorite status, Ghost post status (draft, published, scheduled), or date the file was last edited.</li>
+            <li>Newer rules match files written today, files from any month and day in any year, and locked files.</li>
           </ul>
+          <p>Put every device on 1.5 before you edit a Smart Folder that uses a new rule, because 1.4 can't keep those rules.</p>
           <p>Smart Folders live in the sidebar, sync to every device, and can be renamed and customized like any library.</p>
         </div>
       </details>
@@ -277,6 +345,7 @@
           <ul>
             <li>Sort by title, date created, date modified, or — for Ghost libraries — date published.</li>
             <li>File rows can show text excerpts, dates, and file extensions — all of it is up to you in Settings.</li>
+            <li><strong>Show Images</strong> is an optional setting that shows each file's picture beside it in every list, with a count of how many more it holds.</li>
           </ul>
         </div>
       </details>
@@ -340,6 +409,30 @@
     </section>
 
     <section>
+      <h2 id="locks">Locked Files &amp; Sensitive Images</h2>
+      <p>Keep a file private on your own device, and keep images that might be sensitive out of sight until you say so.</p>
+
+      <details class="toggle">
+        <summary id="locking">Lock a File or a Library</summary>
+        <div class="toggle__body">
+          <p>Lock a file, or a whole library, behind Face ID, Touch ID, or your passcode. It locks again when you step away.</p>
+          <ul>
+            <li>A locked file's title never appears on the Lock Screen, in a notification, or in a widget. They say “Locked File” or count it instead.</li>
+            <li>em uses your device's own Face ID, Touch ID, or passcode, and never sees biometric data.</li>
+            <li>A <a href="#smart-folders">Smart Folder</a> rule can match locked files.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="sensitive-images">Sensitive Image Warnings</summary>
+        <div class="toggle__body">
+          <p>If you use Sensitive Content Warning or Communication Safety, images that may be sensitive stay blurred until you choose to show them. The detection is Apple's, runs on your device, and sends nothing anywhere. See <a href="../privacy.html#sensitive-images">Sensitive Images</a> in the Privacy Policy.</p>
+        </div>
+      </details>
+    </section>
+
+    <section>
       <h2 id="ghost">Publishing to Ghost</h2>
       <p>em connects directly to your <a href="https://ghost.org" target="_blank" rel="noopener noreferrer">Ghost</a> site: your posts appear as a library, your drafts publish from the same editor you write everything else in, and 19 Ghost Koenig card types are supported.</p>
 
@@ -379,6 +472,7 @@
             <li>Choose the newsletter settings — send to all subscribers, free or paid only — or don't send at all.</li>
             <li>Create Draft to keep working on it in Ghost, Publish Post to go live, or Schedule Post for later.</li>
           </ol>
+          <p>A post sent to Ghost from a local file keeps that file's created date and its writing days, so your streaks, the Calendar, and On This Day stay right. Delete Local File on a file sent to Ghost also removes the images only that file used.</p>
         </div>
       </details>
 
@@ -710,7 +804,21 @@
       <details class="toggle">
         <summary id="what-counts-toward-my-streak">What counts toward my streak?</summary>
         <div class="toggle__body">
-          <p>It depends on <strong>Building Streaks Requires Meeting Goals</strong> in Settings → General. On, a period counts only when you reach your goal. Off, any period you write counts. The Calendar's Streak tile can count in days, weeks, or months.</p>
+          <p>It depends on <strong>Building Streaks Requires Meeting Goals</strong>. On, a period counts only when you reach your goal. Off, any period you write counts. Only filled days on the Calendar count, and only in libraries that have Counts Toward Goals and Streaks on. The Calendar's Streak tile can count in days, weeks, or months, and days are read in the time zone you wrote in, so travel doesn't break a streak.</p>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="why-is-a-day-outlined">Why is a day outlined instead of filled?</summary>
+        <div class="toggle__body">
+          <p>An outlined dot means a file was created, published, or scheduled that day, but you didn't write in that library. A filled dot means you wrote or edited there. Only filled days count toward your streak and the Days tile.</p>
+        </div>
+      </details>
+
+      <details class="toggle">
+        <summary id="what-is-the-difference-between-calendar-and-on-this-day">What's the difference between Calendar and On This Day?</summary>
+        <div class="toggle__body">
+          <p>Calendar is what you worked on each day. On This Day is what you published or started on this day, in every year. See <a href="#calendar-or-on-this-day">Calendar or On This Day?</a></p>
         </div>
       </details>
 
