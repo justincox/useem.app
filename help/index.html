@@ -24,7 +24,7 @@
 <link rel="icon" type="image/png" sizes="512x512" href="../assets/img/favicon-512.png?v=4">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png?v=4">
 <link rel="stylesheet" href="../assets/css/tokens.css?v=6">
-<link rel="stylesheet" href="../assets/css/read.css?v=10">
+<link rel="stylesheet" href="../assets/css/read.css?v=11">
 <!-- The hamburger needs JS to open; with it off, keep the nav inline instead of unreachable. -->
 <noscript><style>.toolbar__links{display:flex!important;position:static!important;flex-direction:row!important;flex-wrap:wrap;gap:0.6rem!important;box-shadow:none;padding:0;border-bottom:0}.toolbar__links a{padding:0;border-bottom:1px solid transparent}.menu-toggle{display:none!important}</style></noscript>
 </head>
@@ -165,6 +165,7 @@
           <p>Below it, <strong>Building Streaks Requires Meeting Goals</strong> decides what counts toward a streak. On, a day, week, or month adds to your streak only when you reach your goal. Off, any period you write counts.</p>
           <p><strong>Counts Toward Goals and Streaks</strong> is a switch for each library, on the Goals page and in each library's own settings. A library that is off leaves the goal, the streak, and the tiles, and its marks on the Calendar become upside-down triangles, labeled “Excluded Library” in the key. The AI library has the same switch, on the AI page in Settings, and it starts off. With it on, what you ask counts as writing and em's answers never do.</p>
           <p>Days are read in the time zone the file was written in, so travel no longer breaks a streak.</p>
+          <figure class="help-fig phone"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/settings-goals-iphone-dark.webp"><img src="../assets/screenshots/settings-goals-iphone-light.webp" alt="Settings, Goals, with the writing goal and a Counts Toward Goals and Streaks switch for each library" width="700" height="1522" loading="lazy"></picture><figcaption>Settings → Goals.</figcaption></figure>
         </div>
       </details>
 
@@ -187,6 +188,7 @@
             <li>Each tile is a menu. Count the Streak in days, weeks, or months, and Words and Days over this week, the month shown, or its year.</li>
             <li>Click or tap the count on the goal bar to open the goal editor.</li>
           </ul>
+          <figure class="help-fig"><picture><source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="../assets/screenshots/calendar-iphone-dark.webp"><source media="(max-width: 640px)" srcset="../assets/screenshots/calendar-iphone-light.webp"><source media="(max-width: 1024px) and (prefers-color-scheme: dark)" srcset="../assets/screenshots/calendar-ipad-dark.webp"><source media="(max-width: 1024px)" srcset="../assets/screenshots/calendar-ipad-light.webp"><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/calendar-mac-dark.webp"><img src="../assets/screenshots/calendar-mac-light.webp" alt="em's Calendar with filled and outlined dots and a key beneath the month" width="1400" height="875" loading="lazy"></picture><figcaption>The Calendar, with its key.</figcaption></figure>
         </div>
       </details>
     </section>
@@ -204,6 +206,7 @@
             <li><strong>Choose its libraries:</strong> its toolbar menu and each library's settings pick which libraries it shows.</li>
             <li>It also comes as a Shortcuts action, <strong>Find Files from On This Day</strong>.</li>
           </ul>
+          <figure class="help-fig"><picture><source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="../assets/screenshots/onthisday-iphone-dark.webp"><source media="(max-width: 640px)" srcset="../assets/screenshots/onthisday-iphone-light.webp"><source media="(max-width: 1024px) and (prefers-color-scheme: dark)" srcset="../assets/screenshots/onthisday-ipad-dark.webp"><source media="(max-width: 1024px)" srcset="../assets/screenshots/onthisday-ipad-light.webp"><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/onthisday-mac-dark.webp"><img src="../assets/screenshots/onthisday-mac-light.webp" alt="em's On This Day collection, with a section for each year that holds files from today's date" width="1400" height="875" loading="lazy"></picture><figcaption>One section a year, headed by how long ago it was.</figcaption></figure>
         </div>
       </details>
 
@@ -224,6 +227,11 @@
             <li><strong>Silence a library:</strong> Settings → Notifications has a switch for each library that silences its notifications while leaving its files on the On This Day page and in the widget. Each library's own settings hold the same switch, beside Show in On This Day.</li>
             <li>Opening em clears the notifications it has already delivered.</li>
           </ul>
+          <div class="help-row">
+            <figure class="help-fig"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/notification-iphone-dark.webp"><img src="../assets/screenshots/notification-iphone-light.webp" alt="An On This Day notification naming one file and its year" width="700" height="1522" loading="lazy"></picture><figcaption>One file, named.</figcaption></figure>
+            <figure class="help-fig"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/notification-several-iphone-dark.webp"><img src="../assets/screenshots/notification-several-iphone-light.webp" alt="An On This Day notification counting several files" width="700" height="1522" loading="lazy"></picture><figcaption>Or a count, when the day holds several.</figcaption></figure>
+            <figure class="help-fig"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/settings-notifications-iphone-dark.webp"><img src="../assets/screenshots/settings-notifications-iphone-light.webp" alt="Settings, Notifications, with On This Day and writing reminder options" width="700" height="1522" loading="lazy"></picture><figcaption>Settings → Notifications.</figcaption></figure>
+          </div>
         </div>
       </details>
 
@@ -236,6 +244,15 @@
             <li><strong>Home Screen quick actions</strong> for a new file in the library you last used, or for On This Day.</li>
           </ul>
           <p>A locked file's title never appears in a widget or a notification. They say “Locked File” or count it instead. See <a href="#locks">Locked Files</a>.</p>
+          <div class="help-row">
+            <figure class="help-fig"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/widget-onthisday-medium-iphone-dark.webp"><img src="../assets/screenshots/widget-onthisday-medium-iphone-light.webp" alt="The On This Day widget in two sizes on the Home Screen" width="700" height="1522" loading="lazy"></picture><figcaption>On This Day widgets.</figcaption></figure>
+            <figure class="help-fig"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/widget-lock-iphone-dark.webp"><img src="../assets/screenshots/widget-lock-iphone-light.webp" alt="The On This Day widget on the Lock Screen" width="700" height="1522" loading="lazy"></picture><figcaption>Lock Screen.</figcaption></figure>
+            <figure class="help-fig"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/widgets-streak-newfile-iphone-dark.webp"><img src="../assets/screenshots/widgets-streak-newfile-iphone-light.webp" alt="The Streak and New File widgets" width="700" height="1522" loading="lazy"></picture><figcaption>Streak and New File.</figcaption></figure>
+          </div>
+          <div class="help-row">
+            <figure class="help-fig"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/controls-iphone-dark.webp"><img src="../assets/screenshots/controls-iphone-light.webp" alt="The New File control in Control Center" width="700" height="1522" loading="lazy"></picture><figcaption>Control Center.</figcaption></figure>
+            <figure class="help-fig"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/controls-quickactions-iphone-dark.webp"><img src="../assets/screenshots/controls-quickactions-iphone-light.webp" alt="Home Screen quick actions for New File and On This Day" width="700" height="1522" loading="lazy"></picture><figcaption>Quick actions.</figcaption></figure>
+          </div>
         </div>
       </details>
     </section>
@@ -262,6 +279,7 @@
           <p>Places is a row in the Collections section of the sidebar, beside Calendar. It appears only once at least one library has Location turned on. Until then it isn't there, and when it's empty it says: “Turn on Location in a library's settings, and the files you create there appear here.”</p>
           <p>A file's Info inspector has its own Location section: a map with one pin for each place and a count of the visits at each.</p>
           <p>Tap the place at the end of a file to see it on that library's map, and go back to the file when you're done.</p>
+          <figure class="help-fig phone"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/places-tap-iphone-dark.webp"><img src="../assets/screenshots/places-tap-iphone-light.webp" alt="A file's place, tapped, showing that library's map" width="700" height="1522" loading="lazy"></picture><figcaption>Tap a file's place to see it on the map.</figcaption></figure>
         </div>
       </details>
 
@@ -289,6 +307,7 @@
             <li><strong>Sharing:</strong> like location, the weather line is removed from Copy, AI, Shortcuts, and Siri, and Share follows the same rule as location. Printed pages and PDFs never include it.</li>
           </ul>
           <p>The data comes from Open-Meteo's public files, read directly from your device. See <a href="../privacy.html#weather">Weather</a> in the Privacy Policy for exactly what that does and doesn't reveal.</p>
+          <figure class="help-fig"><picture><source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="../assets/screenshots/weather-generate-iphone-dark.webp"><source media="(max-width: 640px)" srcset="../assets/screenshots/weather-generate-iphone-light.webp"><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/weather-generate-mac-dark.webp"><img src="../assets/screenshots/weather-generate-mac-light.webp" alt="Settings, Location, with Generate Missing Weather" width="1400" height="875" loading="lazy"></picture><figcaption>Generate Missing Weather, in Settings → Location.</figcaption></figure>
         </div>
       </details>
 
@@ -334,6 +353,7 @@
           </ul>
           <p>Put every device on 1.5 before you edit a Smart Folder that uses a new rule, because 1.4 can't keep those rules.</p>
           <p>Smart Folders live in the sidebar, sync to every device, and can be renamed and customized like any library.</p>
+          <figure class="help-fig"><picture><source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="../assets/screenshots/smartfolder-rules-iphone-dark.webp"><source media="(max-width: 640px)" srcset="../assets/screenshots/smartfolder-rules-iphone-light.webp"><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/smartfolder-rules-mac-dark.webp"><img src="../assets/screenshots/smartfolder-rules-mac-light.webp" alt="The Smart Folder rule editor with the new rules" width="1400" height="875" loading="lazy"></picture><figcaption>The new Smart Folder rules.</figcaption></figure>
         </div>
       </details>
 
@@ -347,6 +367,7 @@
             <li>File rows can show text excerpts, dates, and file extensions — all of it is up to you in Settings.</li>
             <li><strong>Show Images</strong> is an optional setting that shows each file's picture beside it in every list, with a count of how many more it holds.</li>
           </ul>
+          <figure class="help-fig"><picture><source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="../assets/screenshots/showimages-iphone-dark.webp"><source media="(max-width: 640px)" srcset="../assets/screenshots/showimages-iphone-light.webp"><source media="(max-width: 1024px) and (prefers-color-scheme: dark)" srcset="../assets/screenshots/showimages-ipad-dark.webp"><source media="(max-width: 1024px)" srcset="../assets/screenshots/showimages-ipad-light.webp"><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/showimages-mac-dark.webp"><img src="../assets/screenshots/showimages-mac-light.webp" alt="A file list with Show Images on, a picture beside each file" width="1400" height="875" loading="lazy"></picture><figcaption>Show Images.</figcaption></figure>
         </div>
       </details>
 
@@ -421,6 +442,11 @@
             <li>em uses your device's own Face ID, Touch ID, or passcode, and never sees biometric data.</li>
             <li>A <a href="#smart-folders">Smart Folder</a> rule can match locked files.</li>
           </ul>
+          <div class="help-row">
+            <figure class="help-fig"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/locked-page-iphone-dark.webp"><img src="../assets/screenshots/locked-page-iphone-light.webp" alt="A locked file asking to be unlocked" width="700" height="1522" loading="lazy"></picture><figcaption>A locked file.</figcaption></figure>
+            <figure class="help-fig"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/locked-list-iphone-dark.webp"><img src="../assets/screenshots/locked-list-iphone-light.webp" alt="A file list with a locked file marked by a padlock" width="700" height="1522" loading="lazy"></picture><figcaption>Marked in the list.</figcaption></figure>
+            <figure class="help-fig"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/screenshots/locked-notification-iphone-dark.webp"><img src="../assets/screenshots/locked-notification-iphone-light.webp" alt="A notification that says Locked File instead of a title" width="700" height="1522" loading="lazy"></picture><figcaption>Never a title.</figcaption></figure>
+          </div>
         </div>
       </details>
 

@@ -725,3 +725,10 @@ h2 .section-icon svg { width: 0.9rem; height: 0.9rem; }
   .doc .tour__slide img { height: min(68vh, 520px); width: auto; max-width: none; }
   .tour__hint { margin: 0.5rem 0 0; text-align: center; font-size: 0.74em; color: var(--ink-muted); }
 }
+
+/* Help-page screenshots: light/dark pairs chosen in markup; phone shots stay phone-sized. */
+.doc .help-fig{margin:1.25rem 0 .25rem}
+.doc .help-fig.phone{max-width:300px;margin-inline:auto}
+.doc .help-fig img{box-shadow:0 8px 24px rgba(0,0,0,.16)}
+.doc .help-row{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:1.25rem 0 .25rem}
+.doc .help-row .help-fig{flex:1 1 170px;max-width:230px;margin:0}
