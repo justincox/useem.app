@@ -1,0 +1,33 @@
+/* Chrome for inner pages (Help, Privacy, Markdown). The article itself keeps
+   the site's existing reader styles from read.css / tokens.css. */
+:root{--pad:clamp(20px,5vw,80px)}
+body{margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;background:#F6F1E4;color:#1d1c18;border:2px solid #F6F1E4;font-family:var(--font-body)}
+.mini{position:relative;overflow:hidden;color:#F6F1E4;font-family:var(--font-body);background:
+  radial-gradient(55% 90% at 85% 120%,rgba(78,154,118,.5),transparent 70%),
+  radial-gradient(35% 70% at 100% -10%,rgba(193,104,63,.32),transparent 70%),#1b1a16}
+.nav{position:relative;z-index:5;display:flex;align-items:center;gap:28px;height:76px;padding:0 var(--pad)}
+.nav__brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.nav__brand img{width:38px;height:38px;border-radius:9px}
+.nav__brand b{font:400 30px/1 var(--font-wordmark)}
+.nav__links{display:flex;gap:28px;margin-left:auto;margin-right:8px}
+.nav__links a{text-decoration:none;color:inherit;opacity:.88}.nav__links a:hover{opacity:1;text-decoration:underline}
+.nav__links a[aria-current=page]{opacity:1;border-bottom:2px solid #8fd0b0}
+.nav__menu{display:none;min-width:44px;min-height:44px;border-radius:999px;border:1.5px solid rgba(246,241,228,.5);background:transparent;color:inherit;font-size:20px}
+.mini__title{padding:clamp(28px,6vh,64px) var(--pad) clamp(36px,7vh,72px);max-width:1180px;margin:0 auto}
+.mini__eyebrow{font:700 13px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#8fd0b0}
+.mini h1{margin:14px 0 0;font:800 clamp(38px,6vw,84px)/1.02 var(--font-heading);letter-spacing:-.02em;max-width:14em}
+.mini__sub{margin:16px 0 0;font-size:clamp(16px,1.4vw,20px);color:rgba(246,241,228,.8);max-width:36em}
+.page{padding-top:clamp(28px,5vw,64px)}
+/* the old toolbar is gone; keep read.css from reserving space for it */
+.nf{border-top:1px solid var(--border);margin-top:clamp(48px,8vw,96px);padding:36px var(--pad);font-family:var(--font-body)}
+.nf__in{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.nf b{font:400 28px/1 var(--font-wordmark)}
+.nf nav{display:flex;gap:22px;flex-wrap:wrap}
+.nf a{color:var(--fg)}
+.nf .btn{background:var(--fg);color:var(--bg);border-color:var(--fg);min-height:44px}
+@media (max-width:1024px){
+  .nav__links{display:none}.nav__menu{display:inline-block}.nav .btn{margin-left:auto}
+  .nav.open .nav__links{display:flex;position:absolute;top:76px;left:var(--pad);right:var(--pad);flex-direction:column;gap:0;background:#2a2924;border-radius:16px;padding:8px 20px;margin:0}
+  .nav.open .nav__links a{padding:14px 0;border-bottom:1px solid rgba(246,241,228,.12)}
+}

@@ -20,337 +20,152 @@
 <meta name="twitter:title" content="em — Markdown Writer &amp; Editor">
 <meta name="twitter:description" content="Your files are yours, and you're the only one who should decide what to do with ’em.">
 <meta name="twitter:image" content="https://useem.app/assets/img/og.png?v=3">
-<meta name="theme-color" content="#F6F1E4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#252525" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#1b1a16">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png?v=4">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png?v=4">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=4">
-<link rel="stylesheet" href="assets/css/tokens.css?v=6">
-<link rel="stylesheet" href="assets/css/read.css?v=10">
-<!-- The hamburger needs JS to open; with it off, keep the nav inline instead of unreachable. -->
-<noscript><style>.toolbar__links{display:flex!important;position:static!important;flex-direction:row!important;flex-wrap:wrap;gap:0.6rem!important;box-shadow:none;padding:0;border-bottom:0}.toolbar__links a{padding:0;border-bottom:1px solid transparent}.menu-toggle{display:none!important}</style></noscript>
+<link rel="stylesheet" href="assets/css/home.css?v=1">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "em",
-  "url": "https://useem.app/",
-  "image": "https://useem.app/assets/img/og.png?v=3",
-  "description": "em is a markdown writing app for Mac, iPad, and iPhone, built on one idea: your writing files are yours, and you're the only one who should decide what to do with them. Writing goals and streaks, On This Day, a map of where you write, smart search, automatic version history, locked files, Ghost publishing, and optional on-device AI — with no server and no account.",
-  "operatingSystem": "macOS, iPadOS, iOS",
-  "applicationCategory": "ProductivityApplication",
-  "author": {
-    "@type": "Person",
-    "name": "Justin Cox",
-    "url": "https://justincox.com/"
-  }
+"@context": "https://schema.org",
+"@type": "SoftwareApplication",
+"name": "em",
+"url": "https://useem.app/",
+"image": "https://useem.app/assets/img/og.png?v=3",
+"description": "em is a markdown writing app for Mac, iPad, and iPhone, built on one idea: your writing files are yours, and you're the only one who should decide what to do with them. Writing goals and streaks, On This Day, a map of where you write, smart search, automatic version history, locked files, Ghost publishing, and optional on-device AI — with no server and no account.",
+"operatingSystem": "macOS, iPadOS, iOS",
+"applicationCategory": "ProductivityApplication",
+"author": {
+"@type": "Person",
+"name": "Justin Cox",
+"url": "https://justincox.com/"
+}
 }
 </script>
+<noscript><style>.nav__links{display:flex!important;position:static!important;flex-wrap:wrap;gap:12px 22px!important;background:none!important;padding:0!important}.nav__menu{display:none!important}</style></noscript>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<a class="skip" href="#doc">Skip to the writing</a>
-
-<nav class="toolbar">
-  <div class="toolbar__wrap">
-    <a class="toolbar__brand" href="index.html" aria-label="em — Markdown Writer &amp; Editor">
-      <span class="app-icon app-icon--sm"><img src="assets/img/about-hero-icon.png?v=4" alt="" width="1024" height="1024"></span>
-      <span class="toolbar__title"><span class="toolbar__wordmark">em</span><span class="toolbar__tagline"> — Markdown Writer &amp; Editor</span></span>
-    </a>
-
-    <div class="toolbar__tools">
-      <ul class="toolbar__links" id="toolbar-menu">
-        <li><a href="help/markdown-cheatsheet.html">Markdown</a></li>
-        <li><a href="help/index.html">Help</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-      </ul>
-      <a class="app-store-badge" href="https://apps.apple.com/app/id6797005003" target="_blank" rel="noopener noreferrer"><img src="assets/img/app-store-badge.svg" alt="Download on the App Store" width="120" height="40"></a>
-      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="toolbar-menu" aria-label="Menu">
-        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
-      </button>
+<header class="hero" id="top">
+  <nav class="nav" id="nav">
+    <a class="nav__brand" href="#top"><img src="assets/img/about-hero-icon.png" alt=""><b>em</b></a>
+    <div class="nav__links" id="navlinks"><a href="#features">Features</a><a href="#new">What’s New</a><a href="#faq">Questions</a><a href="help/index.html">Help</a><a href="privacy.html">Privacy</a></div>
+    <a class="btn btn--light" href="https://apps.apple.com/app/id6797005003">Get em</a>
+    <button class="nav__menu" type="button" id="menu" aria-expanded="false" aria-controls="navlinks" aria-label="Menu">☰</button>
+  </nav>
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <div class="hero__lockup"><img class="hero__icon" src="assets/img/about-hero-icon.png" alt="em app icon" width="256" height="256"><h1 class="hero__name">em</h1></div>
+      <p class="hero__head">Own your drafts and blog posts.</p>
+      <p class="hero__sub">Your files are yours, and you’re the only one who should decide what to do with ’em. Markdown writing for Mac, iPad, and iPhone.</p>
+      <div class="hero__cta" id="herocta"><a href="https://apps.apple.com/app/id6797005003"><img src="assets/img/app-store-badge.svg" alt="Download on the App Store" width="150" height="50"></a><span>No account. No server.</span></div>
+    </div>
+    <div class="cluster" id="cluster" aria-label="em on Mac, iPad, and iPhone">
+      <div class="dev dev--mac"><div class="frame frame--mac"><div class="screen">
+<img class="slide on" data-i="0" src="assets/screenshots/write-mac-light.webp" alt="" loading="eager" decoding="async">
+<img class="slide" data-i="1" src="assets/screenshots/goals-mac-light.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="2" src="assets/screenshots/onthisday-mac-light.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="3" src="assets/screenshots/places-mac-light.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="4" src="assets/screenshots/smartfolder-mac-light.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="5" src="assets/screenshots/version-mac-light.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="6" src="assets/screenshots/publish-mac-light.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="7" src="assets/screenshots/askem-mac-light.webp" alt="" loading="lazy" decoding="async">
+</div></div></div>
+      <div class="dev dev--ipad"><div class="frame frame--ipad"><div class="screen">
+<img class="slide on" data-i="0" src="assets/screenshots/write-ipad-dark.webp" alt="" loading="eager" decoding="async">
+<img class="slide" data-i="1" src="assets/screenshots/goals-ipad-dark.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="2" src="assets/screenshots/onthisday-ipad-dark.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="3" src="assets/screenshots/places-ipad-dark.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="4" src="assets/screenshots/smartfolder-ipad-dark.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="5" src="assets/screenshots/version-ipad-dark.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="6" src="assets/screenshots/publish-ipad-dark.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="7" src="assets/screenshots/askem-ipad-dark.webp" alt="" loading="lazy" decoding="async">
+</div></div></div>
+      <div class="dev dev--iphone"><div class="frame frame--iphone"><div class="screen">
+<img class="slide on" data-i="0" src="assets/screenshots/write-iphone-dark.webp" alt="" loading="eager" decoding="async">
+<img class="slide" data-i="1" src="assets/screenshots/goals-iphone-dark.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="2" src="assets/screenshots/onthisday-iphone-dark.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="3" src="assets/screenshots/places-iphone-dark.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="4" src="assets/screenshots/smartfolder-iphone-dark.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="5" src="assets/screenshots/version-iphone-dark.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="6" src="assets/screenshots/publish-iphone-dark.webp" alt="" loading="lazy" decoding="async">
+<img class="slide" data-i="7" src="assets/screenshots/askem-iphone-dark.webp" alt="" loading="lazy" decoding="async">
+</div></div></div>
     </div>
   </div>
-</nav>
+  <div class="ticker" id="ticker" role="group" aria-label="Choose a feature to preview"><span class="ticker__label" aria-hidden="true">Tap a feature ›</span><button class="chip" type="button" data-i="0" aria-pressed="true">Write ’em</button><button class="chip" type="button" data-i="1" aria-pressed="false">Track ’em</button><button class="chip" type="button" data-i="2" aria-pressed="false">Remember ’em <em>NEW</em></button><button class="chip" type="button" data-i="3" aria-pressed="false">Map ’em</button><button class="chip" type="button" data-i="4" aria-pressed="false">Find ’em</button><button class="chip" type="button" data-i="5" aria-pressed="false">Protect ’em</button><button class="chip" type="button" data-i="6" aria-pressed="false">Publish ’em</button><button class="chip" type="button" data-i="7" aria-pressed="false">Explore ’em</button></div>
+  <div class="hero__line" aria-hidden="true"><i></i></div>
+</header>
 
-<main class="page" id="doc">
+<main id="main">
+<section class="sec sec--alt"><div class="wrap trust">
+  <div><h3>Plain Markdown files</h3><p>No import, no lock-in. Your writing is a folder of files you can open anywhere.</p></div>
+  <div><h3>No server, no account</h3><p>Syncs through your own iCloud. There’s nothing to sign up for.</p></div>
+  <div><h3>Works offline</h3><p>Once downloaded, em works without an iCloud or Ghost connection.</p></div>
+</div></section>
 
-  <article class="doc">
-
-    <header class="doc__head">
-      <div class="app-icon">
-        <img src="assets/img/about-hero-icon.png?v=4" alt="em app icon" width="1024" height="1024">
-      </div>
-      <h1>em</h1>
-      <h2 class="doc__subtitle">Own your drafts and blog posts</h2>
-      <p class="doc__meta" data-doc-meta>Mac · iPad · iPhone</p>
-    </header>
-
-    <div class="callout callout--lede" style="--gc-color: var(--clay);">
-      <div class="callout__body">
-        <p>Your files are yours, and you're the only one who should decide what to do with ’em.</p>
-      </div>
+<section class="sec" id="new"><div class="wrap">
+  <span class="eyebrow">New in 1.5</span>
+  <h2 class="h2">Look back, lock down, and keep going.</h2>
+  <div class="new">
+    <div class="card card--big"><div class="card__text"><span class="badge">New</span><h3>On This Day</h3><p>See what you published or started on today’s date in every year, in a collection, a daily notification, or a widget.</p>
+      <a class="btnlink" href="help/index.html#on-this-day">How On This Day works →</a></div>
+      <div class="shot"><div class="dev-m"><div class="frame frame--mac"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/onthisday-mac-dark.webp"><img src="assets/screenshots/onthisday-mac-light.webp" alt="" loading="lazy" width="1400" height="875"></picture></div></div></div><div class="dev-t"><div class="frame frame--ipad"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/onthisday-ipad-dark.webp"><img src="assets/screenshots/onthisday-ipad-light.webp" alt="" loading="lazy" width="1000" height="1333"></picture></div></div></div><div class="dev-p"><div class="frame frame--iphone"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/onthisday-iphone-dark.webp"><img src="assets/screenshots/onthisday-iphone-light.webp" alt="" loading="lazy" width="700" height="1522"></picture></div></div></div></div></div>
+    <div class="new3">
+      <div class="card"><h3>Locked files</h3><p>Lock a file or a whole library behind Face ID, Touch ID, or your passcode.</p><div class="thumb"><div class="frame frame--iphone"><div class="screen"><picture><img src="assets/screenshots/locked-page-iphone-light.webp" alt="" loading="lazy" width="700" height="1522"></picture></div></div></div></div>
+      <div class="card"><h3>Widgets &amp; controls</h3><p>On This Day, New File, and Streak widgets, plus a Control Center control.</p><div class="thumb"><div class="frame frame--iphone"><div class="screen"><picture><img src="assets/screenshots/widget-onthisday-medium-iphone-light.webp" alt="" loading="lazy" width="700" height="1522"></picture></div></div></div></div>
+      <div class="card"><h3>A clearer Calendar</h3><p>Filled and outlined dots, streak-at-risk, and streaks that survive travel.</p><div class="thumb"><div class="frame frame--iphone"><div class="screen"><picture><img src="assets/screenshots/calendar-iphone-light.webp" alt="" loading="lazy" width="700" height="1522"></picture></div></div></div></div>
     </div>
+  </div>
+</div></section>
 
-    <hr>
+<section class="sec sec--alt" id="features"><div class="wrap">
+  <span class="eyebrow">Features</span>
+  <h2 class="h2">Everything a writer does, in one app.</h2>
+  <div>
+<article class="row"><div class="row__text"><span class="ic" style="--c:var(--clay)" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M368.4 18.3L312.7 74.1 437.9 199.3l55.7-55.7c21.9-21.9 21.9-57.3 0-79.2L447.6 18.3c-21.9-21.9-57.3-21.9-79.2 0zM288 94.6l-9.2 2.8L134.7 140.6c-19.9 6-35.7 21.2-42.3 41L3.8 445.8c-3.8 11.3-1 23.9 7.3 32.4L164.7 324.7c-3-6.3-4.7-13.3-4.7-20.7c0-26.5 21.5-48 48-48s48 21.5 48 48s-21.5 48-48 48c-7.4 0-14.4-1.7-20.7-4.7L33.7 500.9c8.6 8.3 21.1 11.2 32.4 7.3l264.3-88.6c19.7-6.6 35-22.4 41-42.3l43.2-144.1 2.7-9.2L288 94.6z"/></svg></span><h3>Write ’em</h3><p>A distraction-free Markdown editor, tuned for each device, including the iPhone Duo. em counts your words and reading time, but only if you want it to.</p><a href="help/index.html#getting-started">How the editor works →</a></div><div class="shot"><div class="dev-m"><div class="frame frame--mac"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/write-mac-dark.webp"><img src="assets/screenshots/write-mac-light.webp" alt="" loading="lazy" width="1400" height="875"></picture></div></div></div><div class="dev-t"><div class="frame frame--ipad"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/write-ipad-dark.webp"><img src="assets/screenshots/write-ipad-light.webp" alt="" loading="lazy" width="1000" height="1333"></picture></div></div></div><div class="dev-p"><div class="frame frame--iphone"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/write-iphone-dark.webp"><img src="assets/screenshots/write-iphone-light.webp" alt="" loading="lazy" width="700" height="1522"></picture></div></div></div></div></article>
+<article class="row"><div class="row__text"><span class="ic" style="--c:var(--olive)" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M448 256A192 192 0 1 0 64 256a192 192 0 1 0 384 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 80a80 80 0 1 0 0-160 80 80 0 1 0 0 160zm0-224a144 144 0 1 1 0 288 144 144 0 1 1 0-288zM224 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg></span><h3>Track ’em</h3><p>Set a goal for a file, or a daily, weekly, or monthly goal for everything you write. em shows your pace and your streak, and tells you when a streak needs words today.</p><a href="help/index.html#goals">How goals and the Calendar work →</a></div><div class="shot"><div class="dev-m"><div class="frame frame--mac"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/goals-mac-dark.webp"><img src="assets/screenshots/goals-mac-light.webp" alt="" loading="lazy" width="1400" height="875"></picture></div></div></div><div class="dev-t"><div class="frame frame--ipad"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/goals-ipad-dark.webp"><img src="assets/screenshots/goals-ipad-light.webp" alt="" loading="lazy" width="1000" height="1333"></picture></div></div></div><div class="dev-p"><div class="frame frame--iphone"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/goals-iphone-dark.webp"><img src="assets/screenshots/goals-iphone-light.webp" alt="" loading="lazy" width="700" height="1522"></picture></div></div></div></div></article>
+<article class="row"><div class="row__text"><span class="ic" style="--c:var(--clay)" aria-hidden="true"><svg viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg></span><h3>Map ’em</h3><p>See every place you’ve written on a map, with the weather where you started. Location is off until you turn it on for a library, and it is never sent to AI.</p><a href="help/index.html#places">How Places works →</a></div><div class="shot"><div class="dev-m"><div class="frame frame--mac"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/places-mac-dark.webp"><img src="assets/screenshots/places-mac-light.webp" alt="" loading="lazy" width="1400" height="875"></picture></div></div></div><div class="dev-t"><div class="frame frame--ipad"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/places-ipad-dark.webp"><img src="assets/screenshots/places-ipad-light.webp" alt="" loading="lazy" width="1000" height="1333"></picture></div></div></div><div class="dev-p"><div class="frame frame--iphone"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/places-iphone-dark.webp"><img src="assets/screenshots/places-iphone-light.webp" alt="" loading="lazy" width="700" height="1522"></picture></div></div></div></div></article>
+<article class="row"><div class="row__text"><span class="ic" style="--c:var(--teal)" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></span><h3>Find ’em</h3><p>Smart Search lists every file holding your words. Filter by library, tag, status, or year, and save any search as a Smart Folder that stays current.</p><a href="help/index.html#search">How search works →</a></div><div class="shot"><div class="dev-m"><div class="frame frame--mac"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/smartfolder-mac-dark.webp"><img src="assets/screenshots/smartfolder-mac-light.webp" alt="" loading="lazy" width="1400" height="875"></picture></div></div></div><div class="dev-t"><div class="frame frame--ipad"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/smartfolder-ipad-dark.webp"><img src="assets/screenshots/smartfolder-ipad-light.webp" alt="" loading="lazy" width="1000" height="1333"></picture></div></div></div><div class="dev-p"><div class="frame frame--iphone"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/smartfolder-iphone-dark.webp"><img src="assets/screenshots/smartfolder-iphone-light.webp" alt="" loading="lazy" width="700" height="1522"></picture></div></div></div></div></article>
+<article class="row"><div class="row__text"><span class="ic" style="--c:var(--olive)" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z"/></svg></span><h3>Protect ’em</h3><p>Every edit is versioned and backed up to iCloud, so you can stop mourning the paragraph you deleted. Lock private files behind Face ID, Touch ID, or your passcode.</p><a href="help/index.html#versions">How Version History works →</a></div><div class="shot"><div class="dev-m"><div class="frame frame--mac"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/version-mac-dark.webp"><img src="assets/screenshots/version-mac-light.webp" alt="" loading="lazy" width="1400" height="875"></picture></div></div></div><div class="dev-t"><div class="frame frame--ipad"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/version-ipad-dark.webp"><img src="assets/screenshots/version-ipad-light.webp" alt="" loading="lazy" width="1000" height="1333"></picture></div></div></div><div class="dev-p"><div class="frame frame--iphone"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/version-iphone-dark.webp"><img src="assets/screenshots/version-iphone-light.webp" alt="" loading="lazy" width="700" height="1522"></picture></div></div></div></div></article>
+<article class="row"><div class="row__text"><span class="ic" style="--c:var(--accent)" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480l0-83.6c0-4 1.5-7.8 4.2-10.8L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg></span><h3>Publish ’em</h3><p>Connect your Ghost site and write, edit, schedule, and publish natively, with 19 Ghost card types and newsletters, from the editor you write everything else in.</p><a href="help/index.html#ghost">How Ghost publishing works →</a></div><div class="shot"><div class="dev-m"><div class="frame frame--mac"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/publish-mac-dark.webp"><img src="assets/screenshots/publish-mac-light.webp" alt="" loading="lazy" width="1400" height="875"></picture></div></div></div><div class="dev-t"><div class="frame frame--ipad"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/publish-ipad-dark.webp"><img src="assets/screenshots/publish-ipad-light.webp" alt="" loading="lazy" width="1000" height="1333"></picture></div></div></div><div class="dev-p"><div class="frame frame--iphone"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/publish-iphone-dark.webp"><img src="assets/screenshots/publish-iphone-light.webp" alt="" loading="lazy" width="700" height="1522"></picture></div></div></div></div></article>
+<article class="row"><div class="row__text"><span class="ic" style="--c:var(--plum)" aria-hidden="true"><svg viewBox="0 0 576 512"><path d="M234.7 42.7L197 56.8c-3 1.1-5 4-5 7.2s2 6.1 5 7.2l37.7 14.1L248.8 123c1.1 3 4 5 7.2 5s6.1-2 7.2-5l14.1-37.7L315 71.2c3-1.1 5-4 5-7.2s-2-6.1-5-7.2L277.3 42.7 263.2 5c-1.1-3-4-5-7.2-5s-6.1 2-7.2 5L234.7 42.7zM46.1 395.4c-18.7 18.7-18.7 49.1 0 67.9l34.6 34.6c18.7 18.7 49.1 18.7 67.9 0L529.9 116.5c18.7-18.7 18.7-49.1 0-67.9L495.3 14.1c-18.7-18.7-49.1-18.7-67.9 0L46.1 395.4zM484.6 82.6l-105 105-23.3-23.3 105-105 23.3 23.3zM7.5 117.2C3 118.9 0 123.2 0 128s3 9.1 7.5 10.8L64 160l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L128 160l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L128 96 106.8 39.5C105.1 35 100.8 32 96 32s-9.1 3-10.8 7.5L64 96 7.5 117.2zm352 256c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L416 416l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L480 416l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L480 352l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L416 352l-56.5 21.2z"/></svg></span><h3>Explore ’em</h3><p>Ask a question and get an answer grounded in your own files, with sources. Every AI feature ships off, and on-device Apple Intelligence is the default.</p><a href="help/index.html#ai">How AI works in em →</a></div><div class="shot"><div class="dev-m"><div class="frame frame--mac"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/askem-mac-dark.webp"><img src="assets/screenshots/askem-mac-light.webp" alt="" loading="lazy" width="1400" height="875"></picture></div></div></div><div class="dev-t"><div class="frame frame--ipad"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/askem-ipad-dark.webp"><img src="assets/screenshots/askem-ipad-light.webp" alt="" loading="lazy" width="1000" height="1333"></picture></div></div></div><div class="dev-p"><div class="frame frame--iphone"><div class="screen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/askem-iphone-dark.webp"><img src="assets/screenshots/askem-iphone-light.webp" alt="" loading="lazy" width="700" height="1522"></picture></div></div></div></div></article>
+  </div>
+</div></section>
 
-    <section class="tour" aria-label="Screenshots of em">
-      <ul class="tour__strip" tabindex="0">
-      <li><figure class="tour__slide"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/write-iphone-dark.webp"><img src="assets/screenshots/write-iphone-light.webp" alt="Writing in em's distraction-free Markdown editor" width="700" height="1522" loading="lazy"></picture><figcaption>Write</figcaption></figure></li>
-      <li><figure class="tour__slide"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/goals-iphone-dark.webp"><img src="assets/screenshots/goals-iphone-light.webp" alt="em's Calendar showing today's word goal, pace, and writing streak" width="700" height="1522" loading="lazy"></picture><figcaption>Track</figcaption></figure></li>
-      <li><figure class="tour__slide"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/places-iphone-dark.webp"><img src="assets/screenshots/places-iphone-light.webp" alt="em's Places map showing where files were written" width="700" height="1522" loading="lazy"></picture><figcaption>Map</figcaption></figure></li>
-      <li><figure class="tour__slide"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/smartfolder-iphone-dark.webp"><img src="assets/screenshots/smartfolder-iphone-light.webp" alt="A Smart Folder in em listing files that match a saved search" width="700" height="1522" loading="lazy"></picture><figcaption>Find</figcaption></figure></li>
-      <li><figure class="tour__slide"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/version-iphone-dark.webp"><img src="assets/screenshots/version-iphone-light.webp" alt="Restoring an earlier version of a draft in em" width="700" height="1522" loading="lazy"></picture><figcaption>Protect</figcaption></figure></li>
-      <li><figure class="tour__slide"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/publish-iphone-dark.webp"><img src="assets/screenshots/publish-iphone-light.webp" alt="Publishing a post to Ghost from em" width="700" height="1522" loading="lazy"></picture><figcaption>Publish</figcaption></figure></li>
-      <li><figure class="tour__slide"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/askem-iphone-dark.webp"><img src="assets/screenshots/askem-iphone-light.webp" alt="Asking em a question about your own writing" width="700" height="1522" loading="lazy"></picture><figcaption>Explore</figcaption></figure></li>
-      </ul>
-      <p class="tour__hint">Swipe to see more →</p>
-    </section>
+<section class="sec"><div class="wrap">
+  <span class="eyebrow">And more</span>
+  <h2 class="h2">Plenty more.</h2>
+  <div class="grid"><a href="help/index.html#where-everything-lives" style="--c:var(--plum)"><b>Universal App</b><span>Syncs with your iCloud.</span><i aria-hidden="true">→</i></a><a href="help/index.html#shortcuts" style="--c:var(--olive)"><b>Apple Shortcuts</b><span>Automate from outside em.</span><i aria-hidden="true">→</i></a><a href="help/index.html#smart-folders" style="--c:var(--clay)"><b>Smart Folders</b><span>Rules you define.</span><i aria-hidden="true">→</i></a><a href="help/index.html#read-and-edit" style="--c:var(--teal)"><b>Customize Everything</b><span>Fonts, colors, icons.</span><i aria-hidden="true">→</i></a><a href="help/index.html#can-em-read-my-writing-aloud" style="--c:var(--olive)"><b>Read Aloud</b><span>Catch what your eyes miss.</span><i aria-hidden="true">→</i></a><a href="help/index.html#can-i-use-em-to-export-posts-from-ghost" style="--c:var(--clay)"><b>Export</b><span>Any Ghost post as Markdown.</span><i aria-hidden="true">→</i></a><a href="help/index.html#does-em-work-offline" style="--c:var(--accent)"><b>Offline Editing</b><span>No connection needed.</span><i aria-hidden="true">→</i></a><a href="help/index.html#printing" style="--c:var(--plum)"><b>Even More</b><span>Printing, word counts, and em dash coloring.</span><i aria-hidden="true">→</i></a></div></div></section>
 
-    <!-- Section icons are Font Awesome Free (solid), self-hosted as inline
-         paths rather than a webfont — see Acknowledgments for the credit
-         its license requires. -->
-    <section>
-      <h2><span class="section-icon" style="--icon-color: var(--clay);" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M368.4 18.3L312.7 74.1 437.9 199.3l55.7-55.7c21.9-21.9 21.9-57.3 0-79.2L447.6 18.3c-21.9-21.9-57.3-21.9-79.2 0zM288 94.6l-9.2 2.8L134.7 140.6c-19.9 6-35.7 21.2-42.3 41L3.8 445.8c-3.8 11.3-1 23.9 7.3 32.4L164.7 324.7c-3-6.3-4.7-13.3-4.7-20.7c0-26.5 21.5-48 48-48s48 21.5 48 48s-21.5 48-48 48c-7.4 0-14.4-1.7-20.7-4.7L33.7 500.9c8.6 8.3 21.1 11.2 32.4 7.3l264.3-88.6c19.7-6.6 35-22.4 41-42.3l43.2-144.1 2.7-9.2L288 94.6z"/></svg></span>Write ’em</h2>
-      <p>Capture your thoughts and ideas in a distraction-free Markdown editor perfectly tuned for each device, including the iPhone Duo. em will count your words and reading time, but only if you want it to.</p>
-      <figure class="shot">
-        <picture>
-          <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/write-iphone-dark.webp">
-          <source media="(max-width: 640px)" srcset="assets/screenshots/write-iphone-light.webp">
-          <source media="(max-width: 1024px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/write-ipad-dark.webp">
-          <source media="(max-width: 1024px)" srcset="assets/screenshots/write-ipad-light.webp">
-          <source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/write-mac-dark.webp">
-          <img src="assets/screenshots/write-mac-light.webp" alt="Writing in em's distraction-free Markdown editor" width="1400" height="875" loading="lazy">
-        </picture>
-        <figcaption>The editor, tuned to whatever you're writing on.</figcaption>
-      </figure>
-    </section>
+<section class="sec sec--alt" id="privacy"><div class="wrap privacy">
+  <div><span class="eyebrow">Privacy, plainly</span><h2 class="h2">No server. No account. No tracking.</h2><p class="lede">There’s nowhere for your writing to go but your own iCloud. AI is off until you turn it on.</p><a class="btnlink" href="privacy.html" style="color:var(--accent)">Read the full Privacy Policy →</a></div>
+  <div class="flowwrap"><div class="flow" role="img" aria-label="Your writing goes from your device to your iCloud to your other devices. There is no em server.">
+  <div class="flow__node"><span class="flow__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg></span><b>Your device</b><span>Plain files in your folders</span></div>
+  <div class="flow__link" aria-hidden="true"></div>
+  <div class="flow__node"><span class="flow__ic"><svg viewBox="0 0 640 512" fill="currentColor"><path d="M0 336c0 79.5 64.5 144 144 144l368 0c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z"/></svg></span><b>Your iCloud</b><span>Your Apple Account, your sync</span></div>
+  <div class="flow__link" aria-hidden="true"></div>
+  <div class="flow__node"><span class="flow__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="13" height="9" rx="1.5"/><rect x="14" y="9" width="7.5" height="11" rx="1.7"/></svg></span><b>Your other devices</b><span>Mac, iPad, iPhone</span></div>
+</div>
+<p class="flow__none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg>No em server anywhere in this picture.</p></div></div></section>
 
-    <section>
-      <h2><span class="section-icon" style="--icon-color: var(--olive);" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M448 256A192 192 0 1 0 64 256a192 192 0 1 0 384 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 80a80 80 0 1 0 0-160 80 80 0 1 0 0 160zm0-224a144 144 0 1 1 0 288 144 144 0 1 1 0-288zM224 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg></span>Track ’em</h2>
-      <p>Set a word goal or a deadline for a file, or a daily, weekly, or monthly goal for everything you write. Want 500 words a day? 50,000 by the end of the month? em keeps track, shows your pace and your streak, and tells you when a streak needs words today. The Calendar shows what you worked on each day, marked in each library's own color, and you choose which libraries count toward your goals and streaks. Days follow the time zone you wrote in, so travel never breaks a streak.</p>
-      <figure class="shot">
-        <picture>
-          <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/goals-iphone-dark.webp">
-          <source media="(max-width: 640px)" srcset="assets/screenshots/goals-iphone-light.webp">
-          <source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/goals-ipad-dark.webp">
-          <img src="assets/screenshots/goals-ipad-light.webp" alt="em's Calendar showing today's word goal, pace, and writing streak" width="1000" height="1333" loading="lazy" style="display: block; max-width: 460px; margin: 0 auto;">
-        </picture>
-        <figcaption>Your goal, your pace, your streak.</figcaption>
-      </figure>
-      <p><a class="doc__more" href="help/index.html#goals">How goals and the Calendar work →</a></p>
-    </section>
+<section class="sec" id="faq"><div class="wrap faq">
+  <div class="faq__intro"><span class="eyebrow">Questions</span><h2 class="h2">Quick questions</h2><p class="lede">The short answers. The long ones live in Help.</p><a class="btnlink" href="help/index.html" style="color:var(--accent)">More in Help →</a></div>
+  <div class="faq__list"><details class="q"><summary>Do I need an account?</summary><p>No. em has no server and no account. Your writing syncs through your own iCloud.</p></details><details class="q"><summary>Does it work offline?</summary><p>Yes. Once your files are downloaded, em works without an iCloud or Ghost connection.</p></details><details class="q"><summary>Do I have to use AI?</summary><p>No. Every AI feature ships off, and search, indexing, and reading your files happen on your device either way.</p></details><details class="q"><summary>What if I stop using em?</summary><p>Your writing is exactly where it always was: a folder of Markdown files, with nothing missing and nothing to export.</p></details></div>
+</div></section>
 
-    <section>
-      <h2><span class="section-icon" style="--icon-color: var(--plum);" aria-hidden="true"><svg viewBox="0 0 448 512"><path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg></span>Remember ’em</h2>
-      <p><strong>On This Day</strong> is a collection that lists what you published or started on today's month and day in every year, this year included. Each year gets its own section, headed by how long ago it was, like “3 Years Ago · 2023.” Choose which libraries it shows from its toolbar menu or from each library's settings.</p>
-      <p>It can tap you on the shoulder, too. Get one notification a day, only on days that hold files, at a set time or a random time inside a window you choose. It names a single file and its year, or counts several, in wording that changes from day to day, and tapping it opens On This Day. The On This Day widget comes in small, medium, and large for the Home Screen or desktop, with each file's picture, plus a Lock Screen version on iPhone. There's a Shortcuts action, too.</p>
-      <p>The Calendar and On This Day answer different questions. The Calendar is what you worked on each day. On This Day is what you published or started on this day, in every year.</p>
-      <p><a class="doc__more" href="help/index.html#on-this-day">How On This Day works →</a></p>
-    </section>
-
-    <section>
-      <h2><span class="section-icon" style="--icon-color: var(--clay);" aria-hidden="true"><svg viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg></span>Map ’em</h2>
-      <p>em can remember where you started writing each file, including every place you came back to work on ’em. See all of them on a map and follow your writing journey in a whole new way. Tap the place at the end of a file to see it on that library's map, and go back to the file when you're done. Every new file with a location also records the weather where you started writing, and older files can look it up back to 1940, or all at once with Generate Missing Weather. Location is off until you turn it on for a library, weather has its own switch, and neither is ever sent to AI.</p>
-      <figure class="shot">
-        <picture>
-          <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/places-iphone-dark.webp">
-          <source media="(max-width: 640px)" srcset="assets/screenshots/places-iphone-light.webp">
-          <source media="(max-width: 1024px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/places-ipad-dark.webp">
-          <source media="(max-width: 1024px)" srcset="assets/screenshots/places-ipad-light.webp">
-          <source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/places-mac-dark.webp">
-          <img src="assets/screenshots/places-mac-light.webp" alt="em's Places map showing where files were written" width="1400" height="875" loading="lazy">
-        </picture>
-        <figcaption>Every place you've written, on a map.</figcaption>
-      </figure>
-      <p><a class="doc__more" href="help/index.html#places">How Places works →</a></p>
-    </section>
-
-    <section>
-      <h2><span class="section-icon" style="--icon-color: var(--teal);" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></span>Find ’em</h2>
-      <p>Smart Search lists every file holding your words. Use quotes, +, -, OR, and * for precision, filter by library, tag, status, or year, and save any search as a Smart Folder that stays current, now with rules for files written today, files from any month and day in any year, and locked files. Show Images puts each file's picture beside it in every list. Only remember what a piece was about? Ask em.</p>
-      <figure class="shot">
-        <picture>
-          <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/smartfolder-iphone-dark.webp">
-          <source media="(max-width: 640px)" srcset="assets/screenshots/smartfolder-iphone-light.webp">
-          <source media="(max-width: 1024px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/smartfolder-ipad-dark.webp">
-          <source media="(max-width: 1024px)" srcset="assets/screenshots/smartfolder-ipad-light.webp">
-          <source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/smartfolder-mac-dark.webp">
-          <img src="assets/screenshots/smartfolder-mac-light.webp" alt="A Smart Folder in em listing files that match a saved search" width="1400" height="875" loading="lazy">
-        </picture>
-        <figcaption>Save any search as a Smart Folder that stays current.</figcaption>
-      </figure>
-      <p><a class="doc__more" href="help/index.html#search">How search works →</a></p>
-    </section>
-
-    <section>
-      <h2><span class="section-icon" style="--icon-color: var(--olive);" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z"/></svg></span>Protect ’em</h2>
-      <p>Every edit is versioned automatically and backed up to iCloud. Compare a draft against the version your iPhone saved, restore whichever one you actually want, and stop mourning the paragraph you deleted and regretted immediately.</p>
-      <p>Lock a file, or a whole library, behind Face ID, Touch ID, or your passcode. It locks again when you step away, and a locked file's title never appears on the Lock Screen, in a notification, or in a widget. Images that may be sensitive stay blurred until you choose to show them, if you use Sensitive Content Warning or Communication Safety.</p>
-      <figure class="shot">
-        <picture>
-          <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/version-iphone-dark.webp">
-          <source media="(max-width: 640px)" srcset="assets/screenshots/version-iphone-light.webp">
-          <source media="(max-width: 1024px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/version-ipad-dark.webp">
-          <source media="(max-width: 1024px)" srcset="assets/screenshots/version-ipad-light.webp">
-          <source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/version-mac-dark.webp">
-          <img src="assets/screenshots/version-mac-light.webp" alt="Restoring an earlier version of a draft in em" width="1400" height="875" loading="lazy">
-        </picture>
-        <figcaption>Version History, across every device you write on.</figcaption>
-      </figure>
-    </section>
-
-    <section>
-      <h2><span class="section-icon" style="--icon-color: var(--accent);" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480l0-83.6c0-4 1.5-7.8 4.2-10.8L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg></span>Publish ’em</h2>
-      <p>Connect your Ghost site and write, edit, back up, and publish natively — 19 Ghost Koenig card types, plus drafts, scheduling, and <em>newsletters</em>, all from em's customized Markdown. Your files can live in iCloud or in Ghost. Either way, you still decide what happens to ’em.</p>
-      <figure class="shot">
-        <picture>
-          <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/publish-iphone-dark.webp">
-          <source media="(max-width: 640px)" srcset="assets/screenshots/publish-iphone-light.webp">
-          <source media="(max-width: 1024px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/publish-ipad-dark.webp">
-          <source media="(max-width: 1024px)" srcset="assets/screenshots/publish-ipad-light.webp">
-          <source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/publish-mac-dark.webp">
-          <img src="assets/screenshots/publish-mac-light.webp" alt="Publishing a post to Ghost from em" width="1400" height="875" loading="lazy">
-        </picture>
-        <figcaption>Markdown in, Koenig cards out.</figcaption>
-      </figure>
-    </section>
-
-    <section>
-      <h2><span class="section-icon" style="--icon-color: var(--plum);" aria-hidden="true"><svg viewBox="0 0 576 512"><path d="M234.7 42.7L197 56.8c-3 1.1-5 4-5 7.2s2 6.1 5 7.2l37.7 14.1L248.8 123c1.1 3 4 5 7.2 5s6.1-2 7.2-5l14.1-37.7L315 71.2c3-1.1 5-4 5-7.2s-2-6.1-5-7.2L277.3 42.7 263.2 5c-1.1-3-4-5-7.2-5s-6.1 2-7.2 5L234.7 42.7zM46.1 395.4c-18.7 18.7-18.7 49.1 0 67.9l34.6 34.6c18.7 18.7 49.1 18.7 67.9 0L529.9 116.5c18.7-18.7 18.7-49.1 0-67.9L495.3 14.1c-18.7-18.7-49.1-18.7-67.9 0L46.1 395.4zM484.6 82.6l-105 105-23.3-23.3 105-105 23.3 23.3zM7.5 117.2C3 118.9 0 123.2 0 128s3 9.1 7.5 10.8L64 160l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L128 160l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L128 96 106.8 39.5C105.1 35 100.8 32 96 32s-9.1 3-10.8 7.5L64 96 7.5 117.2zm352 256c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L416 416l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L480 416l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L480 352l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L416 352l-56.5 21.2z"/></svg></span>Explore ’em</h2>
-      <h3 class="aside">(but only if you want to)</h3>
-      <p><strong>The only one who should decide about how AI interacts with your writing is you!</strong> Enabling AI lets you ask questions and get answers grounded in what's in your files, not what's on the internet. An Editorial Review runs from a prompt that's an ordinary document in your own library — read it, rewrite it, delete it. Turn AI on and Siri can search, add, or edit your documents too, by voice, on Mac, iPad, or iPhone (requires OS 27). em doesn't write your drafts for you. It helps you decide what to do with ’em.</p>
-      <p>em provides intelligence features only if you opt into ’em. Every AI feature ships <strong>off</strong>. Once on, AI conversations stay on-device with Apple Intelligence by default. Engage with more powerful models like Claude, ChatGPT, or Gemini with your own API key and your own billing if you want to tap into a more powerful model. Or don't! It's your choice.</p>
-      <figure class="shot">
-        <picture>
-          <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/askem-iphone-dark.webp">
-          <source media="(max-width: 640px)" srcset="assets/screenshots/askem-iphone-light.webp">
-          <source media="(max-width: 1024px) and (prefers-color-scheme: dark)" srcset="assets/screenshots/askem-ipad-dark.webp">
-          <source media="(max-width: 1024px)" srcset="assets/screenshots/askem-ipad-light.webp">
-          <source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/askem-mac-dark.webp">
-          <img src="assets/screenshots/askem-mac-light.webp" alt="Asking em a question about your own writing" width="1400" height="875" loading="lazy">
-        </picture>
-        <figcaption>Ask em: answers from your files, with sources, not the internet.</figcaption>
-      </figure>
-      <p><a class="doc__more" href="help/index.html#ai">How AI works in em →</a></p>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2><span class="section-icon" style="--icon-color: var(--teal);" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8l0 378.1C394 378 431.1 230.1 432 141.4L256 66.8s0 0 0 0z"/></svg></span>Privacy, plainly</h2>
-      <div class="callout callout--lede" style="--gc-color: var(--teal);">
-        <div class="callout__body">
-          <p>Your files are yours and no one can tell you what to do with ’em.</p>
-        </div>
-      </div>
-      <p>em has no server. That isn't a promise about what em chooses to do with your writing — there's no backend to store data, no account to create, and no company database where it could end up. <em>Your</em> writing syncs through <em>your</em> iCloud and never touches infrastructure <em>you</em> didn't authorize. AI is off until you turn it on, and your location is never sent with an AI request.</p>
-      <p><a class="doc__more" href="privacy.html">Read the full Privacy Policy →</a></p>
-    </section>
-
-    <section>
-      <h2>Everything Else</h2>
-      <ul class="feature-grid">
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 640 512"><path d="M0 336c0 79.5 64.5 144 144 144l368 0c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z"/></svg></span>
-          <div><strong>Universal App</strong><p>Writing, Versions, and settings sync across devices with iCloud.</p></div>
-        </li>
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M448 256A192 192 0 1 0 64 256a192 192 0 1 0 384 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 80a80 80 0 1 0 0-160 80 80 0 1 0 0 160zm0-224a144 144 0 1 1 0 288 144 144 0 1 1 0-288zM224 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg></span>
-          <div><strong>Goals</strong><p>Word and deadline goals, daily, weekly, and monthly, with pace and streaks.</p></div>
-        </li>
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 448 512"><path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg></span>
-          <div><strong>Calendar</strong><p>Every day you wrote, in one place.</p></div>
-        </li>
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg></span>
-          <div><strong>Places</strong><p>Every place you've written, on a map.</p></div>
-        </li>
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 384 512"><path d="M192 0C139 0 96 43 96 96V256c0 53 43 96 96 96s96-43 96-96V96c0-53-43-96-96-96zM64 216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 89.1 66.2 162.7 152 174.4V464H120c-13.3 0-24 10.7-24 24s10.7 24 24 24h72 72c13.3 0 24-10.7 24-24s-10.7-24-24-24H216V430.4c85.8-11.7 152-85.3 152-174.4V216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 70.7-57.3 128-128 128s-128-57.3-128-128V216z"/></svg></span>
-          <div><strong>Siri</strong><p>Search, add, or edit notes in libraries you approve <em>(OS 27)</em>.</p></div>
-        </li>
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></span>
-          <div><strong>Smart Search</strong><p>Every match in your library, with search operators, filters, and searches saved as Smart Folders.</p></div>
-        </li>
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 448 512"><path d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288l111.5 0L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7l-111.5 0L349.4 44.6z"/></svg></span>
-          <div><strong>Apple Shortcuts</strong><p>Create files, add visits, or publish to Ghost from outside em.</p></div>
-        </li>
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 448 512"><path d="M96 0C43 0 0 43 0 96L0 416c0 53 43 96 96 96l288 0 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64c17.7 0 32-14.3 32-32l0-320c0-17.7-14.3-32-32-32L384 0 96 0zm0 384l256 0 0 64L96 448c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16zm16 48l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></span>
-          <div><strong>Apple Journaling Suggestions</strong><p>Capture memories in Markdown using Apple's on-device suggestions <em>(iOS only)</em>.</p></div>
-        </li>
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-33.6 61.3-70.1 61.3L344 320c-26.5 0-48 21.5-48 48c0 3.4 .4 6.7 1 9.9c2.1 10.2 6.5 20 10.8 29.9c6.1 13.8 12.1 27.5 12.1 42c0 31.8-21.6 60.7-53.4 62c-3.5 .1-7 .2-10.6 .2C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg></span>
-          <div><strong>Customize Everything</strong><p>Change fonts, colors, icons, and more to create the perfect writing environment.</p></div>
-        </li>
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 448 512"><path d="M144 144l0 48 160 0 0-48c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192l0-48C80 64.5 144.5 0 224 0s144 64.5 144 144l0 48 16 0c35.3 0 64 28.7 64 64l0 192c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 256c0-35.3 28.7-64 64-64l16 0z"/></svg></span>
-          <div><strong>Locked Files</strong><p>Lock a file or a whole library behind Face ID, Touch ID, or your passcode.</p></div>
-        </li>
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 640 640"><path d="M320 64C302.3 64 288 78.3 288 96L288 99.2C215 114 160 178.6 160 256L160 277.7C160 325.8 143.6 372.5 113.6 410.1L103.8 422.3C98.7 428.6 96 436.4 96 444.5C96 464.1 111.9 480 131.5 480L508.4 480C528 480 543.9 464.1 543.9 444.5C543.9 436.4 541.2 428.6 536.1 422.3L526.3 410.1C496.4 372.5 480 325.8 480 277.7L480 256C480 178.6 425 114 352 99.2L352 96C352 78.3 337.7 64 320 64zM258 528C265.1 555.6 290.2 576 320 576C349.8 576 374.9 555.6 382 528L258 528z"/></svg></span>
-          <div><strong>Notifications</strong><p>On This Day and writing reminders, all built and delivered on your device.</p></div>
-        </li>
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 448 512"><path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg></span>
-          <div><strong>Widgets and Controls</strong><p>On This Day, New File, and Streak widgets, a New File control for Control Center, and Home Screen quick actions.</p></div>
-        </li>
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"/></svg></span>
-          <div><strong>Smart Folders</strong><p>Create folders based on criteria you define.</p></div>
-        </li>
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 640 512"><path d="M533.6 32.5C598.5 85.2 640 165.8 640 256s-41.5 170.7-106.4 223.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C557.5 398.2 592 331.2 592 256s-34.5-142.2-88.7-186.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM473.1 107c43.2 35.2 70.9 88.9 70.9 149s-27.7 113.8-70.9 149c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C475.3 341.3 496 301.1 496 256s-20.7-85.3-53.2-111.8c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zm-60.5 74.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM301.1 34.8C312.6 40 320 51.4 320 64l0 384c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352 64 352c-35.3 0-64-28.7-64-64l0-64c0-35.3 28.7-64 64-64l67.8 0L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3z"/></svg></span>
-          <div><strong>Read Aloud</strong><p>Have your device read your draft back to you, to catch errors your eyes miss.</p></div>
-        </li>
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 576 512"><path d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 128-168 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l168 0 0 112c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64zM384 336l0-48 110.1 0-39-39c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l80 80c9.4 9.4 9.4 24.6 0 33.9l-80 80c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l39-39L384 336zm0-208l-128 0L256 0 384 128z"/></svg></span>
-          <div><strong>Export</strong><p>Save any Ghost post as a Markdown file, anywhere on your device.</p></div>
-        </li>
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 576 512"><path d="M482.3 192c34.2 0 93.7 29 93.7 64c0 36-59.5 64-93.7 64l-116.6 0L265.2 495.9c-5.7 10-16.3 16.1-27.8 16.1l-56.2 0c-10.6 0-18.3-10.2-15.4-20.4l49-171.6L112 320 68.8 377.6c-3 4-7.8 6.4-12.8 6.4l-42 0c-7.8 0-14-6.3-14-14c0-1.3 .2-2.6 .5-3.9L32 256 .5 145.9c-.4-1.3-.5-2.6-.5-3.9c0-7.8 6.3-14 14-14l42 0c5 0 9.8 2.4 12.8 6.4L112 192l102.9 0-49-171.6C162.9 10.2 170.6 0 181.2 0l56.2 0c11.5 0 22.1 6.2 27.8 16.1L365.7 192l116.6 0z"/></svg></span>
-          <div><strong>Offline Editing</strong><p>Once downloaded, em works without an iCloud or Ghost connection.</p></div>
-        </li>
-        <li class="feature-grid__item">
-          <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 448 512"><path d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"/></svg></span>
-          <div><strong>Even More</strong><p>Printing, reading time, word counts, and yes — em dash coloring.</p></div>
-        </li>
-      </ul>
-    </section>
-
-    <hr>
-
-    <section class="doc__end">
-      <h2>Get em</h2>
-      <p>em is on the Mac App Store and the App Store.</p>
-      <p class="doc__actions">
-        <a class="app-store-badge app-store-badge--lg" href="https://apps.apple.com/app/id6797005003" target="_blank" rel="noopener noreferrer">
-          <img src="assets/img/app-store-badge.svg" alt="Download on the App Store" width="120" height="40">
-        </a>
-      </p>
-    </section>
-
-  </article>
-
-
+<section class="sec sec--alt"><div class="wrap cta">
+  <img class="i" src="assets/img/about-hero-icon.png" alt="" width="96" height="96">
+  <h2>em</h2>
+  <p class="lede" style="margin:0">On the Mac App Store and the App Store.</p>
+  <a class="badge" href="https://apps.apple.com/app/id6797005003"><img src="assets/img/app-store-badge.svg" alt="Download on the App Store" width="150" height="50"></a>
+</div></section>
 </main>
 
-<footer class="site-footer">
-  <div class="site-footer__wrap">
-    <a class="footer-signature" href="https://justincox.com/" target="_blank" rel="noopener noreferrer" aria-label="Justin Cox">
-      <svg class="footer-signature__mark" viewBox="0 0 1080 326" role="img" aria-hidden="true"><path class="fs-pilcrow" d="M268.0,300.5 165.0,300.5 164.0,222.5 120.0,222.5 91.0,218.5 62.0,205.5 43.5,189.0 32.5,173.0 24.5,154.0 20.5,134.0 20.5,109.0 23.5,93.0 34.5,67.0 41.5,57.0 56.0,42.5 83.0,27.5 111.0,21.5 268.5,22.0 268.0,300.5Z M303.0,300.5 286.5,300.0 287.0,21.5 303.5,22.0 303.0,300.5Z"/><path class="fs-wordmark" fill-rule="evenodd" d="M807.0,154.5 757.5,154.0 757.5,65.0 754.0,64.5 686.0,64.5 684.5,66.0 685.0,69.5 712.0,85.5 721.5,96.0 725.5,106.0 726.5,117.0 723.5,131.0 718.5,140.0 711.0,147.5 704.0,151.5 692.0,154.5 616.0,154.5 616.0,110.5 663.5,110.0 662.0,105.5 633.0,87.5 624.5,75.0 621.5,60.0 624.5,44.0 628.5,37.0 638.0,27.5 653.0,21.5 842.0,20.5 842.5,64.0 807.5,65.0 807.0,154.5Z M904.0,153.5 854.5,153.0 855.0,20.5 904.5,21.0 904.0,153.5Z M1059.0,153.5 1010.0,153.5 1004.5,133.0 997.5,119.0 989.0,107.5 971.0,92.5 967.5,93.0 967.5,153.0 918.0,153.5 917.5,21.0 932.0,20.5 944.0,22.5 966.0,29.5 984.0,39.5 1007.0,62.5 1009.0,62.5 1010.0,20.5 1059.0,20.5 1059.0,153.5Z M410.0,154.5 371.0,154.5 357.5,111.0 400.0,110.5 408.5,105.0 410.5,101.0 411.0,21.5 460.0,21.5 460.5,106.0 457.5,118.0 451.5,130.0 441.0,141.5 426.0,150.5 410.0,154.5Z M550.0,158.5 531.0,158.5 510.0,153.5 496.0,145.5 480.5,128.0 473.5,104.0 474.0,21.5 523.5,22.0 523.5,101.0 526.5,108.0 535.0,114.5 548.0,113.5 556.5,104.0 556.5,22.0 606.5,22.0 607.5,98.0 602.5,123.0 595.5,135.0 582.0,147.5 568.0,154.5 550.0,158.5Z M563.0,304.5 544.0,304.5 529.0,301.5 516.0,296.5 505.0,289.5 489.5,273.0 479.5,248.0 479.5,220.0 483.5,206.0 490.5,193.0 510.0,174.5 535.0,164.5 553.0,162.5 567.0,163.5 592.0,171.5 604.0,179.5 616.5,193.0 624.5,208.0 627.5,219.0 627.5,249.0 623.5,262.0 615.5,276.0 607.0,285.5 593.0,295.5 578.0,301.5 563.0,304.5Z M472.0,300.5 415.0,300.5 400.0,297.5 382.0,288.5 367.5,274.0 358.5,256.0 355.5,241.0 355.5,227.0 357.5,215.0 363.5,200.0 380.0,180.5 396.0,171.5 412.0,167.5 472.5,168.0 472.0,210.5 421.0,211.5 414.0,214.5 408.5,220.0 404.5,230.0 404.5,238.0 407.5,246.0 412.0,251.5 419.0,255.5 472.5,257.0 472.0,300.5Z M767.0,300.5 714.0,300.5 694.0,267.5 689.5,270.0 672.0,300.5 619.0,300.5 623.5,290.0 653.5,241.0 656.5,232.0 618.5,168.0 672.0,167.5 690.5,199.0 694.0,199.5 713.0,167.5 767.0,167.5 728.5,233.0 767.0,300.5Z M560.5,260.0 569.0,256.5 576.5,248.0 579.5,240.0 578.5,224.0 575.5,218.0 568.0,210.5 556.0,206.5 546.0,207.5 539.0,210.5 530.5,220.0 527.5,229.0 528.5,242.0 533.5,252.0 540.0,257.5 547.0,260.5 560.5,260.0Z"/></svg>
-    </a>
-    <nav class="footer-links">
-      <a href="help/index.html">Help</a>
-      <a href="help/markdown-cheatsheet.html">Markdown</a>
-      <a href="privacy.html">Privacy</a>
-    </nav>
-  </div>
-</footer>
+<footer><div class="wrap"><span style="font-family:var(--script);font-size:26px">em</span><nav><a href="help/index.html">Help</a><a href="help/markdown-cheatsheet.html">Markdown</a><a href="privacy.html">Privacy</a></nav></div></footer>
 
-<script src="assets/js/read.js?v=4" defer></script>
+<div class="bar" id="bar"><img src="assets/img/about-hero-icon.png" alt=""><div><b>em</b>Markdown Writer &amp; Editor</div><a class="btn" href="https://apps.apple.com/app/id6797005003" style="min-height:44px">Get</a></div>
+<script src="assets/js/home.js?v=1" defer></script>
 </body>
 </html>
