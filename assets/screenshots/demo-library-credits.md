@@ -1,0 +1,116 @@
+# Demo Library Credits
+
+em's screenshots show a made-up writer's library. Its photos are free Unsplash photos used under the [Unsplash License](https://unsplash.com/license), and its one video is a free Pexels video used under the [Pexels License](https://www.pexels.com/license/). Neither license requires attribution; these credits are given anyway.
+
+## Video
+
+- "Serene Cherry Blossom Pathway by Riverside" by [Hideyoshi isai](https://www.pexels.com/@hideyoshi-isai-259138390/) on [Pexels](https://www.pexels.com/video/serene-cherry-blossom-pathway-by-riverside-31313613/)
+
+## Photos
+
+- [Aayush Gupta](https://unsplash.com/photos/yellow-tram-in-historic-lisbon-street-ljhCEaHYWJ8) on Unsplash
+- [Abby Rurenko](https://unsplash.com/photos/waterfall-on-mountain-through-train-window-QoBilxz1dNc) on Unsplash
+- [Adam Blank](https://unsplash.com/photos/city-with-high-rise-buildings-near-mountain-during-sunset-Ff4BbI31Czg) on Unsplash
+- [Adrien Olichon](https://unsplash.com/photos/grey-sand-wave-RCAhiGJsUUE) on Unsplash
+- [Aleksandr Zaitsev](https://unsplash.com/photos/lisbons-skyline-glows-under-a-beautiful-sunset-zEFfW3kXQR8) on Unsplash
+- [Andrea Zanenga](https://unsplash.com/photos/green-grass-field-near-rocky-mountain-during-daytime-jkKTzmIe_vo) on Unsplash
+- [Andres Molina](https://unsplash.com/photos/a-cup-of-coffee-and-a-notebook-on-a-table-8CGOX7oSMbI) on Unsplash
+- [Anisa Cakesandbakes](https://unsplash.com/photos/a-pan-filled-with-cinnamon-rolls-covered-in-icing-c07YNJmNfaE) on Unsplash
+- [Anna Pelzer](https://unsplash.com/photos/bowl-of-vegetable-salads-IGfIGP5ONV0) on Unsplash
+- [Anne Preble](https://unsplash.com/photos/red-tomato-lot-on-blue-baskets-SAPvKo12dQE) on Unsplash
+- [Atsadawut Chaiseeha](https://unsplash.com/photos/brown-deer-on-gray-concrete-road-during-daytime-qgIpa5mDvxM) on Unsplash
+- [Benoît Deschasaux](https://unsplash.com/photos/a-group-of-houses-by-a-body-of-water-with-mountains-in-the-background-with-lofoten-in-the-background-ut7XZMquCoU) on Unsplash
+- [Bingqi Huang](https://unsplash.com/photos/a-snowy-landscape-with-a-mountain-in-the-background-NxjtJghBaHM) on Unsplash
+- [Bjorn Snelders](https://unsplash.com/photos/green-grass-on-mountain-under-white-cloudy-sky-Cd3Ek7rNXSk) on Unsplash
+- [Bon Vivant](https://unsplash.com/photos/ramen-dish-qom5MPOER-I) on Unsplash
+- [Cala](https://unsplash.com/photos/soup-bowls-with-feta-and-seeds-w6ftFbPCs9I) on Unsplash
+- [Calum Lewis](https://unsplash.com/photos/blue-and-white-ceramic-plate-with-pancakes-8Nc_oQsc2qQ) on Unsplash
+- [CHEN HENG](https://unsplash.com/photos/a-snowy-street-with-a-mountain-in-the-background-6zMbpIrLQfw) on Unsplash
+- [CHUTTERSNAP](https://unsplash.com/photos/photography-of-burning-camp-fire-rLm4Wq96h_0) on Unsplash
+- [Colin + Meg](https://unsplash.com/photos/a-pan-of-food-OjGywUZ-v-w) on Unsplash
+- [Connor Mollison](https://unsplash.com/photos/kilchurn-castle-ruins-on-loch-awe-3rkosR_Dgfg) on Unsplash
+- [Cosmin Georgian](https://unsplash.com/photos/people-near-pagoda-under-white-and-blue-sky-gd3ysFyrsTQ) on Unsplash
+- [David Emrich](https://unsplash.com/photos/red-temple-near-body-of-water-VCM99u6HltA) on Unsplash
+- [David Emrich](https://unsplash.com/photos/torii-gates-in-kyoto-EJvGBYjrwEA) on Unsplash
+- [David Emrich](https://unsplash.com/photos/brown-deer-on-white-sand-during-daytime-9e5hzTjT4iU) on Unsplash
+- [Dee Dee](https://unsplash.com/photos/a-plate-with-a-bowl-of-food-and-a-bowl-of-vegetables-d5vo4XDOgfs) on Unsplash
+- [Eaters Collective](https://unsplash.com/photos/pasta-dish-on-white-plate-ddZYOtZUnBk) on Unsplash
+- [Ekin-Fidel Tanriverdi](https://unsplash.com/photos/brown-and-green-concrete-buildings-under-blue-sky-during-daytime-mVq5nE3Yahw) on Unsplash
+- [Elisa Kennemer](https://unsplash.com/photos/golden-retriever-on-beach-shore-during-daytime-GXVpVuXupIg) on Unsplash
+- [Emma Van Sant](https://unsplash.com/photos/brown-desert-under-blue-sky-during-daytime-GkIGSLW04Nc) on Unsplash
+- [Esteban Palacios Blanco](https://unsplash.com/photos/people-walking-on-street-during-daytime-Di64fgE9vos) on Unsplash
+- [FABIO VILHENA](https://unsplash.com/photos/aerial-view-of-city-buildings-during-daytime-2FIcT5nHlLo) on Unsplash
+- [Federico Ramirez](https://unsplash.com/photos/a-plate-of-food-Zggo6DP_P88) on Unsplash
+- [Fikri Rasyid](https://unsplash.com/photos/shinkansen-bullet-train-at-station-3ba59K57wE4) on Unsplash
+- [Franzi Meyer](https://unsplash.com/photos/person-holding-brown-bread-on-brown-wooden-chopping-board-7ARN514bTuA) on Unsplash
+- [Henry Ren](https://unsplash.com/photos/a-couple-of-yellow-trolleys-driving-down-a-street-oiVvB-A7XDM) on Unsplash
+- [Hikari Graf](https://unsplash.com/photos/a-wooden-box-filled-with-different-types-of-food-lE_WxCJo7cA) on Unsplash
+- [Hikerwise.com](https://unsplash.com/photos/a-person-standing-in-a-tunnel-in-a-forest-OQxkPl_9VOg) on Unsplash
+- [Holly Mandarich](https://unsplash.com/photos/person-carrying-yellow-and-black-backpack-walking-between-green-plants-UVyOfX3v0Ls) on Unsplash
+- [Hongbin](https://unsplash.com/photos/a-view-of-a-city-with-a-castle-in-the-background-6I0wZxgAc3c) on Unsplash
+- [Ian Lai](https://unsplash.com/photos/snow-covered-road-between-trees-during-daytime-xaW3i0Z9Pf8) on Unsplash
+- [ikhsan baihaqi](https://unsplash.com/photos/ramen-bowl-with-egg-and-chili-RwAXb8Hv_sU) on Unsplash
+- [Ikko Nishimura](https://unsplash.com/photos/a-pond-with-a-bridge-and-trees-orxRf0zkve8) on Unsplash
+- [Jaida Stewart](https://unsplash.com/photos/clear-drinking-glass-with-green-leaves-Bmek6EYG9Uk) on Unsplash
+- [James Morden](https://unsplash.com/photos/green-trees-near-white-and-brown-mountain-under-blue-sky-during-daytime-zB0YI0s_Bnc) on Unsplash
+- [Jason Leung](https://unsplash.com/photos/white-ceramic-teacup-filled-of-matcha-tea-Z-hvocTfR_s) on Unsplash
+- [Jenna Neal](https://unsplash.com/photos/canal-under-white-trees-PGhkCuYDlaQ) on Unsplash
+- [Jennifer Pallian](https://unsplash.com/photos/close-up-photo-of-baked-cookies-OfdDiqx8Cz8) on Unsplash
+- [Jezael Melgoza](https://unsplash.com/photos/gray-concrete-road-between-brown-concrete-houses-during-daytime-QfBRBEKj76E) on Unsplash
+- [Jil Beckmann](https://unsplash.com/photos/blue-motorcycle-parked-near-green-plant-hhhzCCpG4Oc) on Unsplash
+- [Jorge L. Valdivia](https://unsplash.com/photos/people-walk-down-a-colorful-street-with-a-church-tower-o3o47HgOBjE) on Unsplash
+- [Josh Reid](https://unsplash.com/photos/field-and-mountain-near-body-of-water-meOFNlRbHmY) on Unsplash
+- [Juliana Barquero](https://unsplash.com/photos/boat-on-river-between-high-rise-buildings-during-nighttime-WaHPhFveWLk) on Unsplash
+- [Justin Shen](https://unsplash.com/photos/a-large-neon-sign-on-top-of-a-building-k0VeQ6sXHGg) on Unsplash
+- [Kakeru Tanaka](https://unsplash.com/photos/a-river-flowing-under-a-tree-filled-with-pink-flowers-qESPKV9pjn8) on Unsplash
+- [Karsten Winegeart](https://unsplash.com/photos/green-trees-on-brown-rocky-mountain-beside-blue-sea-under-blue-sky-during-daytime-_m-Xjo9R_y4) on Unsplash
+- [Katie Musial](https://unsplash.com/photos/green-trees-on-rocky-mountain-beside-river-during-daytime-QvN-1FFJpHc) on Unsplash
+- [Kirill](https://unsplash.com/photos/brown-and-white-ceramic-table-decor-q36y-w_RjG4) on Unsplash
+- [Kirill Tonkikh](https://unsplash.com/photos/a-bowl-of-noodle-soup-with-chopsticks-on-the-side-NFQi_2HUNRI) on Unsplash
+- [Luke Stackpoole](https://unsplash.com/photos/white-and-black-mountain-near-body-of-water-during-daytime-ej8pKvHDg_c) on Unsplash
+- [Madeline Liu](https://unsplash.com/photos/hand-holds-rice-ball-with-seaweed-and-sesame-seeds-XYuuo1HQZBg) on Unsplash
+- [Magdalena Raczka](https://unsplash.com/photos/a-plate-of-pastries-sitting-on-a-table-mhhOBO9pfuE) on Unsplash
+- [Marco D'Abramo](https://unsplash.com/photos/a-large-body-of-water-with-a-bunch-of-buildings-on-top-of-it-rSepq4T-CtA) on Unsplash
+- [Marek Piwnicki](https://unsplash.com/photos/a-mountain-range-with-a-lake-in-the-foreground-wgsu3WzFZ5c) on Unsplash
+- [martin bennie](https://unsplash.com/photos/the-storr-range-with-a-body-of-water-in-the-foreground-r3peJAPApQw) on Unsplash
+- [Megan Bucknall](https://unsplash.com/photos/green-soup-on-white-ceramic-bowl-qav5LFLbSUk) on Unsplash
+- [Michael Wu](https://unsplash.com/photos/people-standing-in-front-of-food-stall-NsH4kE9zocY) on Unsplash
+- [NAM CZ](https://unsplash.com/photos/a-glass-of-water-and-a-cup-of-coffee-on-a-table-RFKpgayllWQ) on Unsplash
+- [Nathan Dumlao](https://unsplash.com/photos/black-and-green-trees-close-up-photography-dSzTOV5yaFM) on Unsplash
+- [Nathan Dumlao](https://unsplash.com/photos/white-ceramic-cup-with-brown-liquid-dAYJfrtVjh0) on Unsplash
+- [Nichika Sakurai](https://unsplash.com/photos/a-river-running-through-a-lush-green-forest-01gTvHYIjD4) on Unsplash
+- [Nichika Sakurai](https://unsplash.com/photos/a-room-filled-with-lots-of-different-types-of-food-pm3uMbabqQc) on Unsplash
+- [Nick Nice](https://unsplash.com/photos/water-dew-on-window-ve-R7PCjJDk) on Unsplash
+- [oxana v](https://unsplash.com/photos/eyeglasses-on-map-qoAIlAmLJBU) on Unsplash
+- [Paul Bill](https://unsplash.com/photos/cars-parked-beside-brown-concrete-building-during-daytime-0Ot5ELyWJFk) on Unsplash
+- [Paula Berto](https://unsplash.com/photos/brown-bread-with-red-sauce-WLbD34w3kRQ) on Unsplash
+- [Q](https://unsplash.com/photos/cherry-blossoms-bloom-over-a-japanese-street--h0Aa1PqFRo) on Unsplash
+- [raouf bedrani](https://unsplash.com/photos/a-large-group-of-sand-dunes-in-the-desert-oVWm9rQpbq0) on Unsplash
+- [Rey Seven](https://unsplash.com/photos/brown-books-closeup-photography-_nm_mZ4Cs2I) on Unsplash
+- [Riccardo Cervia](https://unsplash.com/photos/a-mountain-range-with-a-house-on-top-of-it-ICSRhjP1UBU) on Unsplash
+- [Robert Lukeman](https://unsplash.com/photos/waterfalls-at-daytime-zNN6ubHmruI) on Unsplash
+- [Roman Lopez](https://unsplash.com/photos/a-man-walking-down-a-street-next-to-tall-buildings-92XOQbvqpdU) on Unsplash
+- [Rory Hennessey](https://unsplash.com/photos/asphalt-road-and-cliff-horizon-PBrovES5uuI) on Unsplash
+- [ryan doyle](https://unsplash.com/photos/a-large-building-with-a-dome-and-a-courtyard-with-people-walking-around-kO-USq1pmR4) on Unsplash
+- [Sabrina Mazzeo](https://unsplash.com/photos/a-row-of-buildings-next-to-a-body-of-water-khbyM0MQW4M) on Unsplash
+- [Sebastian Leonhardt](https://unsplash.com/photos/positano-village-on-amalfi-coast-PkWac9CLWVA) on Unsplash
+- [Seth kane](https://unsplash.com/photos/red-and-white-wooden-house-in-front-of-body-of-water-XOEAHbE_vO8) on Unsplash
+- [shayd johnson](https://unsplash.com/photos/aerial-view-of-tall-trees-3SYi9YfTXdU) on Unsplash
+- [Snowscat](https://unsplash.com/photos/body-of-water-and-mountain-EnFQmcTtsjo) on Unsplash
+- [Susann Schuster](https://unsplash.com/photos/traditional-japanese-village-nestled-in-a-green-mountain-valley-goEIbd_CrzM) on Unsplash
+- [Taisia Karaseva](https://unsplash.com/photos/a-large-building-with-a-fountain-in-front-of-it-3purECWQ47I) on Unsplash
+- [Thanh Soledas](https://unsplash.com/photos/assorted-color-chinese-lanterns-at-night-XGuZ4HlC5qU) on Unsplash
+- [Thuy Duong Nguyen](https://unsplash.com/photos/a-group-of-people-walking-through-a-bamboo-forest-fsJ0basri8U) on Unsplash
+- [Tim Mossholder](https://unsplash.com/photos/reflection-of-a-mountain-on-beach-shore-during-daytime-RNDcJ_1Yj_I) on Unsplash
+- [Timo Volz](https://unsplash.com/photos/shibuya-scramble-intersection-in-tokyo-DGsqL2j028E) on Unsplash
+- [Tom Byrom](https://unsplash.com/photos/landscape-photography-of-orange-roof-houses-near-body-of-water-hgFX7SydvFk) on Unsplash
+- [Tom Podmore](https://unsplash.com/photos/colorful-buildings-on-amalfi-cliffside-1zkHXas1GIo) on Unsplash
+- [Tomas Williams](https://unsplash.com/photos/a-lush-green-forest-filled-with-lots-of-trees-Ic_lvVv3Dz0) on Unsplash
+- [Toomas Tartes](https://unsplash.com/photos/hikers-on-trail-toward-mountain-peaks-Yizrl9N_eDA) on Unsplash
+- [Veronika Martinelli](https://unsplash.com/photos/white-and-brown-concrete-building-during-daytime-mR_AxcbVivg) on Unsplash
+- [Vicky Ng](https://unsplash.com/photos/bread-on-brown-wooden-table-yL9qjDDmmMU) on Unsplash
+- [Vitor Paladini](https://unsplash.com/photos/a-close-up-of-a-blue-and-white-tiled-wall-00Z8eikbsEs) on Unsplash
+- [Watn Weib](https://unsplash.com/photos/a-stream-running-through-a-lush-green-forest-qBm4PfajILc) on Unsplash
+- [Yoav Aziz](https://unsplash.com/photos/stainless-steel-fork-on-brown-ceramic-plate-422N7Nwq5XY) on Unsplash
+- [Yoav Aziz](https://unsplash.com/photos/people-walking-through-narrow-tokyo-alleyway-tKCd-IWc4gI) on Unsplash
+- [Yosuke Ota](https://unsplash.com/photos/okonomiyaki-cooking-on-a-hot-plate-IveJAkyk7q8) on Unsplash

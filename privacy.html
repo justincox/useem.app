@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — em</title>
 <meta name="description" content="em has no server. This policy describes exactly where your data lives and the few cases where it leaves your device.">
@@ -18,13 +19,14 @@
 <meta name="twitter:title" content="Privacy Policy — em">
 <meta name="twitter:description" content="em has no server. This policy describes exactly where your data lives and the few cases where it leaves your device.">
 <meta name="twitter:image" content="https://useem.app/assets/img/og.png?v=3">
-<meta name="theme-color" content="#1b1a16">
+<meta name="theme-color" content="#cdd8c6">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png?v=4">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png?v=4">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=4">
-<link rel="stylesheet" href="assets/css/tokens.css?v=6">
+<link rel="stylesheet" href="css/tokens16.css?v=6">
 <link rel="stylesheet" href="assets/css/read.css?v=11">
 <link rel="stylesheet" href="assets/css/page.css?v=1">
+<link rel="stylesheet" href="css/pile-page.css?v=2">
 <noscript><style>.nav__links{display:flex!important;position:static!important;flex-wrap:wrap;gap:12px 22px!important;background:none!important;padding:0!important}.nav__menu{display:none!important}</style></noscript>
 </head>
 <body>
@@ -36,7 +38,7 @@
     <a class="btn" href="https://apps.apple.com/app/id6797005003">Get em</a>
     <button class="nav__menu" type="button" id="menu" aria-expanded="false" aria-controls="navlinks" aria-label="Menu">☰</button>
   </nav>
-  <div class="mini__title"><span class="mini__eyebrow">Privacy</span><h1>Privacy Policy</h1><p class="mini__sub">Last updated: November 8, 2026</p></div>
+  <div class="mini__title"><span class="mini__eyebrow">Privacy</span><h1>Privacy Policy</h1><p class="mini__sub">Last updated: November 20, 2026</p></div>
 </header>
 <main class="page" id="doc">
   <article class="doc">
@@ -76,10 +78,10 @@
       <ul>
         <li>em stores your writing as plain Markdown files in folders you choose.</li>
         <li>Those folders sync between your own devices through your own iCloud account — never through servers em operates, because em doesn't operate any.</li>
-        <li>Ghost publishing sends data only to the Ghost site you connect, using your own Admin API key, which is stored in Apple's Keychain.</li>
+        <li>Ghost publishing sends data only to the Ghost site you connect. You sign in on that site’s own sign-in page, and em keeps the sign-in session in your iCloud Keychain. Pasting an Admin API key, which is stored in the Keychain too, still works.</li>
         <li>Location is optional and off until you turn it on for a library. If you do, where you began writing a file is recorded in that file, on your device and in your own iCloud. It never reaches em’s developer, and em never includes it when you copy, use Ask em or Siri, or run a Shortcut.</li>
         <li>Weather is optional and tied to Location, with its own switch for each library. em reads it from Open-Meteo’s public data on Amazon Web Services, directly from your device, with no coordinates or personal data sent. Those servers can still infer the general area, the hour, and your IP address, as with any web request. The result is stored only in your own file and removed from anything you share, the same as location.</li>
-        <li>On This Day, its notifications, writing reminders, and widgets are all built on your device, and every notification is local. Nothing about them is sent anywhere.</li>
+        <li>On This Day, its notifications, writing reminders, sign-in reminders, and widgets are all built on your device, and every notification is local. Nothing about them is sent anywhere.</li>
         <li>Locked files use your device’s own Face ID, Touch ID, or passcode. em never sees biometric data. Sensitive image detection is Apple’s, runs on your device, and sends nothing off it.</li>
         <li>AI features are off by default and begin with Apple's on-device models if enabled. If you connect your own Claude, ChatGPT, or Gemini API key, only files from libraries you specify are sent to the model. Your API key is stored in Apple's Keychain, and the provider bills you according to their usage policy.</li>
         <li>em and its developer never see your writing, your credentials, or your usage. Even better, there is nothing to see — no analytics, no crash reporting unless you choose to share it.</li>
@@ -97,7 +99,9 @@
 
     <section>
       <h2 id="ghost-publishing">Ghost Publishing</h2>
-      <p>If you connect a Ghost site, em talks directly to that site's Admin API using a key you generate in your own Ghost site's settings. That key is stored in your Keychain and synced via iCloud. Data only ever flows between your device and the Ghost site you connected — never through em. Ghost connections are read-only by default, and nothing writes to your site until you explicitly enable the feature and then save or publish a draft. There is no background or automatic upload of your drafts.</p>
+      <p>If you connect a Ghost site, em talks directly to that site. You sign in on the site’s own sign-in page, two-step code included, and em stores Ghost’s sign-in session in your iCloud Keychain: the session value, the site’s admin address, when it ends, and the signed-in name and role. It is the same place an Admin API key was already kept. em sends the session only to that Ghost site. It creates no integration, key, or account on your site.</p>
+      <p>Disconnecting your site or running a Factory Reset signs em out of Ghost, where the site can be reached, and deletes the stored session. If you prefer, you can still paste an Admin API key from your own Ghost site’s settings. It is stored in your Keychain and synced via iCloud, and it is sent only to your site.</p>
+      <p>The warnings before a sign-in ends are local notifications scheduled on your device, like On This Day’s. Nothing is sent anywhere. Data only ever flows between your device and the Ghost site you connected, never through em. Ghost connections are read-only by default, and nothing writes to your site until you explicitly enable the feature and then save or publish a draft. There is no background or automatic upload of your drafts.</p>
     </section>
 
     <section>
@@ -131,7 +135,7 @@
 
     <section>
       <h2 id="on-this-day">On This Day, Notifications, and Widgets</h2>
-      <p>On This Day, its notifications, writing reminders, and widgets are built on your device, and every notification is local. Nothing about them is sent to em’s developer, because em has no server, or to anyone else.</p>
+      <p>On This Day, its notifications, writing reminders, sign-in reminders, and widgets are built on your device, and every notification is local. Nothing about them is sent to em’s developer, because em has no server, or to anyone else.</p>
       <p>The widgets read a snapshot that em writes into its App Group on your device. It holds the titles, dates, and small pictures of the coming days’ files. It never holds a locked file’s title or picture, or an image your Sensitive Content Warning would hide.</p>
       <p>Your On This Day library choices, the notification library switches, and the Counts Toward Goals and Streaks switches sync between your devices through your own iCloud, like em’s other settings.</p>
     </section>
@@ -159,7 +163,7 @@
 
     <section>
       <h2 id="changes-to-this-policy">Changes to This Policy</h2>
-      <p>If em's architecture changes in a way that affects this policy, this document would be updated first, and the change would be visible in the app before it took effect. Beyond what’s described above, em 1.5 sends nothing new off your device.</p>
+      <p>If em's architecture changes in a way that affects this policy, this document would be updated first, and the change would be visible in the app before it took effect. Videos play from your own files on your device, and pictures a Shortcut adds are copied into your own library. Beyond what’s described above, em 1.6 collects nothing new and sends nothing new off your device.</p>
     </section>
 
     <section>
@@ -183,7 +187,8 @@
             <tr><td style="font-family: var(--font-heading); font-weight: 900;">Fraunces</td><td><a href="https://scripts.sil.org/OFL" target="_blank" rel="noopener noreferrer">SIL Open Font License 1.1</a></td></tr>
             <tr><td style="font-family: var(--font-body);">Ubuntu</td><td><a href="https://ubuntu.com/legal/font-licence" target="_blank" rel="noopener noreferrer">Ubuntu Font Licence 1.0</a></td></tr>
             <tr><td style="font-family: var(--font-mono);">Courier Prime</td><td><a href="https://scripts.sil.org/OFL" target="_blank" rel="noopener noreferrer">SIL Open Font License 1.1</a></td></tr>
-            <tr><td style="font-family: var(--font-wordmark);">Pacifico</td><td><a href="https://scripts.sil.org/OFL" target="_blank" rel="noopener noreferrer">SIL Open Font License 1.1</a></td></tr>
+            <tr><td style="font-family: var(--font-wordmark);">Permanent Marker</td><td><a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener noreferrer">Apache License 2.0</a></td></tr>
+            <tr><td>Pacifico</td><td><a href="https://scripts.sil.org/OFL" target="_blank" rel="noopener noreferrer">SIL Open Font License 1.1</a></td></tr>
           </tbody>
         </table>
       </div>
@@ -207,6 +212,9 @@
       </ul>
       <p>em is not affiliated with or endorsed by Amazon, Anthropic, Apple, Ghost, Google, Magic Pages, Open-Meteo, or OpenAI.</p>
       <p>All other trademarks are property of their respective owners.</p>
+
+      <h3 id="demo-media">Demo Photos and Video</h3>
+      <p>The screenshots on this site show a made-up writer’s library. Its photos are free <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a> photos used under the <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License</a>, and its one video is a free <a href="https://www.pexels.com" target="_blank" rel="noopener noreferrer">Pexels</a> video used under the <a href="https://www.pexels.com/license/" target="_blank" rel="noopener noreferrer">Pexels License</a>. Neither license requires attribution. <a href="assets/screenshots/demo-library-credits.md">The credits are listed here.</a></p>
 
       <h3 id="weather-data">Weather Data</h3>
       <p>Weather data by <a href="https://open-meteo.com" target="_blank" rel="noopener noreferrer">Open-Meteo</a>, under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Contains modified Copernicus Climate Change Service information (ERA5) and data from Deutscher Wetterdienst (ICON), modified by em.</p>

@@ -1,0 +1,9 @@
+Fonts used by the em 1.6 home page. All four are Latin-subset woff2 files
+from Google Fonts, self-hosted (the page makes no request to Google).
+
+ubuntu-400-latin.woff2, ubuntu-700-latin.woff2   Ubuntu, Ubuntu Font Licence 1.0
+fraunces-900-latin.woff2                          Fraunces (opsz 144, weight 900), SIL Open Font License 1.1
+permanentmarker-400-latin.woff2                   Permanent Marker, Apache License 2.0
+
+Before launch: add Permanent Marker (Apache 2.0) to the Privacy Policy's
+Acknowledgments table and keep its license text alongside the other font licenses.

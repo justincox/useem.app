@@ -14,49 +14,13 @@
  * Licenses (SIL OFL / Ubuntu Font License) sit alongside the woff2 files.
  */
 
-@font-face {
-  font-family: "Fraunces";
-  src: url("../fonts/Fraunces.woff2") format("woff2-variations"),
-       url("../fonts/Fraunces.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Ubuntu";
-  src: url("../fonts/Ubuntu-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Ubuntu";
-  src: url("../fonts/Ubuntu-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Pacifico";
-  src: url("../fonts/Pacifico-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Courier Prime";
-  src: url("../fonts/CourierPrime-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+@font-face{font-family:"Ubuntu";src:url("../fonts/ubuntu-400-latin.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Ubuntu";src:url("../fonts/ubuntu-700-latin.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Fraunces";src:url("../fonts/fraunces-900-latin.woff2") format("woff2");font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:"Permanent Marker";src:url("../fonts/permanentmarker-400-latin.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
   /* light (default) */
   --bg: #F6F1E4;
@@ -76,8 +40,8 @@
 
   --font-heading: "Fraunces", ui-serif, Georgia, serif;
   --font-body: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  --font-wordmark: "Pacifico", cursive;
-  --font-mono: "Courier Prime", "SFMono-Regular", ui-monospace, Menlo, monospace;
+  --font-wordmark: "Permanent Marker", "Marker Felt", cursive;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 
   /*
    * Read view's own measurements, lifted from the app rather than guessed at:
@@ -105,28 +69,7 @@
   --plum: #8a4f79;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #201F1B;
-    --bg-raised: #2B2A25;
-    --fg: #F6F1E4;
-    --fg-muted: #C7C2B2;
-    --accent: #4E9A76;
-    --accent-fg: #14201A;
-    --border: rgba(246, 241, 228, 0.14);
-    --shadow-color: 0deg 0% 0%;
 
-    --paper: #252525;
-    --ink: #ece7d9;
-    --ink-muted: #9d988a;
-    --rule: rgba(236, 231, 217, 0.26);
-
-    --clay: #d4825c;
-    --olive: #9aa85f;
-    --teal: #5aa8a2;
-    --plum: #b06f97;
-  }
-}
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -182,12 +125,5 @@ img { max-width: 100%; display: block; }
     inset 0 -1px 2px rgba(0, 0, 0, 0.18);
   pointer-events: none;
 }
-@media (prefers-color-scheme: dark) {
-  .app-icon {
-    box-shadow:
-      0 0 0 1px rgba(246, 241, 228, 0.08),
-      0 6px 14px hsl(var(--shadow-color) / 0.4),
-      0 24px 48px -8px hsl(var(--shadow-color) / 0.55);
-  }
-}
+
 .app-icon--sm { --size: clamp(36px, 8vw, 44px); border-radius: 24%; }
