@@ -19,7 +19,7 @@ body{color:var(--ink);background-color:var(--mat);
 .nav__menu{border:2px solid var(--ink);color:var(--ink)}
 .mini__title{max-width:1180px;padding:clamp(8px,3vh,32px) var(--pad) clamp(20px,4vh,40px)}
 .mini__eyebrow{display:inline-block;font:400 clamp(1.2rem,2vw,1.6rem)/1 var(--mk);letter-spacing:.02em;text-transform:none;color:var(--clay);transform:rotate(-2deg)}
-.mini h1{font:900 clamp(2.6rem,6vw,5rem)/1 var(--font-heading);letter-spacing:-.025em;color:var(--ink)}
+.mini h1{font:700 clamp(2.6rem,6vw,5rem)/1 var(--font-heading);letter-spacing:-.025em;color:var(--ink)}
 .mini__sub{color:var(--fg-muted)}
 /* the article is one big sheet of paper */
 .page{padding:0 var(--pad) 40px}
@@ -28,7 +28,7 @@ body{color:var(--ink);background-color:var(--mat);
   background-image:linear-gradient(90deg,transparent clamp(10px,2.4vw,32px),rgba(206,86,86,.4) clamp(10px,2.4vw,32px),rgba(206,86,86,.4) calc(clamp(10px,2.4vw,32px) + 2px),transparent calc(clamp(10px,2.4vw,32px) + 2px))}
 .doc::before{content:"";position:absolute;top:-16px;left:50%;width:120px;height:32px;margin-left:-60px;background:rgba(247,226,122,.85);transform:rotate(-2deg);box-shadow:0 1px 3px rgba(0,0,0,.15)}
 .doc h2,.doc h3{font-family:var(--font-heading)}
-.doc h2{font-weight:900}
+.doc h2{font-weight:700}
 .doc a{color:var(--green)}
 /* contents = sticky note */
 .toc{background:var(--yellow);border:0;border-radius:2px;padding:1.2rem 1.5rem;transform:rotate(-.6deg);box-shadow:0 8px 18px rgba(40,50,30,.2)}
