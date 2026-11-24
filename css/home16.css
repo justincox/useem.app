@@ -68,7 +68,7 @@ h1,h2,h3,p{margin:0}
 .note span{display:block;margin-top:.55rem;font:400 .95rem/1.35 var(--sans)}
 
 /* drop-in on scroll (only when JS runs) */
-.js .drop{opacity:0;transform:translateY(-70px) rotate(calc(var(--r,0deg) + 9deg));transition:opacity .5s ease,transform .9s cubic-bezier(.2,.7,.3,1)}
+.js .drop{opacity:0;transform:rotate(var(--r,0deg));transition:opacity .6s ease}
 .js .drop.in{opacity:1;transform:rotate(var(--r,0deg))}
 
 /* ---------- hero ---------- */
@@ -86,8 +86,14 @@ h1,h2,h3,p{margin:0}
 .pile{position:relative;aspect-ratio:1/1.02;width:100%;max-width:760px;justify-self:end}
 .ps{position:absolute;left:32%;top:12%;width:42%;aspect-ratio:340/440;container-type:inline-size;opacity:0;--r:-6deg;--q:4deg;
   background-color:var(--paper);background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 10.3cqw,var(--rule) 10.3cqw,var(--rule) calc(10.3cqw + 1px));background-position:0 5.8cqw;
-  box-shadow:0 10px 24px rgba(40,50,30,.20);animation:life 19.2s linear infinite;animation-delay:calc(var(--i) * -3.2s);will-change:transform}
-.pile:hover .ps,.pile.paused .ps{animation-play-state:paused}
+  box-shadow:0 10px 24px rgba(40,50,30,.20);}
+/* calm pile: three sheets resting, no loop. */
+.ps{opacity:1;transform:rotate(var(--r))}
+.ps[style*="--i:0"]{z-index:3;left:24%;top:30%;width:46%}
+.ps[style*="--i:1"]{z-index:2;left:46%;top:16%;width:42%}
+.ps[style*="--i:2"]{z-index:1;left:10%;top:12%;width:40%}
+.ps[style*="--i:3"],.ps[style*="--i:4"],.ps[style*="--i:5"]{display:none}
+.pt,.plane,.trail,.togh,.sticky{display:none}
 .ps img{position:absolute;object-fit:cover;box-shadow:0 8px 20px rgba(0,0,0,.25)}
 .ps .pl{position:absolute;font:400 8cqw/.95 var(--mk);white-space:nowrap}
 .ps .ps-s{position:absolute;font:400 5cqw/1.3 var(--sans);color:#3a3a33}
@@ -129,7 +135,7 @@ h1,h2,h3,p{margin:0}
 .editor{padding:1.6rem 1.6rem 2rem 5rem;--r:-2deg;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:1rem 1.4rem}
 .editor .to{font:400 clamp(1.5rem,2.4vw,2rem)/1.1 var(--mk)}
 .editor .body{font:400 clamp(1rem,1.35vw,1.15rem)/1.55 var(--sans);margin-top:.7rem}
-.cursor{display:inline-block;width:3px;height:1.2em;margin-left:3px;background:var(--green);vertical-align:-.2em;animation:blink 1s steps(1) infinite}
+.cursor{display:inline-block;width:3px;height:1.2em;margin-left:3px;background:var(--green);vertical-align:-.2em;}
 @keyframes blink{50%{opacity:0}}
 .menu{margin-top:1rem;padding:.6rem;background:#fff;border-radius:14px;box-shadow:0 10px 26px rgba(0,0,0,.22);border:1px solid #d9d3c1;font:700 1rem/1 var(--sans);max-width:260px}
 .menu small{display:block;padding:.3rem .6rem;font:700 .7rem/1 var(--sans);color:#6f6a5d;letter-spacing:.12em}
@@ -204,7 +210,7 @@ footer nav a{padding:.5rem 0}
   .hero{min-height:0}
   .hero__in{grid-template-columns:1fr;min-height:0}
   .hero__copy{padding:1.5rem 0 0}
-  .pile{justify-self:center;max-width:620px;margin:1rem auto 0;aspect-ratio:1/1.25;overflow:hidden}
+  .pile{justify-self:center;max-width:620px;margin:1rem auto 0;aspect-ratio:1/1.1;overflow:hidden}
   .trail{display:none}
   .plane{top:5%;right:6%;width:24%}
   .grid{grid-template-columns:1fr}
@@ -215,8 +221,10 @@ footer nav a{padding:.5rem 0}
 @media (max-width:640px){
   body{font-size:17px}
   .hero__in{padding:0 20px}
-  .pile{aspect-ratio:1/1.5;margin-top:-3.5rem}
-  .ps{left:28%;width:52%}
+  .pile{aspect-ratio:1/1.1;margin-top:-1.5rem}
+  .ps[style*="--i:0"]{left:20%;top:30%;width:58%}
+  .ps[style*="--i:1"]{left:46%;top:8%;width:48%}
+  .ps[style*="--i:2"]{left:4%;top:6%;width:46%}
   .editor{grid-template-columns:1fr;padding-left:4rem}
   .polaroid{max-width:200px}
   .video{max-width:240px}
