@@ -47,3 +47,9 @@ body{color:var(--ink);background-color:var(--mat);
 .page .doc>*{max-width:none}
 main.page{max-width:none;padding:0 var(--pad) 40px}
 .doc .toc h2{font:400 1.5rem/1 var(--mk);letter-spacing:.02em;text-transform:none;color:var(--ink)}
+
+/* footer: gray Justin Cox wordmark linking to justincox.com, same as the home page */
+.nf .jc{display:block;line-height:0;color:#8b8f86}
+.nf .jc svg{height:2.2rem;width:auto;display:block}
+.nf .jc svg path{fill:currentColor}
+.nf .jc:hover{color:#5f645b}
