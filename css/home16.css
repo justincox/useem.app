@@ -87,8 +87,18 @@ h1,h2,h3,p{margin:0}
 .ps{position:absolute;left:32%;top:12%;width:42%;aspect-ratio:340/440;container-type:inline-size;opacity:0;--r:-6deg;--q:4deg;
   background-color:var(--paper);background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 10.3cqw,var(--rule) 10.3cqw,var(--rule) calc(10.3cqw + 1px));background-position:0 5.8cqw;
   box-shadow:0 10px 24px rgba(40,50,30,.20);}
+/* screenshots float on the page: no paper, tape or captions */
+figure.sheet{--r:0deg!important;background:none;box-shadow:none;padding:0;display:block}
+figure.sheet img{display:block;width:100%;height:auto}
+.desk:has(.over){padding-bottom:34%!important}
+figure.sheet.over{width:27%!important;bottom:0!important}
+figure.sheet.over--bl{left:3%!important}
+figure.sheet.over--br{right:3%!important}
+figure.sheet.over:not(.over--bl):not(.over--br){left:34%!important}
+.ps{background:none;box-shadow:none}
+.ps{transform:none}
 /* calm pile: three sheets resting, no loop. */
-.ps{opacity:1;transform:rotate(var(--r))}
+.ps{opacity:1;transform:none}
 .ps[style*="--i:0"]{z-index:3;left:24%;top:30%;width:46%}
 .ps[style*="--i:1"]{z-index:2;left:46%;top:16%;width:42%}
 .ps[style*="--i:2"]{z-index:1;left:10%;top:12%;width:40%}
@@ -236,7 +246,7 @@ footer nav a{padding:.5rem 0}
   .badge img{height:56px}
   .notes{gap:1rem}
   .flow{grid-template-columns:minmax(90px,.8fr) 1.2fr}
-  .over{width:44%}
+  figure.sheet.over{width:30%!important}
   .sticky{width:30%;left:52%;top:9%}
   .togh{top:24%;right:5%}
   .bar{position:fixed;z-index:60;left:0;right:0;bottom:0;display:flex;align-items:center;gap:.8rem;padding:.6rem 1rem calc(.6rem + env(safe-area-inset-bottom));background:#f3eee0;border-top:2px solid var(--ink);transform:translateY(110%);transition:transform .3s}
