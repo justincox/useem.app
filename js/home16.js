@@ -28,19 +28,6 @@
     drops.forEach(function (d) { d.classList.add('in'); });
   }
 
-  // Pause the hero pile when the tab is hidden or the pile is off screen.
-  var pile = document.getElementById('pile');
-  if (pile && 'IntersectionObserver' in window) {
-    var visible = true;
-    new IntersectionObserver(function (e) {
-      visible = e[0].isIntersecting;
-      pile.classList.toggle('paused', !visible || document.hidden);
-    }).observe(pile);
-    document.addEventListener('visibilitychange', function () {
-      pile.classList.toggle('paused', !visible || document.hidden);
-    });
-  }
-
   // Install bar on phones once the hero button scrolls away.
   var bar = document.getElementById('bar'), cta = document.getElementById('herocta');
   if (bar && cta && 'IntersectionObserver' in window) {
