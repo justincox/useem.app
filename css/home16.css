@@ -75,7 +75,7 @@ h1,h2,h3,p{margin:0}
 .hero{position:relative;overflow:hidden;padding-top:92px;min-height:min(100svh,980px)}
 .hero__in{max-width:1400px;margin:0 auto;padding:0 var(--pad);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:2rem;align-items:center;min-height:calc(min(100svh,980px) - 92px)}
 .hero__copy{position:relative;z-index:6;padding:2rem 0 4rem}
-.hero h1{font:900 clamp(3rem,6.2vw,5.4rem)/.96 var(--serif);letter-spacing:-.03em;margin-top:1rem}
+.hero h1{font:900 clamp(3rem,6.2vw,5.4rem)/.96 var(--serif);letter-spacing:-.03em;word-spacing:.14em;margin-top:1rem}
 .hero h1 span{color:var(--green);display:block}
 .squig{display:block;margin:.6rem 0 1.1rem;width:min(420px,70%);height:24px}
 .hero__sub{font:400 clamp(1.25rem,2vw,1.6rem)/1.45 var(--sans);max-width:20em}
