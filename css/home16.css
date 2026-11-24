@@ -215,3 +215,12 @@ footer nav a{padding:.5rem 0}
 
 /* headings match justincox.com: Fraunces variable, 700, optical size auto, SOFT 50 */
 h1,h2,h3,.h2,.bar div{font-optical-sizing:auto;font-variation-settings:"SOFT" 50}
+
+/* privacy flow labels: plain, title-case, no marker */
+.flow .lbl{font:400 clamp(.95rem,1.2vw,1.05rem)/1.4 var(--sans);color:#3a3a33}
+.flow .lbl b{display:block;font:700 clamp(1.05rem,1.4vw,1.2rem)/1.2 var(--sans);color:var(--ink);margin-bottom:.15rem}
+/* footer: Justin Cox wordmark in gray, linking home */
+.jc{display:block;line-height:0;color:#8b8f86}
+.jc svg{height:2.2rem;width:auto;display:block}
+.jc svg path{fill:currentColor}
+.jc:hover{color:#5f645b}
