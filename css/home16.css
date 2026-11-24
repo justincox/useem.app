@@ -210,7 +210,7 @@ footer nav a{padding:.5rem 0}
   .hero{min-height:0}
   .hero__in{grid-template-columns:1fr;min-height:0}
   .hero__copy{padding:1.5rem 0 0}
-  .pile{justify-self:center;max-width:620px;margin:1rem auto 0;aspect-ratio:1/1.1;overflow:hidden}
+  .pile{display:none}
   .trail{display:none}
   .plane{top:5%;right:6%;width:24%}
   .grid{grid-template-columns:1fr}
@@ -221,7 +221,6 @@ footer nav a{padding:.5rem 0}
 @media (max-width:640px){
   body{font-size:17px}
   .hero__in{padding:0 20px}
-  .pile{aspect-ratio:1/1.1;margin-top:-1.5rem}
   .ps[style*="--i:0"]{left:20%;top:30%;width:58%}
   .ps[style*="--i:1"]{left:46%;top:8%;width:48%}
   .ps[style*="--i:2"]{left:4%;top:6%;width:46%}
