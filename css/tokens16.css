@@ -94,7 +94,7 @@ a { color: inherit; }
 img { max-width: 100%; display: block; }
 
 /*
- * App-icon treatment: the source art (about-hero-icon.png) is flat marketing
+ * App-icon treatment: the source art (about-hero-icon.png?v=6) is flat marketing
  * art with square corners, so the squircle mask, bevel highlight, and
  * elevation shadow that make it read as a real app icon are all applied
  * here in CSS. Usage: <div class="app-icon"><img src="…" alt="em app icon"
